@@ -129,6 +129,20 @@ Apply your custom theme to specific components:
 </x-button>
 ```
 
+## Visual Customization Tool
+
+For more advanced theming and visual customization, use [TweakCN](https://tweakcn.com/) — a visual tool for creating and customizing UI component designs.
+
+TweakCN allows you to:
+- Visually design and tweak component styles
+- Export ready-to-use Tailwind CSS classes
+- Create consistent design systems
+- Preview changes in real-time
+
+<x-callout type="info" title="Pro Tip">
+Use <a href="https://tweakcn.com/" class="underline hover:text-foreground/80" target="_blank">TweakCN</a> to visually customize your components, then copy the generated classes to your Velyx components.
+</x-callout>
+
 ## Next Steps
 
 - Learn about [colors](/docs/colors)
