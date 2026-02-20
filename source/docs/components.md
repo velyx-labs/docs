@@ -9,7 +9,7 @@ section: content
 
 Beautiful, accessible components built with Blade, Tailwind CSS v4, and Alpine.js.
 
-## Available Components
+## Featured Components
 
 ### Button
 
@@ -22,7 +22,7 @@ A versatile button component with multiple variants and sizes.
 <x-button variant="ghost">Ghost</x-button>
 ```
 
-**Add it:** `velyx add button`
+**Add it:** `npx velyx add button`
 
 [View Documentation →](/docs/components/button)
 
@@ -30,24 +30,21 @@ A versatile button component with multiple variants and sizes.
 
 ### Card
 
-A flexible card component for displaying content.
+A flexible card component for displaying content with header and footer slots.
 
 ```blade
 <x-card>
-    <x-card-header>
-        <x-card-title>Card Title</x-card-title>
-        <x-card-description>Card description goes here</x-card-description>
-    </x-card-header>
-    <x-card-content>
-        <p>Card content goes here.</p>
-    </x-card-content>
-    <x-card-footer>
+    <x-slot:header>
+        <h3 class="text-lg font-semibold">Card Title</h3>
+    </x-slot:header>
+    <p>Card content goes here.</p>
+    <x-slot:footer>
         <x-button>Action</x-button>
-    </x-card-footer>
+    </x-slot:footer>
 </x-card>
 ```
 
-**Add it:** `velyx add card`
+**Add it:** `npx velyx add card`
 
 [View Documentation →](/docs/components/card)
 
@@ -62,7 +59,7 @@ A form input component with validation support.
 <x-input type="password" placeholder="Password" />
 ```
 
-**Add it:** `velyx add input`
+**Add it:** `npx velyx add input`
 
 [View Documentation →](/docs/components/input)
 
@@ -70,38 +67,126 @@ A form input component with validation support.
 
 ### Modal
 
-A dialog modal component for overlays and alerts.
+A dialog modal component for overlays and alerts using Alpine.js.
 
 ```blade
-<x-modal>
-    <x-modal-trigger>Open Modal</x-modal-trigger>
-    <x-modal-content>
-        <x-modal-header>
-            <x-modal-title>Are you sure?</x-modal-title>
-            <x-modal-description>
-                This action cannot be undone.
-            </x-modal-description>
-        </x-modal-header>
-        <x-modal-footer>
-            <x-button variant="outline">Cancel</x-button>
-            <x-button>Confirm</x-button>
-        </x-modal-footer>
-    </x-modal-content>
-</x-modal>
+<div x-data="{ open: false }">
+    <x-button @click="open = true">Open Modal</x-button>
+    <x-modal x-model="open">
+        <h2 class="text-lg font-semibold">Modal Title</h2>
+        <p>Modal content goes here.</p>
+        <x-button @click="open = false">Close</x-button>
+    </x-modal>
+</div>
 ```
 
-**Add it:** `velyx add modal`
+**Add it:** `npx velyx add modal`
 
 [View Documentation →](/docs/components/modal)
 
 ---
+
+## All Components
+
+### Forms
+
+| Component | Description | Command |
+|-----------|-------------|---------|
+| Input | Text input fields | `npx velyx add input` |
+| Label | Form labels | `npx velyx add label` |
+| Toggle | Switch/toggle input | `npx velyx add toggle` |
+| File Upload | File upload area | `npx velyx add file-upload` |
+| Date Picker | Date selection | `npx velyx add date-picker` |
+| Range Slider | Range input slider | `npx velyx add range-slider` |
+| Rating | Star rating component | `npx velyx add rating` |
+
+### Layout
+
+| Component | Description | Command |
+|-----------|-------------|---------|
+| Card | Content containers | `npx velyx add card` |
+| Avatar | User avatars | `npx velyx add avatar` |
+| Avatar Group | Overlapping avatars | `npx velyx add avatar-group` |
+| Separator | Visual divider | `npx velyx add separator` |
+
+### Navigation
+
+| Component | Description | Command |
+|-----------|-------------|---------|
+| Breadcrumbs | Navigation breadcrumb | `npx velyx add breadcrumbs` |
+| Tabs | Tabbed content | `npx velyx add tabs` |
+| Dropdown | Dropdown menu | `npx velyx add dropdown` |
+| Progress Steps | Step indicator | `npx velyx add progress-steps` |
+| Stepper | Multi-step form | `npx velyx add stepper` |
+
+### Overlays
+
+| Component | Description | Command |
+|-----------|-------------|---------|
+| Modal | Dialog overlay | `npx velyx add modal` |
+| Drawer | Side panel | `npx velyx add drawer` |
+| Popover | Popover content | `npx velyx add popover` |
+| Tooltip | Hover tooltip | `npx velyx add tooltip` |
+| Toast | Notifications | `npx velyx add toast` |
+
+### Feedback
+
+| Component | Description | Command |
+|-----------|-------------|---------|
+| Alert | Alert messages | `npx velyx add alert` |
+| Empty State | Empty state display | `npx velyx add empty-state` |
+| Progress Bar | Progress indicator | `npx velyx add progress-bar` |
+| Skeleton | Loading placeholder | `npx velyx add skeleton` |
+
+### Data Display
+
+| Component | Description | Command |
+|-----------|-------------|---------|
+| Accordion | Collapsible content | `npx velyx add accordion` |
+| Data Table | Data table | `npx velyx add data-table` |
+| Code Snippet | Code display | `npx velyx add code-snippet` |
+| Timeline | Timeline view | `npx velyx add timeline` |
+| Badge | Status badges | `npx velyx add badge` |
+
+### Other
+
+| Component | Description | Command |
+|-----------|-------------|---------|
+| Button | Action buttons | `npx velyx add button` |
+| Command Palette | Command palette | `npx velyx add command-palette` |
+| Carousel | Image carousel | `npx velyx add carousel` |
+| KBD | Keyboard key | `npx velyx add kbd` |
+| Sortable List | Draggable list | `npx velyx add sortable-list` |
+| Stat Card | Statistics card | `npx velyx add stat-card` |
 
 ## Adding Components
 
 Use the CLI to add any component:
 
 ```bash
-velyx add <component-name>
+npx velyx add button
+npx velyx add card input modal
+npx velyx add --all
 ```
 
 Components are copied directly into your project under `resources/views/components/`, so you can customize them however you want.
+
+## Searching Components
+
+Search for specific components:
+
+```bash
+npx velyx list --query button
+```
+
+Or list all available components:
+
+```bash
+npx velyx list
+```
+
+## Next Steps
+
+- Learn about [theming](/docs/theming)
+- Explore [design tokens](/docs/design/colors)
+- Check out the [CLI reference](/docs/cli-reference)
