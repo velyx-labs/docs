@@ -17,6 +17,4 @@ use App\Listeners\GenerateSitemap;
  *     // Your code here
  * });
  */
-
 $events->afterBuild(GenerateSitemap::class);
-
