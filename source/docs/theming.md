@@ -140,7 +140,7 @@ TweakCN allows you to:
 - Preview changes in real-time
 
 <x-callout type="info" title="Pro Tip">
-Use <a href="https://tweakcn.com/" class="underline hover:text-foreground/80" target="_blank">TweakCN</a> to visually customize your components, then copy the generated classes to your Velyx components.
+Use <a href="https://tweakcn.com/?utm_source=velyx.dev&utm_medium=docs&utm_campaign=theming" class="underline hover:text-foreground/80" target="_blank" rel="noopener noreferrer">TweakCN</a> to visually customize your components, then copy the generated classes to your Velyx components.
 </x-callout>
 
 ## Next Steps
