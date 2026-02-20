@@ -2,13 +2,28 @@
 
 return [
     'Getting Started' => [
-        'url' => 'docs/getting-started',
+        'url' => 'docs/installation',
         'children' => [
-            'Customizing Your Site' => 'docs/customizing-your-site',
-            'Navigation' => 'docs/navigation',
-            'Algolia DocSearch' => 'docs/algolia-docsearch',
-            'Custom 404 Page' => 'docs/custom-404-page',
+            'Quick Start' => 'docs/quick-start',
+            'CLI Reference' => 'docs/cli-reference',
+            'Configuration' => 'docs/configuration',
         ],
     ],
-    'Jigsaw Docs' => 'https://jigsaw.tighten.co/docs/installation',
+    'Components' => [
+        'url' => 'docs/components',
+        'children' => [
+            'Button' => 'docs/components/button',
+            'Card' => 'docs/components/card',
+            'Input' => 'docs/components/input',
+            'Modal' => 'docs/components/modal',
+        ],
+    ],
+    'Theming' => [
+        'url' => 'docs/theming',
+        'children' => [
+            'Colors' => 'docs/colors',
+            'Typography' => 'docs/typography',
+            'Spacing' => 'docs/spacing',
+        ],
+    ],
 ];

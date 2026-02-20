@@ -1,80 +1,145 @@
 @extends('_layouts.master')
 
 @section('body')
+<!-- Hero Section -->
 <section class="relative overflow-hidden">
-    <!-- Background gradient -->
-    <div class="absolute inset-0 -z-10 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-primary/10 via-background to-background"></div>
+    <!-- Background gradient with animated glow -->
+    <div class="absolute inset-0 -z-10">
+        <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-primary/20 via-background to-background"></div>
+        <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/10 rounded-full blur-3xl animate-pulse"></div>
+        <div class="absolute bottom-1/4 right-1/4 w-96 h-96 bg-accent/10 rounded-full blur-3xl animate-pulse" style="animation-delay: 1s;"></div>
+    </div>
 
-    <div class="container max-w-screen-2xl mx-auto px-4 lg:px-8 py-24 md:py-32">
-        <div class="flex flex-col items-center text-center max-w-3xl mx-auto">
-            <!-- Logo/Brand -->
-            <div class="mb-8 animate-fade-in">
-                <img src="/assets/img/logo-large.svg" alt="{{ $page->siteName }} logo" class="h-24 w-24 mx-auto" />
+    <div class="container max-w-screen-xl mx-auto px-4 lg:px-8 py-24 md:py-32 lg:py-40">
+        <div class="flex flex-col items-center text-center max-w-4xl mx-auto">
+            <!-- Badge -->
+            <div class="mb-8 animate-fade-in inline-flex items-center gap-2 rounded-full border border-primary/20 bg-primary/5 px-4 py-2 text-sm">
+                <span class="relative flex h-2 w-2">
+                    <span class="absolute inline-flex h-full w-full animate-ping rounded-full bg-primary opacity-75"></span>
+                    <span class="relative inline-flex h-2 w-2 rounded-full bg-primary"></span>
+                </span>
+                <span class="text-primary font-medium">Inspired by shadcn/ui</span>
             </div>
 
             <!-- Hero text -->
-            <h1 class="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight mb-6 animate-fade-in" style="animation-delay: 0.1s">
-                {{ $page->siteName }}
+            <h1 class="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight mb-6 animate-fade-in" style="animation-delay: 0.1s">
+                <span class="bg-gradient-to-br from-foreground via-foreground to-foreground/70 bg-clip-text text-transparent">
+                    Beautiful UI for
+                </span>
+                <br>
+                <span class="bg-gradient-to-r from-primary via-primary/80 to-accent bg-clip-text text-transparent">
+                    Laravel Projects
+                </span>
             </h1>
 
-            <p class="text-xl md:text-2xl text-muted-foreground mb-4 max-w-2xl animate-fade-in" style="animation-delay: 0.2s">
-                {{ $page->siteDescription }}
-            </p>
-
-            <p class="text-lg text-muted-foreground mb-10 max-w-xl animate-fade-in" style="animation-delay: 0.3s">
-                Give your documentation a boost with Jigsaw. Generate elegant, static docs quickly and easily.
+            <p class="text-xl md:text-2xl text-muted-foreground mb-6 max-w-2xl animate-fade-in leading-relaxed" style="animation-delay: 0.2s">
+                {{ $page->siteDescription }}. Copy and paste components into your projects — fully customized with Tailwind CSS v4 and Alpine.js.
             </p>
 
             <!-- CTA Buttons -->
-            <div class="flex flex-col sm:flex-row gap-4 animate-fade-in" style="animation-delay: 0.4s">
-                <a href="/docs/getting-started" class="inline-flex items-center justify-center rounded-lg bg-primary px-8 py-3 text-base font-medium text-primary-foreground shadow-lg shadow-primary/25 hover:bg-primary/90 transition-fast">
+            <div class="flex flex-col sm:flex-row gap-4 mb-12 animate-fade-in" style="animation-delay: 0.3s">
+                <a href="/docs/installation" class="group inline-flex items-center justify-center rounded-xl bg-primary px-8 py-4 text-base font-semibold text-primary-foreground shadow-lg shadow-primary/25 hover:bg-primary/90 hover:shadow-xl hover:shadow-primary/30 transition-all">
                     Get Started
-                    <x-icon name="arrow-right-02" class="ml-2 h-5 w-5" />
+                    <x-icon name="arrow-right-02" class="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
                 </a>
 
-                <a href="https://jigsaw.tighten.co" class="inline-flex items-center justify-center rounded-lg border border-input bg-background px-8 py-3 text-base font-medium hover:bg-accent hover:text-accent-foreground transition-fast">
-                    About Jigsaw
+                <a href="/docs/components" class="inline-flex items-center justify-center rounded-xl border border-input bg-background px-8 py-4 text-base font-semibold hover:bg-accent hover:text-accent-foreground transition-all">
+                    Browse Components
                 </a>
+            </div>
+
+            <!-- Tech Stack -->
+            <div class="flex flex-wrap items-center justify-center gap-6 text-sm text-muted-foreground animate-fade-in" style="animation-delay: 0.4s">
+                <span class="flex items-center gap-2">
+                    <x-icons.laravel />
+                    Blade
+                </span>
+                <span class="w-1 h-1 rounded-full bg-muted-foreground/50"></span>
+                <span class="flex items-center gap-2">
+                    <x-icons.tailwind />
+                    Tailwind CSS v4
+                </span>
+                <span class="w-1 h-1 rounded-full bg-muted-foreground/50"></span>
+                <span class="flex items-center gap-2">
+                    <x-icons.alpinejs />
+                    Alpine.js
+                </span>
+                <span class="w-1 h-1 rounded-full bg-muted-foreground/50"></span>
+                <span class="flex items-center gap-2">
+                    <x-icons.livewire />
+                    Livewire 4
+                </span>
             </div>
         </div>
     </div>
 </section>
 
 <!-- Features Section -->
-<section class="border-t bg-background/50">
-    <div class="container max-w-screen-2xl mx-auto px-4 lg:px-8 py-24">
+<section class="border-t bg-background/50 backdrop-blur-sm">
+    <div class="container max-w-screen-xl mx-auto px-4 lg:px-8 py-24">
+        <div class="text-center mb-16">
+            <h2 class="text-3xl md:text-4xl font-bold mb-4">Why Velyx?</h2>
+            <p class="text-lg text-muted-foreground max-w-2xl mx-auto">
+                Components you own, fully customized, and ready to ship.
+            </p>
+        </div>
+
         <div class="grid gap-8 md:grid-cols-3">
             <!-- Feature 1 -->
-            <div class="group relative rounded-xl border bg-card p-8 shadow-sm transition-all hover:shadow-md">
-                <div class="mb-4 inline-flex rounded-lg bg-primary/10 p-3 text-primary">
-                    <x-icon name="code-square" class="h-8 w-8" />
+            <div class="group relative rounded-2xl border bg-card p-8 shadow-sm transition-all hover:shadow-lg hover:-translate-y-1">
+                <div class="mb-5 inline-flex rounded-xl bg-gradient-to-br from-primary/20 to-primary/5 p-4 text-primary">
+                    <x-icon name="copy-01" class="h-8 w-8" />
                 </div>
-                <h3 class="text-xl font-semibold mb-3">Laravel's Blade Engine</h3>
-                <p class="text-muted-foreground">
-                    Blade is a powerful, simple, and beautiful templating language. Use it for your static sites, not just Laravel apps.
+                <h3 class="text-xl font-bold mb-3">Copy & Paste</h3>
+                <p class="text-muted-foreground leading-relaxed">
+                    No npm installs or package dependencies. Components are copied directly into your project — you own the code.
                 </p>
             </div>
 
             <!-- Feature 2 -->
-            <div class="group relative rounded-xl border bg-card p-8 shadow-sm transition-all hover:shadow-md">
-                <div class="mb-4 inline-flex rounded-lg bg-primary/10 p-3 text-primary">
-                    <x-icon name="file-attachment" class="h-8 w-8" />
+            <div class="group relative rounded-2xl border bg-card p-8 shadow-sm transition-all hover:shadow-lg hover:-translate-y-1">
+                <div class="mb-5 inline-flex rounded-xl bg-gradient-to-br from-accent/20 to-accent/5 p-4 text-accent">
+                    <x-icon name="slider-horizontal-01" class="h-8 w-8" />
                 </div>
-                <h3 class="text-xl font-semibold mb-3">Markdown Content</h3>
-                <p class="text-muted-foreground">
-                    Markdown is the web's leading format for writing documentation. Jigsaw makes it painless to work with Markdown content.
+                <h3 class="text-xl font-bold mb-3">Fully Customizable</h3>
+                <p class="text-muted-foreground leading-relaxed">
+                    Built with Tailwind CSS v4 utilities. Customize colors, spacing, and styles directly in your markup.
                 </p>
             </div>
 
             <!-- Feature 3 -->
-            <div class="group relative rounded-xl border bg-card p-8 shadow-sm transition-all hover:shadow-md">
-                <div class="mb-4 inline-flex rounded-lg bg-primary/10 p-3 text-primary">
-                    <x-icon name="zap" class="h-8 w-8" />
+            <div class="group relative rounded-2xl border bg-card p-8 shadow-sm transition-all hover:shadow-lg hover:-translate-y-1">
+                <div class="mb-5 inline-flex rounded-xl bg-gradient-to-br from-primary/20 to-primary/5 p-4 text-primary">
+                    <x-icon name="lightning-01" class="h-8 w-8" />
                 </div>
-                <h3 class="text-xl font-semibold mb-3">Vite for Assets</h3>
-                <p class="text-muted-foreground">
-                    Jigsaw comes pre-configured with Vite, a simple and powerful build tool. Use the latest frontend tech with ease.
+                <h3 class="text-xl font-bold mb-3">Laravel Native</h3>
+                <p class="text-muted-foreground leading-relaxed">
+                    Designed for Laravel, Livewire 4, and Alpine.js. Works seamlessly with your existing Laravel stack.
                 </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA Section -->
+<section class="border-t">
+    <div class="container max-w-screen-xl mx-auto px-4 lg:px-8 py-24">
+        <div class="relative overflow-hidden rounded-3xl bg-gradient-to-br from-primary via-primary/90 to-accent p-12 md:p-16 text-center">
+            <!-- Decorative elements -->
+            <div class="absolute top-0 right-0 w-64 h-64 bg-white/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2"></div>
+            <div class="absolute bottom-0 left-0 w-64 h-64 bg-black/10 rounded-full blur-3xl translate-y-1/2 -translate-x-1/2"></div>
+
+            <div class="relative">
+                <h2 class="text-3xl md:text-4xl font-bold text-primary-foreground mb-4">
+                    Ready to build something beautiful?
+                </h2>
+                <p class="text-lg text-primary-foreground/90 mb-8 max-w-2xl mx-auto">
+                    Get started with Velyx and add stunning UI components to your Laravel project in minutes.
+                </p>
+                <a href="/docs/installation" class="inline-flex items-center justify-center rounded-xl bg-background px-8 py-4 text-base font-semibold text-foreground shadow-xl hover:bg-background/90 transition-all">
+                    Read the Documentation
+                    <x-icon name="arrow-right-02" class="ml-2 h-5 w-5" />
+                </a>
             </div>
         </div>
     </div>

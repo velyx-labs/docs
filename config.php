@@ -5,8 +5,8 @@ use Illuminate\Support\Str;
 return [
     'baseUrl' => env('APP_URL', 'http://localhost:8000'),
     'production' => false,
-    'siteName' => 'Docs Starter Template',
-    'siteDescription' => 'Beautiful docs powered by Jigsaw',
+    'siteName' => 'Velyx',
+    'siteDescription' => 'Deliver beautiful UI components to your Laravel projects',
 
     // Algolia DocSearch credentials
     'docsearchAppId' => env('DOCSEARCH_APP_ID'),

@@ -90,7 +90,11 @@ Register listeners in `bootstrap/app.php` via `$events->listen()`.
 
 ## Icons
 
-**HugeIcons** via custom Blade component - Use the `<x-icon>` component:
+Two icon systems are available:
+
+### HugeIcons (General UI Icons)
+
+Use the `<x-icon>` component for general UI icons:
 
 ```blade
 <x-icon name="arrow-right-02" class="ml-2 h-5 w-5" />
@@ -104,6 +108,28 @@ The component accepts:
 - All standard SVG attributes (`width`, `height`, `color`, `stroke-width`, etc.)
 
 Icon component location: `source/_components/icon.blade.php`
+
+### Brand/Technology Icons
+
+Use dedicated Blade components for technology stack icons:
+
+```blade
+<x-icons.laravel />
+<x-icons.tailwind />
+<x-icons.alpinejs />
+<x-icons.livewire />
+<x-icons.github />
+<x-icons.twitter />
+<x-icons.linkedin />
+```
+
+These icons have a default `size-5` class and can be customized with the `$attributes` merge:
+
+```blade
+<x-icons.laravel class="h-6 w-6" />
+```
+
+Icon components location: `source/_components/icons/`
 
 ## Tailwind CSS & Design System
 
