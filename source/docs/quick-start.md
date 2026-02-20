@@ -14,7 +14,7 @@ Add your first component to your Laravel project in minutes.
 If you haven't already, run the init command:
 
 ```bash
-velyx init
+npx velyx init
 ```
 
 ## 2. Add a Component
@@ -22,7 +22,7 @@ velyx init
 Use the CLI to add a component:
 
 ```bash
-velyx add button
+npx velyx add button
 ```
 
 This will:

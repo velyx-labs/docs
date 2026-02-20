@@ -11,38 +11,28 @@ Get started with Velyx in your Laravel project.
 
 ## Prerequisites
 
-Before installing Velyx, make sure you have:
+Before using Velyx, make sure you have:
 
 - **Laravel** 11.0 or higher
 - **Node.js** 20 or higher
 - **PHP** 8.2 or higher
 - **Tailwind CSS** v4 installed in your project
 
-## Install the CLI
-
-Install the Velyx CLI globally via npm:
-
-```bash
-npm install -g velyx
-```
-
-Or use pnpm:
-
-```bash
-pnpm add -g velyx
-```
+<x-callout type="info" title="No Installation Required">
+Velyx works via <code>npx</code> — no global installation needed! Just ensure you have Node.js 20+ in your Laravel project.
+</x-callout>
 
 ## Initialize Velyx
 
 Run the init command in your Laravel project:
 
 ```bash
-velyx init
+npx velyx init
 ```
 
 This will:
 
-1. Create a `velar.config` file in your project root
+1. Create a `velyx.config` file in your project root
 2. Add the necessary CSS imports to your Tailwind configuration
 3. Set up the component paths
 
@@ -51,10 +41,14 @@ This will:
 Browse the [components library](/docs/components) and add components to your project:
 
 ```bash
-velyx add button
+npx velyx add button
 ```
 
 Components are copied directly into your project — you own the code and can customize them however you want.
+
+<x-callout type="warning">
+<strong>Note:</strong> Make sure to commit your changes before adding components, as Velyx will copy files into your project.
+</x-callout>
 
 ## What's Next?
 
