@@ -102,7 +102,6 @@
         <script src="https://cdn.jsdelivr.net/npm/prismjs/prism.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/prismjs/plugins/autoloader/prism-autoloader.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/@docsearch/js@3"></script>
-        <script src="/source/_assets/js/copy-button.js"></script>
 
         @stack('scripts')
     </body>
