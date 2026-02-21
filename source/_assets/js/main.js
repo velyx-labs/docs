@@ -1,8 +1,44 @@
+import Prism from "prismjs"
 // NICO: DocSearch
 // window.docsearch = require('docsearch.js');
 
+// Dark mode toggle
+function initDarkMode() {
+    const toggle = document.getElementById('dark-mode-toggle');
+    if (!toggle) return;
+
+    // Check for saved preference or system preference
+    const savedTheme = localStorage.getItem('theme');
+    const systemDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+    // Apply theme on load
+    if (savedTheme === 'dark' || (!savedTheme && systemDark)) {
+        document.documentElement.classList.add('dark');
+        updateIcon(true);
+    } else {
+        updateIcon(false);
+    }
+
+    // Toggle theme
+    toggle.addEventListener('click', () => {
+        const isDark = document.documentElement.classList.toggle('dark');
+        localStorage.setItem('theme', isDark ? 'dark' : 'light');
+        updateIcon(isDark);
+    });
+
+    function updateIcon(isDark) {
+        const sunIcon = toggle.querySelector('.sun-icon');
+        const moonIcon = toggle.querySelector('.moon-icon');
+        if (sunIcon && moonIcon) {
+            sunIcon.style.display = isDark ? 'block' : 'none';
+            moonIcon.style.display = isDark ? 'none' : 'block';
+        }
+    }
+}
+
 // Add copy button to all code blocks
 document.addEventListener('DOMContentLoaded', function() {
+    initDarkMode();
     const codeBlocks = document.querySelectorAll('.prose pre');
 
     codeBlocks.forEach(block => {
@@ -10,7 +46,7 @@ document.addEventListener('DOMContentLoaded', function() {
         if (block.querySelector('.copy-button')) return;
 
         const button = document.createElement('button');
-        button.className = 'copy-button absolute top-2 right-2 p-2 rounded-md bg-muted hover:bg-muted-foreground/20 text-muted-foreground hover:text-foreground transition-opacity opacity-0 group-hover:opacity-100';
+        button.className = 'copy-button cursor-pointer absolute top-2 right-2 p-2 rounded-md bg-muted hover:bg-muted-foreground/20 text-muted-foreground hover:text-foreground transition-opacity opacity-50 group-hover:opacity-100';
         button.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg>`;
         button.setAttribute('aria-label', 'Copy code');
 

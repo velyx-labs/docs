@@ -123,7 +123,7 @@ $classes = implode(' ', [
 
 Apply your custom theme to specific components:
 
-```blade
+```php
 <x-button class="bg-gradient-to-r from-purple-500 to-pink-500">
     Custom Gradient Button
 </x-button>
