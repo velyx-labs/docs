@@ -5,30 +5,31 @@ body {
 a {
     @apply font-semibold;
     @apply no-underline;
-    @apply text-blue-600;
+    @apply text-primary;
 
     &:hover {
-        @apply text-blue-800;
+        @apply text-primary/80;
     }
 }
 
 blockquote {
-    @apply border-blue-400;
+    @apply border-primary/30;
     @apply border-l-4;
     @apply font-normal;
     @apply italic;
     @apply my-8;
     @apply pl-6;
-    @apply text-gray-800;
+    @apply text-muted-foreground;
     @apply text-lg;
 }
 
 code {
-    @apply bg-gray-300;
+    @apply bg-muted;
     @apply px-2;
     @apply py-px;
-    @apply rounded-sm;
+    @apply rounded-md;
     @apply text-sm;
+    @apply text-foreground;
 }
 
 code.hljs {
@@ -52,7 +53,7 @@ h6 {
     @apply leading-tight;
     @apply mb-4;
     @apply mt-8;
-    @apply text-gray-900;
+    @apply text-foreground;
 
     &:first-child {
         @apply mt-0;
@@ -91,7 +92,7 @@ h6 {
 
 hr {
     @apply border-b;
-    @apply border-blue-200;
+    @apply border-border;
     @apply my-12;
     @apply rounded-full;
 }
@@ -121,14 +122,16 @@ p {
 }
 
 pre {
-    @apply bg-gray-200;
+    @apply bg-muted/50;
     @apply leading-loose;
     @apply my-6;
     @apply overflow-x-auto;
     @apply p-4;
-    @apply rounded-sm;
+    @apply rounded-lg;
     @apply shadow-sm;
     @apply text-base;
+    @apply border;
+    @apply border-border;
 
     code {
         @apply bg-transparent;
@@ -138,6 +141,6 @@ pre {
 }
 
 ::selection {
-    @apply bg-blue-500;
-    @apply text-white;
+    @apply bg-primary/20;
+    @apply text-foreground;
 }
