@@ -1,8 +1,31 @@
-/build_*/
-/node_modules/
-/vendor/
-/source/assets/build/
+# Dependencies
+/node_modules
+/vendor
+
+# Build output
+/build
+/dist
+
+# Environment
 .env
-npm-debug.log
-hot
+.env.local
+.env.*.local
+
+# IDE
 .idea
+.vscode
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Jigsaw
+/cache
+/local
+
+# Temp files
+*.tmp
+*.log
