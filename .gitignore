@@ -26,6 +26,10 @@ Thumbs.db
 /cache
 /local
 
+# Build directories
+/build_local
+/build_production
+
 # Temp files
 *.tmp
 *.log
