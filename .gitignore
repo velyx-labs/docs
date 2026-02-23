@@ -1,8 +1,37 @@
 /build_*/
-/node_modules/
-/vendor/
 /source/assets/build/
-.env
 npm-debug.log
 hot
+
+# Dependencies
+/node_modules
+/vendor
+
+# Build output
+/build
+/dist
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# IDE
 .idea
+.vscode
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Jigsaw
+/cache
+/local
+
+
+# Temp files
+*.tmp
+*.log
