@@ -60,7 +60,7 @@ Velyx uses CSS variables for theming. You can customize these in your Tailwind C
 
 Velyx supports dark mode out of the box. Add the `.dark` class to any element to switch its descendants to dark mode:
 
-```blade
+```php
 <html class="dark">
     <!-- Your content here -->
 </html>
@@ -82,7 +82,7 @@ Since components are copied directly into your project, you can customize them h
 
 ### Example: Custom Button Variant
 
-```blade
+```php
 <!-- resources/views/components/button.blade.php -->
 
 @props([

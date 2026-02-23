@@ -15,7 +15,7 @@ Beautiful, accessible components built with Blade, Tailwind CSS v4, and Alpine.j
 
 A versatile button component with multiple variants and sizes.
 
-```blade
+```php
 <x-button>Default</x-button>
 <x-button variant="secondary">Secondary</x-button>
 <x-button variant="outline">Outline</x-button>
@@ -32,7 +32,7 @@ A versatile button component with multiple variants and sizes.
 
 A flexible card component for displaying content with header and footer slots.
 
-```blade
+```php
 <x-card>
     <x-slot:header>
         <h3 class="text-lg font-semibold">Card Title</h3>
@@ -54,7 +54,7 @@ A flexible card component for displaying content with header and footer slots.
 
 A form input component with validation support.
 
-```blade
+```php
 <x-input type="email" placeholder="Email" />
 <x-input type="password" placeholder="Password" />
 ```
@@ -69,7 +69,7 @@ A form input component with validation support.
 
 A dialog modal component for overlays and alerts using Alpine.js.
 
-```blade
+```php
 <div x-data="{ open: false }">
     <x-button @click="open = true">Open Modal</x-button>
     <x-modal x-model="open">

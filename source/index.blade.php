@@ -98,8 +98,8 @@
 
             <!-- Feature 2 -->
             <div class="group relative rounded-2xl border bg-card p-8 shadow-sm transition-all hover:shadow-lg hover:-translate-y-1">
-                <div class="mb-5 inline-flex rounded-xl bg-gradient-to-br from-accent/20 to-accent/5 p-4 text-accent">
-                    <x-icon name="slider-horizontal-01" class="h-8 w-8" />
+                <div class="mb-5 inline-flex rounded-xl bg-gradient-to-br from-primary/20 to-primary/5 p-4 text-primary">
+                    <x-icon name="sliders-horizontal" class="h-8 w-8" />
                 </div>
                 <h3 class="text-xl font-bold mb-3">Fully Customizable</h3>
                 <p class="text-muted-foreground leading-relaxed">
@@ -110,7 +110,7 @@
             <!-- Feature 3 -->
             <div class="group relative rounded-2xl border bg-card p-8 shadow-sm transition-all hover:shadow-lg hover:-translate-y-1">
                 <div class="mb-5 inline-flex rounded-xl bg-gradient-to-br from-primary/20 to-primary/5 p-4 text-primary">
-                    <x-icon name="lightning-01" class="h-8 w-8" />
+                    <x-icon name="drooling" class="h-8 w-8" />
                 </div>
                 <h3 class="text-xl font-bold mb-3">Laravel Native</h3>
                 <p class="text-muted-foreground leading-relaxed">

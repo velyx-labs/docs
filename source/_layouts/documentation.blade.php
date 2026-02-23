@@ -16,7 +16,7 @@
 
         {{-- Main Content --}}
         <main class="flex-1 min-w-0">
-            <div class="DocSearch-content prose prose-slate max-w-none" v-pre>
+            <div class="DocSearch-content prose prose-zinc dark:prose-invert max-w-none" v-pre>
                 @yield('content')
             </div>
         </main>

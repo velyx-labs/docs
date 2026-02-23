@@ -89,7 +89,7 @@ Used for dangerous actions like delete or remove.
 
 Components reference these CSS variables:
 
-```blade
+```php
 <button class="bg-primary text-primary-foreground hover:bg-primary/90">
     Click me
 </button>

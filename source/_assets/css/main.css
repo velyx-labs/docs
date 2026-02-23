@@ -1,4 +1,4 @@
-@import "./base.css" layer(components);
+/*@import "./base.css" layer(components);*/
 @import "./navigation.css" layer(components);
 @import "./documentation.css" layer(components);
 
@@ -7,7 +7,6 @@
 @import "shadcn/tailwind.css";
 
 @plugin "@tailwindcss/typography";
-
 
 @custom-variant dark (&:is(.dark *));
 
@@ -136,7 +135,7 @@
     ::before,
     ::backdrop,
     ::file-selector-button {
-        border-color: var(--color-gray-200, currentcolor);
+        @apply border-border;
     }
     code {
         @apply font-mono!;
@@ -176,7 +175,13 @@
 
 :not(pre) > code[class*="language-"],
 pre[class*="language-"] {
-    background: #e5e7eb;
+    @apply bg-muted! text-muted-foreground!;
+}
+code[class*="language-"],
+pre[class*="language-"] {
+    @apply text-shadow-[0_1px_white]! text-muted-foreground!; /* light mode */
+
+    @apply dark:text-shadow-[0_1px_#0000]! dark:text-muted-foreground!;
 }
 
 .token.operator,
@@ -184,5 +189,5 @@ pre[class*="language-"] {
 .token.url,
 .language-css .token.string,
 .style .token.string {
-    background: transparent;
+    background: transparent !important;
 }

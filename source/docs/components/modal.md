@@ -25,7 +25,7 @@ npx velyx add modal
 
 ### Basic Modal
 
-```blade
+```php
 <div x-data="{ open: false }">
     <x-button @click="open = true">Open Modal</x-button>
 
@@ -42,7 +42,7 @@ npx velyx add modal
 
 ### Modal with Header and Footer
 
-```blade
+```php
 <div x-data="{ open: false }">
     <x-button @click="open = true">Open Modal</x-button>
 
@@ -80,7 +80,7 @@ npx velyx add modal
 
 ### Confirmation Modal
 
-```blade
+```php
 <div x-data="{ open: false }">
     <x-button variant="destructive" @click="open = true">
         <x-icon name="trash" class="mr-2" />
@@ -123,7 +123,7 @@ npx velyx add modal
 
 ### Form Modal
 
-```blade
+```php
 <div x-data="{ open: false }">
     <x-button @click="open = false">Add User</x-button>
 
@@ -165,7 +165,7 @@ npx velyx add modal
 
 ### Image Preview Modal
 
-```blade
+```php
 <div x-data="{ open: false, image: null }">
     <button @click="open = true; image = '{{ $image->url }}'" class="block">
         <img src="{{ $image->thumbnail }}" alt="Thumbnail">
@@ -181,7 +181,7 @@ npx velyx add modal
 
 ### Nested Modals
 
-```blade
+```php
 <div x-data="{ open: false, confirmOpen: false }">
     <x-button @click="open = true">Open Modal</x-button>
 
@@ -205,7 +205,7 @@ npx velyx add modal
 
 ### Size Variants
 
-```blade
+```php
 <!-- Small modal -->
 <x-modal x-model="open" class="max-w-sm">
     <!-- Content -->
@@ -224,7 +224,7 @@ npx velyx add modal
 
 ### Custom Styling
 
-```blade
+```php
 <x-modal x-model="open" class="!p-0">
     <!-- Custom padding -->
 </x-modal>

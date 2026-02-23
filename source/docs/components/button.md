@@ -21,13 +21,13 @@ npx velyx add button
 
 ### Basic Button
 
-```blade
+```php
 <x-button>Click me</x-button>
 ```
 
 ### Variants
 
-```blade
+```php
 <x-button variant="default">Default</x-button>
 <x-button variant="primary">Primary</x-button>
 <x-button variant="secondary">Secondary</x-button>
@@ -38,7 +38,7 @@ npx velyx add button
 
 ### Sizes
 
-```blade
+```php
 <x-button size="sm">Small</x-button>
 <x-button size="default">Default</x-button>
 <x-button size="lg">Large</x-button>
@@ -46,7 +46,7 @@ npx velyx add button
 
 ### With Icons
 
-```blade
+```php
 <x-button>
     <x-icon name="plus" class="mr-2" />
     Add Item
@@ -60,7 +60,7 @@ npx velyx add button
 
 ### Icon Only
 
-```blade
+```php
 <x-button size="icon">
     <x-icon name="x" />
 </x-button>
@@ -97,7 +97,7 @@ npx velyx add button
 
 ### Submit Form
 
-```blade
+```php
 <form method="POST" action="/submit">
     @csrf
     <x-button type="submit">Submit</x-button>
@@ -106,7 +106,7 @@ npx velyx add button
 
 ### Link Button
 
-```blade
+```php
 <a href="{{ route('dashboard') }}">
     <x-button>Go to Dashboard</x-button>
 </a>
@@ -114,7 +114,7 @@ npx velyx add button
 
 ### Disabled State
 
-```blade
+```php
 <x-button disabled>
     Disabled
 </x-button>
@@ -122,7 +122,7 @@ npx velyx add button
 
 ### Full Width
 
-```blade
+```php
 <x-button class="w-full">
     Full Width Button
 </x-button>
@@ -134,7 +134,7 @@ The button component uses Tailwind CSS classes. You can customize the appearance
 
 1. **Modifying the component directly:**
 
-```blade
+```php
 <!-- resources/views/components/button.blade.php -->
 
 @props([

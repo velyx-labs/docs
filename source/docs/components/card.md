@@ -21,7 +21,7 @@ npx velyx add card
 
 ### Basic Card
 
-```blade
+```php
 <x-card>
     <p>Card content goes here.</p>
 </x-card>
@@ -29,7 +29,7 @@ npx velyx add card
 
 ### Card with Header
 
-```blade
+```php
 <x-card>
     <x-slot:header>
         <h3 class="text-lg font-semibold">Card Title</h3>
@@ -42,7 +42,7 @@ npx velyx add card
 
 ### Card with Footer
 
-```blade
+```php
 <x-card>
     <p>Card content goes here.</p>
 
@@ -54,7 +54,7 @@ npx velyx add card
 
 ### Complete Card
 
-```blade
+```php
 <x-card>
     <x-slot:header>
         <h3 class="text-lg font-semibold">Analytics Overview</h3>
@@ -89,7 +89,7 @@ npx velyx add card
 
 ### User Profile Card
 
-```blade
+```php
 <x-card class="max-w-sm">
     <div class="flex flex-col items-center space-y-4">
         <img src="https://ui-avatars.com/api/?name=John+Doe" alt="Avatar" class="w-20 h-20 rounded-full">
@@ -109,7 +109,7 @@ npx velyx add card
 
 ### Feature Card
 
-```blade
+```php
 <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
     @foreach($features as $feature)
     <x-card>
@@ -132,7 +132,7 @@ npx velyx add card
 
 ### Stats Card
 
-```blade
+```php
 <x-card>
     <div class="flex items-center justify-between">
         <div>
@@ -150,7 +150,7 @@ npx velyx add card
 
 ### Pricing Card
 
-```blade
+```php
 <x-card class="max-w-sm">
     <x-slot:header>
         <h3 class="text-xl font-bold">Pro Plan</h3>
@@ -185,7 +185,7 @@ npx velyx add card
 
 ### Custom Styling
 
-```blade
+```php
 <x-card class="border-2 border-primary shadow-lg">
     <!-- Your content -->
 </x-card>
@@ -193,7 +193,7 @@ npx velyx add card
 
 ### Custom Background
 
-```blade
+```php
 <x-card class="bg-gradient-to-br from-primary/10 to-primary/5">
     <!-- Your content -->
 </x-card>
@@ -203,7 +203,7 @@ npx velyx add card
 
 Use cards with responsive grids for layouts:
 
-```blade
+```php
 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
     <x-card>Card 1</x-card>
     <x-card>Card 2</x-card>

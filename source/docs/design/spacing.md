@@ -39,12 +39,12 @@ Tailwind uses a consistent spacing scale where values increment proportionally:
 ## Padding
 
 ### All Sides
-```blade
+```php
 <div class="p-4">Equal padding on all sides</div>
 ```
 
 ### Individual Sides
-```blade
+```php
 <div class="px-4 py-2">Horizontal and vertical padding</div>
 <div class="pt-4 pr-2 pb-4 pl-2">Individual side padding</div>
 ```
@@ -62,12 +62,12 @@ Tailwind uses a consistent spacing scale where values increment proportionally:
 ## Margin
 
 ### All Sides
-```blade
+```php
 <div class="m-4">Equal margin on all sides</div>
 ```
 
 ### Individual Sides
-```blade
+```php
 <div class="mx-auto my-4">Horizontal auto, vertical margin</div>
 <div class="mt-4 mr-2 mb-4 ml-2">Individual side margins</div>
 ```
@@ -87,7 +87,7 @@ Tailwind uses a consistent spacing scale where values increment proportionally:
 
 Use `gap` utilities for spacing between flex or grid children instead of margins:
 
-```blade
+```php
 <!-- Flexbox with gap -->
 <div class="flex gap-4">
     <div>Item 1</div>
@@ -116,7 +116,7 @@ Use `gap` utilities for spacing between flex or grid children instead of margins
 
 For separating elements vertically, use `space-y`:
 
-```blade
+```php
 <div class="space-y-4">
     <div>Item 1</div>
     <div>Item 2</div>
@@ -126,7 +126,7 @@ For separating elements vertically, use `space-y`:
 
 For horizontal spacing:
 
-```blade
+```php
 <div class="flex space-x-4">
     <div>Item 1</div>
     <div>Item 2</div>
@@ -137,7 +137,7 @@ For horizontal spacing:
 ## Common Patterns
 
 ### Card Spacing
-```blade
+```php
 <div class="p-6 space-y-4">
     <h2>Title</h2>
     <p>Description</p>
@@ -146,21 +146,21 @@ For horizontal spacing:
 ```
 
 ### Button Padding
-```blade
+```php
 <button class="px-4 py-2">Default Button</button>
 <button class="px-3 py-1.5 text-sm">Small Button</button>
 <button class="px-6 py-3 text-lg">Large Button</button>
 ```
 
 ### Container Spacing
-```blade
+```php
 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <!-- Content with responsive horizontal padding -->
 </div>
 ```
 
 ### Section Spacing
-```blade
+```php
 <section class="py-12 lg:py-20">
     <!-- Content with vertical spacing -->
 </section>
@@ -170,7 +170,7 @@ For horizontal spacing:
 
 Adjust spacing at different breakpoints:
 
-```blade
+```php
 <div class="p-4 md:p-6 lg:p-8">
     Responsive padding
 </div>
@@ -184,7 +184,7 @@ Adjust spacing at different breakpoints:
 
 For pulling elements out of their container:
 
-```blade
+```php
 <div class="-mt-4">Negative top margin</div>
 <div class="-mx-4">Negative horizontal margins</div>
 ```

@@ -33,7 +33,7 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@100..900&family=Geist:wght@100..900&family=Instrument+Sans:ital,wght@0,400..700;1,400..700&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-
+        <link rel="stylesheet" href="https://prismjs.com/plugins/line-numbers/prism-line-numbers.css">
         <link href="https://cdn.jsdelivr.net/npm/prismjs/themes/prism.css" rel="stylesheet" />
         <link href="https://cdn.jsdelivr.net/npm/@docsearch/css@3" rel="stylesheet" />
 
@@ -69,16 +69,15 @@
 
                     <button
                         id="dark-mode-toggle"
-                        class="inline-flex items-center justify-center rounded-lg p-2 text-muted-foreground hover:bg-muted hover:text-foreground transition-all"
+                        class="inline-flex items-center justify-center rounded-lg p-2 text-primary hover:bg-muted hover:text-foreground transition-all"
                         aria-label="Toggle dark mode"
                     >
-                        <x-icon name="moon" class="moon-icon h-5 w-5" />
-                        <x-icon name="sun" class="sun-icon h-5 w-5 hidden" />
+                        <x-icon name="moon-01" class="moon-icon" />
+                        <x-icon name="sun-01" class="sun-icon" />
                     </button>
 
                     <a href="/docs/installation" class="hidden sm:inline-flex items-center justify-center rounded-lg bg-primary px-4 py-2 text-sm font-semibold text-primary-foreground shadow-sm hover:bg-primary/90 transition-all">
                         Get Started
-                        <x-icon name="arrow-right-02" class="ml-1.5 h-4 w-4" />
                     </a>
                 </div>
             </div>

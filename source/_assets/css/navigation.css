@@ -1,7 +1,7 @@
 .nav-menu {
     @apply -mt-12;
     @apply -mx-8;
-    @apply bg-gray-200;
+    @apply bg-background;
     @apply mb-8;
     @apply pb-4;
     @apply pt-8;
@@ -28,6 +28,6 @@
     @apply no-underline;
     @apply mb-3;
     @apply mt-0;
-    @apply text-gray-800;
+    @apply text-foreground;
     @apply text-sm;
 }

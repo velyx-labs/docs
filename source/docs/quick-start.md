@@ -35,7 +35,7 @@ This will:
 
 The component is now available in your project. Use it in your Blade templates:
 
-```blade
+```php
 <x-button>Click me</x-button>
 
 <x-button variant="secondary">Secondary Action</x-button>
@@ -47,7 +47,7 @@ The component is now available in your project. Use it in your Blade templates:
 
 Components are copied directly into your project, so you can customize them however you want:
 
-```blade
+```php
 <!-- resources/views/components/button.blade.php -->
 
 @props([

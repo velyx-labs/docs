@@ -25,26 +25,26 @@ npx velyx add input
 
 ### Basic Input
 
-```blade
+```php
 <x-input />
 ```
 
 ### With Label
 
-```blade
+```php
 <x-label for="email">Email Address</x-label>
 <x-input id="email" type="email" placeholder="user@example.com" />
 ```
 
 ### With Value
 
-```blade
+```php
 <x-input value="{{ old('title') }}" />
 ```
 
 ### Laravel Form Integration
 
-```blade
+```php
 <form method="POST" action="{{ route('profile.update') }}">
     @csrf
     @method('put')
@@ -78,7 +78,7 @@ npx velyx add input
 
 ## Input Types
 
-```blade
+```php
 <x-input type="text" />
 <x-input type="email" />
 <x-input type="password" />
@@ -92,7 +92,7 @@ npx velyx add input
 
 ### Login Form
 
-```blade
+```php
 <x-card>
     <x-slot:header>
         <h2 class="text-2xl font-bold">Welcome Back</h2>
@@ -150,7 +150,7 @@ npx velyx add input
 
 ### Search Input
 
-```blade
+```php
 <div class="relative">
     <x-icon name="search" class="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-muted-foreground" />
     <x-input
@@ -163,7 +163,7 @@ npx velyx add input
 
 ### Input with Icon
 
-```blade
+```php
 <div class="relative">
     <x-icon name="mail" class="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-muted-foreground" />
     <x-input
@@ -176,14 +176,14 @@ npx velyx add input
 
 ### Disabled Input
 
-```blade
+```php
 <x-label for="disabled">Disabled Input</x-label>
 <x-input id="disabled" disabled value="Cannot edit" />
 ```
 
 ### Readonly Input
 
-```blade
+```php
 <x-label for="readonly">Readonly Input</x-label>
 <x-input id="readonly" readonly value="john@example.com" />
 ```
@@ -192,7 +192,7 @@ npx velyx add input
 
 Display validation errors with inputs:
 
-```blade
+```php
 <div>
     <x-label for="username">Username</x-label>
     <x-input
@@ -211,7 +211,7 @@ Display validation errors with inputs:
 
 Add helper text below inputs:
 
-```blade
+```php
 <div>
     <x-label for="password">Password</x-label>
     <x-input id="password" type="password" />
@@ -225,13 +225,13 @@ Add helper text below inputs:
 
 ### Custom Styling
 
-```blade
+```php
 <x-input class="bg-muted border-0" />
 ```
 
 ### Custom Sizes
 
-```blade
+```php
 <x-input class="px-2 py-1 text-sm" />
 <x-input class="px-4 py-3 text-lg" />
 ```

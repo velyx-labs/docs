@@ -35,7 +35,7 @@ The fonts are loaded via Google Fonts. You can customize these in your theme con
 
 Velyx uses the `@tailwindcss/typography` plugin for styling Markdown content. Apply the `prose` class to content containers:
 
-```blade
+```php
 <div class="prose prose-slate max-w-none">
     {{ $markdownContent }}
 </div>
@@ -81,28 +81,28 @@ Velyx uses the `@tailwindcss/typography` plugin for styling Markdown content. Ap
 ## Examples
 
 ### Body Text
-```blade
+```php
 <p class="text-base leading-normal text-foreground">
     This is the default body text styling with comfortable line height for readability.
 </p>
 ```
 
 ### Heading
-```blade
+```php
 <h1 class="text-4xl font-bold tracking-tight text-foreground">
     Page Title
 </h1>
 ```
 
 ### Small Text
-```blade
+```php
 <p class="text-sm text-muted-foreground">
     Secondary information or helper text
 </p>
 ```
 
 ### Code
-```blade
+```php
 <code class="font-mono text-sm bg-muted px-1.5 py-0.5 rounded">
     npm install velyx
 </code>
@@ -112,7 +112,7 @@ Velyx uses the `@tailwindcss/typography` plugin for styling Markdown content. Ap
 
 Use responsive prefixes to adjust text at different breakpoints:
 
-```blade
+```php
 <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold">
     Responsive Heading
 </h1>
