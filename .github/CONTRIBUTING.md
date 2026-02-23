@@ -1,6 +1,6 @@
-# Contributing to Velyx Docs
+# Contributing to Velyx CLI
 
-Thank you for your interest in contributing to the Velyx documentation! This document provides guidelines and instructions for contributing.
+Thank you for your interest in contributing to the Velyx CLI! This document provides guidelines and instructions for contributing.
 
 ## Table of Contents
 
@@ -10,8 +10,9 @@ Thank you for your interest in contributing to the Velyx documentation! This doc
   - [Suggesting Enhancements](#suggesting-enhancements)
   - [Pull Requests](#pull-requests)
 - [Development Setup](#development-setup)
-- [Documentation Standards](#documentation-standards)
-- [Style Guidelines](#style-guidelines)
+- [Project Architecture](#project-architecture)
+- [Coding Standards](#coding-standards)
+- [Testing](#testing)
 
 ## Code of Conduct
 
@@ -29,9 +30,10 @@ Before creating bug reports, please check the existing issues to avoid duplicate
 - Steps to reproduce the issue
 - Expected behavior
 - Actual behavior
-- Screenshots if applicable
-- Environment details (OS, browser, etc.)
-- Any relevant error messages or logs
+- Error messages or stack traces
+- Node.js and pnpm versions
+- Laravel project version
+- Operating system
 
 ### Suggesting Enhancements
 
@@ -40,142 +42,321 @@ Enhancement suggestions are tracked as GitHub issues. When creating an enhanceme
 - Use a clear and descriptive title
 - Provide a detailed description of the proposed enhancement
 - Explain why this enhancement would be useful
-- List examples or mockups if applicable
+- List examples or use cases
 - Consider whether it fits the project's scope and goals
 
 ### Pull Requests
 
 1. **Fork the repository** and create your branch from `main`.
-2. **Make your changes** following our [Documentation Standards](#documentation-standards).
-3. **Test your changes** thoroughly by running the documentation site locally.
-4. **Commit your changes** with clear, descriptive commit messages.
-5. **Push to your branch** and create a Pull Request.
+2. **Make your changes** following our [Coding Standards](#coding-standards).
+3. **Add tests** for your changes.
+4. **Ensure all tests pass**.
+5. **Commit your changes** with clear, descriptive commit messages.
+6. **Push to your branch** and create a Pull Request.
 
 **Pull Request Checklist:**
 
-- [ ] Title follows the convention (e.g., "Fix: broken link in installation guide")
+- [ ] Title follows the convention (e.g., "fix: handle edge case in component install")
 - [ ] Description clearly explains the changes and their rationale
-- [ ] Commits are logically organized and have clear messages
-- [ ] Documentation builds successfully
-- [ ] Links have been tested and work correctly
-- [ ] Spelling and grammar have been checked
-- [ ] Code follows the project's style guidelines
+- [ ] Code follows TypeScript and project conventions
+- [ ] Tests are included and pass
+- [ ] Documentation is updated if needed
+- [ ] No breaking changes without proper justification
 
 ## Development Setup
 
-The documentation site uses Jigsaw (PHP static site generator) with Vite for asset building.
+The Velyx CLI is a Node.js/TypeScript CLI tool for adding components to Laravel projects.
 
 ### Prerequisites
 
-- PHP 8.1 or higher
-- Composer
-- Node.js 18+ and pnpm
+- Node.js 18+ or 20+
+- pnpm 8+
+- TypeScript 5+
+- A Laravel project for testing
 
 ### Installation
 
 ```bash
-# Install PHP dependencies
-composer install
-
-# Install Node.js dependencies
+# Install dependencies
 pnpm install
+
+# Build the CLI
+pnpm build
+
+# Link for local testing
+pnpm link
+
+# Run the CLI
+velyx --help
 ```
 
-### Development
+### Development Workflow
 
 ```bash
-# Build assets (in one terminal)
-pnpm run dev
+# Watch mode for development
+pnpm dev
 
-# Start Jigsaw server (in another terminal)
-composer run dev
+# Run the built CLI
+pnpm start
+
+# Run linting
+pnpm check:ci
+
+# Run tests
+pnpm test
+
+# Run tests in watch mode
+pnpm test:watch
 ```
 
-The documentation site will be available at `http://localhost:8000`.
+### Testing in a Laravel Project
 
-### Building for Production
+To test the CLI in an actual Laravel project:
 
 ```bash
-pnpm run prod && vendor/bin/jigsaw build
+# In the velyx-cli directory
+pnpm link
+
+# In your Laravel project directory
+velyx add button
 ```
 
-## Documentation Standards
+## Project Architecture
 
-### Writing Style
+The CLI follows a service-oriented architecture with dependency injection:
 
-- **Be clear and concise** - Get to the point quickly
-- **Use active voice** - It's more direct and engaging
-- **Write for your audience** - Assume readers are Laravel developers
-- **Include examples** - Code examples help understanding
-- **Keep it up to date** - Documentation should match the current version
-
-### Markdown Formatting
-
-- Use ATX-style headings (`# Heading`)
-- Leave a blank line after headings
-- Use fenced code blocks with language specification
-- Include line breaks in paragraphs for readability
-- Use bullet points for lists of items
-
-### Code Examples
-
-All code examples should:
-
-- Be accurate and tested
-- Follow Laravel and PHP best practices
-- Include comments explaining complex logic
-- Use proper syntax highlighting
-- Show complete, runnable examples when possible
-
-### Front Matter
-
-Each documentation page should include proper YAML front matter:
-
-```yaml
----
-title: Page Title
-description: A brief description for meta tags
-section: Section Name
----
+```
+src/
+├── commands/          # CLI command definitions
+│   ├── add.ts
+│   ├── init.ts
+│   └── list.ts
+├── services/          # Business logic
+│   ├── AddService.ts
+│   ├── ComponentService.ts
+│   ├── RegistryService.ts
+│   └── DependencyService.ts
+├── utils/             # Utility functions
+│   ├── file.ts
+│   └── validation.ts
+├── config/            # Configuration
+│   └── constants.ts
+└── index.ts           # Entry point
 ```
 
-## Style Guidelines
+### Services
 
-### Headings
+Services accept interfaces for dependency injection and handle core business logic:
 
-- Use title case for headings
-- Keep headings descriptive but concise
-- Avoid skipping heading levels (e.g., don't jump from H2 to H4)
+- **AddService**: Handles component installation
+- **ComponentService**: Manages component data
+- **RegistryService**: Communicates with the component registry
+- **DependencyService**: Handles npm/Composer dependencies
 
-### Links
+### File Operations
 
-- Use descriptive link text (not "click here")
-- Test all links before submitting
-- Use relative links for internal documentation
-- Include HTTPS for external links
+File operations use a transaction-like pattern with backup/restore:
 
-### Images
+```typescript
+// Example pattern
+const backupPath = await backupFile(targetPath);
+try {
+  // Perform file operations
+  await writeFile(targetPath, content);
+} catch (error) {
+  await restoreFile(backupPath);
+  throw error;
+}
+```
 
-- Place images in `source/_assets/images/`
-- Use descriptive filenames (e.g., `installation-screenshot.png`)
-- Compress images for web
-- Include alt text for accessibility
-- Keep images relevant and helpful
+## Coding Standards
 
-### Code Blocks
+### TypeScript Standards
 
-- Specify the language for syntax highlighting
-- Include context around code blocks
-- Keep code blocks concise
-- Use line continuation indicators (`...`) for omitted code
+- Use strict TypeScript configuration
+- Type all function parameters and return values
+- Use interfaces for object shapes
+- Prefer `const` over `let`
+- Use template literals for string concatenation
+- Avoid `any` type
+
+### Code Style
+
+We use ESLint and Prettier for code formatting:
+
+```bash
+# Check for issues
+pnpm check:ci
+
+# Fix issues automatically
+pnpm lint:fix
+```
+
+### Command Structure
+
+CLI commands follow this pattern:
+
+```typescript
+import { Command } from 'commander';
+import { AddService } from '../services/AddService';
+
+export const addCommand = new Command('add')
+  .argument('<component>', 'Name of the component to add')
+  .option('-v, --version <version>', 'Specific version to install')
+  .description('Add a component to your Laravel project')
+  .action(async (component, options) => {
+    const service = new AddService(/* dependencies */);
+    await service.execute(component, options);
+  });
+```
+
+### Error Handling
+
+- Use custom error classes for specific error types
+- Provide clear, actionable error messages
+- Log errors appropriately
+- Clean up resources on error
+
+```typescript
+export class ComponentNotFoundError extends Error {
+  constructor(componentName: string) {
+    super(`Component "${componentName}" not found in registry`);
+    this.name = 'ComponentNotFoundError';
+  }
+}
+```
+
+### Validation
+
+Use Zod for input validation:
+
+```typescript
+import { z } from 'zod';
+
+const ComponentSchema = z.object({
+  name: z.string().min(1),
+  version: z.string().regex(/^\d+\.\d+\.\d+$/),
+  files: z.array(z.string()),
+});
+```
+
+## Testing
+
+We use Vitest for testing.
+
+### Running Tests
+
+```bash
+# Run all tests
+pnpm test
+
+# Run tests in watch mode
+pnpm test:watch
+
+# Run tests with coverage
+pnpm test:coverage
+
+# Run specific test file
+pnpm test -- add.test.ts
+```
+
+### Writing Tests
+
+- Write unit tests for all services
+- Write integration tests for CLI commands
+- Use descriptive test names
+- Follow Arrange-Act-Assert pattern
+- Mock external dependencies (registry API, file system)
+
+**Example:**
+
+```typescript
+import { describe, it, expect, vi } from 'vitest';
+import { AddService } from '../AddService';
+
+describe('AddService', () => {
+  it('should install component successfully', async () => {
+    // Arrange
+    const mockRegistry = { fetchComponent: vi.fn().mockResolvedValue({ /* ... */ }) };
+    const service = new AddService(mockRegistry);
+
+    // Act
+    await service.execute('button', {});
+
+    // Assert
+    expect(mockRegistry.fetchComponent).toHaveBeenCalledWith('button');
+  });
+});
+```
+
+### Test Coverage
+
+We aim for high test coverage. New features should include tests for:
+
+- Happy path scenarios
+- Error cases
+- Edge cases
+- Validation failures
+
+## Building
+
+### Build Commands
+
+```bash
+# Development build
+pnpm build
+
+# Production build
+pnpm build:prod
+
+# Watch mode
+pnpm dev
+```
+
+### Build Output
+
+The built CLI is output to `dist/` and can be run with:
+
+```bash
+node dist/index.js
+```
+
+## Publishing
+
+```bash
+# Publish to npm (beta)
+pnpm pub:beta
+
+# Publish to npm (next)
+pnpm pub:next
+
+# Publish to npm (latest)
+pnpm pub:release
+```
+
+## Useful Commands
+
+```bash
+# Check for outdated dependencies
+pnpm outdated
+
+# Update dependencies
+pnpm update
+
+# Audit for security vulnerabilities
+pnpm audit
+
+# Clean build artifacts
+pnpm clean
+```
 
 ## Getting Help
 
 If you need help contributing:
 
-- Check existing [documentation](https://docs.velyx.dev)
-- Search [existing issues](https://github.com/velyx-dev/docs/issues)
-- Start a [discussion](https://github.com/velyx-dev/docs/discussions)
+- Check [Velyx documentation](https://docs.velyx.dev)
+- Search [existing issues](https://github.com/velyx-dev/velyx-cli/issues)
+- Start a [discussion](https://github.com/velyx-dev/velyx-cli/discussions)
 - Contact us at [hello@velyx.dev](mailto:hello@velyx.dev)
 
 ## License
