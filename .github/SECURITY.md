@@ -10,7 +10,7 @@ Security updates are provided for the following versions:
 
 ## Reporting a Vulnerability
 
-If you discover a security vulnerability in the Velyx CLI, please follow these steps:
+If you discover a security vulnerability in the Velyx documentation or related systems, please follow these steps:
 
 ### Do NOT create a public issue
 
