@@ -18,18 +18,30 @@ What problem does this feature solve? What pain point does it address?
 
 Describe the solution you'd like. Include:
 
-- What documentation should be added/changed
-- Where it should be located
-- How it should be structured
-- Any examples or diagrams that would help
+- CLI command syntax
+- New options or flags
+- Expected behavior
+- Example usage
+
+```bash
+# Example usage
+velyx add button --variant="outline"
+```
 
 ## Alternatives Considered
 
 Describe any alternative solutions or features you've considered.
 
+## Impact
+
+- [ ] Breaking change
+- [ ] Requires registry API changes
+- [ ] Requires documentation update
+- [ ] Backward compatible
+
 ## Additional Context
 
-Add any other context or screenshots about the feature request here.
+Add any other context, mockups, or examples about the feature request here.
 
 ## Would you like to implement this?
 
