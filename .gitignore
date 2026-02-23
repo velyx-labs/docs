@@ -1,3 +1,8 @@
+/build_*/
+/source/assets/build/
+npm-debug.log
+hot
+
 # Dependencies
 /node_modules
 /vendor
@@ -26,9 +31,6 @@ Thumbs.db
 /cache
 /local
 
-# Build directories
-/build_local
-/build_production
 
 # Temp files
 *.tmp
