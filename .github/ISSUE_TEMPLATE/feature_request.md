@@ -8,7 +8,7 @@ assignees: ''
 
 ## Feature Description
 
-A clear and concise description of the feature you'd like to see added to the Velyx CLI.
+A clear and concise description of the feature you'd like to see added to the documentation.
 
 ## Problem Statement
 
@@ -47,3 +47,5 @@ Add any other context, mockups, or examples about the feature request here.
 
 - [ ] Yes, I'd like to implement this feature
 - [ ] No, I'm just proposing the idea
+
+If you'd like to implement this, please let us know and we can guide you through the contribution process.
