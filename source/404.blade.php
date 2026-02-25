@@ -6,6 +6,7 @@
 
     <h2 class="text-3xl">Page not found</h2>
 
+
     <hr class="block w-full max-w-lg mx-auto my-8 border">
 
     <p class="text-xl">
