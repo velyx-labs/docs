@@ -1,6 +1,7 @@
 /*@import "./base.css" layer(components);*/
 @import "./navigation.css" layer(components);
 @import "./documentation.css" layer(components);
+@import "./search.css" layer(components);
 
 @import "tailwindcss";
 @import "tw-animate-css";

@@ -41,13 +41,13 @@
         <link rel="stylesheet" href="{{ vite('source/_assets/css/main.css') }}">
         <script defer type="module" src="{{ vite('source/_assets/js/main.js') }}"></script>
 
-        @if ($page->docsearchApiKey && $page->docsearchIndexName)
-            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" />
-        @endif
-
         <!-- Alpine.js -->
         <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
     </head>
+
+    @php
+        $isDocsPage = \Illuminate\Support\Str::startsWith(trimPath($page->getPath()), 'docs');
+    @endphp
 
     <body class="flex flex-col justify-between min-h-screen bg-background text-foreground leading-normal font-sans antialiased">
         <header class="sticky top-0 z-50 w-full border-b bg-background/80 backdrop-blur-lg supports-[backdrop-filter]:bg-background/60" role="banner">
@@ -66,7 +66,7 @@
                 </div>
 
                 <div class="flex flex-1 justify-end items-center gap-4">
-                    @if ($page->docsearchApiKey && $page->docsearchIndexName)
+                    @if ($isDocsPage && $page->docsearchApiKey && $page->docsearchIndexName)
                         @include('_nav.search-input')
                     @endif
 
