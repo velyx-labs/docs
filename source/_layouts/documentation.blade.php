@@ -27,12 +27,10 @@
     @endphp
 
 <section class="container max-w-screen-xl mx-auto px-4 lg:px-8 py-8 md:py-12">
-    <div class="flex flex-col lg:flex-row gap-8 lg:gap-12">
+    <div class="flex gap-8 lg:gap-12">
         {{-- Sidebar Navigation --}}
-        <nav id="js-nav-menu" class="nav-menu hidden lg:block w-full lg:w-64 lg:flex-shrink-0 sticky top-14 self-start">
-            <div class="lg:py-4">
-                @include('_nav.menu', ['items' => $page->navigation])
-            </div>
+        <nav class="hidden lg:block w-60 flex-shrink-0 sticky top-14 self-start">
+            @include('_nav.menu', ['items' => $page->navigation])
         </nav>
 
         {{-- Main Content --}}
@@ -61,6 +59,11 @@
                 @yield('content')
             </div>
         </main>
+
+        {{-- Table of Contents --}}
+        <aside class="hidden xl:block w-48 flex-shrink-0 sticky top-14 self-start table-of-contents">
+            <x-table-of-contents />
+        </aside>
     </div>
 </section>
 @endsection

@@ -191,3 +191,8 @@ pre[class*="language-"] {
 .style .token.string {
     background: transparent !important;
 }
+
+/* Alpine.js x-cloak */
+[x-cloak] {
+    display: none !important;
+}

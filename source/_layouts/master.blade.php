@@ -44,6 +44,9 @@
         @if ($page->docsearchApiKey && $page->docsearchIndexName)
             <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" />
         @endif
+
+        <!-- Alpine.js -->
+        <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
     </head>
 
     <body class="flex flex-col justify-between min-h-screen bg-background text-foreground leading-normal font-sans antialiased">
@@ -82,8 +85,9 @@
                 </div>
             </div>
 
-            @yield('nav-toggle')
         </header>
+
+        @yield('nav-toggle')
 
         <main role="main" class="flex-1">
             @yield('body')
