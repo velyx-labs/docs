@@ -2,7 +2,9 @@
     'title' => null,
     'description' => null,
     'prevLink' => null,
+    'prevTitle' => null,
     'nextLink' => null,
+    'nextTitle' => null,
 ])
 
 <div class="flex items-center justify-between mb-6 pb-6 border-b border-border">
@@ -24,15 +26,15 @@
                 @if($prevLink)
                     <a href="{{ $prevLink }}"
                        class="inline-flex items-center justify-center w-9 h-9 rounded-md hover:bg-accent transition-colors"
-                       title="Previous page">
-                        <x-icon name="arrow-left" class="h-4 w-4" />
+                       title="Previous: {{ $prevTitle ?? 'Previous page' }}">
+                        <x-icon name="arrow-left-02" class="h-4 w-4" />
                     </a>
                 @endif
                 @if($nextLink)
                     <a href="{{ $nextLink }}"
                        class="inline-flex items-center justify-center w-9 h-9 rounded-md hover:bg-accent transition-colors"
-                       title="Next page">
-                        <x-icon name="arrow-right" class="h-4 w-4" />
+                       title="Next: {{ $nextTitle ?? 'Next page' }}">
+                        <x-icon name="arrow-right-02" class="h-4 w-4" />
                     </a>
                 @endif
             </div>
@@ -43,7 +45,7 @@
             data-page-copy-btn
             class="inline-flex items-center gap-2 px-3 py-2 text-sm font-medium text-muted-foreground hover:text-foreground hover:bg-accent rounded-md transition-colors"
             title="Copy this page">
-            <x-icon name="copy" class="h-4 w-4" />
+            <x-icon name="copy-01" class="h-4 w-4" />
             <span data-page-copy-text>Copy page</span>
         </button>
     </div>

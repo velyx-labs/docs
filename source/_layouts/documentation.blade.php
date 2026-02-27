@@ -39,9 +39,16 @@
         <main class="flex-1 min-w-0">
             {{-- Page Header with Copy Button --}}
             @if($page->title)
+                @php
+                $adjacent = getAdjacentPages($page);
+                @endphp
                 <x-page-header
                     :title="$page->title"
                     :description="$page->description"
+                    :prevLink="$adjacent['prev'] ? ('/' . $adjacent['prev']['url']) : null"
+                    :prevTitle="$adjacent['prev']['title'] ?? null"
+                    :nextLink="$adjacent['next'] ? ('/' . $adjacent['next']['url']) : null"
+                    :nextTitle="$adjacent['next']['title'] ?? null"
                 />
             @endif
 
