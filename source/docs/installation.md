@@ -13,7 +13,8 @@ Get started with Velyx in your Laravel project.
 
 Before using Velyx, make sure you have:
 
-- **Laravel** 11.0 or higher
+- **Laravel** 10 or higher
+- **Livewire** 3 or higher (if using Livewire components)
 - **Node.js** 20 or higher
 - **PHP** 8.2 or higher
 - **Tailwind CSS** v4 installed in your project
@@ -32,7 +33,7 @@ npx velyx init
 
 This will:
 
-1. Create a `velyx.config` file in your project root
+1. Create a `velyx.json` file in your project root
 2. Add the necessary CSS imports to your Tailwind configuration
 3. Set up the component paths
 

@@ -21,9 +21,9 @@ return [
     'Theming' => [
         'url' => 'docs/theming',
         'children' => [
-            'Colors' => 'docs/colors',
-            'Typography' => 'docs/typography',
-            'Spacing' => 'docs/spacing',
+            'Colors' => 'docs/design/colors',
+            'Typography' => 'docs/design/typography',
+            'Spacing' => 'docs/design/spacing',
         ],
     ],
 ];

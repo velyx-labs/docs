@@ -143,8 +143,8 @@ TweakCN allows you to:
 Use <a href="https://tweakcn.com/?utm_source=velyx.dev&utm_medium=docs&utm_campaign=theming" class="underline hover:text-foreground/80" target="_blank" rel="noopener noreferrer">TweakCN</a> to visually customize your components, then copy the generated classes to your Velyx components.
 </x-callout>
 
-## Next Steps
+  ## Next Steps
 
-- Learn about [colors](/docs/colors)
-- Explore [typography](/docs/typography)
-- Understand [spacing](/docs/spacing)
+- Learn about [colors](/docs/design/colors)
+- Explore [typography](/docs/design/typography)
+- Understand [spacing](/docs/design/spacing)
