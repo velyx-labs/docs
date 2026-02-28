@@ -15,7 +15,7 @@ After running `npx velyx init`, a `velyx.json` file is created in your project r
 
 ```json
 {
-  "version": "1.0.0",
+  "version": "x.y.z",
   "theme": "neutral",
   "packageManager": "npm",
   "css": {
@@ -26,7 +26,7 @@ After running `npx velyx init`, a `velyx.json` file is created in your project r
     "entry": "resources/js/app.js"
   },
   "components": {
-    "path": "resources/views/components"
+    "path": "resources/views/components/ui"
   }
 }
 ```
@@ -55,11 +55,11 @@ The package manager used in your project.
 
 ### `css.entry`
 
-The path to your main CSS file where Tailwind imports are added.
+The path to your main CSS file.
 
-**Default:** `resources/css/app.css`
+**Default:** Auto-detected from your project
 
-Velyx adds the Velyx CSS import to this file:
+During `velyx init`, Velyx can inject this import if a compatible CSS entry is detected and you confirm (or use `--defaults`):
 
 ```css
 @import "./velyx.css";
@@ -77,7 +77,7 @@ This file contains design tokens like colors, spacing, and typography.
 
 The path to your main JavaScript file.
 
-**Default:** `resources/js/app.js`
+**Default:** Auto-detected from your project
 
 Used for components that require Alpine.js or other JavaScript.
 
@@ -85,7 +85,7 @@ Used for components that require Alpine.js or other JavaScript.
 
 The directory where components will be copied.
 
-**Default:** `resources/views/components`
+**Default:** `resources/views/components/ui`
 
 If you organize your components differently, update this path:
 
@@ -103,7 +103,7 @@ You can manually edit `velyx.json` to work with any directory structure:
 
 ```json
 {
-  "version": "1.0.0",
+  "version": "x.y.z",
   "theme": "neutral",
   "packageManager": "npm",
   "css": {

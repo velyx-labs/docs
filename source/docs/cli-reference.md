@@ -21,19 +21,17 @@ npx velyx init
 
 **What it does:**
 - Creates a `velyx.json` file in your project root
-- Adds necessary CSS imports to your Tailwind configuration
-- Sets up the component paths
+- Checks your environment and initializes the UI component setup
+- Prompts for setup values unless you use `--defaults`
 
 **Options:**
 
 | Option | Alias | Description | Default |
 |--------|-------|-------------|---------|
-| `--base-color <color>` | `-b` | The base color to use | `neutral` |
-| `--yes` | `-y` | Skip confirmation prompt | `true` |
+| `--base-color <color>` | `-b` | The base color to use | Prompts if not set |
 | `--defaults` | `-d` | Use default configuration | `false` |
 | `--force` | `-f` | Force overwrite of existing configuration | `false` |
 | `--cwd <path>` | `-c` | The working directory | Current directory |
-| `--silent` | `-s` | Mute output | `false` |
 
 **Base colors:** `neutral`, `gray`, `zinc`, `stone`, `slate`
 
@@ -61,15 +59,8 @@ npx velyx add --all
 
 | Option | Alias | Description | Default |
 |--------|-------|-------------|---------|
-| `--yes` | `-y` | Skip confirmation prompt | `false` |
-| `--overwrite` | `-o` | Overwrite existing files | `false` |
 | `--cwd <path>` | `-c` | The working directory | Current directory |
 | `--all` | `-a` | Add all available components | `false` |
-| `--path <path>` | `-p` | Custom path for components | Config value |
-| `--silent` | `-s` | Mute output | `false` |
-| `--src-dir` | | Use src directory | `false` |
-| `--css-variables` | | Use CSS variables for theming | `true` |
-| `--no-css-variables` | | Do not use CSS variables | - |
 
 ---
 
@@ -101,7 +92,7 @@ npx velyx list --json
 **Alias:** `velyx search`
 
 <x-callout type="info">
-You must run <code>velyx init</code> before using <code>velyx list</code>.
+You must run <code>velyx init</code> before using <code>velyx add</code>, <code>velyx list</code>, or <code>velyx search</code>.
 </x-callout>
 
 ## Configuration File
@@ -110,7 +101,7 @@ The `velyx.json` file created by `init` contains:
 
 ```json
 {
-  "version": "1.0.0",
+  "version": "x.y.z",
   "theme": "neutral",
   "packageManager": "npm",
   "css": {
@@ -121,7 +112,7 @@ The `velyx.json` file created by `init` contains:
     "entry": "resources/js/app.js"
   },
   "components": {
-    "path": "resources/views/components"
+    "path": "resources/views/components/ui"
   }
 }
 ```

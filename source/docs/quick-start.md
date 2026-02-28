@@ -17,6 +17,12 @@ If you haven't already, run the init command:
 npx velyx init
 ```
 
+If you want a non-interactive setup with defaults:
+
+```bash
+npx velyx init --defaults
+```
+
 ## 2. Add a Component
 
 Use the CLI to add a component:
@@ -31,7 +37,14 @@ This will:
 - Ask if you want to install any dependencies
 - Handle any file conflicts
 
-## 3. Use the Component
+## 3. List or Search Components
+
+```bash
+npx velyx list
+npx velyx search --query button
+```
+
+## 4. Use the Component
 
 The component is now available in your project. Use it in your Blade templates:
 
@@ -43,7 +56,7 @@ The component is now available in your project. Use it in your Blade templates:
 <x-button variant="outline" size="sm">Small Button</x-button>
 ```
 
-## 4. Customize
+## 5. Customize
 
 Components are copied directly into your project, so you can customize them however you want:
 

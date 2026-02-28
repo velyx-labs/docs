@@ -34,8 +34,8 @@ npx velyx init
 This will:
 
 1. Create a `velyx.json` file in your project root
-2. Add the necessary CSS imports to your Tailwind configuration
-3. Set up the component paths
+2. Check your project environment
+3. Prepare the component setup for your app
 
 ## Add Your First Component
 
