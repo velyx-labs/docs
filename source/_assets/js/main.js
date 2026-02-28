@@ -1,44 +1,74 @@
 import Prism from "prismjs";
-// NICO: DocSearch
-// window.docsearch = require('docsearch.js');
+import docsearch from "@docsearch/js";
 
 // Dark mode toggle
 function initDarkMode() {
-  const toggle = document.getElementById("dark-mode-toggle");
-  if (!toggle) return;
+  const toggles = document.querySelectorAll(".dark-mode-toggle");
+  if (!toggles.length) return;
 
   // Check for saved preference or system preference
   const savedTheme = localStorage.getItem("theme");
   const systemDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
 
   // Apply theme on load
-  if (savedTheme === "dark" || (!savedTheme && systemDark)) {
-    document.documentElement.classList.add("dark");
-    updateIcon(true);
-  } else {
-    updateIcon(false);
-  }
+  const isDarkInitial = savedTheme === "dark" || (!savedTheme && systemDark);
+  document.documentElement.classList.toggle("dark", isDarkInitial);
+  updateIcon(isDarkInitial);
 
   // Toggle theme
-  toggle.addEventListener("click", () => {
-    const isDark = document.documentElement.classList.toggle("dark");
-    localStorage.setItem("theme", isDark ? "dark" : "light");
-    updateIcon(isDark);
+  toggles.forEach((toggle) => {
+    toggle.addEventListener("click", () => {
+      const isDark = document.documentElement.classList.toggle("dark");
+      localStorage.setItem("theme", isDark ? "dark" : "light");
+      updateIcon(isDark);
+    });
   });
 
   function updateIcon(isDark) {
-    const sunIcon = toggle.querySelector(".sun-icon");
-    const moonIcon = toggle.querySelector(".moon-icon");
-    if (sunIcon && moonIcon) {
-      sunIcon.style.display = isDark ? "block" : "none";
-      moonIcon.style.display = isDark ? "none" : "block";
-    }
+    toggles.forEach((toggle) => {
+      const sunIcon = toggle.querySelector(".sun-icon");
+      const moonIcon = toggle.querySelector(".moon-icon");
+      if (sunIcon && moonIcon) {
+        sunIcon.style.display = isDark ? "block" : "none";
+        moonIcon.style.display = isDark ? "none" : "block";
+      }
+    });
   }
 }
 
 // Add copy button to all code blocks
 document.addEventListener("DOMContentLoaded", function () {
   initDarkMode();
+
+  const docsearchContainer = document.getElementById("docsearch");
+  if (docsearchContainer) {
+    const appId = docsearchContainer.dataset.appId;
+    const indexName = docsearchContainer.dataset.indexName;
+    const apiKey = docsearchContainer.dataset.apiKey;
+
+    if (appId && indexName && apiKey) {
+      docsearch({
+        container: "#docsearch",
+        appId,
+        indexName,
+        apiKey,
+        placeholder: "Search docs…",
+        translations: {
+          button: {
+            buttonText: "Search",
+            buttonAriaLabel: "Search documentation",
+          },
+          modal: {
+            searchBox: {
+              resetButtonTitle: "Clear the query",
+              cancelButtonText: "Close",
+              cancelButtonAriaLabel: "Close search",
+            },
+          },
+        },
+      });
+    }
+  }
   const codeBlocks = document.querySelectorAll(".prose pre");
 
   codeBlocks.forEach((block) => {

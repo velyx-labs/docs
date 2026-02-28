@@ -5,22 +5,52 @@
 .DocSearch {
     font-family: var(--font-sans);
     --docsearch-primary-color: var(--primary);
+    --docsearch-soft-primary-color: color-mix(in oklab, var(--primary) 12%, transparent);
+    --docsearch-highlight-color: var(--primary);
     --docsearch-text-color: var(--foreground);
+    --docsearch-secondary-text-color: color-mix(in oklab, var(--foreground) 75%, transparent);
     --docsearch-muted-color: var(--muted-foreground);
-    --docsearch-container-background: color-mix(in oklab, var(--background) 50%, transparent);
+    --docsearch-muted-color-darker: color-mix(in oklab, var(--muted-foreground) 35%, transparent);
+    --docsearch-icon-color: var(--muted-foreground);
+    --docsearch-background-color: var(--background);
+    --docsearch-container-background: color-mix(in oklab, var(--background) 45%, transparent);
+    --docsearch-search-button-background: color-mix(in oklab, var(--background) 70%, transparent);
+    --docsearch-search-button-text-color: var(--muted-foreground);
     --docsearch-modal-background: var(--background);
+    --docsearch-modal-shadow: 0 20px 50px color-mix(in oklab, #000 25%, transparent);
     --docsearch-searchbox-background: color-mix(in oklab, var(--muted) 70%, transparent);
     --docsearch-searchbox-focus-background: var(--background);
     --docsearch-hit-color: var(--foreground);
     --docsearch-hit-background: var(--background);
-    --docsearch-hit-shadow: 0 1px 0 0 color-mix(in oklab, var(--border) 80%, transparent);
+    --docsearch-hit-highlight-color: color-mix(in oklab, var(--primary) 12%, transparent);
+    --docsearch-hit-shadow: 0 1px 0 0 color-mix(in oklab, var(--border) 85%, transparent);
     --docsearch-footer-background: var(--background);
+    --docsearch-footer-shadow: 0 -1px 0 0 color-mix(in oklab, var(--border) 85%, transparent);
+    --docsearch-key-background: var(--muted);
+    --docsearch-key-color: var(--muted-foreground);
+    --docsearch-border-radius: 14px;
+    --docsearch-modal-width: 860px;
+    --docsearch-modal-height: 640px;
+    --docsearch-modal-variable-height: 70dvh;
+    --docsearch-searchbox-height: 52px;
+    --docsearch-searchbox-initial-height: 52px;
+    --docsearch-footer-height: 56px;
+}
+
+.dark .DocSearch {
+    --docsearch-modal-shadow: 0 20px 60px color-mix(in oklab, #000 55%, transparent);
+    --docsearch-container-background: color-mix(in oklab, #000 35%, transparent);
+    --docsearch-search-button-background: color-mix(in oklab, var(--background) 85%, transparent);
 }
 
 .DocSearch-Button {
     @apply inline-flex items-center gap-2 rounded-lg border border-border bg-background/70 px-2.5 py-2 text-sm text-muted-foreground transition-colors;
     @apply hover:bg-muted hover:text-foreground focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background;
     @apply backdrop-blur-sm;
+}
+
+.docsearch .DocSearch-Button {
+    @apply w-full justify-between md:w-auto;
 }
 
 .DocSearch-Button-Placeholder {
@@ -60,27 +90,27 @@
 }
 
 .DocSearch-Dropdown {
-    @apply px-2 pb-2;
+    @apply px-3 pb-3;
 }
 
 .DocSearch-Hits {
-    @apply p-0;
+    @apply p-0 space-y-2;
 }
 
 .DocSearch-Hit {
-    @apply rounded-xl border border-border bg-background transition-colors;
+    @apply rounded-xl border border-border bg-background transition-colors shadow-sm;
 }
 
 .DocSearch-Hit a {
-    @apply p-3;
+    @apply p-4;
 }
 
 .DocSearch-Hit[aria-selected="true"] {
-    @apply border-primary/40 bg-primary/5;
+    @apply border-primary/50 bg-primary/5 shadow-md;
 }
 
 .DocSearch-Hit-Container {
-    @apply gap-3;
+    @apply gap-4;
 }
 
 .DocSearch-Hit-icon {
@@ -100,9 +130,35 @@
 }
 
 .DocSearch-Footer {
-    @apply border-t border-border;
+    @apply border-t border-border px-4;
 }
 
 .DocSearch-Commands-Key {
     @apply rounded border border-border bg-muted text-muted-foreground;
+}
+
+.DocSearch-Footer-Logo {
+    @apply opacity-80;
+}
+
+.DocSearch-Footer-Commands {
+    @apply text-xs text-muted-foreground;
+}
+
+@media (max-width: 640px) {
+    .DocSearch {
+        --docsearch-modal-width: 100%;
+        --docsearch-modal-height: 85dvh;
+        --docsearch-modal-variable-height: 85dvh;
+        --docsearch-searchbox-height: 48px;
+        --docsearch-searchbox-initial-height: 48px;
+    }
+
+    .DocSearch-Modal {
+        @apply rounded-xl;
+    }
+
+    .DocSearch-Hit a {
+        @apply p-3;
+    }
 }

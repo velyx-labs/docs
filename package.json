@@ -13,6 +13,10 @@
         "vite": "^6.4.1"
     },
     "dependencies": {
+        "@docsearch/core": "^4.6.0",
+        "@docsearch/css": "^4.6.0",
+        "@docsearch/js": "^4.6.0",
+        "@docsearch/modal": "^4.6.0",
         "@tailwindcss/typography": "^0.5.19",
         "prismjs": "^1.30.0",
         "shadcn": "^3.8.5",
