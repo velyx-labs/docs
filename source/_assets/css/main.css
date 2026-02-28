@@ -1,7 +1,12 @@
-/*@import "./base.css" layer(components);*/
+@import "./base.css" layer(components);
 @import "./navigation.css" layer(components);
 @import "./documentation.css" layer(components);
 @import "./search.css" layer(components);
+@import "@fontsource/raleway/index.css" layer(base);
+@import "@fontsource/geist/index.css" layer(base);
+@import "@fontsource/geist-mono/index.css" layer(base);
+@import "@fontsource/instrument-sans/index.css" layer(base);
+@import "@fontsource/jetbrains-mono/index.css" layer(base);
 @import "prismjs/themes/prism.css" layer(base);
 @import "prismjs/plugins/line-numbers/prism-line-numbers.css" layer(base);
 

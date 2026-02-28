@@ -1,6 +1,17 @@
 import Alpine from "alpinejs";
 import Prism from "prismjs";
-import "prismjs/plugins/autoloader/prism-autoloader";
+import "prismjs/components/prism-markup";
+import "prismjs/components/prism-markup-templating";
+import "prismjs/components/prism-bash";
+import "prismjs/components/prism-css";
+import "prismjs/components/prism-javascript";
+import "prismjs/components/prism-jsx";
+import "prismjs/components/prism-typescript";
+import "prismjs/components/prism-tsx";
+import "prismjs/components/prism-json";
+import "prismjs/components/prism-yaml";
+import "prismjs/components/prism-php";
+import "prismjs/components/prism-markdown";
 import docsearch from "@docsearch/js";
 
 // Dark mode toggle
