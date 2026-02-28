@@ -31,15 +31,10 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@100..900&family=Geist:wght@100..900&family=Instrument+Sans:ital,wght@0,400..700;1,400..700&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://prismjs.com/plugins/line-numbers/prism-line-numbers.css">
-<link href="https://cdn.jsdelivr.net/npm/prismjs/themes/prism.css" rel="stylesheet" />
 
 @viteRefresh()
 <link rel="stylesheet" href="{{ vite('source/_assets/css/main.css') }}">
 <script defer type="module" src="{{ vite('source/_assets/js/main.js') }}"></script>
-
-<!-- Alpine.js -->
-<script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
 
 <script>
     (function () {

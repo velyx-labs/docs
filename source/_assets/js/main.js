@@ -1,4 +1,6 @@
+import Alpine from "alpinejs";
 import Prism from "prismjs";
+import "prismjs/plugins/autoloader/prism-autoloader";
 import docsearch from "@docsearch/js";
 
 // Dark mode toggle
@@ -13,31 +15,20 @@ function initDarkMode() {
   // Apply theme on load
   const isDarkInitial = savedTheme === "dark" || (!savedTheme && systemDark);
   document.documentElement.classList.toggle("dark", isDarkInitial);
-  updateIcon(isDarkInitial);
 
   // Toggle theme
   toggles.forEach((toggle) => {
     toggle.addEventListener("click", () => {
       const isDark = document.documentElement.classList.toggle("dark");
       localStorage.setItem("theme", isDark ? "dark" : "light");
-      updateIcon(isDark);
     });
   });
-
-  function updateIcon(isDark) {
-    toggles.forEach((toggle) => {
-      const sunIcon = toggle.querySelector(".sun-icon");
-      const moonIcon = toggle.querySelector(".moon-icon");
-      if (sunIcon && moonIcon) {
-        sunIcon.style.display = isDark ? "block" : "none";
-        moonIcon.style.display = isDark ? "none" : "block";
-      }
-    });
-  }
 }
 
 // Add copy button to all code blocks
 document.addEventListener("DOMContentLoaded", function () {
+  window.Alpine = Alpine;
+  Alpine.start();
   initDarkMode();
 
   const docsearchContainer = document.getElementById("docsearch");

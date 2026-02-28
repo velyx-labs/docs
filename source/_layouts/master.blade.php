@@ -8,7 +8,7 @@
         $isDocsPage = \Illuminate\Support\Str::startsWith(trimPath($page->getPath()), 'docs');
     @endphp
 
-    <body class="flex flex-col justify-between min-h-screen bg-background text-foreground leading-normal font-sans antialiased">
+    <body class="flex flex-col justify-between min-h-screen bg-background text-foreground leading-normal font-sans antialiased transition-colors duration-300">
         @include('_partials.header')
 
         @yield('nav-toggle')

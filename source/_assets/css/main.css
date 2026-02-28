@@ -2,6 +2,8 @@
 @import "./navigation.css" layer(components);
 @import "./documentation.css" layer(components);
 @import "./search.css" layer(components);
+@import "prismjs/themes/prism.css" layer(base);
+@import "prismjs/plugins/line-numbers/prism-line-numbers.css" layer(base);
 
 @import "tailwindcss";
 @import "tw-animate-css";
@@ -122,6 +124,18 @@
   --sidebar-accent-foreground: oklch(0.985 0 0);
   --sidebar-border: oklch(1 0 0 / 10%);
   --sidebar-ring: oklch(0.556 0 0);
+}
+
+.sun-icon {
+    display: none;
+}
+
+.dark .sun-icon {
+    display: block;
+}
+
+.dark .moon-icon {
+    display: none;
 }
 
 @layer base {
