@@ -27,9 +27,13 @@ Velyx works via <code>npx</code> — no global installation needed! Just ensure 
 
 Run the init command in your Laravel project:
 
-```bash
-npx velyx init
-```
+<x-code-tabs
+    npm="npx velyx add button"
+    pnpm="pnpm dlx velyx add button"
+    yarn="yarn dlx velyx add button"
+    bun="bunx --bun velyx add button"
+    default="npm"
+/>
 
 This will:
 
