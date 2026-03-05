@@ -74,8 +74,8 @@ document.addEventListener("DOMContentLoaded", function () {
   const codeBlocks = document.querySelectorAll(".prose pre");
 
   codeBlocks.forEach((block) => {
-    // Skip if already has a button
-    if (block.querySelector(".copy-button")) return;
+    // Skip if already has a button or has no-copy-button class
+    if (block.querySelector(".copy-button") || block.closest(".no-copy-button")) return;
 
     const button = document.createElement("button");
     button.className =

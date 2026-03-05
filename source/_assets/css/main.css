@@ -60,6 +60,8 @@
   --radius-2xl: calc(var(--radius) + 8px);
   --radius-3xl: calc(var(--radius) + 12px);
   --radius-4xl: calc(var(--radius) + 16px);
+  --color-code: var(--code);
+  --color-code-foreground: var(--code-foreground);
 }
 
 :root {
@@ -95,6 +97,10 @@
   --sidebar-accent-foreground: oklch(0.205 0 0);
   --sidebar-border: oklch(0.922 0 0);
   --sidebar-ring: oklch(0.708 0 0);
+  
+  
+  --code: #ffffff;
+  --code-foreground: #1f2328;
 }
 
 .dark {
@@ -129,18 +135,21 @@
   --sidebar-accent-foreground: oklch(0.985 0 0);
   --sidebar-border: oklch(1 0 0 / 10%);
   --sidebar-ring: oklch(0.556 0 0);
+  
+  --code: #24292e;
+  --code-foreground: #e1e4e8;
 }
 
 .sun-icon {
-    display: none;
+  display: none;
 }
 
 .dark .sun-icon {
-    display: block;
+  display: block;
 }
 
 .dark .moon-icon {
-    display: none;
+  display: none;
 }
 
 @layer base {
@@ -196,7 +205,7 @@
 
 :not(pre) > code[class*="language-"],
 pre[class*="language-"] {
-  @apply bg-muted! text-muted-foreground!;
+  @apply bg-muted/50! text-foreground!;
 }
 code[class*="language-"],
 pre[class*="language-"] {

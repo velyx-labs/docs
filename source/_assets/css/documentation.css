@@ -128,7 +128,7 @@
 /* Code block syntax highlighting improvements */
 :not(pre) > code[class*="language-"],
 pre[class*="language-"] {
-    @apply bg-muted/50 text-foreground;
+    @apply bg-code text-code-foreground;
 }
 
 /* Responsive content width */
