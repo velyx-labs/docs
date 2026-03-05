@@ -45,9 +45,12 @@ This will:
 
 Browse the [components library](/docs/components) and add components to your project:
 
-```bash
-npx velyx add button
-```
+<x-code-tabs
+    npm="npx velyx add button"
+    pnpm="pnpm dlx velyx add button"
+    yarn="yarn dlx velyx add button"
+    bun="bunx --bun velyx add button"
+/>
 
 Components are copied directly into your project — you own the code and can customize them however you want.
 
