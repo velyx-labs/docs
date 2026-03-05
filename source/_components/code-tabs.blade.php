@@ -7,7 +7,7 @@
 ])
 
 <div x-data="{
-    activeTab: '{{ $default }}',
+    activeTab: localStorage.getItem('velyx-pm') || '{{ $default }}',
     codes: {
         @if($npm) 'npm': @js($npm), @endif
         @if($pnpm) 'pnpm': @js($pnpm), @endif
@@ -26,8 +26,25 @@
         } catch (err) {
             console.error('Failed to copy:', err);
         }
+    },
+    init() {
+        // Listen for package manager changes from other tabs
+        window.addEventListener('velyx-pm-changed', (e) => {
+            this.activeTab = e.detail.pm;
+        });
+
+        // Set initial value if not in localStorage
+        if (!localStorage.getItem('velyx-pm')) {
+            localStorage.setItem('velyx-pm', this.activeTab);
+        }
+    },
+    setPackageManager(pm) {
+        this.activeTab = pm;
+        localStorage.setItem('velyx-pm', pm);
+        // Dispatch event for other code-tabs instances
+        window.dispatchEvent(new CustomEvent('velyx-pm-changed', { detail: { pm } }));
     }
-}" class="code-tabs bg-muted/50 relative">
+}" class="code-tabs bg-muted/50 relative" x-init="init()">
     <!-- Tabs header -->
     <div class="flex items-center gap-2 px-3 py-1 mb-0 overflow-x-auto">
         <div class="flex size-4 items-center justify-center rounded-[1px] ">
@@ -36,7 +53,7 @@
         <div class="group/tabs-list inline-flex w-fit items-center justify-center text-muted-foreground group-data-[orientation=horizontal]/tabs:h-9 group-data-[orientation=vertical]/tabs:h-fit group-data-[orientation=vertical]/tabs:flex-col data-[variant=line]:rounded-none rounded-none bg-transparent p-0">
         @if($npm)
         <button
-            @click="activeTab = 'npm'"
+            @click="setPackageManager('npm')"
             :class="activeTab === 'npm' ? 'bg-background text-foreground border-input' : 'text-muted-foreground border-transparent hover:text-foreground'"
             class="relative inline-flex items-center justify-center gap-1.5 rounded-md px-2 py-1 text-sm font-medium whitespace-nowrap transition-all h-7 border border-transparent pt-0.5 shadow-none"
         >
@@ -46,7 +63,7 @@
 
         @if($pnpm)
         <button
-            @click="activeTab = 'pnpm'"
+            @click="setPackageManager('pnpm')"
             :class="activeTab === 'pnpm' ? 'bg-background text-foreground border-input' : 'text-muted-foreground border-transparent hover:text-foreground'"
             class="relative inline-flex items-center justify-center gap-1.5 rounded-md px-2 py-1 text-sm font-medium whitespace-nowrap transition-all h-7 border border-transparent pt-0.5 shadow-none"
         >
@@ -56,7 +73,7 @@
 
         @if($yarn)
         <button
-            @click="activeTab = 'yarn'"
+            @click="setPackageManager('yarn')"
             :class="activeTab === 'yarn' ? 'bg-background text-foreground border-input' : 'text-muted-foreground border-transparent hover:text-foreground'"
             class="relative inline-flex items-center justify-center gap-1.5 rounded-md px-2 py-1 text-sm font-medium whitespace-nowrap transition-all h-7 border border-transparent pt-0.5 shadow-none"
         >
@@ -66,7 +83,7 @@
 
         @if($bun)
         <button
-            @click="activeTab = 'bun'"
+            @click="setPackageManager('bun')"
             :class="activeTab === 'bun' ? 'bg-background text-foreground border-input' : 'text-muted-foreground border-transparent hover:text-foreground'"
             class="relative inline-flex items-center justify-center gap-1.5 rounded-md px-2 py-1 text-sm font-medium whitespace-nowrap transition-all h-7 border border-transparent pt-0.5 shadow-none"
         >

@@ -163,11 +163,26 @@ A dialog modal component for overlays and alerts using Alpine.js.
 
 Use the CLI to add any component:
 
-```bash
-npx velyx add button
-npx velyx add card input modal
-npx velyx add --all
-```
+<x-code-tabs
+    npm="npx velyx add button"
+    pnpm="pnpm dlx velyx add button"
+    yarn="yarn dlx velyx add button"
+    bun="bunx --bun velyx add button"
+/>
+
+<x-code-tabs
+    npm="npx velyx add card input modal"
+    pnpm="pnpm dlx velyx add card input modal"
+    yarn="yarn dlx velyx add card input modal"
+    bun="bunx --bun velyx add card input modal"
+/>
+
+<x-code-tabs
+    npm="npx velyx add --all"
+    pnpm="pnpm dlx velyx add --all"
+    yarn="yarn dlx velyx add --all"
+    bun="bunx --bun velyx add --all"
+/>
 
 Components are copied directly into your project under `resources/views/components/`, so you can customize them however you want.
 
@@ -175,15 +190,21 @@ Components are copied directly into your project under `resources/views/componen
 
 Search for specific components:
 
-```bash
-npx velyx list --query button
-```
+<x-code-tabs
+    npm="npx velyx list --query button"
+    pnpm="pnpm dlx velyx list --query button"
+    yarn="yarn dlx velyx list --query button"
+    bun="bunx --bun velyx list --query button"
+/>
 
 Or list all available components:
 
-```bash
-npx velyx list
-```
+<x-code-tabs
+    npm="npx velyx list"
+    pnpm="pnpm dlx velyx list"
+    yarn="yarn dlx velyx list"
+    bun="bunx --bun velyx list"
+/>
 
 ## Next Steps
 
