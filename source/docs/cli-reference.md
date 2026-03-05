@@ -44,11 +44,26 @@ Initialize Velyx in your Laravel project.
 
 Add components to your project.
 
-```bash
-npx velyx add button
-npx velyx add card input modal
-npx velyx add --all
-```
+<x-code-tabs
+    npm="npx velyx add button"
+    pnpm="pnpm dlx velyx add button"
+    yarn="yarn dlx velyx add button"
+    bun="bunx --bun velyx add button"
+/>
+
+<x-code-tabs
+    npm="npx velyx add card input modal"
+    pnpm="pnpm dlx velyx add card input modal"
+    yarn="yarn dlx velyx add card input modal"
+    bun="bunx --bun velyx add card input modal"
+/>
+
+<x-code-tabs
+    npm="npx velyx add --all"
+    pnpm="pnpm dlx velyx add --all"
+    yarn="yarn dlx velyx add --all"
+    bun="bunx --bun velyx add --all"
+/>
 
 **What it does:**
 - Copies the component files to your project
@@ -71,11 +86,26 @@ npx velyx add --all
 
 List all available components from the registry.
 
-```bash
-npx velyx list
-npx velyx list --query button
-npx velyx list --json
-```
+<x-code-tabs
+    npm="npx velyx list"
+    pnpm="pnpm dlx velyx list"
+    yarn="yarn dlx velyx list"
+    bun="bunx --bun velyx list"
+/>
+
+<x-code-tabs
+    npm="npx velyx list --query button"
+    pnpm="pnpm dlx velyx list --query button"
+    yarn="yarn dlx velyx list --query button"
+    bun="bunx --bun velyx list --query button"
+/>
+
+<x-code-tabs
+    npm="npx velyx list --json"
+    pnpm="pnpm dlx velyx list --json"
+    yarn="yarn dlx velyx list --json"
+    bun="bunx --bun velyx list --json"
+/>
 
 **What it does:**
 - Displays all available components in the registry
@@ -126,34 +156,55 @@ You can customize these paths to match your project structure. Learn more in the
 
 ### Initialize with a custom theme
 
-```bash
-npx velyx init --base-color slate
-```
+<x-code-tabs
+    npm="npx velyx init --base-color slate"
+    pnpm="pnpm dlx velyx init --base-color slate"
+    yarn="yarn dlx velyx init --base-color slate"
+    bun="bunx --bun velyx init --base-color slate"
+/>
 
 ### Add multiple components
 
-```bash
-npx velyx add button card input modal
-```
+<x-code-tabs
+    npm="npx velyx add button card input modal"
+    pnpm="pnpm dlx velyx add button card input modal"
+    yarn="yarn dlx velyx add button card input modal"
+    bun="bunx --bun velyx add button card input modal"
+/>
 
 ### Add all components
 
-```bash
-npx velyx add --all
-```
+<x-code-tabs
+    npm="npx velyx add --all"
+    pnpm="pnpm dlx velyx add --all"
+    yarn="yarn dlx velyx add --all"
+    bun="bunx --bun velyx add --all"
+/>
 
 ### Search for components
 
-```bash
-npx velyx list --query button
-npx velyx search --query form
-```
+<x-code-tabs
+    npm="npx velyx list --query button"
+    pnpm="pnpm dlx velyx list --query button"
+    yarn="yarn dlx velyx list --query button"
+    bun="bunx --bun velyx list --query button"
+/>
+
+<x-code-tabs
+    npm="npx velyx search --query form"
+    pnpm="pnpm dlx velyx search --query form"
+    yarn="yarn dlx velyx search --query form"
+    bun="bunx --bun velyx search --query form"
+/>
 
 ### Get JSON output
 
-```bash
-npx velyx list --json
-```
+<x-code-tabs
+    npm="npx velyx list --json"
+    pnpm="pnpm dlx velyx list --json"
+    yarn="yarn dlx velyx list --json"
+    bun="bunx --bun velyx list --json"
+/>
 
 ## Next Steps
 
