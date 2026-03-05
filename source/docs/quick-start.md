@@ -13,23 +13,32 @@ Add your first component to your Laravel project in minutes.
 
 If you haven't already, run the init command:
 
-```bash
-npx velyx init
-```
+<x-code-tabs
+    npm="npx velyx init"
+    pnpm="pnpm dlx velyx init"
+    yarn="yarn dlx velyx init"
+    bun="bunx --bun velyx init"
+/>
 
 If you want a non-interactive setup with defaults:
 
-```bash
-npx velyx init --defaults
-```
+<x-code-tabs
+    npm="npx velyx init --defaults"
+    pnpm="pnpm dlx velyx init --defaults"
+    yarn="yarn dlx velyx init --defaults"
+    bun="bunx --bun velyx init --defaults"
+/>
 
 ## 2. Add a Component
 
 Use the CLI to add a component:
 
-```bash
-npx velyx add button
-```
+<x-code-tabs
+    npm="npx velyx add button"
+    pnpm="pnpm dlx velyx add button"
+    yarn="yarn dlx velyx add button"
+    bun="bunx --bun velyx add button"
+/>
 
 This will:
 
@@ -39,10 +48,12 @@ This will:
 
 ## 3. List or Search Components
 
-```bash
-npx velyx list
-npx velyx search --query button
-```
+<x-code-tabs
+    npm="npx velyx list"
+    pnpm="pnpm dlx velyx list"
+    yarn="yarn dlx velyx list"
+    bun="bunx --bun velyx list"
+/>
 
 ## 4. Use the Component
 

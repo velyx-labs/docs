@@ -13,9 +13,12 @@ Buttons allow users to perform actions or navigate with a single click.
 
 Add the button component to your project:
 
-```bash
-npx velyx add button
-```
+<x-code-tabs
+    npm="npx velyx add button"
+    pnpm="pnpm dlx velyx add button"
+    yarn="yarn dlx velyx add button"
+    bun="bunx --bun velyx add button"
+/>
 
 ## Usage
 

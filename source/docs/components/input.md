@@ -13,9 +13,12 @@ Input components allow users to enter and edit text content.
 
 Add the input component to your project:
 
-```bash
-npx velyx add input
-```
+<x-code-tabs
+    npm="npx velyx add input"
+    pnpm="pnpm dlx velyx add input"
+    yarn="yarn dlx velyx add input"
+    bun="bunx --bun velyx add input"
+/>
 
 <x-callout type="warning">
 <strong>Note:</strong> The input component includes <code>label</code> and other form components. Make sure to add all required dependencies.

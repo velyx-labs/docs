@@ -13,9 +13,12 @@ Modals are dialog overlays that focus the user's attention on a specific task or
 
 Add the modal component to your project:
 
-```bash
-npx velyx add modal
-```
+<x-code-tabs
+    npm="npx velyx add modal"
+    pnpm="pnpm dlx velyx add modal"
+    yarn="yarn dlx velyx add modal"
+    bun="bunx --bun velyx add modal"
+/>
 
 <x-callout type="info">
 <strong>Alpine.js Required:</strong> The modal component requires Alpine.js for interactivity. Make sure Alpine.js is installed in your project.

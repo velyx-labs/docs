@@ -13,9 +13,12 @@ Cards are versatile containers used to group related content and actions.
 
 Add the card component to your project:
 
-```bash
-npx velyx add card
-```
+<x-code-tabs
+    npm="npx velyx add card"
+    pnpm="pnpm dlx velyx add card"
+    yarn="yarn dlx velyx add card"
+    bun="bunx --bun velyx add card"
+/>
 
 ## Usage
 

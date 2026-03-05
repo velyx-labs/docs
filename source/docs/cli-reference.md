@@ -15,9 +15,12 @@ Complete reference for all Velyx CLI commands.
 
 Initialize Velyx in your Laravel project.
 
-```bash
-npx velyx init
-```
+<x-code-tabs
+    npm="npx velyx init"
+    pnpm="pnpm dlx velyx init"
+    yarn="yarn dlx velyx init"
+    bun="bunx --bun velyx init"
+/>
 
 **What it does:**
 - Creates a `velyx.json` file in your project root
