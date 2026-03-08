@@ -22,63 +22,120 @@ Add the button component to your project:
 
 ## Usage
 
-### Basic Button
+### Primary Button
 
-```php
-<x-button>Click me</x-button>
-```
+<x-component-preview component="button" variant="primary">
+    ```
+    <x-button variant="primary">Click me</x-button>
+    ```
+</x-component-preview>
 
-### Variants
+### Secondary Button
 
-```php
-<x-button variant="default">Default</x-button>
-<x-button variant="primary">Primary</x-button>
-<x-button variant="secondary">Secondary</x-button>
-<x-button variant="outline">Outline</x-button>
-<x-button variant="ghost">Ghost</x-button>
-<x-button variant="destructive">Destructive</x-button>
-```
+<x-component-preview component="button" variant="secondary">
+    ```
+    <x-button variant="secondary">Secondary</x-button>
+    ```
+</x-component-preview>
+
+### Destructive Button
+
+<x-component-preview component="button" variant="destructive">
+    ```
+    <x-button variant="destructive">Delete</x-button>
+    ```
+</x-component-preview>
+
+### Outline Button
+
+<x-component-preview component="button" variant="outline">
+    ```
+    <x-button variant="outline">Outline</x-button>
+    ```
+</x-component-preview>
+
+### Ghost Button
+
+<x-component-preview component="button" variant="ghost">
+    ```
+    <x-button variant="ghost">Ghost</x-button>
+    ```
+</x-component-preview>
 
 ### Sizes
 
-```php
-<x-button size="sm">Small</x-button>
-<x-button size="default">Default</x-button>
-<x-button size="lg">Large</x-button>
-```
+<x-component-preview component="button" variant="primary" :props="['size' => 'sm']">
+    ```
+    <x-button variant="primary" size="sm">Small</x-button>
+    ```
+</x-component-preview>
 
-### With Icons
+<x-component-preview component="button" variant="primary" :props="['size' => 'lg']">
+    ```
+    <x-button variant="primary" size="lg">Large</x-button>
+    ```
+</x-component-preview>
 
-```php
-<x-button>
-    <x-icon name="plus" class="mr-2" />
-    Add Item
-</x-button>
+### With Icon
 
-<x-button variant="outline">
-    <x-icon name="github" class="mr-2" />
-    GitHub
-</x-button>
-```
+<x-component-preview component="button" variant="primary" :props="['icon' => 'arrow-right']">
+    ```
+    <x-button variant="primary" icon="arrow-right">
+        Click me
+    </x-button>
+    ```
+</x-component-preview>
 
-### Icon Only
+### Loading State
 
-```php
-<x-button size="icon">
-    <x-icon name="x" />
-</x-button>
+<x-component-preview component="button" variant="primary" :props="['loading' => true]">
+    ```
+    <x-button variant="primary" loading>Loading...</x-button>
+    ```
+</x-component-preview>
 
-<x-button variant="outline" size="icon">
-    <x-icon name="settings" />
-</x-button>
-```
+### Disabled
+
+<x-component-preview component="button" variant="primary" :props="['disabled' => true]">
+    ```
+    <x-button variant="primary" disabled>Disabled</x-button>
+    ```
+</x-component-preview>
+
+### Pill Shape
+
+<x-component-preview component="button" variant="primary" :props="['pill' => true]">
+    ```
+    <x-button variant="primary" pill>Pill Button</x-button>
+    ```
+</x-component-preview>
+
+### Icon Button
+
+<x-component-preview component="button" variant="ghost" :props="['iconOnly' => true, 'icon' => 'settings']" height="300px">
+    ```
+    <x-button variant="ghost" icon-only icon="settings" />
+    ```
+</x-component-preview>
+
 
 ## Props
 
 | Prop | Type | Default | Description |
 |------|------|---------|-------------|
-| `variant` | `string` | `default` | Button style variant |
-| `size` | `string` | `default` | Button size |
+| `variant` | `string` | `primary` | Button style variant |
+| `size` | `string` | `md` | Button size (xs, sm, md, lg, xl) |
+| `type` | `string` | `button` | Button type (button, submit, reset) |
+| `disabled` | `boolean` | `false` | Disable the button |
+| `loading` | `boolean` | `false` | Show loading spinner |
+| `icon` | `string` | `null` | Icon name (left side) |
+| `iconRight` | `string` | `null` | Icon name (right side) |
+| `iconOnly` | `boolean` | `false` | Icon-only button |
+| `pill` | `boolean` | `false` | Rounded pill shape |
+| `block` | `boolean` | `false` | Full width button |
+| `href` | `string` | `null` | URL for link buttons |
+| `action` | `string` | `null` | Livewire action to target |
+
 
 ### Variants
 
@@ -133,39 +190,30 @@ Add the button component to your project:
 
 ## Customization
 
-The button component uses Tailwind CSS classes. You can customize the appearance by:
+The button component uses Tailwind CSS classes. You can customize the appearance by modifying the component in your project:
 
-1. **Modifying the component directly:**
-
-```php
-<!-- resources/views/components/button.blade.php -->
+```blade
+{{-- resources/views/components/ui/button.blade.php --}}
 
 @props([
-    'variant' => 'default',
-    'size' => 'default',
+    'variant' => 'primary',
+    'size' => 'md',
+    // ... other props
 ])
 
 @php
-$variants = [
-    'default' => 'bg-primary text-primary-foreground hover:bg-primary/90',
-    'primary' => 'bg-blue-600 text-white hover:bg-blue-700',
-    // ... add your custom variants
-];
+$variantClasses = match($variant) {
+    'primary' => 'bg-primary text-primary-foreground hover:bg-primary/90',
+    'secondary' => 'bg-secondary text-secondary-foreground hover:bg-secondary/80',
+    // ... customize variants here
+};
 @endphp
 
-<button {{ $attributes->merge(['class' => $variants[$variant]]) }}>
+<button {{ $attributes->class([$variantClasses]) }}>
     {{ $slot }}
 </button>
 ```
 
-2. **Using CSS variables in your theme:**
-
-```css
-:root {
-    --button-primary: oklch(0.55 0.22 250);
-    --button-primary-hover: oklch(0.50 0.22 250);
-}
-```
 
 ## Accessibility
 
