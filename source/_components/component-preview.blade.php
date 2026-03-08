@@ -13,7 +13,7 @@
     $registryUrl = getenv('PREVIEW_REGISTRY_URL') ?: 'http://localhost:8000';
 
     // Build preview URL directly without token
-    $previewType = $interactive ? 'interactive' : 'component';
+    $previewType = $interactive ? 'interactive' : '';
     $previewUrl = "{$registryUrl}/preview/{$previewType}/{$component}";
 
     // Add variant and props to URL
@@ -40,10 +40,10 @@
 
 <div x-data="{ showCode: false }" class="my-8 rounded-lg border bg-card overflow-hidden">
     {{-- Preview Area --}}
-    <div class="p-6 border-b">
+    <div class="border-b">
         <div class="relative w-full" style="height: {{ $height === 'auto' ? '200px' : $height }}">
             <iframe
-                :src="{{ $previewUrl }}"
+                src="{{ $previewUrl }}"
                 class="absolute inset-0 w-full h-full border-0 rounded-md"
                 sandbox="allow-scripts allow-same-origin allow-forms allow-popups allow-modals"
                 loading="lazy"
@@ -71,7 +71,7 @@
                     x-transition:enter="transition-transform duration-200"
                     x-transition:enter-start="rotate-0"
                     x-transition:enter-end="rotate-180"
-                    x-transition:leave="transition-transform duration-200"
+                    x-transition:leave="transition-transform duration=200"
                     x-transition:leave-start="rotate-180"
                     x-transition:leave-end="rotate-0"
                     :class="{ 'rotate-180': showCode }"
@@ -97,7 +97,9 @@
             style="display: none;"
             class="overflow-hidden"
         >
-            <pre class="!m-0 p-4 bg-muted/30"><code class="language-{{ $language }}">{!! $slot !!}</code></pre>
+            <div class="prose max-w-none relative group">
+                <pre class="!m-0 p-4 bg-muted/30"><code class="language-{{ $language }}">{!! $slot !!}</code></pre>
+            </div>
         </div>
     </div>
 </div>
