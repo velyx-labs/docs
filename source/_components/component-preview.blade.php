@@ -12,9 +12,12 @@
     // Get registry URL from config or env
     $registryUrl = getenv('PREVIEW_REGISTRY_URL') ?: 'http://localhost:8000';
 
-    // Build preview URL directly without token
-    $previewType = $interactive ? 'interactive' : '';
-    $previewUrl = "{$registryUrl}/preview/{$previewType}/{$component}";
+    // Build preview URL directly
+    if ($interactive) {
+        $previewUrl = "{$registryUrl}/preview/interactive/{$component}";
+    } else {
+        $previewUrl = "{$registryUrl}/preview/{$component}";
+    }
 
     // Add variant and props to URL
     if ($variant !== 'default') {
@@ -36,12 +39,95 @@
             }
         }
     }
+
+    // Generate unique ID for this preview
+    $previewId = 'preview-' . uniqid();
 @endphp
 
-<div x-data="{ showCode: false }" class="my-8 rounded-lg border bg-card overflow-hidden">
+<div
+    x-data="{
+        showCode: false,
+        loading: true,
+        error: false,
+        initIframe() {
+            const iframe = this.$el.querySelector('iframe');
+            if (!iframe) return;
+
+            // Handle iframe load
+            iframe.addEventListener('load', () => {
+                this.loading = false;
+                this.error = false;
+
+                // Send initial dark mode
+                this.sendDarkMode(iframe);
+            });
+
+            // Handle iframe error
+            iframe.addEventListener('error', () => {
+                this.loading = false;
+                this.error = true;
+            });
+
+            // Watch for dark mode changes
+            const observer = new MutationObserver(() => {
+                if (!this.loading && iframe.contentWindow) {
+                    this.sendDarkMode(iframe);
+                }
+            });
+
+            observer.observe(document.documentElement, {
+                attributes: true,
+                attributeFilter: ['class']
+            });
+        },
+        sendDarkMode(iframe) {
+            const isDark = document.documentElement.classList.contains('dark');
+            if (!iframe.contentWindow) return;
+
+            iframe.contentWindow.postMessage({
+                type: 'darkMode',
+                value: isDark
+            }, '*');
+        }
+    }"
+    x-init="initIframe()"
+    class="my-8 rounded-lg border bg-card overflow-hidden"
+    id="{{ $previewId }}"
+>
     {{-- Preview Area --}}
-    <div class="border-b">
+    <div class="border-b relative">
         <div class="relative w-full" style="height: {{ $height === 'auto' ? '200px' : $height }}">
+            {{-- Loading indicator --}}
+            <div
+                x-show="loading"
+                x-transition:enter="transition-opacity duration-200"
+                x-transition:leave="transition-opacity duration-200"
+                x-transition:enter-start="opacity-100"
+                x-transition:enter-end="opacity-0"
+                x-transition:leave-start="opacity-0"
+                x-transition:leave-end="opacity-100"
+                class="absolute inset-0 flex items-center justify-center bg-muted/20 z-10"
+            >
+                <div class="flex flex-col items-center gap-3">
+                    <div class="size-8 border-2 border-primary border-t-transparent rounded-full animate-spin"></div>
+                    <p class="text-sm text-muted-foreground">Loading preview...</p>
+                </div>
+            </div>
+
+            {{-- Error indicator --}}
+            <div
+                x-show="error"
+                x-cloak
+                class="absolute inset-0 flex items-center justify-center bg-destructive/10 z-10"
+            >
+                <div class="text-center">
+                    <p class="text-sm text-destructive font-medium">Failed to load preview</p>
+                    <button @click="window.location.reload()" class="mt-2 px-3 py-1 text-xs bg-primary text-primary-foreground rounded-md hover:bg-primary/90">
+                        Retry
+                    </button>
+                </div>
+            </div>
+
             <iframe
                 src="{{ $previewUrl }}"
                 class="absolute inset-0 w-full h-full border-0 rounded-md"
