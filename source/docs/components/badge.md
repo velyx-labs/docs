@@ -50,27 +50,9 @@ Add the badge component to your project:
     ```
 </x-component-preview>
 
-<x-component-preview component="badge" :props="['variant' => 'success']">
+<x-component-preview component="badge" :props="['variant' => 'destructive']">
     ```
-    <x-ui.badge variant="success">Success</x-ui.badge>
-    ```
-</x-component-preview>
-
-<x-component-preview component="badge" :props="['variant' => 'warning']">
-    ```
-    <x-ui.badge variant="warning">Warning</x-ui.badge>
-    ```
-</x-component-preview>
-
-<x-component-preview component="badge" :props="['variant' => 'error']">
-    ```
-    <x-ui.badge variant="error">Error</x-ui.badge>
-    ```
-</x-component-preview>
-
-<x-component-preview component="badge" :props="['variant' => 'info']">
-    ```
-    <x-ui.badge variant="info">Info</x-ui.badge>
+    <x-ui.badge variant="destructive">Destructive</x-ui.badge>
     ```
 </x-component-preview>
 
@@ -114,23 +96,23 @@ Add the badge component to your project:
     ```
 </x-component-preview>
 
-<x-component-preview component="badge" :props="['variant' => 'error', 'pill' => true]">
+<x-component-preview component="badge" :props="['variant' => 'destructive', 'pill' => true]">
     ```
-    <x-ui.badge variant="error" pill>Error Pill</x-ui.badge>
+    <x-ui.badge variant="destructive" pill>Destructive Pill</x-ui.badge>
     ```
 </x-component-preview>
 
 ### With Icon
 
-<x-component-preview component="badge" :props="['icon' => 'check', 'variant' => 'success']">
+<x-component-preview component="badge" :props="['icon' => 'check', 'variant' => 'primary']">
     ```
-    <x-ui.badge variant="success" icon="check">Verified</x-ui.badge>
+    <x-ui.badge variant="primary" icon="check">Verified</x-ui.badge>
     ```
 </x-component-preview>
 
-<x-component-preview component="badge" :props="['icon' => 'alert-triangle', 'variant' => 'warning']">
+<x-component-preview component="badge" :props="['icon' => 'sparkles', 'variant' => 'secondary']">
     ```
-    <x-ui.badge variant="warning" icon="alert-triangle">Warning</x-ui.badge>
+    <x-ui.badge variant="secondary" icon="sparkles">Featured</x-ui.badge>
     ```
 </x-component-preview>
 
@@ -178,7 +160,7 @@ Add the badge component to your project:
 
 | Prop | Type | Default | Description |
 |------|------|---------|-------------|
-| `variant` | `string` | `'default'` | Visual style: `default`, `primary`, `secondary`, `success`, `warning`, `error`, `danger`, `info`, `outline` |
+| `variant` | `string` | `'default'` | Visual style: `default`, `primary`, `secondary`, `destructive`, `outline` |
 | `size` | `string` | `'default'` | Size: `sm`, `default`, `lg` |
 | `pill` | `boolean` | `false` | Use pill/rounded shape instead of default squared corners |
 | `icon` | `string` | `null` | Icon name to display before the text |
@@ -197,7 +179,7 @@ Add the badge component to your project:
 
 <div class="flex items-center gap-2">
     <span>Payment Status:</span>
-    <x-ui.badge variant="error">Overdue</x-ui.badge>
+    <x-ui.badge variant="destructive">Overdue</x-ui.badge>
 </div>
 
 <div class="flex items-center gap-2">
@@ -249,12 +231,12 @@ Add the badge component to your project:
 
     <div>
         <p class="text-sm text-muted-foreground">Messages</p>
-        <x-ui.badge size="lg" variant="success">5</x-ui.badge>
+        <x-ui.badge size="lg" variant="secondary">5</x-ui.badge>
     </div>
 
     <div>
         <p class="text-sm text-muted-foreground">Alerts</p>
-        <x-ui.badge size="lg" variant="error">2</x-ui.badge>
+        <x-ui.badge size="lg" variant="destructive">2</x-ui.badge>
     </div>
 </div>
 ```
@@ -293,10 +275,7 @@ The badge component uses Tailwind CSS classes. You can customize the appearance 
 | `default` | General purpose labels |
 | `primary` | Important highlights |
 | `secondary` | Subtle information |
-| `success` | Positive status |
-| `warning` | Warnings |
-| `error` / `danger` | Errors or destructive actions |
-| `info` | Informational content |
+| `destructive` | Errors or destructive actions |
 | `outline` | Bordered badges |
 
 ### Icon Integration
