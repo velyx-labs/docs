@@ -25,139 +25,113 @@ Add the avatar component to your project:
 ### Default Avatar
 
 <x-component-preview component="avatar">
-    ```
     <x-ui.avatar
         src="https://i.pravatar.cc/128?img=12"
         name="Jane Cooper"
     />
-    ```
 </x-component-preview>
 
 ### Sizes
 
 <x-component-preview component="avatar" :props="['size' => 'xs']">
-    ```
     <x-ui.avatar
         size="xs"
         src="https://i.pravatar.cc/128?img=12"
         name="Jane Cooper"
     />
-    ```
 </x-component-preview>
 
 <x-component-preview component="avatar" :props="['size' => 'sm']">
-    ```
     <x-ui.avatar
         size="sm"
         src="https://i.pravatar.cc/128?img=12"
         name="Jane Cooper"
     />
-    ```
 </x-component-preview>
 
 <x-component-preview component="avatar" :props="['size' => 'md']">
-    ```
     <x-ui.avatar
         size="md"
         src="https://i.pravatar.cc/128?img=12"
         name="Jane Cooper"
     />
-    ```
 </x-component-preview>
 
 <x-component-preview component="avatar" :props="['size' => 'lg']">
-    ```
     <x-ui.avatar
         size="lg"
         src="https://i.pravatar.cc/128?img=12"
         name="Jane Cooper"
     />
-    ```
 </x-component-preview>
 
 <x-component-preview component="avatar" :props="['size' => 'xl']">
-    ```
     <x-ui.avatar
         size="xl"
         src="https://i.pravatar.cc/128?img=12"
         name="Jane Cooper"
     />
-    ```
 </x-component-preview>
 
 ### With Status
 
 <x-component-preview component="avatar" :props="['status' => 'online']">
-    ```
     <x-ui.avatar
         src="https://i.pravatar.cc/128?img=12"
         name="Jane Cooper"
         status="online"
     />
-    ```
 </x-component-preview>
 
 <x-component-preview component="avatar" :props="['status' => 'offline']">
-    ```
     <x-ui.avatar
         src="https://i.pravatar.cc/128?img=12"
         name="Jane Cooper"
         status="offline"
     />
-    ```
 </x-component-preview>
 
 <x-component-preview component="avatar" :props="['status' => 'busy']">
-    ```
     <x-ui.avatar
         src="https://i.pravatar.cc/128?img=12"
         name="Jane Cooper"
         status="busy"
     />
-    ```
 </x-component-preview>
 
 <x-component-preview component="avatar" :props="['status' => 'away']">
-    ```
     <x-ui.avatar
         src="https://i.pravatar.cc/128?img=12"
         name="Jane Cooper"
         status="away"
     />
-    ```
 </x-component-preview>
 
 ### Shapes
 
 <x-component-preview component="avatar" :props="['shape' => 'circle']">
-    ```
     <x-ui.avatar
         shape="circle"
         src="https://i.pravatar.cc/128?img=12"
         name="Jane Cooper"
     />
-    ```
 </x-component-preview>
 
 <x-component-preview component="avatar" :props="['shape' => 'square']">
-    ```
     <x-ui.avatar
         shape="square"
         src="https://i.pravatar.cc/128?img=12"
         name="Jane Cooper"
     />
-    ```
 </x-component-preview>
 
 ### Fallback
 
 <x-component-preview component="avatar" :props="['fallbackIcon' => 'user']">
-    ```
     <x-ui.avatar
         name="John Doe"
         fallback-icon="user"
     />
-    ```
 </x-component-preview>
 
 ## Props

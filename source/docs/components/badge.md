@@ -25,135 +25,95 @@ Add the badge component to your project:
 ### Default Badge
 
 <x-component-preview component="badge">
-    ```
     <x-ui.badge>Badge</x-ui.badge>
-    ```
 </x-component-preview>
 
 ### Variants
 
 <x-component-preview component="badge" :props="['variant' => 'default']">
-    ```
     <x-ui.badge>Default</x-ui.badge>
-    ```
 </x-component-preview>
 
 <x-component-preview component="badge" :props="['variant' => 'primary']">
-    ```
     <x-ui.badge variant="primary">Primary</x-ui.badge>
-    ```
 </x-component-preview>
 
 <x-component-preview component="badge" :props="['variant' => 'secondary']">
-    ```
     <x-ui.badge variant="secondary">Secondary</x-ui.badge>
-    ```
 </x-component-preview>
 
 <x-component-preview component="badge" :props="['variant' => 'destructive']">
-    ```
     <x-ui.badge variant="destructive">Destructive</x-ui.badge>
-    ```
 </x-component-preview>
 
 <x-component-preview component="badge" :props="['variant' => 'outline']">
-    ```
     <x-ui.badge variant="outline">Outline</x-ui.badge>
-    ```
 </x-component-preview>
 
 ### Sizes
 
 <x-component-preview component="badge" :props="['size' => 'sm']">
-    ```
     <x-ui.badge size="sm">Small</x-ui.badge>
-    ```
 </x-component-preview>
 
 <x-component-preview component="badge" :props="['size' => 'default']">
-    ```
     <x-ui.badge>Default</x-ui.badge>
-    ```
 </x-component-preview>
 
 <x-component-preview component="badge" :props="['size' => 'lg']">
-    ```
     <x-ui.badge size="lg">Large</x-ui.badge>
-    ```
 </x-component-preview>
 
 ### Pill Shape
 
 <x-component-preview component="badge" :props="['pill' => true]">
-    ```
     <x-ui.badge pill>Pill Badge</x-ui.badge>
-    ```
 </x-component-preview>
 
 <x-component-preview component="badge" :props="['variant' => 'primary', 'pill' => true]">
-    ```
     <x-ui.badge variant="primary" pill>Primary Pill</x-ui.badge>
-    ```
 </x-component-preview>
 
 <x-component-preview component="badge" :props="['variant' => 'destructive', 'pill' => true]">
-    ```
     <x-ui.badge variant="destructive" pill>Destructive Pill</x-ui.badge>
-    ```
 </x-component-preview>
 
 ### With Icon
 
 <x-component-preview component="badge" :props="['icon' => 'check', 'variant' => 'primary']">
-    ```
     <x-ui.badge variant="primary" icon="check">Verified</x-ui.badge>
-    ```
 </x-component-preview>
 
 <x-component-preview component="badge" :props="['icon' => 'sparkles', 'variant' => 'secondary']">
-    ```
     <x-ui.badge variant="secondary" icon="sparkles">Featured</x-ui.badge>
-    ```
 </x-component-preview>
 
 <x-component-preview component="badge" :props="['icon' => 'sparkles', 'variant' => 'primary']">
-    ```
     <x-ui.badge variant="primary" icon="sparkles">New</x-ui.badge>
-    ```
 </x-component-preview>
 
 ### Removable
 
 <x-component-preview component="badge" :props="['removable' => true]">
-    ```
     <x-ui.badge removable>Removable Badge</x-ui.badge>
-    ```
 </x-component-preview>
 
 <x-component-preview component="badge" :props="['variant' => 'primary', 'removable' => true]">
-    ```
     <x-ui.badge variant="primary" removable>Filter</x-ui.badge>
-    ```
 </x-component-preview>
 
 ### Custom Labels
 
 <x-component-preview component="badge" :props="['label' => 'New']">
-    ```
     <x-ui.badge>New</x-ui.badge>
-    ```
 </x-component-preview>
 
 <x-component-preview component="badge" :props="['label' => 'Featured', 'variant' => 'primary']">
-    ```
     <x-ui.badge variant="primary">Featured</x-ui.badge>
-    ```
 </x-component-preview>
 
 <x-component-preview component="badge" :props="['label' => 'Sold Out', 'variant' => 'error']">
-    ```
     <x-ui.badge variant="error">Sold Out</x-ui.badge>
-    ```
 </x-component-preview>
 
 ## Props
@@ -285,8 +245,7 @@ The badge component integrates with your icon system. Any icon name available in
 ```blade
 <x-ui.badge icon="star">Featured</x-ui.badge>
 <x-ui.badge icon="heart">Liked</x-ui.badge>
-<x-ui.badge icon="bookmark">Saved</x-ui.badge>
-```
+<x-ui.badge icon="bookmark">Saved</x-ui.>
 
 ## Next Steps
 

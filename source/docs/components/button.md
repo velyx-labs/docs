@@ -25,97 +25,73 @@ Add the button component to your project:
 ### Primary Button
 
 <x-component-preview component="button" variant="primary">
-    ```
     <x-button variant="primary">Click me</x-button>
-    ```
 </x-component-preview>
 
 ### Secondary Button
 
 <x-component-preview component="button" variant="secondary">
-    ```
     <x-button variant="secondary">Secondary</x-button>
-    ```
 </x-component-preview>
 
 ### Destructive Button
 
 <x-component-preview component="button" variant="destructive">
-    ```
     <x-button variant="destructive">Delete</x-button>
-    ```
 </x-component-preview>
 
 ### Outline Button
 
 <x-component-preview component="button" variant="outline">
-    ```
     <x-button variant="outline">Outline</x-button>
-    ```
 </x-component-preview>
 
 ### Ghost Button
 
 <x-component-preview component="button" variant="ghost">
-    ```
     <x-button variant="ghost">Ghost</x-button>
-    ```
 </x-component-preview>
 
 ### Sizes
 
 <x-component-preview component="button" variant="primary" :props="['size' => 'sm']">
-    ```
     <x-button variant="primary" size="sm">Small</x-button>
-    ```
 </x-component-preview>
 
 <x-component-preview component="button" variant="primary" :props="['size' => 'lg']">
-    ```
     <x-button variant="primary" size="lg">Large</x-button>
-    ```
 </x-component-preview>
 
 ### With Icon
 
 <x-component-preview component="button" variant="primary" :props="['icon' => 'arrow-right']">
-    ```
     <x-button variant="primary" icon="arrow-right">
         Click me
     </x-button>
-    ```
 </x-component-preview>
 
 ### Loading State
 
 <x-component-preview component="button" variant="primary" :props="['loading' => true]">
-    ```
     <x-button variant="primary" loading>Loading...</x-button>
-    ```
 </x-component-preview>
 
 ### Disabled
 
 <x-component-preview component="button" variant="primary" :props="['disabled' => true]">
-    ```
     <x-button variant="primary" disabled>Disabled</x-button>
-    ```
 </x-component-preview>
 
 ### Pill Shape
 
 <x-component-preview component="button" variant="primary" :props="['pill' => true]">
-    ```
     <x-button variant="primary" pill>Pill Button</x-button>
-    ```
 </x-component-preview>
 
 ### Icon Button
 
 <x-component-preview component="button" variant="ghost" :props="['iconOnly' => true, 'icon' => 'settings']" height="300px">
-    ```
     <x-button variant="ghost" icon-only icon="settings" />
-    ```
 </x-component-preview>
 
 

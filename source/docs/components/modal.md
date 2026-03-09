@@ -33,7 +33,6 @@ Add the modal component to your project:
     <x-modal id="my-modal" title="Modal Title">
         <p>Modal content goes here.</p>
     </x-modal>
-    ```
 </x-component-preview>
 
 ### Small Modal
@@ -43,7 +42,6 @@ Add the modal component to your project:
     <x-modal id="small-modal" title="Small Modal" size="sm">
         <p>This is a small modal.</p>
     </x-modal>
-    ```
 </x-component-preview>
 
 ### Large Modal
@@ -53,7 +51,6 @@ Add the modal component to your project:
     <x-modal id="large-modal" title="Large Modal" size="lg">
         <p>This is a large modal with more space.</p>
     </x-modal>
-    ```
 </x-component-preview>
 
 ### Fullscreen Modal
@@ -63,7 +60,6 @@ Add the modal component to your project:
     <x-modal id="fullscreen-modal" title="Fullscreen" size="full">
         <p>This modal takes up the full screen.</p>
     </x-modal>
-    ```
 </x-component-preview>
 
 ## Props

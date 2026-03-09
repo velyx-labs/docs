@@ -33,7 +33,6 @@ Add the alert component to your project:
     <x-alert title="Update available">
         A new version is available. Please update to get the latest features.
     </x-alert>
-    ```
 </x-component-preview>
 
 ### Success Alert
@@ -43,7 +42,6 @@ Add the alert component to your project:
     <x-alert variant="success" title="Success">
         Your changes have been saved successfully.
     </x-alert>
-    ```
 </x-component-preview>
 
 ### Destructive Alert
@@ -53,7 +51,6 @@ Add the alert component to your project:
     <x-alert variant="destructive" title="Error">
         Failed to save your changes. Please try again.
     </x-alert>
-    ```
 </x-component-preview>
 
 ### Warning Alert
@@ -63,7 +60,6 @@ Add the alert component to your project:
     <x-alert variant="warning" title="Warning">
         Please review this important warning message.
     </x-alert>
-    ```
 </x-component-preview>
 
 ### Info Alert
@@ -73,7 +69,6 @@ Add the alert component to your project:
     <x-alert variant="info" title="Information">
         Here is some useful information for you.
     </x-alert>
-    ```
 </x-component-preview>
 
 ### Non-dismissible Alert
@@ -83,7 +78,6 @@ Add the alert component to your project:
     <x-alert variant="default" title="Important Notice" :dismissible="false">
         This alert cannot be dismissed and requires your attention.
     </x-alert>
-    ```
 </x-component-preview>
 
 ### Alert Without Title
@@ -93,7 +87,6 @@ Add the alert component to your project:
     <x-alert variant="default">
         This is an alert message without a title.
     </x-alert>
-    ```
 </x-component-preview>
 
 ## Props
@@ -123,7 +116,6 @@ Add the alert component to your project:
         <p>Your account has been successfully created. You can now log in.</p>
         <a href="/login" class="underline">Go to login page →</a>
     </x-alert>
-    ```
 </x-component-preview>
 
 ### Form Validation Errors
@@ -136,7 +128,6 @@ Add the alert component to your project:
             <li>Password must be at least 8 characters</li>
         </ul>
     </x-alert>
-    ```
 </x-component-preview>
 
 ### System Status
@@ -147,7 +138,6 @@ Add the alert component to your project:
         <p class="mb-2">System maintenance is scheduled for <strong>March 10, 2026 at 2:00 AM UTC</strong>.</p>
         <p class="text-sm">Expected downtime: approximately 2 hours.</p>
     </x-alert>
-    ```
 </x-component-preview>
 
 ### Custom Icon
@@ -157,7 +147,6 @@ Add the alert component to your project:
     <x-alert variant="info" title="Pro Tip" icon="lightbulb">
         You can use keyboard shortcuts to navigate faster. Press <code>?</code> to see all shortcuts.
     </x-alert>
-    ```
 </x-component-preview>
 
 ## Customization

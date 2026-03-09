@@ -25,20 +25,17 @@ Add the breadcrumbs component to your project:
 ### Default Breadcrumbs
 
 <x-component-preview component="breadcrumbs">
-    ```
     <x-ui.breadcrumbs :items="[
         ['label' => 'Home', 'url' => '/'],
         ['label' => 'Components', 'url' => '/components'],
         ['label' => 'Navigation', 'url' => '/components/navigation'],
         ['label' => 'Breadcrumbs'],
     ]" />
-    ```
 </x-component-preview>
 
 ### Custom Separator
 
 <x-component-preview component="breadcrumbs" :props="['separator' => '>']">
-    ```
     <x-ui.breadcrumbs
         :items="[
             ['label' => 'Home', 'url' => '/'],
@@ -47,11 +44,9 @@ Add the breadcrumbs component to your project:
         ]"
         separator=">"
     />
-    ```
 </x-component-preview>
 
 <x-component-preview component="breadcrumbs" :props="['separator' => '→']">
-    ```
     <x-ui.breadcrumbs
         :items="[
             ['label' => 'Home', 'url' => '/'],
@@ -60,11 +55,9 @@ Add the breadcrumbs component to your project:
         ]"
         separator="→"
     />
-    ```
 </x-component-preview>
 
 <x-component-preview component="breadcrumbs" :props="['separator' => '•']">
-    ```
     <x-ui.breadcrumbs
         :items="[
             ['label' => 'Home', 'url' => '/'],
@@ -73,13 +66,11 @@ Add the breadcrumbs component to your project:
         ]"
         separator="•"
     />
-    ```
 </x-component-preview>
 
 ### With Home Icon
 
 <x-component-preview component="breadcrumbs" :props="['homeIcon' => true]">
-    ```
     <x-ui.breadcrumbs
         :items="[
             ['label' => 'Home', 'url' => '/'],
@@ -88,7 +79,6 @@ Add the breadcrumbs component to your project:
         ]"
         :home-icon="true"
     />
-    ```
 </x-component-preview>
 
 ## Props

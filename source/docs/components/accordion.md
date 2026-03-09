@@ -25,7 +25,6 @@ Add the accordion component to your project:
 ### Default Accordion
 
 <x-component-preview component="accordion">
-    ```
     <x-ui.accordion type="single" collapsible>
         <x-ui.accordion.item value="item-1">
             <x-ui.accordion.trigger>Is it accessible?</x-ui.accordion.trigger>
@@ -48,13 +47,11 @@ Add the accordion component to your project:
             </x-ui.accordion.content>
         </x-ui.accordion.item>
     </x-ui.accordion>
-    ```
 </x-component-preview>
 
 ### Multiple Open
 
 <x-component-preview component="accordion" :props="['multiple' => true]">
-    ```
     <x-ui.accordion type="multiple">
         <x-ui.accordion.item value="item-1">
             <x-ui.accordion.trigger>Is it accessible?</x-ui.accordion.trigger>
@@ -77,13 +74,11 @@ Add the accordion component to your project:
             </x-ui.accordion.content>
         </x-ui.accordion.item>
     </x-ui.accordion>
-    ```
 </x-component-preview>
 
 ### With Default Value
 
 <x-component-preview component="accordion" :props="['defaultValue' => 'item-2']">
-    ```
     <x-ui.accordion type="single" collapsible default-value="item-2">
         <x-ui.accordion.item value="item-1">
             <x-ui.accordion.trigger>Is it accessible?</x-ui.accordion.trigger>
@@ -106,13 +101,11 @@ Add the accordion component to your project:
             </x-ui.accordion.content>
         </x-ui.accordion.item>
     </x-ui.accordion>
-    ```
 </x-component-preview>
 
 ### Non-collapsible
 
 <x-component-preview component="accordion" :props="['collapsible' => false]">
-    ```
     <x-ui.accordion type="single" :collapsible="false">
         <x-ui.accordion.item value="item-1">
             <x-ui.accordion.trigger>Is it accessible?</x-ui.accordion.trigger>
@@ -128,7 +121,6 @@ Add the accordion component to your project:
             </x-ui.accordion.content>
         </x-ui.accordion.item>
     </x-ui.accordion>
-    ```
 </x-component-preview>
 
 ## Props
@@ -161,8 +153,7 @@ Use the `accordion-item`, `accordion-trigger`, and `accordion-content` component
             Content goes here
         </x-ui.accordion.content>
     </x-ui.accordion.item>
-</x-ui.accordion>
-```
+</x-ui.>
 
 ## Examples
 
@@ -190,8 +181,7 @@ Use the `accordion-item`, `accordion-trigger`, and `accordion-content` component
             Yes, fully compatible with Livewire 3+ and Alpine.js.
         </x-ui.accordion.content>
     </x-ui.accordion.item>
-</x-ui.accordion>
-```
+</x-ui.>
 
 ### Documentation Sections
 
@@ -217,8 +207,7 @@ Use the `accordion-item`, `accordion-trigger`, and `accordion-content` component
             Learn about custom variants, props, and theming options.
         </x-ui.accordion.content>
     </x-ui.accordion.item>
-</x-ui.accordion>
-```
+</x-ui.>
 
 ## Accessibility
 

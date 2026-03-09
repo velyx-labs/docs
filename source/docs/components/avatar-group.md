@@ -25,20 +25,17 @@ Add the avatar group component to your project:
 ### Default Avatar Group
 
 <x-component-preview component="avatar-group">
-    ```
     <x-ui.avatar-group :avatars="[
         ['src' => 'https://i.pravatar.cc/128?img=11', 'name' => 'Jane Cooper'],
         ['src' => 'https://i.pravatar.cc/128?img=12', 'name' => 'Devon Lane'],
         ['src' => 'https://i.pravatar.cc/128?img=13', 'name' => 'Robert Fox'],
         ['src' => 'https://i.pravatar.cc/128?img=14', 'name' => 'Wade Warren'],
     ]" />
-    ```
 </x-component-preview>
 
 ### With Max Visible
 
 <x-component-preview component="avatar-group">
-    ```
     <x-ui.avatar-group
         :avatars="[
             ['src' => 'https://i.pravatar.cc/128?img=11', 'name' => 'Jane Cooper'],
@@ -49,13 +46,11 @@ Add the avatar group component to your project:
         ]"
         :max="3"
     />
-    ```
 </x-component-preview>
 
 ### Sizes
 
 <x-component-preview component="avatar-group">
-    ```
     <x-ui.avatar-group
         :avatars="[
             ['src' => 'https://i.pravatar.cc/128?img=11', 'name' => 'Jane Cooper'],
@@ -64,11 +59,9 @@ Add the avatar group component to your project:
         ]"
         size="sm"
     />
-    ```
 </x-component-preview>
 
 <x-component-preview component="avatar-group">
-    ```
     <x-ui.avatar-group
         :avatars="[
             ['src' => 'https://i.pravatar.cc/128?img=11', 'name' => 'Jane Cooper'],
@@ -77,11 +70,9 @@ Add the avatar group component to your project:
         ]"
         size="md"
     />
-    ```
 </x-component-preview>
 
 <x-component-preview component="avatar-group">
-    ```
     <x-ui.avatar-group
         :avatars="[
             ['src' => 'https://i.pravatar.cc/128?img=11', 'name' => 'Jane Cooper'],
@@ -90,11 +81,9 @@ Add the avatar group component to your project:
         ]"
         size="lg"
     />
-    ```
 </x-component-preview>
 
 <x-component-preview component="avatar-group">
-    ```
     <x-ui.avatar-group
         :avatars="[
             ['src' => 'https://i.pravatar.cc/128?img=11', 'name' => 'Jane Cooper'],
@@ -103,26 +92,22 @@ Add the avatar group component to your project:
         ]"
         size="xl"
     />
-    ```
 </x-component-preview>
 
 ### With Status
 
 <x-component-preview component="avatar-group">
-    ```
     <x-ui.avatar-group :avatars="[
         ['src' => 'https://i.pravatar.cc/128?img=11', 'name' => 'Jane Cooper', 'status' => 'online'],
         ['src' => 'https://i.pravatar.cc/128?img=12', 'name' => 'Devon Lane', 'status' => 'online'],
         ['src' => 'https://i.pravatar.cc/128?img=13', 'name' => 'Robert Fox', 'status' => 'away'],
         ['src' => 'https://i.pravatar.cc/128?img=14', 'name' => 'Wade Warren', 'status' => 'busy'],
     ]" />
-    ```
 </x-component-preview>
 
 ### Square Shape
 
 <x-component-preview component="avatar-group">
-    ```
     <x-ui.avatar-group
         :avatars="[
             ['src' => 'https://i.pravatar.cc/128?img=11', 'name' => 'Jane Cooper'],
@@ -131,7 +116,6 @@ Add the avatar group component to your project:
         ]"
         shape="square"
     />
-    ```
 </x-component-preview>
 
 ## Props
