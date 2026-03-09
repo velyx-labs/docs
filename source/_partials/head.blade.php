@@ -25,7 +25,7 @@
 @stack('meta')
 
 @if ($page->production)
-    <!-- Insert analytics code here -->
+    <script defer src="https://analytics.jiordiviera.me/script.js" data-website-id="04167809-86e7-4be3-b0ca-72e2b392ee52"></script>
 @endif
 
 
