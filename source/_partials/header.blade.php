@@ -18,8 +18,8 @@
                     class="dark-mode-toggle inline-flex items-center justify-center rounded-lg p-2 text-primary hover:bg-muted hover:text-foreground transition-all"
                     aria-label="Toggle dark mode"
                 >
-                    <x-icon name="moon-01" class="moon-icon" />
-                    <x-icon name="sun-01" class="sun-icon" />
+                    <x-icon name="sun-01" class="sun-icon h-[1.2rem] w-[1.2rem] rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
+                    <x-icon name="moon-01" class="moon-icon absolute h-[1.2rem] w-[1.2rem] rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
                 </button>
 
                 <a href="/docs/installation" class="inline-flex items-center justify-center rounded-lg bg-primary px-3 py-1.5 text-xs font-semibold text-primary-foreground shadow-sm hover:bg-primary/90 transition-all">
@@ -40,8 +40,8 @@
                     class="dark-mode-toggle inline-flex items-center justify-center rounded-lg p-2 text-primary hover:bg-muted hover:text-foreground transition-all"
                     aria-label="Toggle dark mode"
                 >
-                    <x-icon name="moon-01" class="moon-icon" />
-                    <x-icon name="sun-01" class="sun-icon" />
+                    <x-icon name="sun-01" class="sun-icon h-[1.2rem] w-[1.2rem] rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
+                    <x-icon name="moon-01" class="moon-icon absolute h-[1.2rem] w-[1.2rem] rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
                 </button>
 
                 <a href="/docs/installation" class="hidden sm:inline-flex items-center justify-center rounded-lg bg-primary px-4 py-2 text-sm font-semibold text-primary-foreground shadow-sm hover:bg-primary/90 transition-all">

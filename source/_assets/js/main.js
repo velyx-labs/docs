@@ -27,11 +27,35 @@ function initDarkMode() {
   const isDarkInitial = savedTheme === "dark" || (!savedTheme && systemDark);
   document.documentElement.classList.toggle("dark", isDarkInitial);
 
-  // Toggle theme
+  // Toggle theme with View Transitions API
   toggles.forEach((toggle) => {
-    toggle.addEventListener("click", () => {
-      const isDark = document.documentElement.classList.toggle("dark");
-      localStorage.setItem("theme", isDark ? "dark" : "light");
+    toggle.addEventListener("click", (event) => {
+      const isDark = document.documentElement.classList.contains("dark");
+      const newTheme = isDark ? "light" : "dark";
+      const prefersReducedMotion = window.matchMedia(
+        "(prefers-reduced-motion: reduce)"
+      ).matches;
+
+      const applyThemeChange = () => {
+        document.documentElement.classList.toggle("dark");
+        localStorage.setItem("theme", newTheme);
+      };
+
+      // Use View Transitions API if available
+      if (!prefersReducedMotion && document.startViewTransition) {
+        const { clientX: x, clientY: y } = event;
+        const root = document.documentElement;
+
+        // Set CSS variables for animation origin
+        root.style.setProperty("--x", `${x}px`);
+        root.style.setProperty("--y", `${y}px`);
+
+        document.startViewTransition(() => {
+          applyThemeChange();
+        });
+      } else {
+        applyThemeChange();
+      }
     });
   });
 }
