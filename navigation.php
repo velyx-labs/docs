@@ -21,7 +21,7 @@ return [
             'Button' => 'docs/components/button',
             'Card' => 'docs/components/card',
             'Command Palette' => 'docs/components/command-palette',
-            'Data Table' => 'docs/components/data-table',
+            'Table' => 'docs/components/table',
             'Date Picker' => 'docs/components/date-picker',
             'Drawer' => 'docs/components/drawer',
             'Dropdown' => 'docs/components/dropdown',
