@@ -24,7 +24,7 @@ return [
             'Table' => 'docs/components/table',
             'Date Picker' => 'docs/components/date-picker',
             'Drawer' => 'docs/components/drawer',
-            'Dropdown' => 'docs/components/dropdown',
+            'Dropdown Menu' => 'docs/components/dropdown-menu',
             'Empty State' => 'docs/components/empty-state',
             'File Upload' => 'docs/components/file-upload',
             'Input' => 'docs/components/input',

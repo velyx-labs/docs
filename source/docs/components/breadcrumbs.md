@@ -260,4 +260,4 @@ Keep breadcrumb labels short and descriptive:
 
 - Explore [Navigation components](/docs/components/tabs)
 - Learn about [Separator component](/docs/components/separator)
-- View [Dropdown component](/docs/components/dropdown)
+- View [Dropdown Menu component](/docs/components/dropdown-menu)
