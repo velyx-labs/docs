@@ -12,7 +12,7 @@
          x-transition:leave-start="opacity-100"
          x-transition:leave-end="opacity-0"
          @click="open = false"
-         class="fixed inset-0 z-40 bg-background/80 backdrop-blur-sm"
+         class="fixed inset-0 z-[60] bg-background/80 backdrop-blur-sm"
          style="display: none;"
          x-cloak
     ></div>
@@ -25,7 +25,7 @@
            x-transition:leave="transition-transform ease-in-out duration-200"
            x-transition:leave-start="translate-x-0"
            x-transition:leave-end="-translate-x-full"
-           class="fixed inset-y-0 left-0 z-50 w-72 max-w-[85vw] overflow-y-auto no-scrollbar border-r border-border bg-background shadow-2xl transform -translate-x-full"
+           class="fixed inset-y-0 left-0 z-[70] w-72 max-w-[85vw] overflow-y-auto no-scrollbar border-r border-border bg-background shadow-2xl transform -translate-x-full"
            x-bind:class="open ? 'translate-x-0' : '-translate-x-full'"
            style="display: none;"
            @click.stop
