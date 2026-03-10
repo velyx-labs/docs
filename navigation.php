@@ -31,7 +31,7 @@ return [
             'KBD' => 'docs/components/kbd',
             'Label' => 'docs/components/label',
             'Markdown Viewer' => 'docs/components/markdown-viewer',
-            'Modal' => 'docs/components/modal',
+            'Dialog' => 'docs/components/dialog',
             'Popover' => 'docs/components/popover',
             'Progress Bar' => 'docs/components/progress-bar',
             'Progress Steps' => 'docs/components/progress-steps',
