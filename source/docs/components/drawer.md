@@ -1,6 +1,8 @@
 ---
 title: Drawer
-description: Slide-out panel for additional content and actions
+description: Drawer component documentation for Velyx. Installation, usage examples, variants, and customization guidance for Laravel Blade, Alpine.js, Livewire, and Tailwind CSS v4.
+metaImage: /assets/images/og/docs/components/drawer.png
+metaTitle: Drawer Component for Laravel Blade, Alpine.js & Livewire | Velyx
 extends: _layouts.documentation
 section: content
 ---
@@ -14,10 +16,10 @@ The Drawer component provides a slide-out panel from the bottom of the screen fo
 Add the drawer component to your project:
 
 <x-code-tabs
-    npm="npx velyx add drawer"
-    pnpm="pnpm dlx velyx add drawer"
-    yarn="yarn dlx velyx add drawer"
-    bun="bunx --bun velyx add drawer"
+    npm="npx velyx@latest add drawer"
+    pnpm="pnpm dlx velyx@latest add drawer"
+    yarn="yarn dlx velyx@latest add drawer"
+    bun="bunx --bun velyx@latest add drawer"
 />
 
 <x-callout type="info">

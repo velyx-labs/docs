@@ -1,6 +1,8 @@
 ---
 title: Dropdown Menu
-description: Contextual menus for actions and navigation
+description: Dropdown Menu component documentation for Velyx. Installation, usage examples, variants, and customization guidance for Laravel Blade, Alpine.js, Livewire, and Tailwind CSS v4.
+metaImage: /assets/images/og/docs/components/dropdown-menu.png
+metaTitle: Dropdown Menu Component for Laravel Blade, Alpine.js & Livewire | Velyx
 extends: _layouts.documentation
 section: content
 ---
@@ -14,10 +16,10 @@ The Dropdown Menu component displays a list of actions or content in a floating 
 Add the dropdown menu component to your project:
 
 <x-code-tabs
-    npm="npx velyx add dropdown-menu"
-    pnpm="pnpm dlx velyx add dropdown-menu"
-    yarn="yarn dlx velyx add dropdown-menu"
-    bun="bunx --bun velyx add dropdown-menu"
+    npm="npx velyx@latest add dropdown-menu"
+    pnpm="pnpm dlx velyx@latest add dropdown-menu"
+    yarn="yarn dlx velyx@latest add dropdown-menu"
+    bun="bunx --bun velyx@latest add dropdown-menu"
 />
 
 <x-callout type="info">

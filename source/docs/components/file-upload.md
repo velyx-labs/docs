@@ -1,6 +1,8 @@
 ---
 title: File Upload
-description: Drag and drop file upload with progress tracking
+description: File Upload component documentation for Velyx. Installation, usage examples, variants, and customization guidance for Laravel Blade, Alpine.js, Livewire, and Tailwind CSS v4.
+metaImage: /assets/images/og/docs/components/file-upload.png
+metaTitle: File Upload Component for Laravel Blade, Alpine.js & Livewire | Velyx
 extends: _layouts.documentation
 section: content
 ---
@@ -14,10 +16,10 @@ The File Upload component provides a drag-and-drop zone for uploading files with
 Add the file upload component to your project:
 
 <x-code-tabs
-    npm="npx velyx add file-upload"
-    pnpm="pnpm dlx velyx add file-upload"
-    yarn="yarn dlx velyx add file-upload"
-    bun="bunx --bun velyx add file-upload"
+    npm="npx velyx@latest add file-upload"
+    pnpm="pnpm dlx velyx@latest add file-upload"
+    yarn="yarn dlx velyx@latest add file-upload"
+    bun="bunx --bun velyx@latest add file-upload"
 />
 
 ## Usage

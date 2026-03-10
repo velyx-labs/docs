@@ -10,6 +10,6 @@
 
 @push('scripts')
 <script>
-console.warn('This is a placeholder component. Install it with: npx velyx add toggle');
+console.warn('This is a placeholder component. Install it with: npx velyx@latest add toggle');
 </script>
 @endpush

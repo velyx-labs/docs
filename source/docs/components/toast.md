@@ -1,6 +1,8 @@
 ---
 title: Toast
-description: Temporary notification messages for user feedback
+description: Toast component documentation for Velyx. Installation, usage examples, variants, and customization guidance for Laravel Blade, Alpine.js, Livewire, and Tailwind CSS v4.
+metaImage: /assets/images/og/docs/components/toast.png
+metaTitle: Toast Component for Laravel Blade, Alpine.js & Livewire | Velyx
 extends: _layouts.documentation
 section: content
 ---
@@ -14,10 +16,10 @@ The Toast component displays temporary notification messages that appear and dis
 Add the toast component to your project:
 
 <x-code-tabs
-    npm="npx velyx add toast"
-    pnpm="pnpm dlx velyx add toast"
-    yarn="yarn dlx velyx add toast"
-    bun="bunx --bun velyx add toast"
+    npm="npx velyx@latest add toast"
+    pnpm="pnpm dlx velyx@latest add toast"
+    yarn="yarn dlx velyx@latest add toast"
+    bun="bunx --bun velyx@latest add toast"
 />
 
 ## Usage

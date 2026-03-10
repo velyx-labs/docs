@@ -1,6 +1,8 @@
 ---
 title: Accordion
-description: Collapsible content panels for organizing information
+description: Accordion component documentation for Velyx. Installation, usage examples, variants, and customization guidance for Laravel Blade, Alpine.js, Livewire, and Tailwind CSS v4.
+metaImage: /assets/images/og/docs/components/accordion.png
+metaTitle: Accordion Component for Laravel Blade, Alpine.js & Livewire | Velyx
 extends: _layouts.documentation
 section: content
 ---
@@ -14,10 +16,10 @@ Accordions allow users to expand and collapse content panels, useful for FAQs, d
 Add the accordion component to your project:
 
 <x-code-tabs
-    npm="npx velyx add accordion"
-    pnpm="pnpm dlx velyx add accordion"
-    yarn="yarn dlx velyx add accordion"
-    bun="bunx --bun velyx add accordion"
+    npm="npx velyx@latest add accordion"
+    pnpm="pnpm dlx velyx@latest add accordion"
+    yarn="yarn dlx velyx@latest add accordion"
+    bun="bunx --bun velyx@latest add accordion"
 />
 
 ## Usage
@@ -119,7 +121,7 @@ Use the `accordion-item`, `accordion-trigger`, and `accordion-content` component
     <x-ui.accordion.item value="item-1">
         <x-ui.accordion.trigger>How do I install components?</x-ui.accordion.trigger>
         <x-ui.accordion.content>
-            Use the Velyx CLI: <code>npx velyx add button</code>
+            Use the Velyx CLI: <code>npx velyx@latest add button</code>
         </x-ui.accordion.content>
     </x-ui.accordion.item>
 

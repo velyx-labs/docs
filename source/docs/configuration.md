@@ -1,6 +1,8 @@
 ---
 title: Configuration
-description: Configure Velyx for your Laravel project
+description: Configure Velyx for your Laravel project, adjust project settings, and align the component workflow with your application structure.
+metaImage: /assets/images/og/docs/configuration.png
+metaTitle: Configuration Guide for Laravel UI Components | Velyx
 extends: _layouts.documentation
 section: content
 ---
@@ -11,7 +13,7 @@ Configure Velyx to match your project's structure and preferences.
 
 ## velyx.json File
 
-After running `npx velyx init`, a `velyx.json` file is created in your project root:
+After running `npx velyx@latest init`, a `velyx.json` file is created in your project root:
 
 ```json
 {
@@ -59,7 +61,7 @@ The path to your main CSS file.
 
 **Default:** Auto-detected from your project
 
-During `velyx init`, Velyx can inject this import if a compatible CSS entry is detected and you confirm (or use `--defaults`):
+During `npx velyx@latest init`, Velyx can inject this import if a compatible CSS entry is detected and you confirm (or use `--defaults`):
 
 ```css
 @import "./velyx.css";

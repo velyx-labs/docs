@@ -1,6 +1,8 @@
 ---
 title: Keyboard
-description: Keyboard key shortcuts display component
+description: Keyboard component documentation for Velyx. Installation, usage examples, variants, and customization guidance for Laravel Blade, Alpine.js, Livewire, and Tailwind CSS v4.
+metaImage: /assets/images/og/docs/components/kbd.png
+metaTitle: Keyboard Component for Laravel Blade, Alpine.js & Livewire | Velyx
 extends: _layouts.documentation
 section: content
 ---
@@ -14,10 +16,10 @@ The Keyboard component displays keyboard key shortcuts with proper styling. It's
 Add the keyboard component to your project:
 
 <x-code-tabs
-    npm="npx velyx add kbd"
-    pnpm="pnpm dlx velyx add kbd"
-    yarn="yarn dlx velyx add kbd"
-    bun="bunx --bun velyx add kbd"
+    npm="npx velyx@latest add kbd"
+    pnpm="pnpm dlx velyx@latest add kbd"
+    yarn="yarn dlx velyx@latest add kbd"
+    bun="bunx --bun velyx@latest add kbd"
 />
 
 <x-callout type="info">

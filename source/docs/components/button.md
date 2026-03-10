@@ -1,6 +1,8 @@
 ---
 title: Button
-description: Button component with multiple variants and sizes
+description: Button component documentation for Velyx. Installation, usage examples, variants, and customization guidance for Laravel Blade, Alpine.js, Livewire, and Tailwind CSS v4.
+metaImage: /assets/images/og/docs/components/button.png
+metaTitle: Button Component for Laravel Blade, Alpine.js & Livewire | Velyx
 extends: _layouts.documentation
 section: content
 ---
@@ -14,10 +16,10 @@ Buttons allow users to perform actions or navigate with a single click.
 Add the button component to your project:
 
 <x-code-tabs
-    npm="npx velyx add button"
-    pnpm="pnpm dlx velyx add button"
-    yarn="yarn dlx velyx add button"
-    bun="bunx --bun velyx add button"
+    npm="npx velyx@latest add button"
+    pnpm="pnpm dlx velyx@latest add button"
+    yarn="yarn dlx velyx@latest add button"
+    bun="bunx --bun velyx@latest add button"
 />
 
 ## Usage

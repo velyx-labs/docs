@@ -1,6 +1,8 @@
 ---
 title: Theming
-description: Customize components to match your brand
+description: Customize Velyx components to match your brand with practical theming patterns for colors, spacing, and interface polish.
+metaImage: /assets/images/og/docs/theming.png
+metaTitle: Theming Guide for Laravel UI Components | Velyx
 extends: _layouts.documentation
 section: content
 ---

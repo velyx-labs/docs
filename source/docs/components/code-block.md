@@ -1,6 +1,8 @@
 ---
 title: Code Block
-description: Display code snippets with syntax highlighting
+description: Code Block component documentation for Velyx. Installation, usage examples, variants, and customization guidance for Laravel Blade, Alpine.js, Livewire, and Tailwind CSS v4.
+metaImage: /assets/images/og/docs/components/code-block.png
+metaTitle: Code Block Component for Laravel Blade, Alpine.js & Livewire | Velyx
 extends: _layouts.documentation
 section: content
 ---
@@ -14,10 +16,10 @@ The Code Block component displays code snippets with syntax highlighting using P
 Add the code block component to your project:
 
 <x-code-tabs
-    npm="npx velyx add code-block"
-    pnpm="pnpm dlx velyx add code-block"
-    yarn="yarn dlx velyx add code-block"
-    bun="bunx --bun velyx add code-block"
+    npm="npx velyx@latest add code-block"
+    pnpm="pnpm dlx velyx@latest add code-block"
+    yarn="yarn dlx velyx@latest add code-block"
+    bun="bunx --bun velyx@latest add code-block"
 />
 
 ## Usage

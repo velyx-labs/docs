@@ -1,6 +1,8 @@
 ---
 title: Command Palette
-description: Searchable command interface for quick actions and navigation
+description: Command Palette component documentation for Velyx. Installation, usage examples, variants, and customization guidance for Laravel Blade, Alpine.js, Livewire, and Tailwind CSS v4.
+metaImage: /assets/images/og/docs/components/command-palette.png
+metaTitle: Command Palette Component for Laravel Blade, Alpine.js & Livewire | Velyx
 extends: _layouts.documentation
 section: content
 ---
@@ -14,10 +16,10 @@ The Command Palette component provides a searchable, keyboard-accessible interfa
 Add the command palette component to your project:
 
 <x-code-tabs
-    npm="npx velyx add command-palette"
-    pnpm="pnpm dlx velyx add command-palette"
-    yarn="yarn dlx velyx add command-palette"
-    bun="bunx --bun velyx add command-palette"
+    npm="npx velyx@latest add command-palette"
+    pnpm="pnpm dlx velyx@latest add command-palette"
+    yarn="yarn dlx velyx@latest add command-palette"
+    bun="bunx --bun velyx@latest add command-palette"
 />
 
 <x-callout type="info">

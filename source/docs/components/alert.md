@@ -1,6 +1,8 @@
 ---
 title: Alert
-description: Display important messages and notifications
+description: Alert component documentation for Velyx. Installation, usage examples, variants, and customization guidance for Laravel Blade, Alpine.js, Livewire, and Tailwind CSS v4.
+metaImage: /assets/images/og/docs/components/alert.png
+metaTitle: Alert Component for Laravel Blade, Alpine.js & Livewire | Velyx
 extends: _layouts.documentation
 section: content
 ---
@@ -14,10 +16,10 @@ Alerts display short, important messages in a way that attracts the user's atten
 Add the alert component to your project:
 
 <x-code-tabs
-    npm="npx velyx add alert"
-    pnpm="pnpm dlx velyx add alert"
-    yarn="yarn dlx velyx add alert"
-    bun="bunx --bun velyx add alert"
+    npm="npx velyx@latest add alert"
+    pnpm="pnpm dlx velyx@latest add alert"
+    yarn="yarn dlx velyx@latest add alert"
+    bun="bunx --bun velyx@latest add alert"
 />
 
 <x-callout type="info">

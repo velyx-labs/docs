@@ -1,6 +1,8 @@
 ---
 title: Table
-description: Display data in rows and columns with proper styling
+description: Table component documentation for Velyx. Installation, usage examples, variants, and customization guidance for Laravel Blade, Alpine.js, Livewire, and Tailwind CSS v4.
+metaImage: /assets/images/og/docs/components/table.png
+metaTitle: Table Component for Laravel Blade, Alpine.js & Livewire | Velyx
 extends: _layouts.documentation
 section: content
 ---
@@ -14,10 +16,10 @@ The Table component provides a styled container for displaying tabular data with
 Add the table component to your project:
 
 <x-code-tabs
-    npm="npx velyx add table"
-    pnpm="pnpm dlx velyx add table"
-    yarn="yarn dlx velyx add table"
-    bun="bunx --bun velyx add table"
+    npm="npx velyx@latest add table"
+    pnpm="pnpm dlx velyx@latest add table"
+    yarn="yarn dlx velyx@latest add table"
+    bun="bunx --bun velyx@latest add table"
 />
 
 ## Usage

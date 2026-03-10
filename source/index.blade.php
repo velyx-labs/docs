@@ -1,5 +1,9 @@
 @extends('_layouts.master')
 
+@push('meta')
+<meta name="keywords" content="Laravel UI components, Blade components, Alpine.js UI, Tailwind CSS v4, Livewire components, Laravel design system">
+@endpush
+
 @section('body')
 <section class="relative overflow-hidden border-b border-border/60 bg-background">
     <div class="pointer-events-none absolute inset-0 -z-10">
@@ -74,6 +78,25 @@
                     </div>
 
                     <div class="grid gap-5 p-5">
+
+                        <div class="grid gap-4 sm:grid-cols-3">
+                            <div class="rounded-2xl border border-border/60 bg-background/80 p-4">
+                                <img src="/assets/img/icon-window.svg" alt="Window preview icon" class="h-8 w-8" />
+                                <p class="mt-4 text-sm font-semibold text-foreground">Structured screens</p>
+                                <p class="mt-2 text-xs leading-6 text-muted-foreground">Cards, tables and forms arranged like a real product interface.</p>
+                            </div>
+                            <div class="rounded-2xl border border-border/60 bg-background/80 p-4">
+                                <img src="/assets/img/icon-stack.svg" alt="Component stack icon" class="h-8 w-8" />
+                                <p class="mt-4 text-sm font-semibold text-foreground">Composable blocks</p>
+                                <p class="mt-2 text-xs leading-6 text-muted-foreground">Pieces that move from docs to app without needing a rewrite.</p>
+                            </div>
+                            <div class="rounded-2xl border border-border/60 bg-background/80 p-4">
+                                <img src="/assets/img/icon-terminal.svg" alt="Terminal icon" class="h-8 w-8" />
+                                <p class="mt-4 text-sm font-semibold text-foreground">Fast handoff</p>
+                                <p class="mt-2 text-xs leading-6 text-muted-foreground">Install, paste, adapt and keep shipping inside Laravel.</p>
+                            </div>
+                        </div>
+
                         <div class="rounded-2xl border border-border/60 bg-background p-4">
                             <div class="flex flex-wrap items-center gap-2 text-[11px] font-medium text-muted-foreground">
                                 <span class="rounded-full bg-muted px-2.5 py-1">drawer</span>
@@ -125,62 +148,6 @@
                                             <span class="text-foreground">Table</span>
                                             <span class="text-muted-foreground">Dense data UI</span>
                                         </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="grid gap-4 sm:grid-cols-[0.94fr_1.06fr]">
-                            <div class="rounded-2xl border border-border/60 bg-background p-4">
-                                <div class="flex items-center justify-between">
-                                    <p class="text-xs uppercase tracking-[0.24em] text-muted-foreground">Drawer Example</p>
-                                    <span class="rounded-full bg-primary/10 px-2.5 py-1 text-[11px] font-semibold text-primary">Account Settings</span>
-                                </div>
-                                <div class="mt-4 space-y-3">
-                                    <div class="space-y-1">
-                                        <div class="h-3 w-24 rounded-full bg-muted"></div>
-                                        <div class="h-9 rounded-xl border border-border bg-muted/40"></div>
-                                    </div>
-                                    <div class="space-y-1">
-                                        <div class="h-3 w-20 rounded-full bg-muted"></div>
-                                        <div class="h-9 rounded-xl border border-border bg-muted/40"></div>
-                                    </div>
-                                    <div class="space-y-1">
-                                        <div class="h-3 w-32 rounded-full bg-muted"></div>
-                                        <div class="h-20 rounded-2xl border border-border bg-muted/40"></div>
-                                    </div>
-                                </div>
-                                <div class="mt-4 flex gap-2">
-                                    <span class="inline-flex rounded-xl border border-border bg-background px-3 py-2 text-xs text-foreground">Cancel</span>
-                                    <span class="inline-flex rounded-xl bg-primary px-3 py-2 text-xs font-semibold text-primary-foreground">Save changes</span>
-                                </div>
-                            </div>
-
-                            <div class="rounded-2xl border border-border/60 bg-background p-4">
-                                <div class="flex items-center justify-between">
-                                    <p class="text-xs uppercase tracking-[0.24em] text-muted-foreground">Table Example</p>
-                                    <span class="text-xs text-muted-foreground">3 rows</span>
-                                </div>
-                                <div class="mt-4 overflow-hidden rounded-2xl border border-border">
-                                    <div class="grid grid-cols-[1.3fr_0.8fr_0.8fr] border-b border-border bg-muted/50 px-3 py-2 text-[11px] font-semibold uppercase tracking-[0.18em] text-muted-foreground">
-                                        <span>Component</span>
-                                        <span>Status</span>
-                                        <span>Usage</span>
-                                    </div>
-                                    <div class="grid grid-cols-[1.3fr_0.8fr_0.8fr] px-3 py-3 text-sm">
-                                        <span class="text-foreground">Drawer</span>
-                                        <span class="text-foreground">Ready</span>
-                                        <span class="text-muted-foreground">High</span>
-                                    </div>
-                                    <div class="grid grid-cols-[1.3fr_0.8fr_0.8fr] border-t border-border px-3 py-3 text-sm">
-                                        <span class="text-foreground">Popover</span>
-                                        <span class="text-foreground">Ready</span>
-                                        <span class="text-muted-foreground">Medium</span>
-                                    </div>
-                                    <div class="grid grid-cols-[1.3fr_0.8fr_0.8fr] border-t border-border px-3 py-3 text-sm">
-                                        <span class="text-foreground">Command</span>
-                                        <span class="text-foreground">Ready</span>
-                                        <span class="text-muted-foreground">High</span>
                                     </div>
                                 </div>
                             </div>
@@ -294,10 +261,12 @@
     </div>
 </section>
 
-<section class="bg-background">
-    <div class="container-wrapper px-4 py-18 lg:px-6 lg:py-22">
-        <div class="relative overflow-hidden rounded-[2rem] border border-border/70 bg-foreground px-6 py-10 text-primary-foreground md:px-10 md:py-12">
-            <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_rgba(255,255,255,0.18),_transparent_24%),radial-gradient(circle_at_bottom_left,_rgba(255,255,255,0.1),_transparent_30%)]"></div>
+<section class="border-t border-border/60 bg-muted/20">
+    <div class="container-wrapper px-4 py-16 lg:px-6 lg:py-20">
+        <div class="relative overflow-hidden rounded-[2rem] border border-primary/20 bg-primary px-6 py-10 text-primary-foreground md:px-10 md:py-12">
+            <div class="absolute inset-0 bg-[linear-gradient(135deg,transparent,rgba(255,255,255,0.04))]"></div>
+            <div class="absolute -right-16 -top-20 h-56 w-56 rounded-full bg-primary-foreground/12 blur-3xl"></div>
+            <div class="absolute -bottom-20 left-10 h-52 w-52 rounded-full bg-background/14 blur-3xl"></div>
             <div class="relative flex flex-col gap-8 lg:flex-row lg:items-end lg:justify-between">
                 <div class="max-w-2xl">
                     <p class="text-xs font-semibold uppercase tracking-[0.26em] text-primary-foreground/70">Start Building</p>
@@ -314,7 +283,7 @@
                         Read the Docs
                         <x-icon name="arrow-right-02" class="h-4 w-4" />
                     </a>
-                    <a href="https://github.com/velyx-labs" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 rounded-2xl border border-white/15 px-5 py-3 text-sm font-semibold text-primary-foreground transition-colors hover:bg-white/8">
+                    <a href="https://github.com/velyx-labs" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 rounded-2xl border border-primary-foreground/20 bg-primary-foreground/6 px-5 py-3 text-sm font-semibold text-primary-foreground transition-colors hover:bg-primary-foreground/12">
                         <x-icons.github class="h-4 w-4 text-primary-foreground" />
                         View on GitHub
                     </a>

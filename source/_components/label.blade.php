@@ -9,6 +9,6 @@
 
 @push('scripts')
 <script>
-console.warn('This is a placeholder component. Install it with: npx velyx add label');
+console.warn('This is a placeholder component. Install it with: npx velyx@latest add label');
 </script>
 @endpush

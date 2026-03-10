@@ -20,15 +20,15 @@
                     />
                     <span class="text-[15px] tracking-tight sm:text-[17px]">{{ $page->siteName }}</span>
                     <span class="ml-0.5 hidden rounded-full border border-border bg-muted/70 px-2 py-0.5 text-[10px] font-semibold uppercase tracking-widest text-muted-foreground sm:inline-flex">
-                        Beta
+                        Copy. Adapt. Ship.
                     </span>
                 </a>
 
                 <nav class="hidden items-center gap-1 text-sm font-medium md:flex" role="navigation" aria-label="Main navigation">
                     @php
                         $navLinks = [
-                            ['href' => '/docs/installation', 'label' => 'Documentation'],
-                            ['href' => '/docs/components',   'label' => 'Components'],
+                            ['href' => '/docs/installation', 'label' => 'Get Started'],
+                            ['href' => '/docs/components',   'label' => 'Component Library'],
                         ];
                     @endphp
 
@@ -90,7 +90,7 @@
                     href="/docs/installation"
                     class="inline-flex items-center gap-1.5 rounded-lg bg-primary px-4 py-2 text-sm font-semibold text-primary-foreground shadow-sm ring-1 ring-primary/20 transition-all hover:bg-primary/90 hover:shadow-md hover:ring-primary/40 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 hidden md:inline-flex"
                 >
-                    Get Started
+                    Start Building
                     <x-icon name="arrow-right-02" class="h-3.5 w-3.5" />
                 </a>
 
@@ -98,7 +98,7 @@
                     href="/docs/installation"
                     class="inline-flex items-center gap-1 rounded-lg bg-primary px-2.5 py-1.5 text-[11px] font-semibold text-primary-foreground shadow-sm transition-all hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 md:hidden"
                 >
-                    <span>Get Started</span>
+                    <span>Start</span>
                     <x-icon name="arrow-right-02" class="h-3.5 w-3.5" />
                 </a>
             </div>

@@ -1,6 +1,8 @@
 ---
 title: Avatar
-description: User profile image component with status indicators
+description: Avatar component documentation for Velyx. Installation, usage examples, variants, and customization guidance for Laravel Blade, Alpine.js, Livewire, and Tailwind CSS v4.
+metaImage: /assets/images/og/docs/components/avatar.png
+metaTitle: Avatar Component for Laravel Blade, Alpine.js & Livewire | Velyx
 extends: _layouts.documentation
 section: content
 ---
@@ -14,10 +16,10 @@ Avatar components are used to represent a user and can display images, initials,
 Add the avatar component to your project:
 
 <x-code-tabs
-    npm="npx velyx add avatar"
-    pnpm="pnpm dlx velyx add avatar"
-    yarn="yarn dlx velyx add avatar"
-    bun="bunx --bun velyx add avatar"
+    npm="npx velyx@latest add avatar"
+    pnpm="pnpm dlx velyx@latest add avatar"
+    yarn="yarn dlx velyx@latest add avatar"
+    bun="bunx --bun velyx@latest add avatar"
 />
 
 ## Usage

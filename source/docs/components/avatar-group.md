@@ -1,6 +1,8 @@
 ---
 title: Avatar Group
-description: Grouped avatars with overlap for showing multiple users
+description: Avatar Group component documentation for Velyx. Installation, usage examples, variants, and customization guidance for Laravel Blade, Alpine.js, Livewire, and Tailwind CSS v4.
+metaImage: /assets/images/og/docs/components/avatar-group.png
+metaTitle: Avatar Group Component for Laravel Blade, Alpine.js & Livewire | Velyx
 extends: _layouts.documentation
 section: content
 ---
@@ -14,10 +16,10 @@ Avatar groups display multiple avatars stacked together, perfect for showing tea
 Add the avatar group component to your project:
 
 <x-code-tabs
-    npm="npx velyx add avatar-group"
-    pnpm="pnpm dlx velyx add avatar-group"
-    yarn="yarn dlx velyx add avatar-group"
-    bun="bunx --bun velyx add avatar-group"
+    npm="npx velyx@latest add avatar-group"
+    pnpm="pnpm dlx velyx@latest add avatar-group"
+    yarn="yarn dlx velyx@latest add avatar-group"
+    bun="bunx --bun velyx@latest add avatar-group"
 />
 
 ## Usage

@@ -1,6 +1,8 @@
 ---
 title: Date Picker
-description: Interactive calendar component for selecting dates
+description: Date Picker component documentation for Velyx. Installation, usage examples, variants, and customization guidance for Laravel Blade, Alpine.js, Livewire, and Tailwind CSS v4.
+metaImage: /assets/images/og/docs/components/date-picker.png
+metaTitle: Date Picker Component for Laravel Blade, Alpine.js & Livewire | Velyx
 extends: _layouts.documentation
 section: content
 ---
@@ -14,10 +16,10 @@ The Date Picker component provides an interactive calendar interface for selecti
 Add the date picker component to your project:
 
 <x-code-tabs
-    npm="npx velyx add date-picker"
-    pnpm="pnpm dlx velyx add date-picker"
-    yarn="yarn dlx velyx add date-picker"
-    bun="bunx --bun velyx add date-picker"
+    npm="npx velyx@latest add date-picker"
+    pnpm="pnpm dlx velyx@latest add date-picker"
+    yarn="yarn dlx velyx@latest add date-picker"
+    bun="bunx --bun velyx@latest add date-picker"
 />
 
 <x-callout type="info">

@@ -1,6 +1,8 @@
 ---
 title: Progress Bar
-description: Visual indicator for task completion progress
+description: Progress Bar component documentation for Velyx. Installation, usage examples, variants, and customization guidance for Laravel Blade, Alpine.js, Livewire, and Tailwind CSS v4.
+metaImage: /assets/images/og/docs/components/progress-bar.png
+metaTitle: Progress Bar Component for Laravel Blade, Alpine.js & Livewire | Velyx
 extends: _layouts.documentation
 section: content
 ---
@@ -14,10 +16,10 @@ The Progress Bar component provides a visual indicator for tracking the completi
 Add the progress bar component to your project:
 
 <x-code-tabs
-    npm="npx velyx add progress-bar"
-    pnpm="pnpm dlx velyx add progress-bar"
-    yarn="yarn dlx velyx add progress-bar"
-    bun="bunx --bun velyx add progress-bar"
+    npm="npx velyx@latest add progress-bar"
+    pnpm="pnpm dlx velyx@latest add progress-bar"
+    yarn="yarn dlx velyx@latest add progress-bar"
+    bun="bunx --bun velyx@latest add progress-bar"
 />
 
 ## Usage

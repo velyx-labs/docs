@@ -1,6 +1,8 @@
 ---
 title: Breadcrumbs
-description: Navigation path indicator for hierarchical content
+description: Breadcrumbs component documentation for Velyx. Installation, usage examples, variants, and customization guidance for Laravel Blade, Alpine.js, Livewire, and Tailwind CSS v4.
+metaImage: /assets/images/og/docs/components/breadcrumbs.png
+metaTitle: Breadcrumbs Component for Laravel Blade, Alpine.js & Livewire | Velyx
 extends: _layouts.documentation
 section: content
 ---
@@ -14,10 +16,10 @@ Breadcrumbs show users their current location within a website's hierarchy and h
 Add the breadcrumbs component to your project:
 
 <x-code-tabs
-    npm="npx velyx add breadcrumbs"
-    pnpm="pnpm dlx velyx add breadcrumbs"
-    yarn="yarn dlx velyx add breadcrumbs"
-    bun="bunx --bun velyx add breadcrumbs"
+    npm="npx velyx@latest add breadcrumbs"
+    pnpm="pnpm dlx velyx@latest add breadcrumbs"
+    yarn="yarn dlx velyx@latest add breadcrumbs"
+    bun="bunx --bun velyx@latest add breadcrumbs"
 />
 
 ## Usage

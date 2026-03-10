@@ -1,6 +1,8 @@
 ---
 title: Popover
-description: Floating content container triggered by user interaction
+description: Popover component documentation for Velyx. Installation, usage examples, variants, and customization guidance for Laravel Blade, Alpine.js, Livewire, and Tailwind CSS v4.
+metaImage: /assets/images/og/docs/components/popover.png
+metaTitle: Popover Component for Laravel Blade, Alpine.js & Livewire | Velyx
 extends: _layouts.documentation
 section: content
 ---
@@ -14,10 +16,10 @@ The Popover component displays floating content that appears when users interact
 Add the popover component to your project:
 
 <x-code-tabs
-    npm="npx velyx add popover"
-    pnpm="pnpm dlx velyx add popover"
-    yarn="yarn dlx velyx add popover"
-    bun="bunx --bun velyx add popover"
+    npm="npx velyx@latest add popover"
+    pnpm="pnpm dlx velyx@latest add popover"
+    yarn="yarn dlx velyx@latest add popover"
+    bun="bunx --bun velyx@latest add popover"
 />
 
 ## Usage

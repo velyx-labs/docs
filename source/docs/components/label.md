@@ -1,6 +1,8 @@
 ---
 title: Label
-description: Form label with description and required indicator
+description: Label component documentation for Velyx. Installation, usage examples, variants, and customization guidance for Laravel Blade, Alpine.js, Livewire, and Tailwind CSS v4.
+metaImage: /assets/images/og/docs/components/label.png
+metaTitle: Label Component for Laravel Blade, Alpine.js & Livewire | Velyx
 extends: _layouts.documentation
 section: content
 ---
@@ -14,10 +16,10 @@ The Label component provides accessible form labels with optional descriptions a
 Add the label component to your project:
 
 <x-code-tabs
-    npm="npx velyx add label"
-    pnpm="pnpm dlx velyx add label"
-    yarn="yarn dlx velyx add label"
-    bun="bunx --bun velyx add label"
+    npm="npx velyx@latest add label"
+    pnpm="pnpm dlx velyx@latest add label"
+    yarn="yarn dlx velyx@latest add label"
+    bun="bunx --bun velyx@latest add label"
 />
 
 ## Usage

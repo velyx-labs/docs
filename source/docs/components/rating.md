@@ -1,6 +1,8 @@
 ---
 title: Rating
-description: Interactive star rating component
+description: Rating component documentation for Velyx. Installation, usage examples, variants, and customization guidance for Laravel Blade, Alpine.js, Livewire, and Tailwind CSS v4.
+metaImage: /assets/images/og/docs/components/rating.png
+metaTitle: Rating Component for Laravel Blade, Alpine.js & Livewire | Velyx
 extends: _layouts.documentation
 section: content
 ---
@@ -14,10 +16,10 @@ The Rating component provides an interactive star rating system for collecting u
 Add the rating component to your project:
 
 <x-code-tabs
-    npm="npx velyx add rating"
-    pnpm="pnpm dlx velyx add rating"
-    yarn="yarn dlx velyx add rating"
-    bun="bunx --bun velyx add rating"
+    npm="npx velyx@latest add rating"
+    pnpm="pnpm dlx velyx@latest add rating"
+    yarn="yarn dlx velyx@latest add rating"
+    bun="bunx --bun velyx@latest add rating"
 />
 
 ## Usage

@@ -1,6 +1,8 @@
 ---
 title: CLI Reference
-description: Complete guide to Velyx CLI commands
+description: Reference for Velyx CLI commands, installation flows, and day-to-day component management in Laravel projects.
+metaImage: /assets/images/og/docs/cli-reference.png
+metaTitle: Velyx CLI Reference for Laravel Projects | Velyx
 extends: _layouts.documentation
 section: content
 ---
@@ -9,6 +11,18 @@ section: content
 
 Complete reference for all Velyx CLI commands.
 
+## Global Options
+
+### `velyx --version`
+
+Display the installed Velyx CLI version.
+
+```bash
+velyx --version
+```
+
+**Alias:** `velyx -v`
+
 ## Commands
 
 ### `velyx init`
@@ -16,10 +30,10 @@ Complete reference for all Velyx CLI commands.
 Initialize Velyx in your Laravel project.
 
 <x-code-tabs
-    npm="npx velyx init"
-    pnpm="pnpm dlx velyx init"
-    yarn="yarn dlx velyx init"
-    bun="bunx --bun velyx init"
+    npm="npx velyx@latest init"
+    pnpm="pnpm dlx velyx@latest init"
+    yarn="yarn dlx velyx@latest init"
+    bun="bunx --bun velyx@latest init"
 />
 
 **What it does:**
@@ -31,7 +45,7 @@ Initialize Velyx in your Laravel project.
 
 | Option | Alias | Description | Default |
 |--------|-------|-------------|---------|
-| `--base-color <color>` | `-b` | The base color to use | Prompts if not set |
+| `--base-color <base-color>` | `-b` | The base color to use | Prompts if not set |
 | `--defaults` | `-d` | Use default configuration | `false` |
 | `--force` | `-f` | Force overwrite of existing configuration | `false` |
 | `--cwd <path>` | `-c` | The working directory | Current directory |
@@ -45,24 +59,24 @@ Initialize Velyx in your Laravel project.
 Add components to your project.
 
 <x-code-tabs
-    npm="npx velyx add button"
-    pnpm="pnpm dlx velyx add button"
-    yarn="yarn dlx velyx add button"
-    bun="bunx --bun velyx add button"
+    npm="npx velyx@latest add button"
+    pnpm="pnpm dlx velyx@latest add button"
+    yarn="yarn dlx velyx@latest add button"
+    bun="bunx --bun velyx@latest add button"
 />
 
 <x-code-tabs
-    npm="npx velyx add card input modal"
-    pnpm="pnpm dlx velyx add card input modal"
-    yarn="yarn dlx velyx add card input modal"
-    bun="bunx --bun velyx add card input modal"
+    npm="npx velyx@latest add card input modal"
+    pnpm="pnpm dlx velyx@latest add card input modal"
+    yarn="yarn dlx velyx@latest add card input modal"
+    bun="bunx --bun velyx@latest add card input modal"
 />
 
 <x-code-tabs
-    npm="npx velyx add --all"
-    pnpm="pnpm dlx velyx add --all"
-    yarn="yarn dlx velyx add --all"
-    bun="bunx --bun velyx add --all"
+    npm="npx velyx@latest add --all"
+    pnpm="pnpm dlx velyx@latest add --all"
+    yarn="yarn dlx velyx@latest add --all"
+    bun="bunx --bun velyx@latest add --all"
 />
 
 **What it does:**
@@ -87,24 +101,24 @@ Add components to your project.
 List all available components from the registry.
 
 <x-code-tabs
-    npm="npx velyx list"
-    pnpm="pnpm dlx velyx list"
-    yarn="yarn dlx velyx list"
-    bun="bunx --bun velyx list"
+    npm="npx velyx@latest list"
+    pnpm="pnpm dlx velyx@latest list"
+    yarn="yarn dlx velyx@latest list"
+    bun="bunx --bun velyx@latest list"
 />
 
 <x-code-tabs
-    npm="npx velyx list --query button"
-    pnpm="pnpm dlx velyx list --query button"
-    yarn="yarn dlx velyx list --query button"
-    bun="bunx --bun velyx list --query button"
+    npm="npx velyx@latest list --query button"
+    pnpm="pnpm dlx velyx@latest list --query button"
+    yarn="yarn dlx velyx@latest list --query button"
+    bun="bunx --bun velyx@latest list --query button"
 />
 
 <x-code-tabs
-    npm="npx velyx list --json"
-    pnpm="pnpm dlx velyx list --json"
-    yarn="yarn dlx velyx list --json"
-    bun="bunx --bun velyx list --json"
+    npm="npx velyx@latest list --json"
+    pnpm="pnpm dlx velyx@latest list --json"
+    yarn="yarn dlx velyx@latest list --json"
+    bun="bunx --bun velyx@latest list --json"
 />
 
 **What it does:**
@@ -125,12 +139,12 @@ List all available components from the registry.
 **Alias:** `velyx search`
 
 <x-callout type="info">
-You must run <code>velyx init</code> before using <code>velyx add</code>, <code>velyx list</code>, or <code>velyx search</code>.
+You must run <code>npx velyx@latest init</code> before using <code>npx velyx@latest add</code>, <code>npx velyx@latest list</code>, or <code>npx velyx@latest search</code>.
 </x-callout>
 
 ## Configuration File
 
-The `velyx.json` file created by `init` contains:
+The `velyx.json` file created by `npx velyx@latest init` contains:
 
 ```json
 {
@@ -157,53 +171,53 @@ You can customize these paths to match your project structure. Learn more in the
 ### Initialize with a custom theme
 
 <x-code-tabs
-    npm="npx velyx init --base-color slate"
-    pnpm="pnpm dlx velyx init --base-color slate"
-    yarn="yarn dlx velyx init --base-color slate"
-    bun="bunx --bun velyx init --base-color slate"
+    npm="npx velyx@latest init --base-color slate"
+    pnpm="pnpm dlx velyx@latest init --base-color slate"
+    yarn="yarn dlx velyx@latest init --base-color slate"
+    bun="bunx --bun velyx@latest init --base-color slate"
 />
 
 ### Add multiple components
 
 <x-code-tabs
-    npm="npx velyx add button card input modal"
-    pnpm="pnpm dlx velyx add button card input modal"
-    yarn="yarn dlx velyx add button card input modal"
-    bun="bunx --bun velyx add button card input modal"
+    npm="npx velyx@latest add button card input modal"
+    pnpm="pnpm dlx velyx@latest add button card input modal"
+    yarn="yarn dlx velyx@latest add button card input modal"
+    bun="bunx --bun velyx@latest add button card input modal"
 />
 
 ### Add all components
 
 <x-code-tabs
-    npm="npx velyx add --all"
-    pnpm="pnpm dlx velyx add --all"
-    yarn="yarn dlx velyx add --all"
-    bun="bunx --bun velyx add --all"
+    npm="npx velyx@latest add --all"
+    pnpm="pnpm dlx velyx@latest add --all"
+    yarn="yarn dlx velyx@latest add --all"
+    bun="bunx --bun velyx@latest add --all"
 />
 
 ### Search for components
 
 <x-code-tabs
-    npm="npx velyx list --query button"
-    pnpm="pnpm dlx velyx list --query button"
-    yarn="yarn dlx velyx list --query button"
-    bun="bunx --bun velyx list --query button"
+    npm="npx velyx@latest list --query button"
+    pnpm="pnpm dlx velyx@latest list --query button"
+    yarn="yarn dlx velyx@latest list --query button"
+    bun="bunx --bun velyx@latest list --query button"
 />
 
 <x-code-tabs
-    npm="npx velyx search --query form"
-    pnpm="pnpm dlx velyx search --query form"
-    yarn="yarn dlx velyx search --query form"
-    bun="bunx --bun velyx search --query form"
+    npm="npx velyx@latest search --query form"
+    pnpm="pnpm dlx velyx@latest search --query form"
+    yarn="yarn dlx velyx@latest search --query form"
+    bun="bunx --bun velyx@latest search --query form"
 />
 
 ### Get JSON output
 
 <x-code-tabs
-    npm="npx velyx list --json"
-    pnpm="pnpm dlx velyx list --json"
-    yarn="yarn dlx velyx list --json"
-    bun="bunx --bun velyx list --json"
+    npm="npx velyx@latest list --json"
+    pnpm="pnpm dlx velyx@latest list --json"
+    yarn="yarn dlx velyx@latest list --json"
+    bun="bunx --bun velyx@latest list --json"
 />
 
 ## Next Steps

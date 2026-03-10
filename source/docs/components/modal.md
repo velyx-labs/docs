@@ -1,6 +1,8 @@
 ---
 title: Modal
-description: Modal dialog component for focused interactions
+description: Modal component documentation for Velyx. Installation, usage examples, variants, and customization guidance for Laravel Blade, Alpine.js, Livewire, and Tailwind CSS v4.
+metaImage: /assets/images/og/docs/components/modal.png
+metaTitle: Modal Component for Laravel Blade, Alpine.js & Livewire | Velyx
 extends: _layouts.documentation
 section: content
 ---
@@ -14,10 +16,10 @@ Modals are dialog overlays that focus the user's attention on a specific task or
 Add the modal component to your project:
 
 <x-code-tabs
-    npm="npx velyx add modal"
-    pnpm="pnpm dlx velyx add modal"
-    yarn="yarn dlx velyx add modal"
-    bun="bunx --bun velyx add modal"
+    npm="npx velyx@latest add modal"
+    pnpm="pnpm dlx velyx@latest add modal"
+    yarn="yarn dlx velyx@latest add modal"
+    bun="bunx --bun velyx@latest add modal"
 />
 
 <x-callout type="info">

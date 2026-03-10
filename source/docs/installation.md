@@ -1,6 +1,8 @@
 ---
 title: Installation
-description: Get started with Velyx in your Laravel project
+description: Install Velyx in your Laravel project and start adding Blade components with Tailwind CSS v4, Alpine.js, and Livewire support.
+metaImage: /assets/images/og/docs/installation.png
+metaTitle: Installation Guide for Laravel UI Components | Velyx
 extends: _layouts.documentation
 section: content
 ---
@@ -28,10 +30,10 @@ Velyx works via <code>npx</code> — no global installation needed! Just ensure 
 Run the init command in your Laravel project:
 
 <x-code-tabs
-    npm="npx velyx add button"
-    pnpm="pnpm dlx velyx add button"
-    yarn="yarn dlx velyx add button"
-    bun="bunx --bun velyx add button"
+    npm="npx velyx@latest add button"
+    pnpm="pnpm dlx velyx@latest add button"
+    yarn="yarn dlx velyx@latest add button"
+    bun="bunx --bun velyx@latest add button"
     default="npm"
 />
 
@@ -46,10 +48,10 @@ This will:
 Browse the [components library](/docs/components) and add components to your project:
 
 <x-code-tabs
-    npm="npx velyx add button"
-    pnpm="pnpm dlx velyx add button"
-    yarn="yarn dlx velyx add button"
-    bun="bunx --bun velyx add button"
+    npm="npx velyx@latest add button"
+    pnpm="pnpm dlx velyx@latest add button"
+    yarn="yarn dlx velyx@latest add button"
+    bun="bunx --bun velyx@latest add button"
 />
 
 Components are copied directly into your project — you own the code and can customize them however you want.

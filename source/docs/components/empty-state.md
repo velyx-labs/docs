@@ -1,6 +1,8 @@
 ---
 title: Empty State
-description: Placeholder for empty lists and no results
+description: Empty State component documentation for Velyx. Installation, usage examples, variants, and customization guidance for Laravel Blade, Alpine.js, Livewire, and Tailwind CSS v4.
+metaImage: /assets/images/og/docs/components/empty-state.png
+metaTitle: Empty State Component for Laravel Blade, Alpine.js & Livewire | Velyx
 extends: _layouts.documentation
 section: content
 ---
@@ -14,10 +16,10 @@ The Empty State component displays a placeholder when there's no data to show. I
 Add the empty state component to your project:
 
 <x-code-tabs
-    npm="npx velyx add empty-state"
-    pnpm="pnpm dlx velyx add empty-state"
-    yarn="yarn dlx velyx add empty-state"
-    bun="bunx --bun velyx add empty-state"
+    npm="npx velyx@latest add empty-state"
+    pnpm="pnpm dlx velyx@latest add empty-state"
+    yarn="yarn dlx velyx@latest add empty-state"
+    bun="bunx --bun velyx@latest add empty-state"
 />
 
 ## Usage

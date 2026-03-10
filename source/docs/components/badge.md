@@ -1,6 +1,8 @@
 ---
 title: Badge
-description: Labels and status indicators for UI elements
+description: Badge component documentation for Velyx. Installation, usage examples, variants, and customization guidance for Laravel Blade, Alpine.js, Livewire, and Tailwind CSS v4.
+metaImage: /assets/images/og/docs/components/badge.png
+metaTitle: Badge Component for Laravel Blade, Alpine.js & Livewire | Velyx
 extends: _layouts.documentation
 section: content
 ---
@@ -14,10 +16,10 @@ Badges are used to highlight status, categories, or small pieces of information.
 Add the badge component to your project:
 
 <x-code-tabs
-    npm="npx velyx add badge"
-    pnpm="pnpm dlx velyx add badge"
-    yarn="yarn dlx velyx add badge"
-    bun="bunx --bun velyx add badge"
+    npm="npx velyx@latest add badge"
+    pnpm="pnpm dlx velyx@latest add badge"
+    yarn="yarn dlx velyx@latest add badge"
+    bun="bunx --bun velyx@latest add badge"
 />
 
 ## Usage

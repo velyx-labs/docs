@@ -1,6 +1,8 @@
 ---
 title: Quick Start
-description: Add your first component with Velyx
+description: Add your first Velyx component, understand the workflow, and move from documentation to implementation quickly in Laravel.
+metaImage: /assets/images/og/docs/quick-start.png
+metaTitle: Quick Start Guide for Velyx Components | Velyx
 extends: _layouts.documentation
 section: content
 ---
@@ -14,19 +16,19 @@ Add your first component to your Laravel project in minutes.
 If you haven't already, run the init command:
 
 <x-code-tabs
-    npm="npx velyx init"
-    pnpm="pnpm dlx velyx init"
-    yarn="yarn dlx velyx init"
-    bun="bunx --bun velyx init"
+    npm="npx velyx@latest init"
+    pnpm="pnpm dlx velyx@latest init"
+    yarn="yarn dlx velyx@latest init"
+    bun="bunx --bun velyx@latest init"
 />
 
 If you want a non-interactive setup with defaults:
 
 <x-code-tabs
-    npm="npx velyx init --defaults"
-    pnpm="pnpm dlx velyx init --defaults"
-    yarn="yarn dlx velyx init --defaults"
-    bun="bunx --bun velyx init --defaults"
+    npm="npx velyx@latest init --defaults"
+    pnpm="pnpm dlx velyx@latest init --defaults"
+    yarn="yarn dlx velyx@latest init --defaults"
+    bun="bunx --bun velyx@latest init --defaults"
 />
 
 ## 2. Add a Component
@@ -34,10 +36,10 @@ If you want a non-interactive setup with defaults:
 Use the CLI to add a component:
 
 <x-code-tabs
-    npm="npx velyx add button"
-    pnpm="pnpm dlx velyx add button"
-    yarn="yarn dlx velyx add button"
-    bun="bunx --bun velyx add button"
+    npm="npx velyx@latest add button"
+    pnpm="pnpm dlx velyx@latest add button"
+    yarn="yarn dlx velyx@latest add button"
+    bun="bunx --bun velyx@latest add button"
 />
 
 This will:
@@ -49,10 +51,10 @@ This will:
 ## 3. List or Search Components
 
 <x-code-tabs
-    npm="npx velyx list"
-    pnpm="pnpm dlx velyx list"
-    yarn="yarn dlx velyx list"
-    bun="bunx --bun velyx list"
+    npm="npx velyx@latest list"
+    pnpm="pnpm dlx velyx@latest list"
+    yarn="yarn dlx velyx@latest list"
+    bun="bunx --bun velyx@latest list"
 />
 
 ## 4. Use the Component

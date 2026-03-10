@@ -1,6 +1,8 @@
 ---
 title: Markdown Viewer
-description: Render markdown content with syntax highlighting and styling
+description: Markdown Viewer component documentation for Velyx. Installation, usage examples, variants, and customization guidance for Laravel Blade, Alpine.js, Livewire, and Tailwind CSS v4.
+metaImage: /assets/images/og/docs/components/markdown-viewer.png
+metaTitle: Markdown Viewer Component for Laravel Blade, Alpine.js & Livewire | Velyx
 extends: _layouts.documentation
 section: content
 ---
@@ -14,10 +16,10 @@ The Markdown Viewer component renders markdown content with beautiful typography
 Add the markdown viewer component to your project:
 
 <x-code-tabs
-    npm="npx velyx add markdown-viewer"
-    pnpm="pnpm dlx velyx add markdown-viewer"
-    yarn="yarn dlx velyx add markdown-viewer"
-    bun="bunx --bun velyx add markdown-viewer"
+    npm="npx velyx@latest add markdown-viewer"
+    pnpm="pnpm dlx velyx@latest add markdown-viewer"
+    yarn="yarn dlx velyx@latest add markdown-viewer"
+    bun="bunx --bun velyx@latest add markdown-viewer"
 />
 
 ## Usage

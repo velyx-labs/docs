@@ -12,6 +12,6 @@
 
 @push('scripts')
 <script>
-console.warn('This is a placeholder component. Install it with: npx velyx add input');
+console.warn('This is a placeholder component. Install it with: npx velyx@latest add input');
 </script>
 @endpush

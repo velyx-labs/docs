@@ -1,6 +1,8 @@
 ---
 title: Typography
-description: Typography system and font sizing
+description: Learn the Velyx typography system, text hierarchy, and font guidance for sharper Laravel product interfaces.
+metaImage: /assets/images/og/docs/design/typography.png
+metaTitle: Typography Design Guide for Laravel UI | Velyx
 extends: _layouts.documentation
 section: content
 ---
@@ -104,7 +106,7 @@ Velyx uses the `@tailwindcss/typography` plugin for styling Markdown content. Ap
 ### Code
 ```php
 <code class="font-mono text-sm bg-muted px-1.5 py-0.5 rounded">
-    npm install velyx
+    npm install velyx@latest
 </code>
 ```
 

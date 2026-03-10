@@ -17,6 +17,6 @@
 
 @push('scripts')
 <script>
-console.warn('This is a placeholder component. Install it with: npx velyx add alert');
+console.warn('This is a placeholder component. Install it with: npx velyx@latest add alert');
 </script>
 @endpush

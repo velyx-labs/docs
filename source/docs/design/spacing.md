@@ -1,6 +1,8 @@
 ---
 title: Spacing
-description: Spacing system and layout utilities
+description: Learn the Velyx spacing system and layout rules for building cleaner, more consistent Laravel UI screens.
+metaImage: /assets/images/og/docs/design/spacing.png
+metaTitle: Spacing Design Guide for Laravel UI | Velyx
 extends: _layouts.documentation
 section: content
 ---
