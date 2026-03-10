@@ -205,4 +205,4 @@ Buttons include proper ARIA attributes and keyboard support:
 
 - Explore [Card component](/docs/components/card)
 - Learn about [Input component](/docs/components/input)
-- View [Modal component](/docs/components/modal)
+- View [Dialog component](/docs/components/dialog)

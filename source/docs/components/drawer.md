@@ -343,6 +343,6 @@ The drawer uses Tailwind CSS utility classes:
 
 ## Next Steps
 
-- Explore [Modal component](/docs/components/modal)
+- Explore [Dialog component](/docs/components/dialog)
 - Learn about [Dialog component](/docs/components/dialog)
 - View [Popover component](/docs/components/popover)

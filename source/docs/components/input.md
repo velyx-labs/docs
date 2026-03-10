@@ -253,4 +253,4 @@ Add helper text below inputs:
 
 - Explore [Button component](/docs/components/button)
 - Learn about [Card component](/docs/components/card)
-- View [Modal component](/docs/components/modal)
+- View [Dialog component](/docs/components/dialog)

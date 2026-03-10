@@ -220,4 +220,4 @@ Use cards with responsive grids for layouts:
 
 - Explore [Button component](/docs/components/button)
 - Learn about [Input component](/docs/components/input)
-- View [Modal component](/docs/components/modal)
+- View [Dialog component](/docs/components/dialog)

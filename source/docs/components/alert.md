@@ -198,5 +198,5 @@ Alerts include smooth transitions for dismiss action:
 ## Next Steps
 
 - Explore [Button component](/docs/components/button)
-- Learn about [Modal component](/docs/components/modal)
+- Learn about [Dialog component](/docs/components/dialog)
 - View [Input component](/docs/components/input)

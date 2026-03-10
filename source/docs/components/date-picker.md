@@ -217,4 +217,4 @@ The calendar popup uses:
 
 - Explore [Input component](/docs/components/input)
 - Learn about [Form components](/docs/components/form)
-- View [Modal component](/docs/components/modal)
+- View [Dialog component](/docs/components/dialog)

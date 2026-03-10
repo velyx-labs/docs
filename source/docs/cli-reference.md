@@ -66,10 +66,10 @@ Add components to your project.
 />
 
 <x-code-tabs
-    npm="npx velyx@latest add card input modal"
-    pnpm="pnpm dlx velyx@latest add card input modal"
-    yarn="yarn dlx velyx@latest add card input modal"
-    bun="bunx --bun velyx@latest add card input modal"
+    npm="npx velyx@latest add card input dialog"
+    pnpm="pnpm dlx velyx@latest add card input dialog"
+    yarn="yarn dlx velyx@latest add card input dialog"
+    bun="bunx --bun velyx@latest add card input dialog"
 />
 
 <x-code-tabs
@@ -180,10 +180,10 @@ You can customize these paths to match your project structure. Learn more in the
 ### Add multiple components
 
 <x-code-tabs
-    npm="npx velyx@latest add button card input modal"
-    pnpm="pnpm dlx velyx@latest add button card input modal"
-    yarn="yarn dlx velyx@latest add button card input modal"
-    bun="bunx --bun velyx@latest add button card input modal"
+    npm="npx velyx@latest add button card input dialog"
+    pnpm="pnpm dlx velyx@latest add button card input dialog"
+    yarn="yarn dlx velyx@latest add button card input dialog"
+    bun="bunx --bun velyx@latest add button card input dialog"
 />
 
 ### Add all components

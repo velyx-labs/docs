@@ -58,7 +58,7 @@ Add the command palette component to your project:
                 Alert component
             </li>
             <li class="text-foreground hover:bg-muted rounded-md px-3 py-2 text-sm">
-                Modal component
+                Dialog component
             </li>
         </ul>
     </x-ui.command-palette>
@@ -244,6 +244,6 @@ The Command Palette component includes proper ARIA attributes and keyboard suppo
 
 ## Next Steps
 
-- Explore [Modal component](/docs/components/modal)
+- Explore [Dialog component](/docs/components/dialog)
 - Learn about [Dropdown component](/docs/components/dropdown)
 - View [Input component](/docs/components/input)
