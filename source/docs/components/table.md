@@ -200,7 +200,7 @@ The Table component consists of several sub-components:
 
 ### Basic Table Structure
 
-```blade
+```php
 <x-ui.table>
     <x-ui.table.header>
         <x-ui.table.row>
@@ -222,7 +222,7 @@ The Table component consists of several sub-components:
 
 ### Table with Laravel Collection
 
-```blade
+```php
 <x-ui.table>
     <x-ui.table.header>
         <x-ui.table.row>
@@ -244,7 +244,7 @@ The Table component consists of several sub-components:
 
 ### With Column Alignment
 
-```blade
+```php
 <x-ui.table>
     <x-ui.table.header>
         <x-ui.table.row>
@@ -266,7 +266,7 @@ The Table component consists of several sub-components:
 
 ### With Row Styling
 
-```blade
+```php
 <x-ui.table>
     <x-ui.table.header>
         <x-ui.table.row>
@@ -291,7 +291,7 @@ The Table component consists of several sub-components:
 
 ### With Conditional Styling
 
-```blade
+```php
 <x-ui.table>
     <x-ui.table.header>
         <x-ui.table.row>
@@ -320,7 +320,7 @@ The Table component consists of several sub-components:
 
 ### Custom Column Width
 
-```blade
+```php
 <x-ui.table>
     <x-ui.table.header>
         <x-ui.table.row>
@@ -338,7 +338,7 @@ The Table component consists of several sub-components:
 
 ### Custom Caption Styling
 
-```blade
+```php
 <x-ui.table>
     <x-ui.table.caption class="text-sm font-medium text-muted-foreground">
         Showing 1 to 10 of 50 results

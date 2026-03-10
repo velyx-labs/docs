@@ -133,7 +133,7 @@ Add the badge component to your project:
 
 ### Status Indicators
 
-```blade
+```php
 <div class="flex items-center gap-2">
     <span>Account Status:</span>
     <x-ui.badge variant="success">Active</x-ui.badge>
@@ -152,7 +152,7 @@ Add the badge component to your project:
 
 ### Filter Tags
 
-```blade
+```php
 <div class="flex items-center gap-2">
     <x-ui.badge variant="secondary" removable>Category</x-ui.badge>
     <x-ui.badge variant="secondary" removable>Price Range</x-ui.badge>
@@ -162,7 +162,7 @@ Add the badge component to your project:
 
 ### Product Tags
 
-```blade
+```php
 <div class="flex items-center gap-2">
     <x-ui.badge variant="primary" pill>New</x-ui.badge>
     <x-ui.badge variant="success" pill>In Stock</x-ui.badge>
@@ -172,7 +172,7 @@ Add the badge component to your project:
 
 ### Notification Badges
 
-```blade
+```php
 <div class="relative">
     <button>
         Notifications
@@ -184,7 +184,7 @@ Add the badge component to your project:
 
 ### Counters
 
-```blade
+```php
 <div class="flex items-center gap-4">
     <div>
         <p class="text-sm text-muted-foreground">Tasks</p>
@@ -216,7 +216,7 @@ Badge components include proper ARIA attributes:
 
 The badge component uses Tailwind CSS classes. You can customize the appearance by modifying the component in your project:
 
-```blade
+```php
 {{-- resources/views/components/ui/badge.blade.php --}}
 
 @props([
@@ -244,7 +244,7 @@ The badge component uses Tailwind CSS classes. You can customize the appearance 
 
 The badge component integrates with your icon system. Any icon name available in your project can be used:
 
-```blade
+```php
 <x-ui.badge icon="star">Featured</x-ui.badge>
 <x-ui.badge icon="heart">Liked</x-ui.badge>
 <x-ui.badge icon="bookmark">Saved</x-ui.>

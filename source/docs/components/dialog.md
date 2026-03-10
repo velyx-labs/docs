@@ -31,7 +31,7 @@ Add the dialog component to your project:
 ### Basic Dialog
 
 <x-component-preview component="dialog">
-    ```blade
+    ```php
     <x-dialog id="confirm-dialog" title="Delete project">
         <p>This action cannot be undone. This will permanently delete the project.</p>
     </x-dialog>
@@ -40,7 +40,7 @@ Add the dialog component to your project:
 ### Compact Dialog
 
 <x-component-preview component="dialog" variant="small">
-    ```blade
+    ```php
     <x-dialog id="small-dialog" title="Quick note" size="sm">
         <p>This is a compact dialog for short confirmations.</p>
     </x-dialog>
@@ -49,7 +49,7 @@ Add the dialog component to your project:
 ### Large Dialog
 
 <x-component-preview component="dialog" variant="large">
-    ```blade
+    ```php
     <x-dialog id="large-dialog" title="Project settings" size="lg">
         <p>This dialog gives you more room for forms and configuration.</p>
     </x-dialog>
@@ -58,7 +58,7 @@ Add the dialog component to your project:
 ### Full-width Dialog
 
 <x-component-preview component="dialog" variant="fullscreen">
-    ```blade
+    ```php
     <x-dialog id="fullscreen-dialog" title="Command center" size="full">
         <p>This dialog stretches wide for immersive workflows.</p>
     </x-dialog>

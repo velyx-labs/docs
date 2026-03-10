@@ -209,7 +209,7 @@ The Drawer component consists of several sub-components:
 
 ### Basic Drawer Structure
 
-```blade
+```php
 <x-ui.drawer id="my-drawer">
     <x-ui.drawer.trigger target="my-drawer">
         <x-ui.button>Open</x-ui.button>
@@ -231,7 +231,7 @@ The Drawer component consists of several sub-components:
 
 ### With Custom Trigger
 
-```blade
+```php
 <x-ui.drawer id="settings-drawer">
     <x-ui.drawer.trigger as-child="true" target="settings-drawer">
         <button class="px-4 py-2 bg-blue-500 text-white rounded">
@@ -247,7 +247,7 @@ The Drawer component consists of several sub-components:
 
 ### Controlled with Alpine.js
 
-```blade
+```php
 <div x-data="{ open: false }">
     <button @click="$dispatch('drawer-open', { drawerId: 'my-drawer' })">
         Open Drawer
@@ -265,7 +265,7 @@ The Drawer component consists of several sub-components:
 
 ### With Livewire
 
-```blade
+```php
 <div x-data="{ open: @entangle($drawerOpen).live }">
     <button @click="open = true">Toggle</button>
 
@@ -281,7 +281,7 @@ The Drawer component consists of several sub-components:
 
 ### Multiple Drawers
 
-```blade
+```php
 <x-ui.drawer id="drawer-1">
     <x-ui.drawer.trigger target="drawer-1">
         <x-ui.button>Open Drawer 1</x-ui.button>
@@ -299,7 +299,7 @@ The Drawer component consists of several sub-components:
 
 ### Without Close on Escape
 
-```blade
+```php
 <x-ui.drawer :close-on-escape="false" id="important-drawer">
     <x-ui.drawer.content>
         <div class="p-4">

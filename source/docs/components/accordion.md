@@ -100,7 +100,7 @@ Add the accordion component to your project:
 
 Use the `accordion-item`, `accordion-trigger`, and `accordion-content` components to build your accordion:
 
-```blade
+```php
 <x-ui.accordion type="single">
     <x-ui.accordion.item value="item-1">
         <x-ui.accordion.trigger>
@@ -111,12 +111,13 @@ Use the `accordion-item`, `accordion-trigger`, and `accordion-content` component
         </x-ui.accordion.content>
     </x-ui.accordion.item>
 </x-ui.>
+```
 
 ## Examples
 
 ### FAQ Section
 
-```blade
+```php
 <x-ui.accordion type="multiple">
     <x-ui.accordion.item value="item-1">
         <x-ui.accordion.trigger>How do I install components?</x-ui.accordion.trigger>
@@ -139,10 +140,11 @@ Use the `accordion-item`, `accordion-trigger`, and `accordion-content` component
         </x-ui.accordion.content>
     </x-ui.accordion.item>
 </x-ui.>
+```
 
 ### Documentation Sections
 
-```blade
+```php
 <x-ui.accordion type="single" collapsible>
     <x-ui.accordion.item value="getting-started">
         <x-ui.accordion.trigger>Getting Started</x-ui.accordion.trigger>
@@ -165,6 +167,7 @@ Use the `accordion-item`, `accordion-trigger`, and `accordion-content` component
         </x-ui.accordion.content>
     </x-ui.accordion.item>
 </x-ui.>
+```
 
 ## Accessibility
 
@@ -179,8 +182,7 @@ Accordion components include proper ARIA attributes and keyboard support:
 
 The accordion component uses Tailwind CSS classes. You can customize the appearance by modifying the component in your project:
 
-```blade
-{{-- resources/views/components/ui/accordion.blade.php --}}
+```php
 
 @props([
     'type' => 'single',

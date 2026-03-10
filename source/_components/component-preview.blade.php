@@ -10,9 +10,11 @@
 @php
     $registryUrl = getenv('PREVIEW_REGISTRY_URL') ?: 'http://localhost:8000';
     $previewUrl = "{$registryUrl}/preview/{$component}";
+    $previewSourceUrl = "{$registryUrl}/api/v1/previews/{$component}/source";
 
     if ($variant !== 'default') {
         $previewUrl .= "?variant={$variant}";
+        $previewSourceUrl .= "?variant={$variant}";
     }
 
     $firstProp = true;
@@ -34,6 +36,7 @@
     $previewId = 'preview-' . uniqid();
     $previewHeight = $height === 'auto' ? '280px' : $height;
     $previewLabel = str($component)->replace('-', ' ')->title();
+    $fallbackCode = trim((string) $slot);
 @endphp
 
 <div
@@ -42,6 +45,11 @@
         loading: true,
         error: false,
         fullscreen: false,
+        code: @js($fallbackCode),
+        codePath: 'Docs snippet',
+        codeLoading: false,
+        codeError: false,
+        codeFetched: false,
         initIframe() {
             this.bindIframe(this.$refs.inlineFrame);
 
@@ -95,6 +103,44 @@
             this.loading = true;
             this.error = false;
             iframe.src = iframe.src;
+        },
+        async toggleCode() {
+            this.showCode = !this.showCode;
+
+            if (this.showCode && !this.codeFetched) {
+                await this.fetchCode();
+            }
+        },
+        async fetchCode() {
+            this.codeLoading = true;
+            this.codeError = false;
+
+            try {
+                const response = await fetch(@js($previewSourceUrl), {
+                    headers: {
+                        'Accept': 'application/json',
+                    },
+                });
+
+                if (!response.ok) {
+                    throw new Error('Failed to load preview source');
+                }
+
+                const payload = await response.json();
+                const source = payload?.data?.source;
+
+                if (typeof source !== 'string' || source.trim() === '') {
+                    throw new Error('Preview source is empty');
+                }
+
+                this.code = source.trim();
+                this.codePath = payload?.data?.path ?? 'Registry preview source';
+                this.codeFetched = true;
+            } catch (error) {
+                this.codeError = true;
+            } finally {
+                this.codeLoading = false;
+            }
         }
     }"
     x-init="initIframe()"
@@ -187,7 +233,7 @@
         <div class="flex items-center justify-between border-t border-border/70 bg-muted/35 px-4 py-2">
             <span class="text-sm text-muted-foreground">Code</span>
             <button
-                @click="showCode = !showCode"
+                @click="toggleCode()"
                 class="text-sm font-medium text-foreground hover:text-primary transition-colors flex items-center gap-1"
             >
                 <template x-if="showCode">
@@ -226,7 +272,25 @@
             class="overflow-hidden"
         >
             <div class="prose max-w-none relative group">
-                <pre class="!m-0 p-4 bg-muted/30"><code class="language-{{ $language }}">{!! $slot !!}</code></pre>
+                <div class="flex items-center justify-between border-b border-border/70 bg-background/70 px-4 py-2 text-xs text-muted-foreground">
+                    <span>Source</span>
+                    <code class="rounded bg-muted px-2 py-0.5 text-[11px]" x-text="codePath"></code>
+                </div>
+                <div
+                    x-show="codeLoading"
+                    x-cloak
+                    class="flex items-center justify-between border-b border-border/70 bg-background/70 px-4 py-2 text-xs text-muted-foreground"
+                >
+                    <span>Loading code from registry…</span>
+                </div>
+                <div
+                    x-show="codeError"
+                    x-cloak
+                    class="flex items-center justify-between border-b border-border/70 bg-destructive/5 px-4 py-2 text-xs text-destructive"
+                >
+                    <span>Unable to load registry source. Fallbacking to the docs snippet.</span>
+                </div>
+                <pre class="!m-0 overflow-x-auto p-4 bg-muted/30"><code class="language-{{ $language }}" x-text="code">{!! $slot !!}</code></pre>
             </div>
         </div>
     </div>

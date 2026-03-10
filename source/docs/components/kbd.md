@@ -58,31 +58,31 @@ Add the keyboard component to your project:
 
 ### Basic Single Key
 
-```blade
+```php
 <x-ui.kbd keys="k" />
 ```
 
 ### Command Key Shortcut
 
-```blade
+```php
 <x-ui.kbd keys="cmd+k" />
 ```
 
 ### Control Key Combination
 
-```blade
+```php
 <x-ui.kbd :keys="['ctrl', 's']" />
 ```
 
 ### Multi-Key Combination
 
-```blade
+```php
 <x-ui.kbd :keys="['ctrl', 'shift', 'right']" />
 ```
 
 ### With Different Sizes
 
-```blade
+```php
 <x-ui.kbd keys="enter" size="sm" />
 <x-ui.kbd keys="enter" size="md" />
 <x-ui.kbd keys="enter" size="lg" />
@@ -90,13 +90,13 @@ Add the keyboard component to your project:
 
 ### Outline Variant
 
-```blade
+```php
 <x-ui.kbd keys="esc" variant="outline" />
 ```
 
 ### Inline with Text
 
-```blade
+```php
 <p>
     Press
     <x-ui.kbd keys="cmd+k" class="mx-1" />
@@ -106,7 +106,7 @@ Add the keyboard component to your project:
 
 ### In Documentation
 
-```blade
+```php
 <div class="prose">
     <h3>Keyboard Shortcuts</h3>
     <ul>
@@ -128,7 +128,7 @@ Add the keyboard component to your project:
 
 ### With Action Buttons
 
-```blade
+```php
 <div class="flex items-center gap-4">
     <span>Press</span>
     <x-ui.kbd :keys="['ctrl', 'k']" />

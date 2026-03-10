@@ -41,7 +41,7 @@ Add the file upload component to your project:
 
 ### Images Only
 
-```blade
+```php
 <x-ui.file-upload
     accept="image/*"
     label="Upload images"
@@ -50,7 +50,7 @@ Add the file upload component to your project:
 
 ### Multiple Files
 
-```blade
+```php
 <x-ui.file-upload
     :multiple="true"
     label="Upload documents"
@@ -59,7 +59,7 @@ Add the file upload component to your project:
 
 ### With Size Limit
 
-```blade
+```php
 <x-ui.file-upload
     :maxSize="5242880"
     label="Upload file (max 5MB)"
@@ -68,7 +68,7 @@ Add the file upload component to your project:
 
 ### Accepted File Types
 
-```blade
+```php
 <x-ui.file-upload
     accept=".pdf,.doc,.docx"
     label="Upload document"

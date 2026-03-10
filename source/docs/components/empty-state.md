@@ -80,7 +80,7 @@ Add the empty state component to your project:
 
 ### Basic Empty State
 
-```blade
+```php
 <x-ui.empty-state
     title="No results found"
     description="Try adjusting your search terms."
@@ -90,7 +90,7 @@ Add the empty state component to your project:
 
 ### With Action Button
 
-```blade
+```php
 <x-ui.empty-state
     title="No projects yet"
     description="Get started by creating your first project."
@@ -102,7 +102,7 @@ Add the empty state component to your project:
 
 ### Without Icon
 
-```blade
+```php
 <x-ui.empty-state
     title="All caught up"
     description="You have no pending tasks."
@@ -111,7 +111,7 @@ Add the empty state component to your project:
 
 ### With Custom Icon
 
-```blade
+```php
 <x-ui.empty-state
     title="No files uploaded"
     description="Upload files to see them here."
@@ -121,7 +121,7 @@ Add the empty state component to your project:
 
 ### Small Size
 
-```blade
+```php
 <x-ui.empty-state
     title="No data"
     size="sm"
@@ -130,7 +130,7 @@ Add the empty state component to your project:
 
 ### Large Size
 
-```blade
+```php
 <x-ui.empty-state
     title="No results"
     size="lg"
@@ -140,7 +140,7 @@ Add the empty state component to your project:
 
 ### Outline Variant
 
-```blade
+```php
 <x-ui.empty-state
     title="Empty list"
     description="This list is currently empty."
@@ -150,7 +150,7 @@ Add the empty state component to your project:
 
 ### Ghost Variant (Minimal)
 
-```blade
+```php
 <x-ui.empty-state
     title="No notifications"
     description="You're all caught up!"
@@ -161,7 +161,7 @@ Add the empty state component to your project:
 
 ### In a Card
 
-```blade
+```php
 <div class="rounded-lg border bg-card p-6">
     <h2 class="text-lg font-semibold mb-4">Projects</h2>
 
@@ -179,7 +179,7 @@ Add the empty state component to your project:
 
 ### With Conditional Content
 
-```blade
+```php
 @if ($projects->count() === 0)
     <div class="rounded-lg border border-border p-8">
         <x-ui.empty-state
@@ -201,7 +201,7 @@ Add the empty state component to your project:
 
 ### After Search
 
-```blade
+```php
 <div class="rounded-lg border border-border p-6">
     <h2 class="text-lg font-semibold mb-4">Search Results</h2>
 
@@ -219,7 +219,7 @@ Add the empty state component to your project:
 
 ### With Custom Styling
 
-```blade
+```php
 <div class="my-12 rounded-xl bg-muted/30 border border-dashed p-12">
     <x-ui.empty-state
         title="No data available"
@@ -232,7 +232,7 @@ Add the empty state component to your project:
 
 ### With Description Only
 
-```blade
+```php
 <x-ui.empty-state
     title="All done!"
     description="You've completed all your tasks for today."
@@ -244,7 +244,7 @@ Add the empty state component to your project:
 ## Common Use Cases
 
 ### Empty Project List
-```blade
+```php
 <x-ui.empty-state
     title="No projects"
     description="Create your first project to get started."
@@ -255,7 +255,7 @@ Add the empty state component to your project:
 ```
 
 ### No Search Results
-```blade
+```php
 <x-ui.empty-state
     title="No results found"
     description="We couldn't find anything matching '{{ $query }}'."
@@ -264,7 +264,7 @@ Add the empty state component to your project:
 ```
 
 ### No Notifications
-```blade
+```php
 <x-ui.empty-state
     title="No notifications"
     description="You're all caught up!"
@@ -275,7 +275,7 @@ Add the empty state component to your project:
 ```
 
 ### Empty Folder
-```blade
+```php
 <x-ui.empty-state
     title="This folder is empty"
     description="Upload files to see them here."
@@ -286,7 +286,7 @@ Add the empty state component to your project:
 ```
 
 ### No Favorites
-```blade
+```php
 <x-ui.empty-state
     title="No favorites yet"
     description="Save items to your favorites to access them quickly."

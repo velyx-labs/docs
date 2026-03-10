@@ -67,7 +67,7 @@ Add the label component to your project:
 
 ### Basic Label
 
-```blade
+```php
 <x-ui.label for="email">
     Email address
 </x-ui.label>
@@ -76,7 +76,7 @@ Add the label component to your project:
 
 ### With Helper Text
 
-```blade
+```php
 <x-ui.label for="username" description="Choose a unique username for your account.">
     Username
 </x-ui.label>
@@ -85,7 +85,7 @@ Add the label component to your project:
 
 ### Required Field
 
-```blade
+```php
 <x-ui.label for="password" required="true">
     Password
 </x-ui.label>
@@ -94,7 +94,7 @@ Add the label component to your project:
 
 ### With Placeholder
 
-```blade
+```php
 <x-ui.label for="name">
     Full name
 </x-ui.label>
@@ -103,7 +103,7 @@ Add the label component to your project:
 
 ### In a Form
 
-```blade
+```php
 <form>
     <div class="space-y-4">
         <div class="grid gap-2">
@@ -129,7 +129,7 @@ Add the label component to your project:
 
 ### With Checkbox
 
-```blade
+```php
 <div class="flex items-center gap-2">
     <input type="checkbox" id="terms" class="h-4 w-4 rounded border-border" />
     <x-ui.label for="terms" class="cursor-pointer">
@@ -140,7 +140,7 @@ Add the label component to your project:
 
 ### With Radio Group
 
-```blade
+```php
 <div class="space-y-2">
     <x-ui.label>Preferred contact method</x-ui.label>
 
@@ -160,7 +160,7 @@ Add the label component to your project:
 
 ### Livewire Integration
 
-```blade
+```php
 <div class="grid gap-2">
     <x-ui.label for="title" required="true">
         Post Title

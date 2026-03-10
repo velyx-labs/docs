@@ -65,7 +65,7 @@ PHP, JavaScript, TypeScript, JSX, TSX, JSON, YAML, Markdown, Bash, CSS, HTML, Ma
 
 ### Using Slot Content
 
-```blade
+```php
 <x-ui.code-block language="php">
     $user = User::find($id);
     return $user->name;
@@ -74,7 +74,7 @@ PHP, JavaScript, TypeScript, JSX, TSX, JSON, YAML, Markdown, Bash, CSS, HTML, Ma
 
 ### Using Code Prop
 
-```blade
+```php
 <x-ui.code-block
     :code="$codeSnippet"
     language="php"
@@ -83,7 +83,7 @@ PHP, JavaScript, TypeScript, JSX, TSX, JSON, YAML, Markdown, Bash, CSS, HTML, Ma
 
 ### With Line Numbers
 
-```blade
+```php
 <x-ui.code-block
     language="php"
     :show-line-numbers="true"
@@ -95,7 +95,7 @@ PHP, JavaScript, TypeScript, JSX, TSX, JSON, YAML, Markdown, Bash, CSS, HTML, Ma
 
 ### Custom Starting Line
 
-```blade
+```php
 <x-ui.code-block
     language="php"
     :starting-line-number="10"

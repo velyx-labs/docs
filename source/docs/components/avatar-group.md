@@ -145,7 +145,7 @@ Each avatar in the `avatars` array should have:
 
 ### Team Members
 
-```blade
+```php
 <div class="flex items-center gap-4">
     <x-ui.avatar-group
         :avatars="[
@@ -164,7 +164,7 @@ Each avatar in the `avatars` array should have:
 
 ### With Counter
 
-```blade
+```php
 <x-ui.avatar-group
     :avatars="$teamMembers"
     :max="4"
@@ -177,7 +177,7 @@ Each avatar in the `avatars` array should have:
 
 ### Collaborators Section
 
-```blade
+```php
 <div class="flex items-center justify-between p-4 border rounded-lg">
     <div>
         <p class="font-medium">Collaborators</p>
@@ -205,7 +205,7 @@ Avatar group components include proper accessibility features:
 
 The avatar group component uses Tailwind CSS classes. You can customize the appearance by modifying the component in your project:
 
-```blade
+```php
 {{-- resources/views/components/ui/avatar-group.blade.php --}}
 
 @props([
@@ -222,7 +222,7 @@ The avatar group component uses Tailwind CSS classes. You can customize the appe
 
 Avatars overlap by default to create a compact grouping. The overlap is controlled using negative margins in Tailwind:
 
-```blade
+```php
 -x-2  // Overlap by 8px
 -x-3  // Overlap by 12px
 -x-4  // Overlap by 16px

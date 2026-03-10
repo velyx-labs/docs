@@ -205,13 +205,13 @@ Add the markdown viewer component to your project:
 
 ### Using Content Prop
 
-```blade
+```php
 <x-ui.markdown-viewer :content="$markdownContent" />
 ```
 
 ### Using Slot Content
 
-```blade
+```php
 <x-ui.markdown-viewer>
     # Your Title
 
@@ -220,7 +220,7 @@ Add the markdown viewer component to your project:
 
 ### Custom Height
 
-```blade
+```php
 <x-ui.markdown-viewer maxHeight="600px">
     # Long Content
 
@@ -229,7 +229,7 @@ Add the markdown viewer component to your project:
 
 ### Custom Styling
 
-```blade
+```php
 <x-ui.markdown-viewer class="shadow-lg">
     # Styled Content
 

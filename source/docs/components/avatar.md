@@ -151,7 +151,7 @@ Add the avatar component to your project:
 
 ### Avatar Group
 
-```blade
+```php
 <div class="flex -space-x-2">
     <x-ui.avatar
         src="https://i.pravatar.cc/128?img=1"
@@ -178,7 +178,7 @@ Add the avatar component to your project:
 
 ### User Profile Card
 
-```blade
+```php
 <div class="flex items-center gap-4 p-4 border rounded-lg">
     <x-ui.avatar
         src="https://i.pravatar.cc/128?img=12"
@@ -196,7 +196,7 @@ Add the avatar component to your project:
 
 ### With Initials
 
-```blade
+```php
 <x-ui.avatar
     name="Jane Cooper"
     fallback-icon="user"
@@ -216,7 +216,7 @@ Avatar components include proper ARIA attributes:
 
 The avatar component uses Tailwind CSS classes. You can customize the appearance by modifying the component in your project:
 
-```blade
+```php
 {{-- resources/views/components/ui/avatar.blade.php --}}
 
 @props([

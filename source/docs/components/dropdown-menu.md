@@ -219,7 +219,7 @@ The Dropdown Menu component consists of several sub-components:
 
 ### Basic Menu
 
-```blade
+```php
 <x-ui.dropdown-menu>
     <x-ui.dropdown-menu.trigger as-child="true">
         <x-ui.button>Open Menu</x-ui.button>
@@ -236,7 +236,7 @@ The Dropdown Menu component consists of several sub-components:
 
 ### With Icons
 
-```blade
+```php
 <x-ui.dropdown-menu>
     <x-ui.dropdown-menu.trigger as-child="true">
         <x-ui.button variant="ghost" size="icon">
@@ -259,7 +259,7 @@ The Dropdown Menu component consists of several sub-components:
 
 ### With Checkbox Items
 
-```blade
+```php
 <x-ui.dropdown-menu>
     <x-ui.dropdown-menu.trigger as-child="true">
         <x-ui.button>Filter</x-ui.button>
@@ -281,7 +281,7 @@ The Dropdown Menu component consists of several sub-components:
 
 ### With Radio Items
 
-```blade
+```php
 <x-ui.dropdown-menu>
     <x-ui.dropdown-menu.trigger as-child="true">
         <x-ui.button>View</x-ui.button>
@@ -303,7 +303,7 @@ The Dropdown Menu component consists of several sub-components:
 
 ### With Livewire Actions
 
-```blade
+```php
 <x-ui.dropdown-menu>
     <x-ui.dropdown-menu.trigger as-child="true">
         <x-ui.button>Actions</x-ui.button>
@@ -326,7 +326,7 @@ The Dropdown Menu component consists of several sub-components:
 
 ### Full Example with All Features
 
-```blade
+```php
 <x-ui.dropdown-menu>
     <x-ui.dropdown-menu.trigger as-child="true">
         <x-ui.button variant="outline">

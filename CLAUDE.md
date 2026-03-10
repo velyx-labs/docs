@@ -96,7 +96,7 @@ Two icon systems are available:
 
 Use the `<x-icon>` component for general UI icons:
 
-```blade
+```php
 <x-icon name="arrow-right-02" class="ml-2 h-5 w-5" />
 <x-icon name="youtube" class="w-6 h-6 text-red-500" />
 <x-icon name="code-square" />
@@ -113,7 +113,7 @@ Icon component location: `source/_components/icon.blade.php`
 
 Use dedicated Blade components for technology stack icons:
 
-```blade
+```php
 <x-icons.laravel />
 <x-icons.tailwind />
 <x-icons.alpinejs />

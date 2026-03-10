@@ -170,7 +170,7 @@ Add the button component to your project:
 
 The button component uses Tailwind CSS classes. You can customize the appearance by modifying the component in your project:
 
-```blade
+```php
 {{-- resources/views/components/ui/button.blade.php --}}
 
 @props([

@@ -108,7 +108,7 @@ The last item typically doesn't have a URL to indicate the current page.
 
 ### Simple Navigation
 
-```blade
+```php
 <x-ui.breadcrumbs :items="[
     ['label' => 'Home', 'url' => '/'],
     ['label' => 'Products', 'url' => '/products'],
@@ -118,7 +118,7 @@ The last item typically doesn't have a URL to indicate the current page.
 
 ### Product Hierarchy
 
-```blade
+```php
 <x-ui.breadcrumbs :items="[
     ['label' => 'Home', 'url' => '/'],
     ['label' => 'Shop', 'url' => '/shop'],
@@ -130,7 +130,7 @@ The last item typically doesn't have a URL to indicate the current page.
 
 ### Documentation Structure
 
-```blade
+```php
 <x-ui.breadcrumbs :items="[
     ['label' => 'Home', 'url' => '/'],
     ['label' => 'Documentation', 'url' => '/docs'],
@@ -141,7 +141,7 @@ The last item typically doesn't have a URL to indicate the current page.
 
 ### Blog Categories
 
-```blade
+```php
 <x-ui.breadcrumbs
     :items="[
         ['label' => 'Home', 'url' => '/'],
@@ -154,7 +154,7 @@ The last item typically doesn't have a URL to indicate the current page.
 
 ### Custom Styling
 
-```blade
+```php
 <div class="flex items-center gap-2 text-sm">
     <x-ui.breadcrumbs :items="$breadcrumbs" class="text-muted-foreground" />
 </div>
@@ -162,7 +162,7 @@ The last item typically doesn't have a URL to indicate the current page.
 
 ### With Icons
 
-```blade
+```php
 <x-ui.breadcrumbs
     :items="[
         ['label' => 'Home', 'url' => '/'],
@@ -188,7 +188,7 @@ Breadcrumbs include proper ARIA attributes and semantic HTML:
 
 The breadcrumbs component uses Tailwind CSS classes. You can customize the appearance by modifying the component in your project:
 
-```blade
+```php
 {{-- resources/views/components/ui/breadcrumbs.blade.php --}}
 
 @props([
@@ -214,7 +214,7 @@ Common separators you can use:
 
 The last breadcrumb (current page) is automatically styled differently to indicate it's not clickable:
 
-```blade
+```php
 // Last item gets different styling
 <li class="text-foreground font-medium" aria-current="page">
     Current Page
@@ -227,7 +227,7 @@ The last breadcrumb (current page) is automatically styled differently to indica
 
 Limit breadcrumbs to show only the most relevant path levels:
 
-```blade
+```php
 {{-- Good - Clear hierarchy --}}
 <x-ui.breadcrumbs :items="[
     ['label' => 'Home', 'url' => '/'],
@@ -250,7 +250,7 @@ Limit breadcrumbs to show only the most relevant path levels:
 
 Keep breadcrumb labels short and descriptive:
 
-```blade
+```php
 {{-- Good --}}
 ['label' => 'Products', 'url' => '/products']
 

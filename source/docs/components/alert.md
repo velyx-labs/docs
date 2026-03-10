@@ -31,7 +31,7 @@ Add the alert component to your project:
 ### Default Alert
 
 <x-component-preview component="alert" variant="default">
-    ```blade
+    ```php
     <x-alert title="Update available">
         A new version is available. Please update to get the latest features.
     </x-alert>
@@ -40,7 +40,7 @@ Add the alert component to your project:
 ### Success Alert
 
 <x-component-preview component="alert" variant="success">
-    ```blade
+    ```php
     <x-alert variant="success" title="Success">
         Your changes have been saved successfully.
     </x-alert>
@@ -49,7 +49,7 @@ Add the alert component to your project:
 ### Destructive Alert
 
 <x-component-preview component="alert" variant="destructive">
-    ```blade
+    ```php
     <x-alert variant="destructive" title="Error">
         Failed to save your changes. Please try again.
     </x-alert>
@@ -58,7 +58,7 @@ Add the alert component to your project:
 ### Warning Alert
 
 <x-component-preview component="alert" variant="warning">
-    ```blade
+    ```php
     <x-alert variant="warning" title="Warning">
         Please review this important warning message.
     </x-alert>
@@ -67,7 +67,7 @@ Add the alert component to your project:
 ### Info Alert
 
 <x-component-preview component="alert" variant="info">
-    ```blade
+    ```php
     <x-alert variant="info" title="Information">
         Here is some useful information for you.
     </x-alert>
@@ -76,7 +76,7 @@ Add the alert component to your project:
 ### Non-dismissible Alert
 
 <x-component-preview component="alert" variant="default" :props="['dismissible' => false]">
-    ```blade
+    ```php
     <x-alert variant="default" title="Important Notice" :dismissible="false">
         This alert cannot be dismissed and requires your attention.
     </x-alert>
@@ -85,7 +85,7 @@ Add the alert component to your project:
 ### Alert Without Title
 
 <x-component-preview component="alert" variant="default">
-    ```blade
+    ```php
     <x-alert variant="default">
         This is an alert message without a title.
     </x-alert>
@@ -113,7 +113,7 @@ Add the alert component to your project:
 ### Form Success Message
 
 <x-component-preview component="alert" variant="success">
-    ```blade
+    ```php
     <x-alert variant="success" title="Account Created" dismissible>
         <p>Your account has been successfully created. You can now log in.</p>
         <a href="/login" class="underline">Go to login page →</a>
@@ -123,7 +123,7 @@ Add the alert component to your project:
 ### Form Validation Errors
 
 <x-component-preview component="alert" variant="destructive">
-    ```blade
+    ```php
     <x-alert variant="destructive" title="Validation Errors" dismissible>
         <ul class="list-disc list-inside space-y-1">
             <li>Email field is required</li>
@@ -135,7 +135,7 @@ Add the alert component to your project:
 ### System Status
 
 <x-component-preview component="alert" variant="warning" :props="['dismissible' => false]">
-    ```blade
+    ```php
     <x-alert variant="warning" title="Scheduled Maintenance" :dismissible="false">
         <p class="mb-2">System maintenance is scheduled for <strong>March 10, 2026 at 2:00 AM UTC</strong>.</p>
         <p class="text-sm">Expected downtime: approximately 2 hours.</p>
@@ -145,7 +145,7 @@ Add the alert component to your project:
 ### Custom Icon
 
 <x-component-preview component="alert" variant="info">
-    ```blade
+    ```php
     <x-alert variant="info" title="Pro Tip" icon="lightbulb">
         You can use keyboard shortcuts to navigate faster. Press <code>?</code> to see all shortcuts.
     </x-alert>
@@ -155,7 +155,7 @@ Add the alert component to your project:
 
 You can customize the alert component by modifying the variant classes:
 
-```blade
+```php
 {{-- resources/views/components/ui/alert.blade.php --}}
 
 @props([
