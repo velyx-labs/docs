@@ -11,4 +11,24 @@ export default defineConfig({
         }),
         tailwindcss()
     ],
+    build: {
+        chunkSizeWarningLimit: 550,
+        rollupOptions: {
+            output: {
+                manualChunks(id) {
+                    if (id.includes('@docsearch')) {
+                        return 'docsearch';
+                    }
+
+                    if (id.includes('prismjs')) {
+                        return 'prism';
+                    }
+
+                    if (id.includes('alpinejs')) {
+                        return 'alpine';
+                    }
+                },
+            },
+        },
+    },
 });

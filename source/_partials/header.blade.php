@@ -93,14 +93,6 @@
                     Start Building
                     <x-icon name="arrow-right-02" class="h-3.5 w-3.5" />
                 </a>
-
-                <a
-                    href="/docs/installation"
-                    class="inline-flex items-center gap-1 rounded-lg bg-primary px-2.5 py-1.5 text-[11px] font-semibold text-primary-foreground shadow-sm transition-all hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 md:hidden"
-                >
-                    <span>Start</span>
-                    <x-icon name="arrow-right-02" class="h-3.5 w-3.5" />
-                </a>
             </div>
         </div>
 

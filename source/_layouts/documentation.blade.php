@@ -36,7 +36,7 @@
         </nav>
 
         {{-- Main Content --}}
-        <section class="documentation-main">
+        <section class="documentation-main p-4">
             @if($page->title)
                 @php
                 $adjacent = getAdjacentPages($page);
