@@ -1,0 +1,25 @@
+title: "Q&A"
+labels:
+  - question
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this discussion for documentation questions, structure discussions, or content clarifications that are not yet confirmed bugs.
+  - type: textarea
+    id: question
+    attributes:
+      label: Question
+      description: Ask the question directly.
+    validations:
+      required: true
+  - type: textarea
+    id: context
+    attributes:
+      label: Context
+      description: Include URLs, sections, components, or layouts involved.
+  - type: textarea
+    id: tried
+    attributes:
+      label: What you already checked
+      description: Mention pages, searches, or builds you already reviewed.
