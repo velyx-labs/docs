@@ -26,7 +26,7 @@ If yes, explain the user-facing impact.
 
 ## Validation
 
-- [ ] `npm run build`
+- [ ] `pnpm run build`
 - [ ] Browser review completed
 - [ ] Mobile layout reviewed
 - [ ] Links and navigation verified

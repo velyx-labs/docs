@@ -2,7 +2,7 @@
 
 ## Supported Versions
 
-Security fixes are provided for the current maintained state of the docs site.
+Security fixes are provided for the current maintained docs site.
 
 | Version | Supported |
 | --- | --- |
@@ -17,40 +17,40 @@ Report vulnerabilities privately at [security@velyx.dev](mailto:security@velyx.d
 Include:
 
 - a clear description of the issue
-- exact steps to reproduce it
-- impacted pages, routes, or integrations
-- potential impact
-- proof of concept if relevant
+- exact reproduction steps
+- affected pages, routes, or integrations
+- expected impact
+- a proof of concept if it is necessary to validate the report
 
 ## Scope
 
 This policy covers issues in this repository, including:
 
-- the docs site and its generated pages
+- generated docs pages
 - preview iframe integrations
-- search integration and front-end behavior
+- search integration and front-end behavior shipped by this repo
 - metadata, canonical URLs, and social card generation
-- client-side scripts shipped by the docs site
+- client-side scripts delivered by the docs site
 
 ## Out of Scope
 
-The following are generally out of scope for this repository:
+The following are generally out of scope:
 
 - vulnerabilities in third-party services themselves
-- issues that only exist in a local uncommitted environment
-- general Laravel, npm, or browser ecosystem vulnerabilities with no repo-specific exploit path
+- issues that exist only in a local uncommitted environment
+- generic ecosystem vulnerabilities with no repo-specific exploit path
 
-## What To Expect
+## Response Expectations
 
 - acknowledgement within 48 hours
 - triage and validation of impact
 - coordinated fix and disclosure when appropriate
 
-## Guidance
+## Reporter Guidance
 
-- do not publicly disclose the issue before a fix is available
+- do not disclose the issue publicly before a fix is available
 - do not access or alter data you do not own
-- keep the proof of concept minimal and targeted
+- keep proofs of concept minimal and targeted
 
 ## Contact
 

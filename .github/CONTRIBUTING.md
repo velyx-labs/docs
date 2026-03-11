@@ -1,84 +1,82 @@
 # Contributing to Velyx Docs
 
-This repository contains the Velyx documentation site, landing pages, component reference pages, shared doc UI, and preview integrations.
+This repository contains the Velyx documentation site, landing pages, component reference pages, shared docs UI, and preview integrations.
 
 ## Code of Conduct
 
-By participating in this project, you agree to follow the [Code of Conduct](CODE_OF_CONDUCT.md).
+Participation in this repository is governed by the [Code of Conduct](CODE_OF_CONDUCT.md).
 
-## Before Opening Work
+## Before You Open Work
 
-- Search existing issues and pull requests first.
-- Prefer small, focused changes.
-- If the change affects layout, navigation, search, previews, or metadata, describe the impacted pages precisely.
+- Search existing issues, discussions, and pull requests first.
+- Keep changes narrow. Do not mix unrelated cleanup with product work.
+- If the change affects layout, navigation, search, previews, or metadata, identify the exact pages and components up front.
 
-## Good Contributions
+## Contribution Standard
 
-Examples of useful contributions:
+Useful contributions in this repository include:
 
-- Fixing incorrect or outdated documentation
-- Improving page structure, layout, or responsive behavior
-- Cleaning up navigation, SEO, metadata, or social cards
-- Aligning examples with the real registry or CLI behavior
-- Improving preview rendering and iframe integration
+- correcting inaccurate or outdated documentation
+- improving layout, navigation, or responsive behavior
+- aligning examples with actual registry or CLI behavior
+- fixing preview rendering or preview/code mismatches
+- improving metadata, canonical URLs, or social card behavior
+
+Low-value contributions include placeholder content, cosmetic churn with no user benefit, and documentation that is not backed by the product.
 
 ## Local Setup
 
 ```bash
-npm install
-npm run build
+pnpm install
+pnpm run build
 ```
 
-For local development, use the repository workflow already used by the team. At minimum, make sure a production build still succeeds before opening a PR.
+A pull request is not ready if the production build fails.
 
-## What To Test
+## Required Verification
 
-Choose the checks that match your change:
+Run the checks relevant to your change:
 
 ```bash
-npm run build
+pnpm run build
 ```
 
-Manual checks that matter in this repo:
+Also verify manually when applicable:
 
-- landing page renders correctly
-- docs navigation works on desktop and mobile
+- the affected page renders correctly
+- navigation works on desktop and mobile
 - search UI still opens and styles correctly
-- component previews load and match their code/source panels
+- preview iframes load and match their code/source panels
 - updated links, metadata, and canonical tags are correct
 
-## Writing Standards
+## Writing Standard
 
-- Keep copy direct and precise.
-- Do not document behavior that no longer matches the registry or CLI.
-- Prefer concrete examples over vague descriptions.
-- Keep headings and labels consistent across pages.
-- When changing snippets, use `php` fences instead of `blade`.
+- Keep copy concrete and direct.
+- Do not document behavior that is not implemented.
+- Prefer precise examples over generic explanation.
+- Keep headings, labels, and terminology consistent.
+- Use `php` fences, not `blade`, for snippets.
 
 ## Pull Requests
 
-1. Create a focused branch.
-2. Keep unrelated formatting churn out of the PR.
-3. Include screenshots when the change affects layout or visual behavior.
-4. Mention affected pages, components, or templates explicitly.
-5. State what you verified locally.
-
-Useful PR content:
+A pull request should state:
 
 - what changed
 - why it changed
 - which pages or components are affected
-- how you verified the result
+- how the result was verified
 
-## Content and UI Notes
+If the change is visual, include screenshots. If the change affects navigation, previews, or metadata, say so explicitly.
 
-When editing documentation UI:
+## UI and Content Constraints
 
-- preserve the visual direction already established in the repo unless the change is intentionally a redesign
-- validate mobile behavior, not only desktop
-- keep preview/code examples aligned with the real registry output
-- avoid adding placeholder content that looks shippable but is not backed by the product
+When editing the docs UI:
+
+- preserve the established visual direction unless the PR is intentionally a redesign
+- verify mobile behavior, not only desktop behavior
+- keep preview code aligned with the real registry output
+- do not add mock content that looks shippable but is not supported by the product
 
 ## Security
 
-If you discover a security issue, do not open a public issue. Follow the process in [SECURITY.md](SECURITY.md).
+Do not report security issues in public issues or discussions. Follow [SECURITY.md](SECURITY.md).
