@@ -1,51 +1,60 @@
 ---
 name: Feature request
-about: Suggest an idea for this project
+about: Propose a concrete documentation, navigation, search, or example improvement
 title: '[FEATURE] '
-labels: enhancement
+labels: enhancement, needs-triage
 assignees: ''
 ---
 
-## Feature Description
+## Summary
 
-A clear and concise description of the feature you'd like to see added to the documentation.
+Describe the proposed improvement directly.
 
-## Problem Statement
+## Problem
 
-What problem does this feature solve? What pain point does it address?
+Explain the current gap or friction in the docs experience.
 
-## Proposed Solution
+## Proposed Change
 
-Describe the solution you'd like. Include:
+Describe the change you want.
 
-- CLI command syntax
-- New options or flags
-- Expected behavior
-- Example usage
+- Information architecture:
+- Page content:
+- Search or discoverability:
+- Examples or previews:
+- SEO or metadata:
 
-```bash
-# Example usage
-velyx add button --variant="outline"
-```
+## Expected Outcome
+
+Describe how users benefit if this is implemented.
 
 ## Alternatives Considered
 
-Describe any alternative solutions or features you've considered.
+List any alternatives you considered.
 
-## Impact
+## Delivery Impact
 
-- [ ] Breaking change
-- [ ] Requires registry API changes
-- [ ] Requires documentation update
+- [ ] Requires new docs pages
+- [ ] Requires copy rewrite
+- [ ] Requires UI or layout changes
+- [ ] Requires preview/example changes
 - [ ] Backward compatible
+
+## Validation Plan
+
+How should this be reviewed?
+
+- [ ] Local docs build
+- [ ] Browser review
+- [ ] Mobile review
+- [ ] Link or search verification
+
+## Scope Check
+
+- [ ] I checked for an existing request
+- [ ] I described the affected pages or sections precisely
+- [ ] I included examples or references where relevant
 
 ## Additional Context
 
-Add any other context, mockups, or examples about the feature request here.
-
-## Would you like to implement this?
-
-- [ ] Yes, I'd like to implement this feature
-- [ ] No, I'm just proposing the idea
-
-If you'd like to implement this, please let us know and we can guide you through the contribution process.
+Add references, screenshots, or related issues.

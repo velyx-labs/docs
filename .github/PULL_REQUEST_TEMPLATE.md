@@ -1,59 +1,54 @@
-## Description
+## Summary
 
-Briefly describe the changes made in this pull request. Include:
+Describe what changed and why.
 
-- What was changed
-- Why the change was necessary
-- Any relevant context or background
+## Scope
 
-## Type of Change
+- Affected areas:
+  - [ ] Landing page
+  - [ ] Docs layout or navigation
+  - [ ] Search / DocSearch
+  - [ ] Component examples or previews
+  - [ ] SEO / metadata / OG images
+  - [ ] Copy only
+- Platforms reviewed:
+  - [ ] Desktop
+  - [ ] Mobile
+  - [ ] Light mode
+  - [ ] Dark mode
 
-Please mark the relevant option with an `x`:
+## Breaking Changes
 
-- [ ] Bug fix (non-breaking change that fixes an issue)
-- [ ] New feature (non-breaking change that adds functionality)
-- [ ] Breaking change (fix or feature that would cause existing functionality to not work as expected)
-- [ ] Documentation update (changes to documentation only)
-- [ ] Refactoring (improving code structure without changing functionality)
-- [ ] Performance improvement
-- [ ] Other (please describe)
+- [ ] None
+- [ ] Yes, described below
+
+If yes, explain the user-facing impact.
+
+## Validation
+
+- [ ] `npm run build`
+- [ ] Browser review completed
+- [ ] Mobile layout reviewed
+- [ ] Links and navigation verified
+- [ ] Preview/code blocks checked
+
+```text
+Paste the most relevant pages, screenshots, or verification notes here.
+```
 
 ## Related Issues
 
-Fixes #(issue number)
-Relates to #(issue number)
-Closes #(issue number)
-
-## Testing
-
-Describe how you tested these changes:
-
-- [ ] Built the documentation site locally
-- [ ] Reviewed changes in browser
-- [ ] Tested all links
-- [ ] Verified code examples work correctly
-- [ ] Checked on multiple browsers (Chrome, Firefox, Safari)
-
-## Screenshots (if applicable)
-
-If your changes include visual updates, include before/after screenshots:
-
-**Before:**
-[Insert screenshot]
-
-**After:**
-[Insert screenshot]
+Fixes #
+Relates to #
 
 ## Checklist
 
-- [ ] My code follows the style guidelines of this project
-- [ ] I have performed a self-review of my own code
-- [ ] I have commented my code where necessary
-- [ ] I have updated the documentation accordingly
-- [ ] My changes generate no new warnings
-- [ ] I have tested my changes locally
-- [ ] I have checked spelling and grammar
+- [ ] The change is scoped and intentional
+- [ ] I reviewed the diff myself
+- [ ] Copy, links, and labels were checked
+- [ ] Visual changes were reviewed in context
+- [ ] Metadata or preview changes remain aligned with the product
 
 ## Additional Notes
 
-Add any other notes about the pull request here.
+Add screenshots, affected pages, or follow-up work.
