@@ -12,6 +12,7 @@ class GenerateSitemap
         '/assets/*',
         '*/favicon.ico',
         '*/404',
+        '*/404.html',
     ];
 
     public function handle(Jigsaw $jigsaw)
