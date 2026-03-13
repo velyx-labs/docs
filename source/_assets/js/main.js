@@ -1,7 +1,4 @@
 import Alpine from "alpinejs";
-import Prism from "prismjs";
-import "prismjs/plugins/autoloader/prism-autoloader";
-import docsearch from "@docsearch/js";
 
 // Dark mode toggle
 function initDarkMode() {
@@ -16,13 +13,95 @@ function initDarkMode() {
   const isDarkInitial = savedTheme === "dark" || (!savedTheme && systemDark);
   document.documentElement.classList.toggle("dark", isDarkInitial);
 
-  // Toggle theme
+  // Toggle theme with View Transitions API
   toggles.forEach((toggle) => {
-    toggle.addEventListener("click", () => {
-      const isDark = document.documentElement.classList.toggle("dark");
-      localStorage.setItem("theme", isDark ? "dark" : "light");
+    toggle.addEventListener("click", (event) => {
+      const isDark = document.documentElement.classList.contains("dark");
+      const newTheme = isDark ? "light" : "dark";
+      const prefersReducedMotion = window.matchMedia(
+        "(prefers-reduced-motion: reduce)"
+      ).matches;
+
+      const applyThemeChange = () => {
+        document.documentElement.classList.toggle("dark");
+        localStorage.setItem("theme", newTheme);
+      };
+
+      // Use View Transitions API if available
+      if (!prefersReducedMotion && document.startViewTransition) {
+        const { clientX: x, clientY: y } = event;
+        const root = document.documentElement;
+
+        // Set CSS variables for animation origin
+        root.style.setProperty("--x", `${x}px`);
+        root.style.setProperty("--y", `${y}px`);
+
+        document.startViewTransition(() => {
+          applyThemeChange();
+        });
+      } else {
+        applyThemeChange();
+      }
     });
   });
+}
+
+async function initDocSearch() {
+  const docsearchContainer = document.getElementById("docsearch");
+  if (!docsearchContainer) return;
+
+  const appId = docsearchContainer.dataset.appId;
+  const indexName = docsearchContainer.dataset.indexName;
+  const apiKey = docsearchContainer.dataset.apiKey;
+
+  if (!appId || !indexName || !apiKey) return;
+
+  const { default: docsearch } = await import("@docsearch/js");
+
+  docsearch({
+    container: "#docsearch",
+    appId,
+    indexName,
+    apiKey,
+    placeholder: "Search docs…",
+    translations: {
+      button: {
+        buttonText: "Search",
+        buttonAriaLabel: "Search documentation",
+      },
+      modal: {
+        searchBox: {
+          resetButtonTitle: "Clear the query",
+          cancelButtonText: "Close",
+          cancelButtonAriaLabel: "Close search",
+        },
+      },
+    },
+  });
+}
+
+async function initCodeHighlighting() {
+  const codeBlocks = document.querySelectorAll("pre code");
+  if (!codeBlocks.length) return;
+
+  const Prism = (await import("prismjs")).default;
+
+  await Promise.all([
+    import("prismjs/components/prism-markup"),
+    import("prismjs/components/prism-markup-templating"),
+    import("prismjs/components/prism-bash"),
+    import("prismjs/components/prism-css"),
+    import("prismjs/components/prism-javascript"),
+    import("prismjs/components/prism-jsx"),
+    import("prismjs/components/prism-typescript"),
+    import("prismjs/components/prism-tsx"),
+    import("prismjs/components/prism-json"),
+    import("prismjs/components/prism-yaml"),
+    import("prismjs/components/prism-php"),
+    import("prismjs/components/prism-markdown"),
+  ]);
+
+  Prism.highlightAll();
 }
 
 // Add copy button to all code blocks
@@ -30,41 +109,13 @@ document.addEventListener("DOMContentLoaded", function () {
   window.Alpine = Alpine;
   Alpine.start();
   initDarkMode();
-
-  const docsearchContainer = document.getElementById("docsearch");
-  if (docsearchContainer) {
-    const appId = docsearchContainer.dataset.appId;
-    const indexName = docsearchContainer.dataset.indexName;
-    const apiKey = docsearchContainer.dataset.apiKey;
-
-    if (appId && indexName && apiKey) {
-      docsearch({
-        container: "#docsearch",
-        appId,
-        indexName,
-        apiKey,
-        placeholder: "Search docs…",
-        translations: {
-          button: {
-            buttonText: "Search",
-            buttonAriaLabel: "Search documentation",
-          },
-          modal: {
-            searchBox: {
-              resetButtonTitle: "Clear the query",
-              cancelButtonText: "Close",
-              cancelButtonAriaLabel: "Close search",
-            },
-          },
-        },
-      });
-    }
-  }
+  void initDocSearch();
+  void initCodeHighlighting();
   const codeBlocks = document.querySelectorAll(".prose pre");
 
   codeBlocks.forEach((block) => {
-    // Skip if already has a button
-    if (block.querySelector(".copy-button")) return;
+    // Skip if already has a button or has no-copy-button class
+    if (block.querySelector(".copy-button") || block.closest(".no-copy-button")) return;
 
     const button = document.createElement("button");
     button.className =

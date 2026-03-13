@@ -1,0 +1,20 @@
+title: "Show and tell"
+labels:
+  - showcase
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Share documentation improvements, component pages, preview patterns, or navigation ideas you explored.
+  - type: textarea
+    id: summary
+    attributes:
+      label: What you explored
+      description: Describe the page, pattern, or outcome.
+    validations:
+      required: true
+  - type: textarea
+    id: details
+    attributes:
+      label: Details
+      description: Share screenshots, links, copy experiments, or lessons learned.

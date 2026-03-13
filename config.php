@@ -6,7 +6,7 @@ return [
     'baseUrl' => env('APP_URL', 'http://localhost:8000'),
     'production' => false,
     'siteName' => 'Velyx',
-    'siteDescription' => 'Deliver beautiful UI components to your Laravel projects',
+    'siteDescription' => 'Laravel-first UI components you can copy, adapt, and ship without losing control of your codebase',
 
     // Algolia DocSearch credentials
     'docsearchAppId' => env('DOCSEARCH_APP_ID'),

@@ -1,34 +1,47 @@
 ---
 name: Documentation improvement
-about: Suggest improvements to existing documentation
+about: Suggest a focused correction or rewrite for an existing docs page
 title: '[DOCS] '
-labels: documentation
+labels: documentation, needs-triage
 assignees: ''
 ---
 
-## Documentation Issue
+## Summary
 
-A clear and concise description of the documentation issue you found.
+Describe the documentation issue or rewrite opportunity.
 
 ## Location
 
-Link to the specific documentation page where the issue is located:
-URL: [documentation URL]
+Provide the exact page or file.
+
+- URL:
+- Section heading:
+- Source file (optional):
 
 ## Issue Type
 
-- [ ] Typo or grammatical error
-- [ ] Unclear or confusing explanation
-- [ ] Missing information
+- [ ] Typo or grammar
+- [ ] Unclear explanation
+- [ ] Missing prerequisite
 - [ ] Outdated information
 - [ ] Broken link
-- [ ] Inaccurate code example
-- [ ] Other (please describe)
+- [ ] Incorrect code example
+- [ ] Structural or formatting issue
 
-## Suggested Improvement
+## Proposed Improvement
 
-Please describe how the documentation should be improved. If you have a specific rewrite in mind, feel free to include it.
+Describe the correction or rewrite you want.
+
+## Why This Matters
+
+Explain how this improves clarity or reduces confusion.
+
+## Scope Check
+
+- [ ] I checked for an existing issue
+- [ ] I included the exact page or section involved
+- [ ] I provided a concrete correction or direction
 
 ## Additional Context
 
-Add any other context, screenshots, or examples that would help clarify the issue.
+Add screenshots, references, or suggested wording if useful.

@@ -1,6 +1,8 @@
 ---
 title: CLI Reference
-description: Complete guide to Velyx CLI commands
+description: Reference for Velyx CLI commands, installation flows, and day-to-day component management in Laravel projects.
+metaImage: /assets/images/og/docs/cli-reference.png
+metaTitle: Velyx CLI Reference for Laravel Projects | Velyx
 extends: _layouts.documentation
 section: content
 ---
@@ -9,31 +11,44 @@ section: content
 
 Complete reference for all Velyx CLI commands.
 
+## Global Options
+
+### `velyx --version`
+
+Display the installed Velyx CLI version.
+
+```bash
+velyx --version
+```
+
+**Alias:** `velyx -v`
+
 ## Commands
 
 ### `velyx init`
 
 Initialize Velyx in your Laravel project.
 
-```bash
-npx velyx init
-```
+<x-code-tabs
+    npm="npx velyx@latest init"
+    pnpm="pnpm dlx velyx@latest init"
+    yarn="yarn dlx velyx@latest init"
+    bun="bunx --bun velyx@latest init"
+/>
 
 **What it does:**
 - Creates a `velyx.json` file in your project root
-- Adds necessary CSS imports to your Tailwind configuration
-- Sets up the component paths
+- Checks your environment and initializes the UI component setup
+- Prompts for setup values unless you use `--defaults`
 
 **Options:**
 
 | Option | Alias | Description | Default |
 |--------|-------|-------------|---------|
-| `--base-color <color>` | `-b` | The base color to use | `neutral` |
-| `--yes` | `-y` | Skip confirmation prompt | `true` |
+| `--base-color <base-color>` | `-b` | The base color to use | Prompts if not set |
 | `--defaults` | `-d` | Use default configuration | `false` |
 | `--force` | `-f` | Force overwrite of existing configuration | `false` |
 | `--cwd <path>` | `-c` | The working directory | Current directory |
-| `--silent` | `-s` | Mute output | `false` |
 
 **Base colors:** `neutral`, `gray`, `zinc`, `stone`, `slate`
 
@@ -43,11 +58,26 @@ npx velyx init
 
 Add components to your project.
 
-```bash
-npx velyx add button
-npx velyx add card input modal
-npx velyx add --all
-```
+<x-code-tabs
+    npm="npx velyx@latest add button"
+    pnpm="pnpm dlx velyx@latest add button"
+    yarn="yarn dlx velyx@latest add button"
+    bun="bunx --bun velyx@latest add button"
+/>
+
+<x-code-tabs
+    npm="npx velyx@latest add card input dialog"
+    pnpm="pnpm dlx velyx@latest add card input dialog"
+    yarn="yarn dlx velyx@latest add card input dialog"
+    bun="bunx --bun velyx@latest add card input dialog"
+/>
+
+<x-code-tabs
+    npm="npx velyx@latest add --all"
+    pnpm="pnpm dlx velyx@latest add --all"
+    yarn="yarn dlx velyx@latest add --all"
+    bun="bunx --bun velyx@latest add --all"
+/>
 
 **What it does:**
 - Copies the component files to your project
@@ -61,15 +91,8 @@ npx velyx add --all
 
 | Option | Alias | Description | Default |
 |--------|-------|-------------|---------|
-| `--yes` | `-y` | Skip confirmation prompt | `false` |
-| `--overwrite` | `-o` | Overwrite existing files | `false` |
 | `--cwd <path>` | `-c` | The working directory | Current directory |
 | `--all` | `-a` | Add all available components | `false` |
-| `--path <path>` | `-p` | Custom path for components | Config value |
-| `--silent` | `-s` | Mute output | `false` |
-| `--src-dir` | | Use src directory | `false` |
-| `--css-variables` | | Use CSS variables for theming | `true` |
-| `--no-css-variables` | | Do not use CSS variables | - |
 
 ---
 
@@ -77,11 +100,26 @@ npx velyx add --all
 
 List all available components from the registry.
 
-```bash
-npx velyx list
-npx velyx list --query button
-npx velyx list --json
-```
+<x-code-tabs
+    npm="npx velyx@latest list"
+    pnpm="pnpm dlx velyx@latest list"
+    yarn="yarn dlx velyx@latest list"
+    bun="bunx --bun velyx@latest list"
+/>
+
+<x-code-tabs
+    npm="npx velyx@latest list --query button"
+    pnpm="pnpm dlx velyx@latest list --query button"
+    yarn="yarn dlx velyx@latest list --query button"
+    bun="bunx --bun velyx@latest list --query button"
+/>
+
+<x-code-tabs
+    npm="npx velyx@latest list --json"
+    pnpm="pnpm dlx velyx@latest list --json"
+    yarn="yarn dlx velyx@latest list --json"
+    bun="bunx --bun velyx@latest list --json"
+/>
 
 **What it does:**
 - Displays all available components in the registry
@@ -101,16 +139,16 @@ npx velyx list --json
 **Alias:** `velyx search`
 
 <x-callout type="info">
-You must run <code>velyx init</code> before using <code>velyx list</code>.
+You must run <code>npx velyx@latest init</code> before using <code>npx velyx@latest add</code>, <code>npx velyx@latest list</code>, or <code>npx velyx@latest search</code>.
 </x-callout>
 
 ## Configuration File
 
-The `velyx.json` file created by `init` contains:
+The `velyx.json` file created by `npx velyx@latest init` contains:
 
 ```json
 {
-  "version": "1.0.0",
+  "version": "x.y.z",
   "theme": "neutral",
   "packageManager": "npm",
   "css": {
@@ -121,7 +159,7 @@ The `velyx.json` file created by `init` contains:
     "entry": "resources/js/app.js"
   },
   "components": {
-    "path": "resources/views/components"
+    "path": "resources/views/components/ui"
   }
 }
 ```
@@ -132,34 +170,55 @@ You can customize these paths to match your project structure. Learn more in the
 
 ### Initialize with a custom theme
 
-```bash
-npx velyx init --base-color slate
-```
+<x-code-tabs
+    npm="npx velyx@latest init --base-color slate"
+    pnpm="pnpm dlx velyx@latest init --base-color slate"
+    yarn="yarn dlx velyx@latest init --base-color slate"
+    bun="bunx --bun velyx@latest init --base-color slate"
+/>
 
 ### Add multiple components
 
-```bash
-npx velyx add button card input modal
-```
+<x-code-tabs
+    npm="npx velyx@latest add button card input dialog"
+    pnpm="pnpm dlx velyx@latest add button card input dialog"
+    yarn="yarn dlx velyx@latest add button card input dialog"
+    bun="bunx --bun velyx@latest add button card input dialog"
+/>
 
 ### Add all components
 
-```bash
-npx velyx add --all
-```
+<x-code-tabs
+    npm="npx velyx@latest add --all"
+    pnpm="pnpm dlx velyx@latest add --all"
+    yarn="yarn dlx velyx@latest add --all"
+    bun="bunx --bun velyx@latest add --all"
+/>
 
 ### Search for components
 
-```bash
-npx velyx list --query button
-npx velyx search --query form
-```
+<x-code-tabs
+    npm="npx velyx@latest list --query button"
+    pnpm="pnpm dlx velyx@latest list --query button"
+    yarn="yarn dlx velyx@latest list --query button"
+    bun="bunx --bun velyx@latest list --query button"
+/>
+
+<x-code-tabs
+    npm="npx velyx@latest search --query form"
+    pnpm="pnpm dlx velyx@latest search --query form"
+    yarn="yarn dlx velyx@latest search --query form"
+    bun="bunx --bun velyx@latest search --query form"
+/>
 
 ### Get JSON output
 
-```bash
-npx velyx list --json
-```
+<x-code-tabs
+    npm="npx velyx@latest list --json"
+    pnpm="pnpm dlx velyx@latest list --json"
+    yarn="yarn dlx velyx@latest list --json"
+    bun="bunx --bun velyx@latest list --json"
+/>
 
 ## Next Steps
 

@@ -1,6 +1,8 @@
 ---
 title: Input
-description: Form input component with validation and variants
+description: Input component documentation for Velyx. Installation, usage examples, variants, and customization guidance for Laravel Blade, Alpine.js, Livewire, and Tailwind CSS v4.
+metaImage: /assets/images/og/docs/components/input.png
+metaTitle: Input Component for Laravel Blade, Alpine.js & Livewire | Velyx
 extends: _layouts.documentation
 section: content
 ---
@@ -13,9 +15,12 @@ Input components allow users to enter and edit text content.
 
 Add the input component to your project:
 
-```bash
-npx velyx add input
-```
+<x-code-tabs
+    npm="npx velyx@latest add input"
+    pnpm="pnpm dlx velyx@latest add input"
+    yarn="yarn dlx velyx@latest add input"
+    bun="bunx --bun velyx@latest add input"
+/>
 
 <x-callout type="warning">
 <strong>Note:</strong> The input component includes <code>label</code> and other form components. Make sure to add all required dependencies.
@@ -248,4 +253,4 @@ Add helper text below inputs:
 
 - Explore [Button component](/docs/components/button)
 - Learn about [Card component](/docs/components/card)
-- View [Modal component](/docs/components/modal)
+- View [Dialog component](/docs/components/dialog)

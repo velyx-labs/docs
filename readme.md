@@ -71,7 +71,7 @@ section: content
 
 ### Adding Assets
 
-Any assets that need to be compiled, such as JavaScript or CSS using Tailwind, can be added to the `source/_assets/` directory. Vite will process them when running `npm run dev` or `npm run build`, and the processed assets will be stored in `/build_local` or `/build_production`, respectively.
+Any assets that need to be compiled, such as JavaScript or CSS using Tailwind, can be added to the `source/_assets/` directory. Vite will process them when running `pnpm run dev` or `pnpm run build`, and the processed assets will be stored in `/build_local` or `/build_production`, respectively.
 
 Files that don't need processing (like images and fonts) can be placed in `/source/assets/` and will be included in the build as-is.
 
@@ -85,8 +85,8 @@ Now that you’ve edited your configuration variables and know how to customize 
 
 ```bash
 # run development server
-npm run dev
+pnpm run dev
 
 # build static files with Vite
-npm run build
+pnpm run build
 ```

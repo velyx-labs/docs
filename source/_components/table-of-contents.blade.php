@@ -1,22 +1,32 @@
-<div class="hidden xl:block">
-    <div class="sticky top-14 -mt-10 pt-10 self-start">
-        <p class="mb-4 text-sm font-medium text-foreground">On This Page</p>
-        <ul class="space-y-2 text-sm text-muted-foreground">
-            {{-- TOC items will be populated by JavaScript --}}
-        </ul>
-    </div>
-</div>
+<nav class="table-of-contents-panel" aria-label="On this page">
+    <p class="table-of-contents-title">On This Page</p>
+    <ul class="table-of-contents-list">
+        {{-- TOC items will be populated by JavaScript --}}
+    </ul>
+</nav>
 
 @push('scripts')
 <script>
 (function() {
     const initTOC = () => {
         const content = document.querySelector('.DocSearch-content');
+        const tocRoot = document.querySelector('.table-of-contents');
+        const tocPanel = document.querySelector('.table-of-contents-panel');
+        const tocContainer = document.querySelector('.table-of-contents-list');
+
         if (!content) return;
+        if (!tocRoot || !tocPanel || !tocContainer) return;
 
         // Find all h2 and h3 headings
         const headings = content.querySelectorAll('h2, h3');
-        if (headings.length === 0) return;
+        if (headings.length === 0) {
+            tocRoot.classList.add('xl:hidden');
+            tocPanel.setAttribute('hidden', 'hidden');
+            return;
+        }
+
+        tocRoot.classList.remove('xl:hidden');
+        tocPanel.removeAttribute('hidden');
 
         // Generate IDs for headings without them
         headings.forEach((heading, index) => {
@@ -32,9 +42,6 @@
         });
 
         // Build TOC
-        const tocContainer = document.querySelector('.table-of-contents ul');
-        if (!tocContainer) return;
-
         tocContainer.innerHTML = '';
 
         headings.forEach(heading => {

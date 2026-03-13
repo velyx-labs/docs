@@ -26,16 +26,17 @@
     }
     @endphp
 
-<section class="container max-w-screen-xl mx-auto px-4 lg:px-8 py-8 md:py-12">
-    <div class="flex gap-8 lg:gap-12">
+<section class="documentation-shell">
+    <div class="container-wrapper documentation-grid">
         {{-- Sidebar Navigation --}}
-        <nav class="hidden lg:block w-60 flex-shrink-0 sticky top-14 self-start">
-            @include('_nav.menu', ['items' => $page->navigation])
+        <nav class="documentation-sidebar" aria-label="Documentation navigation">
+            <div class="documentation-sidebar__inner">
+                @include('_nav.menu', ['items' => $page->navigation])
+            </div>
         </nav>
 
         {{-- Main Content --}}
-        <main class="flex-1 min-w-0">
-            {{-- Page Header with Copy Button --}}
+        <section class="documentation-main p-4">
             @if($page->title)
                 @php
                 $adjacent = getAdjacentPages($page);
@@ -50,18 +51,17 @@
                 />
             @endif
 
-            {{-- Content wrapper with markdown source for copy --}}
-            <div
-                class="DocSearch-content prose prose-zinc dark:prose-invert max-w-none"
+            <article
+                class="documentation-content DocSearch-content prose prose-zinc dark:prose-invert"
                 v-pre
                 data-page-content="{{ htmlspecialchars($rawMarkdown) }}"
             >
                 @yield('content')
-            </div>
-        </main>
+            </article>
+        </section>
 
         {{-- Table of Contents --}}
-        <aside class="hidden xl:block w-48 flex-shrink-0 sticky top-14 self-start table-of-contents">
+        <aside class="documentation-toc table-of-contents" aria-label="On this page">
             <x-table-of-contents />
         </aside>
     </div>

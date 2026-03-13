@@ -1,7 +1,12 @@
-/*@import "./base.css" layer(components);*/
+@import "./base.css" layer(components);
 @import "./navigation.css" layer(components);
 @import "./documentation.css" layer(components);
 @import "./search.css" layer(components);
+@import "@fontsource/raleway/index.css" layer(base);
+@import "@fontsource/geist/index.css" layer(base);
+@import "@fontsource/geist-mono/index.css" layer(base);
+@import "@fontsource/instrument-sans/index.css" layer(base);
+@import "@fontsource/jetbrains-mono/index.css" layer(base);
 @import "prismjs/themes/prism.css" layer(base);
 @import "prismjs/plugins/line-numbers/prism-line-numbers.css" layer(base);
 
@@ -55,6 +60,8 @@
   --radius-2xl: calc(var(--radius) + 8px);
   --radius-3xl: calc(var(--radius) + 12px);
   --radius-4xl: calc(var(--radius) + 16px);
+  --color-code: var(--code);
+  --color-code-foreground: var(--code-foreground);
 }
 
 :root {
@@ -90,6 +97,10 @@
   --sidebar-accent-foreground: oklch(0.205 0 0);
   --sidebar-border: oklch(0.922 0 0);
   --sidebar-ring: oklch(0.708 0 0);
+  
+  
+  --code: #ffffff;
+  --code-foreground: #1f2328;
 }
 
 .dark {
@@ -124,18 +135,51 @@
   --sidebar-accent-foreground: oklch(0.985 0 0);
   --sidebar-border: oklch(1 0 0 / 10%);
   --sidebar-ring: oklch(0.556 0 0);
+  
+  --code: #24292e;
+  --code-foreground: #e1e4e8;
 }
 
 .sun-icon {
-    display: none;
+  display: block;
 }
 
 .dark .sun-icon {
-    display: block;
+  display: none;
 }
 
 .dark .moon-icon {
-    display: none;
+  display: block;
+}
+
+/* View Transitions API for Dark Mode Animation */
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation: none;
+  mix-blend-mode: normal;
+}
+
+::view-transition-old(root) {
+  z-index: 0;
+}
+
+::view-transition-new(root) {
+  z-index: 1;
+}
+
+@keyframes reveal {
+  from {
+    clip-path: circle(0% at var(--x, 50%) var(--y, 50%));
+    opacity: 0.7;
+  }
+  to {
+    clip-path: circle(150% at var(--x, 50%) var(--y, 50%));
+    opacity: 1;
+  }
+}
+
+::view-transition-new(root) {
+  animation: reveal 0.4s ease-in-out forwards;
 }
 
 @layer base {
@@ -191,7 +235,7 @@
 
 :not(pre) > code[class*="language-"],
 pre[class*="language-"] {
-  @apply bg-muted! text-muted-foreground!;
+  @apply bg-muted/50! text-foreground!;
 }
 code[class*="language-"],
 pre[class*="language-"] {
@@ -212,3 +256,4 @@ pre[class*="language-"] {
 [x-cloak] {
   display: none !important;
 }
+

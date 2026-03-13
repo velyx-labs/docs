@@ -1,6 +1,8 @@
 ---
 title: Colors
-description: Color system and design tokens
+description: Learn the Velyx color system, design tokens, and practical guidance for building consistent Laravel interfaces.
+metaImage: /assets/images/og/docs/design/colors.png
+metaTitle: Colors Design Guide for Laravel UI | Velyx
 extends: _layouts.documentation
 section: content
 ---

@@ -1,63 +1,61 @@
 ---
 name: Bug report
-about: Create a report to help us improve
+about: Report a reproducible docs issue affecting layout, content, navigation, search, or examples
 title: '[BUG] '
 labels: bug, needs-triage
 assignees: ''
 ---
 
-## Bug Description
+## Summary
 
-A clear and concise description of what the bug is.
+Describe the issue clearly.
 
-## Steps to Reproduce
+## Impact
 
-1. Run `velyx ...`
-2. Click on '....'
-3. Scroll down to '....'
-4. See error
+Explain what is broken.
+
+- [ ] Page layout or responsive behavior
+- [ ] Navigation or sidebar
+- [ ] Search or DocSearch
+- [ ] Broken link or route
+- [ ] Wrong code sample
+- [ ] SEO or metadata
+- [ ] Preview iframe or example rendering
+
+## Steps To Reproduce
+
+1. Open `...`
+2. Click or search `...`
+3. Observe `...`
 
 ## Expected Behavior
 
-A clear and concise description of what you expected to happen.
+Describe what should happen.
 
 ## Actual Behavior
 
-A clear and concise description of what actually happened.
+Describe what actually happens.
 
-## Error Messages
+## Evidence
 
-```
-Paste error messages or stack traces here
+```text
+Paste console errors, failing URLs, or other relevant output.
 ```
 
 ## Environment
 
-- Node.js Version: [e.g. 20.11.0]
-- pnpm Version: [e.g. 8.15.0]
-- Velyx CLI Version: [e.g. 1.0.0]
-- Laravel Version: [e.g. 11.0]
-- PHP Version: [e.g. 8.3]
-- OS: [e.g. Ubuntu 22.04, macOS 14, Windows 11]
-- Shell: [e.g. bash, zsh, PowerShell]
+- Page URL:
+- Browser:
+- Device or viewport:
+- Color scheme:
+- OS:
 
-## Commands Run
+## Scope Check
 
-```bash
-# Commands you ran
-velyx add button
-```
-
-## Project Context
-
-- Is this a fresh Laravel install or an existing project?
-- Are you using any special configuration?
-- Are you working in a monorepo?
+- [ ] I reproduced this on the current docs site
+- [ ] I checked for an existing issue
+- [ ] I included the exact page or component involved
 
 ## Additional Context
 
-Add any other context about the problem here.
-
-## Possible Solution (Optional)
-
-If you have an idea of how to fix this, please describe it here.
+Add screenshots or links if they help.

@@ -1,5 +1,59 @@
 /* Documentation Content Styles */
 
+.documentation-shell {
+    @apply px-4 py-8 md:px-6 lg:px-8 lg:py-10;
+}
+
+.documentation-grid {
+    @apply mx-auto grid max-w-screen-2xl grid-cols-1 gap-10;
+}
+
+.documentation-sidebar {
+    @apply hidden lg:block;
+    position: sticky;
+    top: calc(var(--header-height, 4rem) + 1.5rem);
+    align-self: start;
+    max-height: calc(100vh - var(--header-height, 4rem) - 2rem);
+}
+
+.documentation-sidebar__inner {
+    @apply overflow-y-auto pr-4;
+    max-height: inherit;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.documentation-sidebar__inner::-webkit-scrollbar {
+    display: none;
+}
+
+.documentation-main {
+    @apply min-w-0;
+}
+
+.documentation-content {
+    @apply max-w-none;
+}
+
+.documentation-toc {
+    @apply hidden xl:block;
+    position: sticky;
+    top: calc(var(--header-height, 4rem) + 1.5rem);
+    align-self: start;
+}
+
+.table-of-contents-panel {
+    @apply rounded-2xl border border-border/60 bg-muted/20 p-5;
+}
+
+.table-of-contents-title {
+    @apply mb-4 text-xs font-semibold uppercase tracking-[0.22em] text-foreground;
+}
+
+.table-of-contents-list {
+    @apply space-y-2 text-sm text-muted-foreground;
+}
+
 /* Prose styles for Markdown content */
 .prose {
     @apply max-w-none;
@@ -128,13 +182,30 @@
 /* Code block syntax highlighting improvements */
 :not(pre) > code[class*="language-"],
 pre[class*="language-"] {
-    @apply bg-muted/50 text-foreground;
+    @apply bg-code text-code-foreground;
 }
 
 /* Responsive content width */
 @media (min-width: 1024px) {
+    .documentation-grid {
+        grid-template-columns: minmax(14rem, 16rem) minmax(0, 48rem);
+        justify-content: center;
+    }
+
+    .documentation-main {
+        @apply px-1;
+    }
+}
+
+@media (min-width: 1280px) {
+    .documentation-grid {
+        grid-template-columns: minmax(14rem, 16rem) minmax(0, 48rem) minmax(12rem, 14rem);
+        gap: 2.5rem;
+        justify-content: center;
+    }
+
     .DocSearch-content {
-        @apply max-w-2xl;
+        max-width: 48rem;
     }
 }
 
@@ -152,4 +223,3 @@ html {
 ::selection {
     @apply bg-primary/20 text-foreground;
 }
-

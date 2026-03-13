@@ -1,6 +1,8 @@
 ---
 title: Card
-description: Card component for displaying grouped content
+description: Card component documentation for Velyx. Installation, usage examples, variants, and customization guidance for Laravel Blade, Alpine.js, Livewire, and Tailwind CSS v4.
+metaImage: /assets/images/og/docs/components/card.png
+metaTitle: Card Component for Laravel Blade, Alpine.js & Livewire | Velyx
 extends: _layouts.documentation
 section: content
 ---
@@ -13,9 +15,12 @@ Cards are versatile containers used to group related content and actions.
 
 Add the card component to your project:
 
-```bash
-npx velyx add card
-```
+<x-code-tabs
+    npm="npx velyx@latest add card"
+    pnpm="pnpm dlx velyx@latest add card"
+    yarn="yarn dlx velyx@latest add card"
+    bun="bunx --bun velyx@latest add card"
+/>
 
 ## Usage
 
@@ -215,4 +220,4 @@ Use cards with responsive grids for layouts:
 
 - Explore [Button component](/docs/components/button)
 - Learn about [Input component](/docs/components/input)
-- View [Modal component](/docs/components/modal)
+- View [Dialog component](/docs/components/dialog)
