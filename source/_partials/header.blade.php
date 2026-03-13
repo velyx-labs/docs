@@ -6,14 +6,21 @@
     <div class="container-wrapper px-4 lg:px-6">
         <div class="flex h-16 items-center gap-4">
             <div class="flex min-w-0 items-center gap-4 lg:gap-8">
-                <a
+                    <a
                     href="/"
                     title="{{ $page->siteName }} home"
                     class="group flex items-center gap-2.5 font-bold text-foreground transition-colors hover:text-primary"
                 >
                     <img
-                        class="h-7 w-7 transition-transform duration-300 group-hover:rotate-6"
+                        class="h-7 w-7 transition-transform duration-300 group-hover:rotate-6 dark:hidden"
                         src="/assets/img/logo.svg"
+                        alt="{{ $page->siteName }} logo"
+                        width="28"
+                        height="28"
+                    />
+                    <img
+                        class="h-7 w-7 transition-transform duration-300 group-hover:rotate-6 hidden dark:block"
+                        src="/assets/img/logo-dark.svg"
                         alt="{{ $page->siteName }} logo"
                         width="28"
                         height="28"

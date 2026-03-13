@@ -44,7 +44,8 @@
 
 <link rel="home" href="{{ $page->baseUrl }}">
 <link rel="canonical" href="{{ $metaUrl }}">
-<link rel="icon" href="/favicon.ico">
+<link rel="icon" type="image/svg+xml" href="/assets/img/logo.svg" class="dark:hidden">
+<link rel="icon" type="image/svg+xml" href="/assets/img/logo-dark.svg" class="hidden dark:block">
 
 @stack('meta')
 
