@@ -12,7 +12,7 @@
 
     $metaTitle = $page->metaTitle ?? ($page->title ? $page->title . ' | ' . $page->siteName : $page->siteName . ' | Laravel UI Components');
     $metaDescription = $page->metaDescription ?? $page->description ?? $defaultMetaDescription;
-    $metaImage = $page->metaImage ?? '/assets/images/og-velyx.png';
+    $metaImage = $page->metaImage ?? '/assets/images/og.png';
     $metaUrl = $page->getUrl();
     $metaImageUrl = str_starts_with($metaImage, 'http') ? $metaImage : rtrim($page->baseUrl, '/') . $metaImage;
 @endphp
