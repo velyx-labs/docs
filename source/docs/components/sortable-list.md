@@ -63,18 +63,18 @@ Add the sortable list component to your project:
 
 ## Props
 
-| Prop | Type | Default | Description |
-|------|------|---------|-------------|
-| `items` | `array` | `[]` | Ordered items rendered in the list |
-| `itemKey` | `string` | `'id'` | Property used as the unique item key |
-| `handle` | `bool` | `true` | Enables a visible drag handle |
-| `animation` | `int` | `150` | Drag animation duration |
-| `ghostClass` | `string` | `'opacity-50'` | Class applied to the ghost item |
-| `dragClass` | `string` | `'shadow-lg'` | Class applied while an item is dragged |
-| `disabled` | `bool` | `false` | Disables sorting |
+| Prop         | Type     | Default        | Description                            |
+| ------------ | -------- | -------------- | -------------------------------------- |
+| `items`      | `array`  | `[]`           | Ordered items rendered in the list     |
+| `itemKey`    | `string` | `'id'`         | Property used as the unique item key   |
+| `handle`     | `bool`   | `true`         | Enables a visible drag handle          |
+| `animation`  | `int`    | `150`          | Drag animation duration                |
+| `ghostClass` | `string` | `'opacity-50'` | Class applied to the ghost item        |
+| `dragClass`  | `string` | `'shadow-lg'`  | Class applied while an item is dragged |
+| `disabled`   | `bool`   | `false`        | Disables sorting                       |
 
 ## Next Steps
 
 - Explore [Table component](/docs/components/table)
-- Learn about [Stat Card component](/docs/components/stat-card)
+- Learn about [tabs component](/docs/components/tabs)
 - View [Toggle component](/docs/components/toggle)

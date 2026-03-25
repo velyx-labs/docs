@@ -79,7 +79,7 @@
                     </button>
                 @endif
 
-                <button
+                {{-- <button
                     type="button"
                     onclick="
                         const html = document.documentElement;
@@ -91,15 +91,20 @@
                 >
                     <x-icon name="sun-01" class="sun-icon h-[1.2rem] w-[1.2rem] rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
                     <x-icon name="moon-01" class="moon-icon absolute h-[1.2rem] w-[1.2rem] rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
-                </button>
+                </button> --}}
 
-                <a
+                <button class="toggle"  onclick="
+                    const html = document.documentElement;
+                    html.classList.toggle('dark');
+                    localStorage.setItem('theme', html.classList.contains('dark') ? 'dark' : 'light');
+                ">◑ Toggle</button>
+                {{-- <a
                     href="/docs/installation"
                     class="inline-flex items-center gap-1.5 rounded-lg bg-primary px-4 py-2 text-sm font-semibold text-primary-foreground shadow-sm ring-1 ring-primary/20 transition-all hover:bg-primary/90 hover:shadow-md hover:ring-primary/40 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 hidden md:inline-flex"
                 >
                     Start Building
                     <x-icon name="arrow-right-02" class="h-3.5 w-3.5" />
-                </a>
+                </a> --}}
             </div>
         </div>
 

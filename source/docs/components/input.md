@@ -70,16 +70,16 @@ Add the input component to your project:
 
 ## Props
 
-| Prop | Type | Default | Description |
-|------|------|---------|-------------|
-| `type` | `string` | `text` | Input type |
-| `name` | `string` | - | Input name |
-| `id` | `string` | - | Input ID |
-| `placeholder` | `string` | - | Placeholder text |
-| `value` | `string` | - | Input value |
-| `required` | `boolean` | `false` | Required field |
-| `disabled` | `boolean` | `false` | Disabled state |
-| `readonly` | `boolean` | `false` | Read-only state |
+| Prop          | Type      | Default | Description      |
+| ------------- | --------- | ------- | ---------------- |
+| `type`        | `string`  | `text`  | Input type       |
+| `name`        | `string`  | -       | Input name       |
+| `id`          | `string`  | -       | Input ID         |
+| `placeholder` | `string`  | -       | Placeholder text |
+| `value`       | `string`  | -       | Input value      |
+| `required`    | `boolean` | `false` | Required field   |
+| `disabled`    | `boolean` | `false` | Disabled state   |
+| `readonly`    | `boolean` | `false` | Read-only state  |
 
 ## Input Types
 

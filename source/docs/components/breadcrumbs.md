@@ -85,11 +85,11 @@ Add the breadcrumbs component to your project:
 
 ## Props
 
-| Prop | Type | Default | Description |
-|------|------|---------|-------------|
-| `items` | `array` | `[]` | Array of breadcrumb items with `label` and optional `url` |
-| `separator` | `string` | `'/'` | Separator character between breadcrumb items |
-| `homeIcon` | `boolean` | `false` | Show a home icon instead of text for the first item |
+| Prop        | Type      | Default | Description                                               |
+| ----------- | --------- | ------- | --------------------------------------------------------- |
+| `items`     | `array`   | `[]`    | Array of breadcrumb items with `label` and optional `url` |
+| `separator` | `string`  | `'/'`   | Separator character between breadcrumb items              |
+| `homeIcon`  | `boolean` | `false` | Show a home icon instead of text for the first item       |
 
 ### Items Structure
 
@@ -203,6 +203,7 @@ The breadcrumbs component uses Tailwind CSS classes. You can customize the appea
 ### Separator Options
 
 Common separators you can use:
+
 - `/` (default) - Forward slash
 - `>` - Greater than
 - `→` - Right arrow

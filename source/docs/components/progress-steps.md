@@ -47,15 +47,15 @@ Add the progress steps component to your project:
 
 ## Props
 
-| Prop | Type | Default | Description |
-|------|------|---------|-------------|
-| `steps` | `array` | `[]` | Ordered steps with optional labels, descriptions, and icons |
-| `current` | `int` | `1` | Current step number |
-| `variant` | `string` | `'default'` | Visual style such as `default`, `success`, or `blue` |
-| `showLabels` | `bool` | `true` | Displays step labels |
-| `showDescriptions` | `bool` | `true` | Displays supporting descriptions |
-| `clickable` | `bool` | `false` | Allows completed steps to be clicked |
-| `size` | `string` | `'md'` | Size preset: `sm`, `md`, or `lg` |
+| Prop               | Type     | Default     | Description                                                 |
+| ------------------ | -------- | ----------- | ----------------------------------------------------------- |
+| `steps`            | `array`  | `[]`        | Ordered steps with optional labels, descriptions, and icons |
+| `current`          | `int`    | `1`         | Current step number                                         |
+| `variant`          | `string` | `'default'` | Visual style such as `default`, `success`, or `blue`        |
+| `showLabels`       | `bool`   | `true`      | Displays step labels                                        |
+| `showDescriptions` | `bool`   | `true`      | Displays supporting descriptions                            |
+| `clickable`        | `bool`   | `false`     | Allows completed steps to be clicked                        |
+| `size`             | `string` | `'md'`      | Size preset: `sm`, `md`, or `lg`                            |
 
 ## Example Structure
 

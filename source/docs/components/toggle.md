@@ -66,16 +66,16 @@ Add the toggle component to your project:
 
 ## Props
 
-| Prop | Type | Default | Description |
-|------|------|---------|-------------|
-| `name` | `string|null` | `null` | Optional field name for form and Livewire binding |
-| `checked` | `bool` | `false` | Initial checked state |
-| `value` | `mixed` | `null` | Alternate incoming value used to resolve checked state |
-| `label` | `string|null` | `null` | Optional visible label |
-| `description` | `string|null` | `null` | Supporting text shown below the label |
-| `size` | `string` | `'md'` | Toggle size: `sm`, `md`, or `lg` |
-| `disabled` | `bool` | `false` | Disables interaction |
-| `required` | `bool` | `false` | Marks the field as required in forms |
+| Prop          | Type     | Default | Description                                            |
+| ------------- | -------- | ------- | ------------------------------------------------------ | ------------------------------------------------- |
+| `name`        | `string  | null`   | `null`                                                 | Optional field name for form and Livewire binding |
+| `checked`     | `bool`   | `false` | Initial checked state                                  |
+| `value`       | `mixed`  | `null`  | Alternate incoming value used to resolve checked state |
+| `label`       | `string  | null`   | `null`                                                 | Optional visible label                            |
+| `description` | `string  | null`   | `null`                                                 | Supporting text shown below the label             |
+| `size`        | `string` | `'md'`  | Toggle size: `sm`, `md`, or `lg`                       |
+| `disabled`    | `bool`   | `false` | Disables interaction                                   |
+| `required`    | `bool`   | `false` | Marks the field as required in forms                   |
 
 ## Example Structure
 

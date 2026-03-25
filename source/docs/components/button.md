@@ -96,24 +96,22 @@ Add the button component to your project:
     <x-button variant="ghost" icon-only icon="settings" />
 </x-component-preview>
 
-
 ## Props
 
-| Prop | Type | Default | Description |
-|------|------|---------|-------------|
-| `variant` | `string` | `primary` | Button style variant |
-| `size` | `string` | `md` | Button size (xs, sm, md, lg, xl) |
-| `type` | `string` | `button` | Button type (button, submit, reset) |
-| `disabled` | `boolean` | `false` | Disable the button |
-| `loading` | `boolean` | `false` | Show loading spinner |
-| `icon` | `string` | `null` | Icon name (left side) |
-| `iconRight` | `string` | `null` | Icon name (right side) |
-| `iconOnly` | `boolean` | `false` | Icon-only button |
-| `pill` | `boolean` | `false` | Rounded pill shape |
-| `block` | `boolean` | `false` | Full width button |
-| `href` | `string` | `null` | URL for link buttons |
-| `action` | `string` | `null` | Livewire action to target |
-
+| Prop        | Type      | Default   | Description                         |
+| ----------- | --------- | --------- | ----------------------------------- |
+| `variant`   | `string`  | `primary` | Button style variant                |
+| `size`      | `string`  | `md`      | Button size (xs, sm, md, lg, xl)    |
+| `type`      | `string`  | `button`  | Button type (button, submit, reset) |
+| `disabled`  | `boolean` | `false`   | Disable the button                  |
+| `loading`   | `boolean` | `false`   | Show loading spinner                |
+| `icon`      | `string`  | `null`    | Icon name (left side)               |
+| `iconRight` | `string`  | `null`    | Icon name (right side)              |
+| `iconOnly`  | `boolean` | `false`   | Icon-only button                    |
+| `pill`      | `boolean` | `false`   | Rounded pill shape                  |
+| `block`     | `boolean` | `false`   | Full width button                   |
+| `href`      | `string`  | `null`    | URL for link buttons                |
+| `action`    | `string`  | `null`    | Livewire action to target           |
 
 ### Variants
 
@@ -191,7 +189,6 @@ $variantClasses = match($variant) {
     {{ $slot }}
 </button>
 ```
-
 
 ## Accessibility
 

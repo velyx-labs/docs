@@ -17,8 +17,8 @@ Velyx uses a modern color system built on OKLCH for consistent, accessible color
 
 ```css
 :root {
-    --background: oklch(1 0 0);
-    --foreground: oklch(0.145 0 0);
+  --background: oklch(1 0 0);
+  --foreground: oklch(0.145 0 0);
 }
 ```
 
@@ -28,6 +28,7 @@ Velyx uses a modern color system built on OKLCH for consistent, accessible color
 ### Semantic Colors
 
 #### Primary
+
 ```css
 --primary: oklch(0.205 0 0);
 --primary-foreground: oklch(0.985 0 0);
@@ -36,6 +37,7 @@ Velyx uses a modern color system built on OKLCH for consistent, accessible color
 Used for main actions, links, and important elements.
 
 #### Secondary
+
 ```css
 --secondary: oklch(0.97 0 0);
 --secondary-foreground: oklch(0.205 0 0);
@@ -44,6 +46,7 @@ Used for main actions, links, and important elements.
 Used for secondary actions and less prominent elements.
 
 #### Muted
+
 ```css
 --muted: oklch(0.97 0 0);
 --muted-foreground: oklch(0.556 0 0);
@@ -52,6 +55,7 @@ Used for secondary actions and less prominent elements.
 Used for disabled states and subtle backgrounds.
 
 #### Accent
+
 ```css
 --accent: oklch(0.97 0 0);
 --accent-foreground: oklch(0.205 0 0);
@@ -60,6 +64,7 @@ Used for disabled states and subtle backgrounds.
 Used for hover states and interactive elements.
 
 #### Destructive
+
 ```css
 --destructive: oklch(0.58 0.22 27);
 ```
@@ -107,11 +112,11 @@ Dark mode colors are automatically applied when the `.dark` class is present:
 
 ```css
 .dark {
-    --background: oklch(0.145 0 0);
-    --foreground: oklch(0.985 0 0);
-    --primary: oklch(0.87 0 0);
-    --primary-foreground: oklch(0.205 0 0);
-    /* ... */
+  --background: oklch(0.145 0 0);
+  --foreground: oklch(0.985 0 0);
+  --primary: oklch(0.87 0 0);
+  --primary-foreground: oklch(0.205 0 0);
+  /* ... */
 }
 ```
 
@@ -125,9 +130,9 @@ To customize colors, override the CSS variables in your theme file:
 
 ```css
 :root {
-    /* Custom brand color */
-    --primary: oklch(0.55 0.22 250);
-    --primary-foreground: oklch(0.99 0 0);
+  /* Custom brand color */
+  --primary: oklch(0.55 0.22 250);
+  --primary-foreground: oklch(0.99 0 0);
 }
 ```
 

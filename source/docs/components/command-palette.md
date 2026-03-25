@@ -118,6 +118,7 @@ Add the command palette component to your project:
             </li>
         </ul>
     </x-ui.command-palette>
+
 </x-component-preview>
 
 ### With Keyboard Shortcuts
@@ -143,21 +144,21 @@ Add the command palette component to your project:
 
 ## Props
 
-| Prop | Type | Default | Description |
-|------|------|---------|-------------|
-| `open` | `boolean` | `false` | Whether the command palette is open |
-| `placeholder` | `string` | `'Search commands, files...'` | Placeholder text for the search input |
+| Prop          | Type      | Default                       | Description                           |
+| ------------- | --------- | ----------------------------- | ------------------------------------- |
+| `open`        | `boolean` | `false`                       | Whether the command palette is open   |
+| `placeholder` | `string`  | `'Search commands, files...'` | Placeholder text for the search input |
 
 ## Keyboard Shortcuts
 
 The command palette includes built-in keyboard shortcuts:
 
-| Shortcut | Action |
-|----------|--------|
-| `⌘K` / `Ctrl+K` | Open the command palette |
-| `Escape` | Close the command palette |
-| `↑` / `↓` | Navigate through items |
-| `Enter` | Select focused item |
+| Shortcut        | Action                    |
+| --------------- | ------------------------- |
+| `⌘K` / `Ctrl+K` | Open the command palette  |
+| `Escape`        | Close the command palette |
+| `↑` / `↓`       | Navigate through items    |
+| `Enter`         | Select focused item       |
 
 ## Examples
 

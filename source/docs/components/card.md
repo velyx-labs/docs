@@ -84,11 +84,11 @@ Add the card component to your project:
 
 ## Slots
 
-| Slot | Description |
-|------|-------------|
-| `header` | Card header section |
-| `footer` | Card footer section |
-| (default) | Main card content |
+| Slot      | Description         |
+| --------- | ------------------- |
+| `header`  | Card header section |
+| `footer`  | Card footer section |
+| (default) | Main card content   |
 
 ## Examples
 

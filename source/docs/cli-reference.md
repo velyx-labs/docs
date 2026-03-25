@@ -37,18 +37,19 @@ Initialize Velyx in your Laravel project.
 />
 
 **What it does:**
+
 - Creates a `velyx.json` file in your project root
 - Checks your environment and initializes the UI component setup
 - Prompts for setup values unless you use `--defaults`
 
 **Options:**
 
-| Option | Alias | Description | Default |
-|--------|-------|-------------|---------|
-| `--base-color <base-color>` | `-b` | The base color to use | Prompts if not set |
-| `--defaults` | `-d` | Use default configuration | `false` |
-| `--force` | `-f` | Force overwrite of existing configuration | `false` |
-| `--cwd <path>` | `-c` | The working directory | Current directory |
+| Option                      | Alias | Description                               | Default            |
+| --------------------------- | ----- | ----------------------------------------- | ------------------ |
+| `--base-color <base-color>` | `-b`  | The base color to use                     | Prompts if not set |
+| `--defaults`                | `-d`  | Use default configuration                 | `false`            |
+| `--force`                   | `-f`  | Force overwrite of existing configuration | `false`            |
+| `--cwd <path>`              | `-c`  | The working directory                     | Current directory  |
 
 **Base colors:** `neutral`, `gray`, `zinc`, `stone`, `slate`
 
@@ -80,19 +81,21 @@ Add components to your project.
 />
 
 **What it does:**
+
 - Copies the component files to your project
 - Prompts you to install any required dependencies
 - Handles file conflicts if they exist
 
 **Arguments:**
+
 - `components...` - The names of components to add (optional if using `--all`)
 
 **Options:**
 
-| Option | Alias | Description | Default |
-|--------|-------|-------------|---------|
-| `--cwd <path>` | `-c` | The working directory | Current directory |
-| `--all` | `-a` | Add all available components | `false` |
+| Option         | Alias | Description                  | Default           |
+| -------------- | ----- | ---------------------------- | ----------------- |
+| `--cwd <path>` | `-c`  | The working directory        | Current directory |
+| `--all`        | `-a`  | Add all available components | `false`           |
 
 ---
 
@@ -122,19 +125,20 @@ List all available components from the registry.
 />
 
 **What it does:**
+
 - Displays all available components in the registry
 - Shows component descriptions and dependencies
 - Supports searching and filtering
 
 **Options:**
 
-| Option | Alias | Description | Default |
-|--------|-------|-------------|---------|
-| `--cwd <path>` | `-c` | The working directory | Current directory |
-| `--query <query>` | `-q` | Search query string | - |
-| `--limit <number>` | `-l` | Maximum number of items to display | All |
-| `--offset <number>` | `-o` | Number of items to skip | `0` |
-| `--json` | | Output as JSON | `false` |
+| Option              | Alias | Description                        | Default           |
+| ------------------- | ----- | ---------------------------------- | ----------------- |
+| `--cwd <path>`      | `-c`  | The working directory              | Current directory |
+| `--query <query>`   | `-q`  | Search query string                | -                 |
+| `--limit <number>`  | `-l`  | Maximum number of items to display | All               |
+| `--offset <number>` | `-o`  | Number of items to skip            | `0`               |
+| `--json`            |       | Output as JSON                     | `false`           |
 
 **Alias:** `velyx search`
 

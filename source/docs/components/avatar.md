@@ -138,14 +138,14 @@ Add the avatar component to your project:
 
 ## Props
 
-| Prop | Type | Default | Description |
-|------|------|---------|-------------|
-| `src` | `string` | `null` | Image URL for the avatar |
-| `name` | `string` | `null` | User's name (used for initials and alt text) |
-| `size` | `string` | `'xl'` | Size of the avatar: `xs`, `sm`, `md`, `lg`, `xl` |
-| `shape` | `string` | `'circle'` | Shape of the avatar: `circle` or `square` |
-| `status` | `string` | `null` | Status indicator: `online`, `offline`, `busy`, `away` |
-| `fallbackIcon` | `string` | `'user'` | Icon name to show when no image is provided |
+| Prop           | Type     | Default    | Description                                           |
+| -------------- | -------- | ---------- | ----------------------------------------------------- |
+| `src`          | `string` | `null`     | Image URL for the avatar                              |
+| `name`         | `string` | `null`     | User's name (used for initials and alt text)          |
+| `size`         | `string` | `'xl'`     | Size of the avatar: `xs`, `sm`, `md`, `lg`, `xl`      |
+| `shape`        | `string` | `'circle'` | Shape of the avatar: `circle` or `square`             |
+| `status`       | `string` | `null`     | Status indicator: `online`, `offline`, `busy`, `away` |
+| `fallbackIcon` | `string` | `'user'`   | Icon name to show when no image is provided           |
 
 ## Examples
 
@@ -234,6 +234,7 @@ The avatar component uses Tailwind CSS classes. You can customize the appearance
 ### Size Customization
 
 The avatar supports the following sizes:
+
 - `xs`: 24px
 - `sm`: 32px
 - `md`: 40px

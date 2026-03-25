@@ -48,11 +48,11 @@ Add the keyboard component to your project:
 
 ## Props
 
-| Prop | Type | Default | Description |
-|------|------|---------|-------------|
-| `keys` | `string\|array` | required | The keyboard shortcut(s) to display. Can be a single key (e.g., `'k'`) or an array of keys (e.g., `['ctrl', 'k']`) |
-| `size` | `string` | `'md'` | Size of the keyboard keys: `sm`, `md`, or `lg` |
-| `variant` | `string` | `'default'` | Visual style variant: `default` or `outline` |
+| Prop      | Type            | Default     | Description                                                                                                        |
+| --------- | --------------- | ----------- | ------------------------------------------------------------------------------------------------------------------ |
+| `keys`    | `string\|array` | required    | The keyboard shortcut(s) to display. Can be a single key (e.g., `'k'`) or an array of keys (e.g., `['ctrl', 'k']`) |
+| `size`    | `string`        | `'md'`      | Size of the keyboard keys: `sm`, `md`, or `lg`                                                                     |
+| `variant` | `string`        | `'default'` | Visual style variant: `default` or `outline`                                                                       |
 
 ## Examples
 
@@ -139,10 +139,12 @@ Add the keyboard component to your project:
 ### Common Key Combinations
 
 **Navigation:**
+
 - `Tab` - Move focus forward
 - `Shift + Tab` - Move focus backward
 
 **Editing:**
+
 - `Ctrl + C` - Copy
 - `Ctrl + V` - Paste
 - `Ctrl + X` - Cut
@@ -150,6 +152,7 @@ Add the keyboard component to your project:
 - `Ctrl + Shift + Z` - Redo
 
 **System:**
+
 - `Cmd + K` - Command palette
 - `Cmd + /` - Quick search
 - `Escape` - Close/Cancel
@@ -165,11 +168,11 @@ The Keyboard component uses Tailwind CSS utility classes:
 
 ### Size Variants
 
-| Size | Height | Padding | Font |
-|------|--------|---------|------|
-| `sm` | `h-6` | `px-1.5 py-0.5` | `text-xs` |
-| `md` | `h-7` | `px-2 py-1` | `text-xs` |
-| `lg` | `h-8` | `px-2.5 py-1` | `text-sm` |
+| Size | Height | Padding         | Font      |
+| ---- | ------ | --------------- | --------- |
+| `sm` | `h-6`  | `px-1.5 py-0.5` | `text-xs` |
+| `md` | `h-7`  | `px-2 py-1`     | `text-xs` |
+| `lg` | `h-8`  | `px-2.5 py-1`   | `text-sm` |
 
 ### Variant Styles
 

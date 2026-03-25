@@ -93,12 +93,12 @@ Add the alert component to your project:
 
 ## Props
 
-| Prop | Type | Default | Description |
-|------|------|---------|-------------|
-| `variant` | `string` | `default` | Alert style variant (default, success, destructive, warning, info) |
-| `dismissible` | `boolean` | `false` | Show dismiss button |
-| `title` | `string` | `null` | Alert title |
-| `icon` | `string` | `null` | Override default icon |
+| Prop          | Type      | Default   | Description                                                        |
+| ------------- | --------- | --------- | ------------------------------------------------------------------ |
+| `variant`     | `string`  | `default` | Alert style variant (default, success, destructive, warning, info) |
+| `dismissible` | `boolean` | `false`   | Show dismiss button                                                |
+| `title`       | `string`  | `null`    | Alert title                                                        |
+| `icon`        | `string`  | `null`    | Override default icon                                              |
 
 ## Variants
 

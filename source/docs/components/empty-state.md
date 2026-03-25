@@ -66,15 +66,15 @@ Add the empty state component to your project:
 
 ## Props
 
-| Prop | Type | Default | Description |
-|------|------|---------|-------------|
-| `title` | `string` | required | The main heading text to display |
-| `description` | `string` | `null` | Additional text explaining the empty state |
-| `icon` | `string` | `null` | HugeIcons icon name to display (e.g., `folder-open`, `bell-off`) |
-| `variant` | `string` | `'default'` | Visual style: `default`, `ghost`, or `outline` |
-| `size` | `string` | `'md'` | Size of the content: `sm`, `md`, or `lg` |
-| `actionLabel` | `string` | `null` | Text for the action button |
-| `actionUrl` | `string` | `null` | URL for the action button link |
+| Prop          | Type     | Default     | Description                                                      |
+| ------------- | -------- | ----------- | ---------------------------------------------------------------- |
+| `title`       | `string` | required    | The main heading text to display                                 |
+| `description` | `string` | `null`      | Additional text explaining the empty state                       |
+| `icon`        | `string` | `null`      | HugeIcons icon name to display (e.g., `folder-open`, `bell-off`) |
+| `variant`     | `string` | `'default'` | Visual style: `default`, `ghost`, or `outline`                   |
+| `size`        | `string` | `'md'`      | Size of the content: `sm`, `md`, or `lg`                         |
+| `actionLabel` | `string` | `null`      | Text for the action button                                       |
+| `actionUrl`   | `string` | `null`      | URL for the action button link                                   |
 
 ## Examples
 
@@ -244,6 +244,7 @@ Add the empty state component to your project:
 ## Common Use Cases
 
 ### Empty Project List
+
 ```php
 <x-ui.empty-state
     title="No projects"
@@ -255,6 +256,7 @@ Add the empty state component to your project:
 ```
 
 ### No Search Results
+
 ```php
 <x-ui.empty-state
     title="No results found"
@@ -264,6 +266,7 @@ Add the empty state component to your project:
 ```
 
 ### No Notifications
+
 ```php
 <x-ui.empty-state
     title="No notifications"
@@ -275,6 +278,7 @@ Add the empty state component to your project:
 ```
 
 ### Empty Folder
+
 ```php
 <x-ui.empty-state
     title="This folder is empty"
@@ -286,6 +290,7 @@ Add the empty state component to your project:
 ```
 
 ### No Favorites
+
 ```php
 <x-ui.empty-state
     title="No favorites yet"
@@ -299,19 +304,19 @@ Add the empty state component to your project:
 
 Popular HugeIcons for empty states:
 
-| Icon | Use Case |
-|------|----------|
-| `search` | No search results |
-| `folder-open` | Empty folder/list |
-| `bell-off` | No notifications |
-| `inbox` | Empty inbox |
-| `calendar` | No events scheduled |
-| `users` | No team members |
-| `shopping-bag-02` | Empty cart |
-| `document` | No documents |
-| `clipboard` | Empty clipboard |
-| `check-circle` | Task completed |
-| `upload-cloud` | Upload area |
+| Icon              | Use Case            |
+| ----------------- | ------------------- |
+| `search`          | No search results   |
+| `folder-open`     | Empty folder/list   |
+| `bell-off`        | No notifications    |
+| `inbox`           | Empty inbox         |
+| `calendar`        | No events scheduled |
+| `users`           | No team members     |
+| `shopping-bag-02` | Empty cart          |
+| `document`        | No documents        |
+| `clipboard`       | Empty clipboard     |
+| `check-circle`    | Task completed      |
+| `upload-cloud`    | Upload area         |
 
 ## Styling
 
@@ -325,16 +330,16 @@ The Empty State component uses Tailwind CSS utility classes:
 
 ### Size Variants
 
-| Size | Icon Size | Text Size |
-|------|-----------|-----------|
-| `sm` | `h-12 w-12` | `text-sm` |
+| Size | Icon Size   | Text Size   |
+| ---- | ----------- | ----------- |
+| `sm` | `h-12 w-12` | `text-sm`   |
 | `md` | `h-16 w-16` | `text-base` |
-| `lg` | `h-20 w-20` | `text-lg` |
+| `lg` | `h-20 w-20` | `text-lg`   |
 
 ### Variant Styles
 
 - **default**: Standard styling with icon and text
-- **ghost`: Minimal styling, muted colors
+- \*\*ghost`: Minimal styling, muted colors
 - **outline**: Bordered variant for more emphasis
 
 ## Accessibility

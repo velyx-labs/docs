@@ -66,13 +66,13 @@ Add the dialog component to your project:
 
 ## Props
 
-| Prop | Type | Default | Description |
-|------|------|---------|-------------|
-| `id` | `string` | `dialog` | Unique identifier for the dialog |
-| `size` | `string` | `md` | Dialog size (sm, md, lg, xl, 2xl, 3xl, 4xl, full) |
-| `closeable` | `boolean` | `true` | Show close button and allow closing |
-| `title` | `string` | `null` | Dialog title |
-| `footer` | `slot` | `null` | Dialog footer content |
+| Prop        | Type      | Default  | Description                                       |
+| ----------- | --------- | -------- | ------------------------------------------------- |
+| `id`        | `string`  | `dialog` | Unique identifier for the dialog                  |
+| `size`      | `string`  | `md`     | Dialog size (sm, md, lg, xl, 2xl, 3xl, 4xl, full) |
+| `closeable` | `boolean` | `true`   | Show close button and allow closing               |
+| `title`     | `string`  | `null`   | Dialog title                                      |
+| `footer`    | `slot`    | `null`   | Dialog footer content                             |
 
 ## Accessibility
 
@@ -85,11 +85,11 @@ Dialogs include:
 
 ## Keyboard Interactions
 
-| Key | Action |
-|-----|--------|
-| `Escape` | Close dialog (when closeable) |
-| `Tab` | Move focus within the dialog |
-| `Shift + Tab` | Move focus backwards |
+| Key           | Action                        |
+| ------------- | ----------------------------- |
+| `Escape`      | Close dialog (when closeable) |
+| `Tab`         | Move focus within the dialog  |
+| `Shift + Tab` | Move focus backwards          |
 
 ## Next Steps
 

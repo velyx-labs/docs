@@ -1,9 +1,9 @@
 ---
 name: Feature request
 about: Propose a concrete documentation, navigation, search, or example improvement
-title: '[FEATURE] '
+title: "[FEATURE] "
 labels: enhancement, needs-triage
-assignees: ''
+assignees: ""
 ---
 
 ## Summary

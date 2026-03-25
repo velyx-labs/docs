@@ -41,23 +41,24 @@ Add the popover component to your project:
             </x-slot:content>
         </x-ui.popover>
     </div>
+
 </x-component-preview>
 
 ## Props
 
-| Prop | Type | Default | Description |
-|------|------|---------|-------------|
-| `position` | `string` | `'bottom'` | Vertical position: `top`, `bottom` |
-| `align` | `string` | `'center'` | Horizontal alignment: `start`, `center`, `end` |
-| `width` | `string` | `'auto'` | Width of popover: `auto`, `sm`, `md`, `lg` |
-| `offset` | `number` | `8` | Distance in pixels from trigger element |
+| Prop       | Type     | Default    | Description                                    |
+| ---------- | -------- | ---------- | ---------------------------------------------- |
+| `position` | `string` | `'bottom'` | Vertical position: `top`, `bottom`             |
+| `align`    | `string` | `'center'` | Horizontal alignment: `start`, `center`, `end` |
+| `width`    | `string` | `'auto'`   | Width of popover: `auto`, `sm`, `md`, `lg`     |
+| `offset`   | `number` | `8`        | Distance in pixels from trigger element        |
 
 ## Slots
 
-| Slot | Description |
-|------|-------------|
+| Slot           | Description                                              |
+| -------------- | -------------------------------------------------------- |
 | `trigger_slot` | The element that triggers the popover (usually a button) |
-| `content` | The content displayed inside the popover |
+| `content`      | The content displayed inside the popover                 |
 
 ## Examples
 
@@ -371,12 +372,12 @@ The Popover component uses Tailwind CSS utility classes:
 
 ### Width Options
 
-| Width | CSS Width |
-|-------|-----------|
+| Width  | CSS Width                |
+| ------ | ------------------------ |
 | `auto` | `w-auto` (content-based) |
-| `sm` | `w-48` (192px) |
-|md` | `w-64` (256px) |
-| `lg` | `w-80` (320px) |
+| `sm`   | `w-48` (192px)           |
+| md`    | `w-64` (256px)           |
+| `lg`   | `w-80` (320px)           |
 
 ## Accessibility
 

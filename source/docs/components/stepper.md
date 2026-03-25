@@ -57,14 +57,14 @@ Add the stepper component to your project:
 
 ## Props
 
-| Prop | Type | Default | Description |
-|------|------|---------|-------------|
-| `steps` | `array` | `[]` | Ordered step definitions |
-| `currentStep` | `int` | `1` | Currently active step |
-| `variant` | `string` | `'horizontal'` | Layout orientation: `horizontal` or `vertical` |
-| `size` | `string` | `'md'` | Size preset |
-| `showNumbers` | `bool` | `true` | Shows numeric indicators when no icon is provided |
-| `clickable` | `bool` | `false` | Allows navigating back to completed steps |
+| Prop          | Type     | Default        | Description                                       |
+| ------------- | -------- | -------------- | ------------------------------------------------- |
+| `steps`       | `array`  | `[]`           | Ordered step definitions                          |
+| `currentStep` | `int`    | `1`            | Currently active step                             |
+| `variant`     | `string` | `'horizontal'` | Layout orientation: `horizontal` or `vertical`    |
+| `size`        | `string` | `'md'`         | Size preset                                       |
+| `showNumbers` | `bool`   | `true`         | Shows numeric indicators when no icon is provided |
+| `clickable`   | `bool`   | `false`        | Allows navigating back to completed steps         |
 
 ## Next Steps
 

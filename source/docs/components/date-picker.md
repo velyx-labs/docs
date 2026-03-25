@@ -77,15 +77,15 @@ Add the date picker component to your project:
 
 ## Props
 
-| Prop | Type | Default | Description |
-|------|------|---------|-------------|
-| `placeholder` | `string` | `'Select a date'` | Placeholder text shown when no date is selected |
-| `disabled` | `boolean` | `false` | Whether the date picker is disabled |
-| `icon` | `string` | `'calendar'` | Icon name to display in the input field |
-| `clearable` | `boolean` | `true` | Whether to show a clear button when a date is selected |
-| `size` | `string` | `'md'` | Size of the input: `sm`, `md`, or `lg` |
-| `minDate` | `string` | `null` | Minimum selectable date (format: YYYY-MM-DD) |
-| `maxDate` | `string` | `null` | Maximum selectable date (format: YYYY-MM-DD) |
+| Prop          | Type      | Default           | Description                                            |
+| ------------- | --------- | ----------------- | ------------------------------------------------------ |
+| `placeholder` | `string`  | `'Select a date'` | Placeholder text shown when no date is selected        |
+| `disabled`    | `boolean` | `false`           | Whether the date picker is disabled                    |
+| `icon`        | `string`  | `'calendar'`      | Icon name to display in the input field                |
+| `clearable`   | `boolean` | `true`            | Whether to show a clear button when a date is selected |
+| `size`        | `string`  | `'md'`            | Size of the input: `sm`, `md`, or `lg`                 |
+| `minDate`     | `string`  | `null`            | Minimum selectable date (format: YYYY-MM-DD)           |
+| `maxDate`     | `string`  | `null`            | Maximum selectable date (format: YYYY-MM-DD)           |
 
 ## Examples
 
@@ -188,6 +188,7 @@ The date picker uses Tailwind CSS utility classes and can be customized:
 ### Input Styling
 
 The input field uses standard form classes:
+
 - Border: `border-input`
 - Background: `bg-background`
 - Focus ring: `focus:ring-2 focus:ring-ring`
@@ -196,6 +197,7 @@ The input field uses standard form classes:
 ### Calendar Styling
 
 The calendar popup uses:
+
 - Background: `bg-popover`
 - Border: `border-border`
 - Shadow: `shadow-lg`

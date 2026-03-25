@@ -57,6 +57,7 @@ Add the drawer component to your project:
             </div>
         </x-ui.drawer.content>
     </x-ui.drawer>
+
 </x-component-preview>
 
 ### Without Overlay
@@ -81,6 +82,7 @@ Add the drawer component to your project:
             </div>
         </x-ui.drawer.content>
     </x-ui.drawer>
+
 </x-component-preview>
 
 ### With Form
@@ -118,6 +120,7 @@ Add the drawer component to your project:
             </div>
         </x-ui.drawer.content>
     </x-ui.drawer>
+
 </x-component-preview>
 
 ### Interactive Example
@@ -159,51 +162,52 @@ Add the drawer component to your project:
             </div>
         </x-ui.drawer.content>
     </x-ui.drawer>
+
 </x-component-preview>
 
 ## Components
 
 The Drawer component consists of several sub-components:
 
-| Component | Purpose |
-|-----------|---------|
-| `<x-ui.drawer>` | Main drawer container with Alpine.js state management |
-| `<x-ui.drawer.trigger>` | Button that opens the drawer |
-| `<x-ui.drawer.content>` | The slide-out panel content |
-| `<x-ui.drawer.header>` | Header section with title and description |
-| `<x-ui.drawer.title>` | Drawer title |
-| `<x-ui.drawer.description>` | Optional description below title |
-| `<x-ui.drawer.footer>` | Footer section for action buttons |
-| `<x-ui.drawer.close>` | Button that closes the drawer |
+| Component                   | Purpose                                               |
+| --------------------------- | ----------------------------------------------------- |
+| `<x-ui.drawer>`             | Main drawer container with Alpine.js state management |
+| `<x-ui.drawer.trigger>`     | Button that opens the drawer                          |
+| `<x-ui.drawer.content>`     | The slide-out panel content                           |
+| `<x-ui.drawer.header>`      | Header section with title and description             |
+| `<x-ui.drawer.title>`       | Drawer title                                          |
+| `<x-ui.drawer.description>` | Optional description below title                      |
+| `<x-ui.drawer.footer>`      | Footer section for action buttons                     |
+| `<x-ui.drawer.close>`       | Button that closes the drawer                         |
 
 ## Props
 
 ### Drawer Root
 
-| Prop | Type | Default | Description |
-|------|------|---------|-------------|
-| `open` | `boolean` | `false` | Whether the drawer is initially open |
-| `closeOnEscape` | `boolean` | `true` | Whether pressing Escape closes the drawer |
+| Prop            | Type      | Default | Description                               |
+| --------------- | --------- | ------- | ----------------------------------------- |
+| `open`          | `boolean` | `false` | Whether the drawer is initially open      |
+| `closeOnEscape` | `boolean` | `true`  | Whether pressing Escape closes the drawer |
 
 ### Drawer Content
 
-| Prop | Type | Default | Description |
-|------|------|---------|-------------|
-| `showOverlay` | `boolean` | `true` | Whether to show the dark backdrop overlay |
+| Prop          | Type      | Default | Description                               |
+| ------------- | --------- | ------- | ----------------------------------------- |
+| `showOverlay` | `boolean` | `true`  | Whether to show the dark backdrop overlay |
 
 ### Drawer Trigger
 
-| Prop | Type | Default | Description |
-|------|------|---------|-------------|
-| `target` | `string` | required | ID of the drawer to open |
-| `asChild` | `boolean` | `false` | Whether to render as child element instead of button |
+| Prop      | Type      | Default  | Description                                          |
+| --------- | --------- | -------- | ---------------------------------------------------- |
+| `target`  | `string`  | required | ID of the drawer to open                             |
+| `asChild` | `boolean` | `false`  | Whether to render as child element instead of button |
 
 ### Drawer Close
 
-| Prop | Type | Default | Description |
-|------|------|---------|-------------|
-| `target` | `string` | required | ID of the drawer to close |
-| `asChild` | `boolean` | `false` | Whether to render as child element instead of button |
+| Prop      | Type      | Default  | Description                                          |
+| --------- | --------- | -------- | ---------------------------------------------------- |
+| `target`  | `string`  | required | ID of the drawer to close                            |
+| `asChild` | `boolean` | `false`  | Whether to render as child element instead of button |
 
 ## Examples
 

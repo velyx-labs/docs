@@ -27,10 +27,12 @@ pnpm run prod && vendor/bin/jigsaw build   # Production: compile + build static 
 ### Build System
 
 Jigsaw generates static HTML from two sources:
+
 1. **Markdown content** (`source/docs/`) with YAML frontmatter
 2. **Blade templates** (`source/_layouts/`, `source/_/`)
 
 Build outputs:
+
 - `build_local/` - Development build
 - `build_production/` - Production-optimized static files
 
@@ -39,12 +41,13 @@ Vite handles asset compilation (Tailwind CSS, JavaScript) via `@tighten/jigsaw-v
 ### Content Structure
 
 Documentation pages use YAML frontmatter:
+
 ```yaml
 ---
 title: Page Title
 description: Meta description
 extends: _layouts.documentation
-section: content  # Maps to @section('content') in layout
+section: content # Maps to @section('content') in layout
 ---
 ```
 
@@ -54,11 +57,13 @@ section: content  # Maps to @section('content') in layout
 ### Navigation
 
 Navigation is defined in `navigation.php` as a PHP array:
+
 - Top-level keys are section names
 - `url` key defines the link path
 - `children` array creates nested navigation
 
 Helper functions in `config.php`:
+
 - `isActive()` - Check if current page matches path
 - `isActiveParent()` - Check if page is under a parent section
 - `url()` - Resolve relative or absolute URLs
@@ -72,6 +77,7 @@ Helper functions in `config.php`:
 ### Event System
 
 Jigsaw fires events during build. Event listeners in `listeners/`:
+
 - `GenerateSitemap.php` - Auto-generates sitemap.xml after build
 
 Register listeners in `bootstrap/app.php` via `$events->listen()`.
@@ -103,6 +109,7 @@ Use the `<x-icon>` component for general UI icons:
 ```
 
 The component accepts:
+
 - `name` - HugeIcons icon name (find at https://hugeicons.com)
 - `class` - Tailwind classes for styling
 - All standard SVG attributes (`width`, `height`, `color`, `stroke-width`, etc.)
@@ -137,21 +144,23 @@ Uses Tailwind CSS 4.x with Shadcn integration. **All styling should use utility 
 
 ### Design Tokens (available as utility classes)
 
-| Utility | Usage |
-|---------|-------|
-| `bg-background` / `text-foreground` | Base background/text |
-| `bg-primary` / `text-primary` | Primary brand |
-| `bg-secondary` / `text-secondary-foreground` | Secondary surfaces |
-| `bg-muted` / `text-muted-foreground` | Muted content |
-| `bg-accent` / `text-accent-foreground` | Accent highlights |
-| `bg-card` / `text-card-foreground` | Card backgrounds |
-| `bg-destructive` | Error/danger |
-| `border-border` / `bg-input` | Borders/inputs |
+| Utility                                      | Usage                |
+| -------------------------------------------- | -------------------- |
+| `bg-background` / `text-foreground`          | Base background/text |
+| `bg-primary` / `text-primary`                | Primary brand        |
+| `bg-secondary` / `text-secondary-foreground` | Secondary surfaces   |
+| `bg-muted` / `text-muted-foreground`         | Muted content        |
+| `bg-accent` / `text-accent-foreground`       | Accent highlights    |
+| `bg-card` / `text-card-foreground`           | Card backgrounds     |
+| `bg-destructive`                             | Error/danger         |
+| `border-border` / `bg-input`                 | Borders/inputs       |
 
 ### Radius utilities
+
 `rounded-sm`, `rounded-md`, `rounded-lg`, `rounded-xl`, `rounded-2xl`, `rounded-3xl`, `rounded-4xl`
 
 ### Dark mode
+
 Add `.dark` class to any element to switch descendants to dark theme.
 
 ## Key Conventions

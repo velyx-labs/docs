@@ -67,12 +67,12 @@ Add the tooltip component to your project:
 
 ## Props
 
-| Prop | Type | Default | Description |
-|------|------|---------|-------------|
-| `content` | `string` | `''` | Text shown inside the tooltip |
-| `position` | `string` | `'top'` | Placement: `top`, `bottom`, `left`, or `right` |
-| `delay` | `int` | `200` | Delay in milliseconds before the tooltip appears |
-| `arrow` | `bool` | `true` | Shows or hides the tooltip arrow |
+| Prop       | Type     | Default | Description                                      |
+| ---------- | -------- | ------- | ------------------------------------------------ |
+| `content`  | `string` | `''`    | Text shown inside the tooltip                    |
+| `position` | `string` | `'top'` | Placement: `top`, `bottom`, `left`, or `right`   |
+| `delay`    | `int`    | `200`   | Delay in milliseconds before the tooltip appears |
+| `arrow`    | `bool`   | `true`  | Shows or hides the tooltip arrow                 |
 
 ## Example Structure
 

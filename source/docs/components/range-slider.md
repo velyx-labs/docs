@@ -53,16 +53,16 @@ Add the range slider component to your project:
 
 ## Props
 
-| Prop | Type | Default | Description |
-|------|------|---------|-------------|
-| `min` | `int|float` | `0` | Minimum slider value |
-| `max` | `int|float` | `100` | Maximum slider value |
-| `step` | `int|float` | `1` | Value increment |
-| `showValue` | `bool` | `true` | Displays the current value above the track |
-| `showLabels` | `bool` | `true` | Displays the min and max labels below the track |
-| `size` | `string` | `'md'` | Slider size: `sm`, `md`, or `lg` |
-| `variant` | `string` | `'default'` | Track accent color variant |
-| `type` | `string` | `'single'` | Slider mode: `single` or `double` |
+| Prop         | Type     | Default     | Description                                     |
+| ------------ | -------- | ----------- | ----------------------------------------------- | -------------------- |
+| `min`        | `int     | float`      | `0`                                             | Minimum slider value |
+| `max`        | `int     | float`      | `100`                                           | Maximum slider value |
+| `step`       | `int     | float`      | `1`                                             | Value increment      |
+| `showValue`  | `bool`   | `true`      | Displays the current value above the track      |
+| `showLabels` | `bool`   | `true`      | Displays the min and max labels below the track |
+| `size`       | `string` | `'md'`      | Slider size: `sm`, `md`, or `lg`                |
+| `variant`    | `string` | `'default'` | Track accent color variant                      |
+| `type`       | `string` | `'single'`  | Slider mode: `single` or `double`               |
 
 ## Example Structure
 

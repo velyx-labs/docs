@@ -5,291 +5,237 @@
 @endpush
 
 @section('body')
-<section class="relative overflow-hidden border-b border-border/60 bg-background">
-    <div class="pointer-events-none absolute inset-0 -z-10">
-        <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_left,_rgba(24,24,27,0.06),_transparent_34%),linear-gradient(180deg,rgba(24,24,27,0.04),transparent_38%)] dark:bg-[radial-gradient(circle_at_top_left,_rgba(255,255,255,0.08),_transparent_28%),linear-gradient(180deg,rgba(255,255,255,0.03),transparent_36%)]"></div>
-        <div class="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-border to-transparent"></div>
-        <div class="absolute left-[8%] top-24 h-48 w-48 rounded-full bg-foreground/5 blur-3xl dark:bg-white/6"></div>
-        <div class="absolute right-[10%] top-40 h-64 w-64 rounded-full bg-primary/10 blur-3xl"></div>
+
+<section class="relative overflow-hidden border-b border-border bg-background">
+
+    <div class="pointer-events-none absolute inset-x-0 top-0 z-10 h-px bg-gradient-to-r from-transparent via-border to-transparent"></div>
+
+    <div class="pointer-events-none absolute inset-0 z-0"
+         style="background-image: linear-gradient(to right, var(--border) 1px, transparent 1px), linear-gradient(to bottom, var(--border) 1px, transparent 1px); background-size: 72px 72px; mask-image: radial-gradient(ellipse 85% 55% at 50% 0%, black 10%, transparent 100%); -webkit-mask-image: radial-gradient(ellipse 85% 55% at 50% 0%, black 10%, transparent 100%);"></div>
+
+    <div class="pointer-events-none absolute inset-0 z-0">
+        <div class="absolute left-1/2 top-0 h-64 w-[640px] -translate-x-1/2 rounded-full bg-foreground/[0.04] blur-3xl"></div>
+        <div class="absolute right-[6%] top-12 h-52 w-52 rounded-full bg-foreground/[0.025] blur-3xl"></div>
     </div>
 
-    <div class="container-wrapper px-4 py-16 lg:px-6 lg:py-24">
-        <div class="grid items-center gap-14 lg:grid-cols-[minmax(0,1.05fr)_minmax(0,0.95fr)]">
-            <div class="max-w-3xl">
-                <div class="animate-fade-in inline-flex items-center gap-2 rounded-full border border-border/70 bg-background/80 px-4 py-2 text-xs font-semibold uppercase tracking-[0.24em] text-muted-foreground backdrop-blur">
-                    <span class="inline-flex h-2 w-2 rounded-full bg-primary"></span>
-                    Blade Components For Shipping Products
+    <div class="container-wrapper relative z-10 px-4 py-20 lg:px-6 lg:py-28">
+        <div class="mx-auto max-w-5xl text-center">
+
+            {{-- Badge --}}
+            <div class="animate-fade-in inline-flex items-center gap-2 rounded-full border border-border bg-background/80 px-4 py-1.5 text-[0.625rem] font-bold uppercase tracking-[0.22em] text-muted-foreground backdrop-blur-sm">
+                <span class="inline-block h-1.5 w-1.5 rounded-full bg-foreground opacity-50"></span>
+                Blade Components For Shipping Products
+            </div>
+
+            <h1 class="mt-7 animate-fade-in font-serif text-5xl font-normal leading-[1.06] tracking-[-0.03em] text-foreground sm:text-6xl lg:text-[5.25rem]"
+                style="animation-delay: 0.08s">
+                Copy the UI.<br>
+                <em class="italic text-muted-foreground">Keep the leverage.</em>
+            </h1>
+
+            <p class="mx-auto mt-6 max-w-[38rem] animate-fade-in text-base font-light leading-[1.85] text-muted-foreground sm:text-lg"
+               style="animation-delay: 0.16s">
+                Velyx is a Laravel-first component system for teams that want polished interfaces without tying product work to a dependency-owned UI layer. Copy, adapt, ship.
+            </p>
+
+            {{-- CTAs --}}
+            <div class="mt-9 flex animate-fade-in flex-wrap justify-center gap-3" style="animation-delay: 0.24s">
+
+                <a href="/docs/installation"
+                   class="inline-flex items-center justify-center gap-2 rounded-lg bg-foreground px-6 py-3 text-[0.8125rem] font-semibold text-background shadow-sm transition-all duration-150 hover:-translate-y-px hover:opacity-90">
+                    Get Started
+                    <x-icon name="arrow-right-02" class="h-3.5 w-3.5" />
+                </a>
+
+                <a href="/docs/components"
+                   class="inline-flex items-center justify-center gap-2 rounded-lg border border-border bg-transparent px-6 py-3 text-[0.8125rem] font-medium text-muted-foreground transition-all duration-150 hover:-translate-y-px hover:border-border/80 hover:text-foreground">
+                    Browse Components
+                    <x-icon name="arrow-right-02" class="h-3.5 w-3.5" />
+                </a>
+
+            </div>
+
+            <div class="mt-14 grid animate-fade-in grid-cols-3 overflow-hidden rounded-[calc(var(--radius)+8px)] border border-border"
+                 style="animation-delay: 0.32s">
+                <div class="border-r border-border p-5 text-left">
+                    <p class="text-[0.625rem] font-bold uppercase tracking-[0.2em] text-muted-foreground">Ownership</p>
+                    <p class="mt-2 text-sm font-light leading-[1.75] text-foreground">No runtime UI package between your product and your codebase.</p>
                 </div>
-
-                <h1 class="mt-6 max-w-4xl animate-fade-in text-5xl font-semibold tracking-[-0.05em] text-foreground sm:text-6xl lg:text-7xl" style="animation-delay: 0.08s">
-                    Copy the UI. Keep the leverage.
-                </h1>
-
-                <p class="mt-6 max-w-2xl animate-fade-in text-lg leading-8 text-muted-foreground sm:text-xl" style="animation-delay: 0.16s">
-                    Velyx is a Laravel-first component system for teams that want polished interfaces without tying product work to a dependency-owned UI layer. Use the docs, copy the component, adapt the markup, ship faster.
-                </p>
-
-                <div class="mt-8 flex animate-fade-in flex-col gap-3 sm:flex-row" style="animation-delay: 0.24s">
-                    <a href="/docs/installation" class="inline-flex items-center justify-center gap-2 rounded-2xl bg-primary px-6 py-3.5 text-sm font-semibold text-primary-foreground shadow-lg shadow-primary/20 transition-all hover:bg-primary/90 hover:shadow-xl">
-                        Get Started
-                        <x-icon name="arrow-right-02" class="h-4 w-4" />
-                    </a>
-
-                    <a href="/docs/components" class="inline-flex items-center justify-center gap-2 rounded-2xl border border-border bg-background/90 px-6 py-3.5 text-sm font-semibold text-foreground transition-colors hover:bg-muted">
-                        Browse Components
-                        <x-icon name="arrow-right-02" class="h-4 w-4" />
-                    </a>
+                <div class="border-r border-border p-5 text-left">
+                    <p class="text-[0.625rem] font-bold uppercase tracking-[0.2em] text-muted-foreground">Stack Fit</p>
+                    <p class="mt-2 text-sm font-light leading-[1.75] text-foreground">Blade, Alpine.js, Tailwind CSS v4 and Livewire from day one.</p>
                 </div>
-
-                <div class="mt-8 grid animate-fade-in gap-4 sm:grid-cols-3" style="animation-delay: 0.32s">
-                    <div class="rounded-2xl border border-border/70 bg-muted/30 p-4">
-                        <p class="text-xs font-semibold uppercase tracking-[0.22em] text-muted-foreground">Ownership</p>
-                        <p class="mt-2 text-sm leading-6 text-foreground">No runtime UI package sitting between your product and your codebase.</p>
-                    </div>
-                    <div class="rounded-2xl border border-border/70 bg-muted/30 p-4">
-                        <p class="text-xs font-semibold uppercase tracking-[0.22em] text-muted-foreground">Stack Fit</p>
-                        <p class="mt-2 text-sm leading-6 text-foreground">Made around Blade, Alpine.js, Tailwind CSS v4 and Livewire from day one.</p>
-                    </div>
-                    <div class="rounded-2xl border border-border/70 bg-muted/30 p-4">
-                        <p class="text-xs font-semibold uppercase tracking-[0.22em] text-muted-foreground">Ship Faster</p>
-                        <p class="mt-2 text-sm leading-6 text-foreground">Start with a sharp baseline, then shape every component around your product.</p>
-                    </div>
+                <div class="p-5 text-left">
+                    <p class="text-[0.625rem] font-bold uppercase tracking-[0.2em] text-muted-foreground">Ship Faster</p>
+                    <p class="mt-2 text-sm font-light leading-[1.75] text-foreground">Sharp baseline, then shape every component around your product.</p>
                 </div>
             </div>
 
-            <div class="animate-fade-in lg:justify-self-end" style="animation-delay: 0.2s">
-                <div class="relative overflow-hidden rounded-[2rem] border border-border/70 bg-card shadow-[0_24px_80px_rgba(0,0,0,0.08)] dark:shadow-[0_24px_80px_rgba(0,0,0,0.3)]">
-                    <div class="absolute inset-x-0 top-0 h-24 bg-gradient-to-b from-muted/60 to-transparent"></div>
-                    <div class="border-b border-border/60 px-5 py-4">
-                        <div class="flex items-center justify-between gap-4">
-                            <div class="flex items-center gap-3">
-                                <div class="flex h-10 w-10 items-center justify-center rounded-2xl bg-primary text-primary-foreground">
-                                    <x-icon name="sparkles" class="h-5 w-5" />
-                                </div>
-                                <div>
-                                    <p class="text-sm font-semibold text-foreground">Component Preview Stack</p>
-                                    <p class="text-xs text-muted-foreground">Drawer, table, command palette, cards</p>
-                                </div>
-                            </div>
-                            <div class="rounded-full border border-border bg-background/80 px-3 py-1 text-[11px] font-medium text-muted-foreground">
-                                Blade + Alpine
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="grid gap-5 p-5">
-
-                        <div class="grid gap-4 sm:grid-cols-3">
-                            <div class="rounded-2xl border border-border/60 bg-background/80 p-4">
-                                <img src="/assets/img/icon-window.svg" alt="Window preview icon" class="h-8 w-8" />
-                                <p class="mt-4 text-sm font-semibold text-foreground">Structured screens</p>
-                                <p class="mt-2 text-xs leading-6 text-muted-foreground">Cards, tables and forms arranged like a real product interface.</p>
-                            </div>
-                            <div class="rounded-2xl border border-border/60 bg-background/80 p-4">
-                                <img src="/assets/img/icon-stack.svg" alt="Component stack icon" class="h-8 w-8" />
-                                <p class="mt-4 text-sm font-semibold text-foreground">Composable blocks</p>
-                                <p class="mt-2 text-xs leading-6 text-muted-foreground">Pieces that move from docs to app without needing a rewrite.</p>
-                            </div>
-                            <div class="rounded-2xl border border-border/60 bg-background/80 p-4">
-                                <img src="/assets/img/icon-terminal.svg" alt="Terminal icon" class="h-8 w-8" />
-                                <p class="mt-4 text-sm font-semibold text-foreground">Fast handoff</p>
-                                <p class="mt-2 text-xs leading-6 text-muted-foreground">Install, paste, adapt and keep shipping inside Laravel.</p>
-                            </div>
-                        </div>
-
-                        <div class="rounded-2xl border border-border/60 bg-background p-4">
-                            <div class="flex flex-wrap items-center gap-2 text-[11px] font-medium text-muted-foreground">
-                                <span class="rounded-full bg-muted px-2.5 py-1">drawer</span>
-                                <span class="rounded-full bg-muted px-2.5 py-1">command-palette</span>
-                                <span class="rounded-full bg-muted px-2.5 py-1">card</span>
-                                <span class="rounded-full bg-muted px-2.5 py-1">table</span>
-                            </div>
-
-                            <div class="mt-4 grid gap-4 sm:grid-cols-[1.1fr_0.9fr]">
-                                <div class="rounded-2xl border border-border/60 bg-muted/20 p-4">
-                                    <div class="flex items-start justify-between gap-4">
-                                        <div>
-                                            <p class="text-xs uppercase tracking-[0.24em] text-muted-foreground">Admin Card</p>
-                                            <p class="mt-3 text-3xl font-semibold tracking-tight text-foreground">$48.2k</p>
-                                        </div>
-                                        <div class="rounded-full bg-primary/10 px-2.5 py-1 text-xs font-semibold text-primary">+12.4%</div>
-                                    </div>
-                                    <div class="mt-6 flex h-24 items-end gap-2">
-                                        <span class="h-10 w-full rounded-t-xl bg-muted"></span>
-                                        <span class="h-16 w-full rounded-t-xl bg-muted"></span>
-                                        <span class="h-20 w-full rounded-t-xl bg-primary/35"></span>
-                                        <span class="h-14 w-full rounded-t-xl bg-muted"></span>
-                                        <span class="h-24 w-full rounded-t-xl bg-primary"></span>
-                                        <span class="h-18 w-full rounded-t-xl bg-primary/45"></span>
-                                    </div>
-                                </div>
-
-                                <div class="rounded-2xl border border-border/60 bg-muted/20 p-4">
-                                    <div class="flex items-center justify-between">
-                                        <p class="text-xs uppercase tracking-[0.24em] text-muted-foreground">Command Palette</p>
-                                        <div class="inline-flex items-center gap-1 rounded-full border border-border bg-background px-2 py-1 text-[10px] text-muted-foreground">
-                                            <span class="rounded bg-muted px-1.5 py-0.5">⌘</span>
-                                            <span class="rounded bg-muted px-1.5 py-0.5">K</span>
-                                        </div>
-                                    </div>
-                                    <div class="mt-3 rounded-xl border border-border bg-background px-3 py-2 text-sm text-muted-foreground">
-                                        Search components, blocks, or docs...
-                                    </div>
-                                    <div class="mt-3 space-y-2">
-                                        <div class="flex items-center justify-between rounded-xl bg-background px-3 py-2 text-sm">
-                                            <span class="text-foreground">Drawer</span>
-                                            <span class="text-muted-foreground">Open side panel</span>
-                                        </div>
-                                        <div class="flex items-center justify-between rounded-xl bg-background px-3 py-2 text-sm">
-                                            <span class="text-foreground">Popover</span>
-                                            <span class="text-muted-foreground">Layered actions</span>
-                                        </div>
-                                        <div class="flex items-center justify-between rounded-xl bg-background px-3 py-2 text-sm">
-                                            <span class="text-foreground">Table</span>
-                                            <span class="text-muted-foreground">Dense data UI</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="rounded-2xl border border-dashed border-border/70 bg-background/70 p-4">
-                            <div class="flex flex-wrap items-center gap-4 text-sm text-muted-foreground">
-                                <span class="inline-flex items-center gap-2"><x-icons.laravel /> Blade-first</span>
-                                <span class="inline-flex items-center gap-2"><x-icons.tailwind /> Tailwind CSS v4</span>
-                                <span class="inline-flex items-center gap-2"><x-icons.alpinejs /> Alpine.js</span>
-                                <span class="inline-flex items-center gap-2"><x-icons.livewire /> Livewire ready</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
         </div>
     </div>
 </section>
 
-<section class="border-b border-border/60 bg-muted/20">
+<section class="border-b border-border bg-muted/20">
     <div class="container-wrapper px-4 py-14 lg:px-6">
         <div class="grid gap-6 lg:grid-cols-3">
-            <div class="rounded-3xl border border-border/70 bg-background p-8">
-                <div class="inline-flex rounded-2xl bg-primary/10 p-3 text-primary">
-                    <x-icon name="copy-01" class="h-6 w-6" />
+
+            <div class="rounded-[calc(var(--radius)+12px)] border border-border bg-background p-8">
+                <div class="inline-flex rounded-[calc(var(--radius)+4px)] bg-primary/10 p-3 text-primary">
+                    <x-icon name="copy-01" class="h-[1.375rem] w-[1.375rem]" />
                 </div>
-                <h2 class="mt-5 text-2xl font-semibold tracking-tight text-foreground">Copy the component. Keep the control.</h2>
-                <p class="mt-3 text-sm leading-7 text-muted-foreground">
-                    Pull the markup into your app, inspect every class, and evolve the component with your own product constraints instead of someone else’s package roadmap.
+                <h2 class="mt-5 text-[1.0625rem] font-semibold leading-snug tracking-tight text-foreground">Copy the component. Keep the control.</h2>
+                <p class="mt-3 text-[0.8125rem] font-light leading-7 text-muted-foreground">
+                    Pull the markup into your app, inspect every class, and evolve the component with your own product constraints instead of someone else's package roadmap.
                 </p>
             </div>
 
-            <div class="rounded-3xl border border-border/70 bg-background p-8">
-                <div class="inline-flex rounded-2xl bg-primary/10 p-3 text-primary">
-                    <x-icon name="sliders-horizontal" class="h-6 w-6" />
+            <div class="rounded-[calc(var(--radius)+12px)] border border-border bg-background p-8">
+                <div class="inline-flex rounded-[calc(var(--radius)+4px)] bg-primary/10 p-3 text-primary">
+                    <x-icon name="sliders-horizontal" class="h-[1.375rem] w-[1.375rem]" />
                 </div>
-                <h2 class="mt-5 text-2xl font-semibold tracking-tight text-foreground">Built to be edited, not protected.</h2>
-                <p class="mt-3 text-sm leading-7 text-muted-foreground">
+                <h2 class="mt-5 text-[1.0625rem] font-semibold leading-snug tracking-tight text-foreground">Built to be edited, not protected.</h2>
+                <p class="mt-3 text-[0.8125rem] font-light leading-7 text-muted-foreground">
                     Utility classes stay legible, component anatomy stays practical, and your design system can bend the UI without fighting an abstraction wall.
                 </p>
             </div>
 
-            <div class="rounded-3xl border border-border/70 bg-background p-8">
-                <div class="inline-flex rounded-2xl bg-primary/10 p-3 text-primary">
-                    <x-icon name="dashboard-square-03" class="h-6 w-6" />
+            <div class="rounded-[calc(var(--radius)+12px)] border border-border bg-background p-8">
+                <div class="inline-flex rounded-[calc(var(--radius)+4px)] bg-primary/10 p-3 text-primary">
+                    <x-icon name="dashboard-square-03" class="h-[1.375rem] w-[1.375rem]" />
                 </div>
-                <h2 class="mt-5 text-2xl font-semibold tracking-tight text-foreground">Made for real Laravel product work.</h2>
-                <p class="mt-3 text-sm leading-7 text-muted-foreground">
+                <h2 class="mt-5 text-[1.0625rem] font-semibold leading-snug tracking-tight text-foreground">Made for real Laravel product work.</h2>
+                <p class="mt-3 text-[0.8125rem] font-light leading-7 text-muted-foreground">
                     The patterns are aimed at admin panels, SaaS dashboards, settings flows, search-heavy interfaces, and the screens teams actually need to ship.
                 </p>
             </div>
+
         </div>
     </div>
 </section>
 
-<section class="border-b border-border/60 bg-background">
+<section class="border-b border-border bg-background">
     <div class="container-wrapper px-4 py-16 lg:px-6">
+
         <div class="flex flex-col gap-4 text-center">
-            <p class="text-xs font-semibold uppercase tracking-[0.28em] text-muted-foreground">What You Actually Get</p>
+            <p class="text-[0.625rem] font-bold uppercase tracking-[0.28em] text-muted-foreground">What You Actually Get</p>
             <h2 class="text-3xl font-semibold tracking-tight text-foreground sm:text-4xl">A Laravel UI baseline that still feels like your product</h2>
-            <p class="mx-auto max-w-2xl text-base leading-7 text-muted-foreground">
+            <p class="mx-auto max-w-2xl text-[0.9375rem] leading-7 text-muted-foreground">
                 Start from a confident component library, then shape each screen around your brand, data density, and workflow needs.
             </p>
         </div>
 
         <div class="mt-12 grid gap-5 lg:grid-cols-[minmax(0,1.2fr)_minmax(0,0.8fr)]">
-            <div class="rounded-[2rem] border border-border/70 bg-card p-6">
+
+            <div class="border border-border bg-card p-6">
                 <div class="grid gap-5 sm:grid-cols-2">
-                    <div class="rounded-2xl border border-border/60 bg-background p-5">
-                        <p class="text-xs font-semibold uppercase tracking-[0.22em] text-muted-foreground">Documentation</p>
-                        <p class="mt-3 text-lg font-semibold text-foreground">Installation guides and usage patterns</p>
-                        <p class="mt-2 text-sm leading-6 text-muted-foreground">Clear onboarding paths for adding components into Blade projects without build-process drama.</p>
+                    <div class="rounded-[calc(var(--radius)+8px)] border border-border bg-background p-5">
+                        <p class="text-[0.6rem] font-bold uppercase tracking-[0.22em] text-muted-foreground">Documentation</p>
+                        <p class="mt-3 text-base font-semibold text-foreground">Installation guides and usage patterns</p>
+                        <p class="mt-2 text-[0.8125rem] leading-6 text-muted-foreground">Clear onboarding paths for adding components into Blade projects without build-process drama.</p>
                     </div>
-                    <div class="rounded-2xl border border-border/60 bg-background p-5">
-                        <p class="text-xs font-semibold uppercase tracking-[0.22em] text-muted-foreground">Components</p>
-                        <p class="mt-3 text-lg font-semibold text-foreground">A practical catalog for common product UI</p>
-                        <p class="mt-2 text-sm leading-6 text-muted-foreground">Drawers, cards, tables, popovers, command palettes, modals, markdown viewers and more.</p>
+                    <div class="rounded-[calc(var(--radius)+8px)] border border-border bg-background p-5">
+                        <p class="text-[0.6rem] font-bold uppercase tracking-[0.22em] text-muted-foreground">Components</p>
+                        <p class="mt-3 text-base font-semibold text-foreground">A practical catalog for common product UI</p>
+                        <p class="mt-2 text-[0.8125rem] leading-6 text-muted-foreground">Drawers, cards, tables, popovers, command palettes, modals, markdown viewers and more.</p>
                     </div>
-                    <div class="rounded-2xl border border-border/60 bg-background p-5">
-                        <p class="text-xs font-semibold uppercase tracking-[0.22em] text-muted-foreground">Customization</p>
-                        <p class="mt-3 text-lg font-semibold text-foreground">Classes you can actually reason about</p>
-                        <p class="mt-2 text-sm leading-6 text-muted-foreground">No hidden abstraction tax when brand direction, spacing logic, or product states evolve.</p>
+                    <div class="rounded-[calc(var(--radius)+8px)] border border-border bg-background p-5">
+                        <p class="text-[0.6rem] font-bold uppercase tracking-[0.22em] text-muted-foreground">Customization</p>
+                        <p class="mt-3 text-base font-semibold text-foreground">Classes you can actually reason about</p>
+                        <p class="mt-2 text-[0.8125rem] leading-6 text-muted-foreground">No hidden abstraction tax when brand direction, spacing logic, or product states evolve.</p>
                     </div>
-                    <div class="rounded-2xl border border-border/60 bg-background p-5">
-                        <p class="text-xs font-semibold uppercase tracking-[0.22em] text-muted-foreground">Workflow</p>
-                        <p class="mt-3 text-lg font-semibold text-foreground">Faster iteration from docs to interface</p>
-                        <p class="mt-2 text-sm leading-6 text-muted-foreground">Pick a component, paste it into the app, wire it to your data, then keep momentum.</p>
+                    <div class="rounded-[calc(var(--radius)+8px)] border border-border bg-background p-5">
+                        <p class="text-[0.6rem] font-bold uppercase tracking-[0.22em] text-muted-foreground">Workflow</p>
+                        <p class="mt-3 text-base font-semibold text-foreground">Faster iteration from docs to interface</p>
+                        <p class="mt-2 text-[0.8125rem] leading-6 text-muted-foreground">Pick a component, paste it into the app, wire it to your data, then keep momentum.</p>
                     </div>
                 </div>
             </div>
 
-            <div class="rounded-[2rem] border border-border/70 bg-muted/30 p-6">
-                <p class="text-xs font-semibold uppercase tracking-[0.24em] text-muted-foreground">Why Teams Reach For It</p>
+            <div class="border border-border bg-muted/30 p-6">
+                <p class="text-[0.6rem] font-bold uppercase tracking-[0.24em] text-muted-foreground">Why Teams Reach For It</p>
                 <div class="mt-6 space-y-4">
-                    <div class="rounded-2xl border border-border/60 bg-background px-4 py-4">
+                    <div class="rounded-[calc(var(--radius)+8px)] border border-border bg-background px-4 py-4">
                         <p class="text-sm font-semibold text-foreground">No package lock-in</p>
-                        <p class="mt-1 text-sm leading-6 text-muted-foreground">Your components live in your repository, where product decisions and maintenance already happen.</p>
+                        <p class="mt-1 text-[0.8125rem] leading-6 text-muted-foreground">Your components live in your repository, where product decisions and maintenance already happen.</p>
                     </div>
-                    <div class="rounded-2xl border border-border/60 bg-background px-4 py-4">
+                    <div class="rounded-[calc(var(--radius)+8px)] border border-border bg-background px-4 py-4">
                         <p class="text-sm font-semibold text-foreground">Consistent visual starting point</p>
-                        <p class="mt-1 text-sm leading-6 text-muted-foreground">Useful defaults that still leave room for a brand with sharper visual character.</p>
+                        <p class="mt-1 text-[0.8125rem] leading-6 text-muted-foreground">Useful defaults that still leave room for a brand with sharper visual character.</p>
                     </div>
-                    <div class="rounded-2xl border border-border/60 bg-background px-4 py-4">
+                    <div class="rounded-[calc(var(--radius)+8px)] border border-border bg-background px-4 py-4">
                         <p class="text-sm font-semibold text-foreground">Laravel-native ergonomics</p>
-                        <p class="mt-1 text-sm leading-6 text-muted-foreground">It feels like building in Laravel instead of translating a foreign component philosophy.</p>
+                        <p class="mt-1 text-[0.8125rem] leading-6 text-muted-foreground">It feels like building in Laravel instead of translating a foreign component philosophy.</p>
                     </div>
                 </div>
             </div>
+
         </div>
     </div>
 </section>
 
-<section class="border-t border-border/60 bg-muted/20">
-    <div class="container-wrapper px-4 py-16 lg:px-6 lg:py-20">
-        <div class="relative overflow-hidden rounded-[2rem] border border-primary/20 bg-primary px-6 py-10 text-primary-foreground md:px-10 md:py-12">
-            <div class="absolute inset-0 bg-[linear-gradient(135deg,transparent,rgba(255,255,255,0.04))]"></div>
-            <div class="absolute -right-16 -top-20 h-56 w-56 rounded-full bg-primary-foreground/12 blur-3xl"></div>
-            <div class="absolute -bottom-20 left-10 h-52 w-52 rounded-full bg-background/14 blur-3xl"></div>
-            <div class="relative flex flex-col gap-8 lg:flex-row lg:items-end lg:justify-between">
-                <div class="max-w-2xl">
-                    <p class="text-xs font-semibold uppercase tracking-[0.26em] text-primary-foreground/70">Start Building</p>
-                    <h2 class="mt-4 text-3xl font-semibold tracking-tight sm:text-4xl">
-                        Build the first serious screen faster, then make it unmistakably yours.
-                    </h2>
-                    <p class="mt-4 text-base leading-7 text-primary-foreground/75">
-                        Explore the docs, pull in the components you need, and turn Velyx into an interface layer that belongs to your product, not ours.
-                    </p>
+<section class="border-t border-border bg-background">
+    <div class="container-wrapper px-4 py-20 lg:px-6 lg:py-24">
+
+        <div class="relative overflow-hidden rounded-[calc(var(--radius)+12px)] border border-border bg-card px-8 py-16 text-center md:px-16">
+
+            <div class="pointer-events-none absolute inset-0 z-0"
+                 style="background-image: linear-gradient(to right, var(--border) 1px, transparent 1px), linear-gradient(to bottom, var(--border) 1px, transparent 1px); background-size: 52px 52px; mask-image: radial-gradient(ellipse 85% 85% at 50% 50%, transparent 18%, black 100%); -webkit-mask-image: radial-gradient(ellipse 85% 85% at 50% 50%, transparent 18%, black 100%);"></div>
+
+            <div class="pointer-events-none absolute inset-0 z-0">
+                <div class="absolute -left-20 -top-20 h-72 w-72 rounded-full bg-foreground/[0.035] blur-3xl"></div>
+                <div class="absolute -bottom-20 -right-20 h-72 w-72 rounded-full bg-foreground/[0.025] blur-3xl"></div>
+            </div>
+
+            <div class="relative z-10">
+
+                <span class="inline-block rounded-full border border-border px-3.5 py-1 text-[0.625rem] font-bold uppercase tracking-[0.24em] text-muted-foreground">
+                    Start Building
+                </span>
+
+                <h2 class="mx-auto mt-6 max-w-2xl font-serif text-4xl font-normal leading-[1.1] tracking-[-0.03em] text-foreground sm:text-5xl">
+                    Build the first serious screen faster,
+                    <em class="italic text-muted-foreground">then make it unmistakably yours.</em>
+                </h2>
+
+                <p class="mx-auto mt-5 max-w-md text-sm font-light leading-[1.85] text-muted-foreground">
+                    Explore the docs, pull in the components you need, and turn Velyx into an interface layer that belongs to your product, not ours.
+                </p>
+
+                <div class="mx-auto mt-8 flex max-w-[200px] items-center gap-3">
+                    <div class="h-px flex-1 bg-gradient-to-r from-transparent to-border"></div>
+                    <div class="flex gap-1">
+                        <span class="inline-block h-[3px] w-[3px] rounded-full bg-muted-foreground opacity-35"></span>
+                        <span class="inline-block h-[3px] w-[3px] rounded-full bg-muted-foreground opacity-35"></span>
+                        <span class="inline-block h-[3px] w-[3px] rounded-full bg-muted-foreground opacity-35"></span>
+                    </div>
+                    <div class="h-px flex-1 bg-gradient-to-l from-transparent to-border"></div>
                 </div>
 
-                <div class="flex flex-col gap-3 sm:flex-row">
-                    <a href="/docs/installation" class="inline-flex items-center justify-center gap-2 rounded-2xl bg-background px-5 py-3 text-sm font-semibold text-foreground transition-colors hover:bg-background/90">
+                <div class="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
+
+                    <a href="/docs/installation"
+                       class="inline-flex items-center justify-center gap-2 rounded-lg bg-foreground px-6 py-3 text-[0.8125rem] font-semibold text-background shadow-sm transition-all duration-150 hover:-translate-y-px hover:opacity-90">
                         Read the Docs
-                        <x-icon name="arrow-right-02" class="h-4 w-4" />
+                        <x-icon name="arrow-right-02" class="h-3.5 w-3.5" />
                     </a>
-                    <a href="https://github.com/velyx-labs" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 rounded-2xl border border-primary-foreground/20 bg-primary-foreground/6 px-5 py-3 text-sm font-semibold text-primary-foreground transition-colors hover:bg-primary-foreground/12">
-                        <x-icons.github class="h-4 w-4 text-primary-foreground" />
+
+                    <a  href="https://github.com/velyx-labs" target="_blank" rel="noopener noreferrer"
+                       class="inline-flex items-center justify-center gap-2 rounded-lg border border-border bg-transparent px-6 py-3 text-[0.8125rem] font-medium text-muted-foreground transition-all duration-150 hover:-translate-y-px hover:border-border/80 hover:text-foreground">
+                        <x-icons.github class="h-4 w-4" />
                         View on GitHub
                     </a>
+
                 </div>
+
+                <p class="mt-8 text-[0.6875rem] font-light tracking-wide text-muted-foreground/60">
+                    No package required —
+                    <span class="font-medium text-muted-foreground/80">components live in your repo.</span>
+                </p>
+
             </div>
         </div>
+
     </div>
 </section>
+
 @endsection

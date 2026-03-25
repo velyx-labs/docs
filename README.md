@@ -10,5 +10,3 @@ composer install
 pnpm run dev
 composer run dev
 ```
-
-
