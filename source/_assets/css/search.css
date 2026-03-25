@@ -260,7 +260,7 @@
 }
 
 .DocSearch-Form:focus-within {
-  @apply border-primary/40;
+  @apply border-border/40 outline-0;
   box-shadow: 0 0 0 3px color-mix(in oklab, var(--primary) 8%, transparent);
 }
 
@@ -269,7 +269,7 @@
 }
 
 .DocSearch-Input {
-  @apply text-base text-foreground placeholder:text-muted-foreground/60;
+  @apply text-base text-foreground placeholder:text-muted-foreground/60 focus:border-border;
 }
 
 /* ── Results ── */
