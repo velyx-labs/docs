@@ -5,8 +5,8 @@
 Security fixes are provided for the current maintained docs site.
 
 | Version | Supported |
-| --- | --- |
-| Latest | Yes |
+| ------- | --------- |
+| Latest  | Yes       |
 
 ## Reporting a Vulnerability
 

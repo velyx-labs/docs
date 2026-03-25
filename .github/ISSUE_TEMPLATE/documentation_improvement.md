@@ -1,9 +1,9 @@
 ---
 name: Documentation improvement
 about: Suggest a focused correction or rewrite for an existing docs page
-title: '[DOCS] '
+title: "[DOCS] "
 labels: documentation, needs-triage
-assignees: ''
+assignees: ""
 ---
 
 ## Summary

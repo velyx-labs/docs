@@ -36,12 +36,12 @@ Add the progress bar component to your project:
 
 ## Props
 
-| Prop | Type | Default | Description |
-|------|------|---------|-------------|
-| `label` | `string` | `null` | Text label describing the progress |
-| `percentage` | `number` | `0` | Progress value between 0 and 100 |
-| `variant` | `string` | `'primary'` | Color style: `primary`, `info`, `success`, `warning`, `destructive` |
-| `size` | `string` | `'md'` | Size of the progress bar: `sm`, `md`, or `lg` |
+| Prop         | Type     | Default     | Description                                                         |
+| ------------ | -------- | ----------- | ------------------------------------------------------------------- |
+| `label`      | `string` | `null`      | Text label describing the progress                                  |
+| `percentage` | `number` | `0`         | Progress value between 0 and 100                                    |
+| `variant`    | `string` | `'primary'` | Color style: `primary`, `info`, `success`, `warning`, `destructive` |
+| `size`       | `string` | `'md'`      | Size of the progress bar: `sm`, `md`, or `lg`                       |
 
 ## Examples
 
@@ -210,6 +210,7 @@ Add the progress bar component to your project:
 ## Common Use Cases
 
 ### File Upload
+
 ```php
 <x-ui.progress-bar
     label="Uploading documents.pdf"
@@ -219,6 +220,7 @@ Add the progress bar component to your project:
 ```
 
 ### Form Completion
+
 ```php
 <x-ui.progress-bar
     label="Profile completion"
@@ -228,6 +230,7 @@ Add the progress bar component to your project:
 ```
 
 ### Download Status
+
 ```php
 <x-ui.progress-bar
     label="Downloading update"
@@ -237,6 +240,7 @@ Add the progress bar component to your project:
 ```
 
 ### Storage Usage
+
 ```php
 <x-ui.progress-bar
     label="Storage used: 7.5 GB / 10 GB"
@@ -257,11 +261,11 @@ The Progress Bar component uses Tailwind CSS utility classes:
 
 ### Size Variants
 
-| Size | Height | Text Size |
-|------|--------|-----------|
-| `sm` | `h-1` | `text-xs` |
-| `md` | `h-2` | `text-sm` |
-| `lg` | `h-3` | `text-base` |
+| Size | Height | Text Size   |
+| ---- | ------ | ----------- |
+| `sm` | `h-1`  | `text-xs`   |
+| `md` | `h-2`  | `text-sm`   |
+| `lg` | `h-3`  | `text-base` |
 
 ### Variant Colors
 
@@ -299,5 +303,5 @@ The Progress Bar component includes accessibility features:
 ## Next Steps
 
 - Explore [Rating component](/docs/components/rating)
-- Learn about [Stat Card component](/docs/components/stat-card)
+- Learn about [Tabs component](/docs/components/tabs)
 - View [Progress Steps component](/docs/components/progress-steps)

@@ -55,6 +55,7 @@ Add the tabs component to your project:
             </div>
         </x-ui.tabs.content>
     </x-ui.tabs.tabs>
+
 </x-component-preview>
 
 ### Pills Variant
@@ -85,6 +86,7 @@ Add the tabs component to your project:
             </div>
         </x-ui.tabs.content>
     </x-ui.tabs.tabs>
+
 </x-component-preview>
 
 ### Enclosed Variant
@@ -115,29 +117,30 @@ Add the tabs component to your project:
             </div>
         </x-ui.tabs.content>
     </x-ui.tabs.tabs>
+
 </x-component-preview>
 
 ## Props
 
 ### Tabs Root
 
-| Prop | Type | Default | Description |
-|------|------|---------|-------------|
-| `default` | `string|null` | `null` | The tab that should be active on initial render |
+| Prop      | Type     | Default       | Description                                                    |
+| --------- | -------- | ------------- | -------------------------------------------------------------- | ----------------------------------------------- |
+| `default` | `string  | null`         | `null`                                                         | The tab that should be active on initial render |
 | `variant` | `string` | `'underline'` | Visual style for the tabs: `underline`, `pills`, or `enclosed` |
 
 ### Tabs Trigger
 
-| Prop | Type | Default | Description |
-|------|------|---------|-------------|
-| `tab` | `string` | required | Unique identifier for the tab and its matching panel |
-| `icon` | `string|null` | `null` | Optional Lucide icon shown before the label |
+| Prop      | Type     | Default       | Description                                          |
+| --------- | -------- | ------------- | ---------------------------------------------------- | ------------------------------------------- |
+| `tab`     | `string` | required      | Unique identifier for the tab and its matching panel |
+| `icon`    | `string  | null`         | `null`                                               | Optional Lucide icon shown before the label |
 | `variant` | `string` | `'underline'` | Matches the list/root variant for consistent styling |
 
 ### Tabs Content
 
-| Prop | Type | Default | Description |
-|------|------|---------|-------------|
+| Prop  | Type     | Default  | Description                      |
+| ----- | -------- | -------- | -------------------------------- |
 | `tab` | `string` | required | The tab id this panel belongs to |
 
 ## Example Structure

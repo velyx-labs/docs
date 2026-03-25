@@ -16,6 +16,7 @@ Velyx provides a complete typography system with consistent sizing, weights, and
 Velyx uses two font families by default:
 
 ### Sans Serif
+
 ```css
 --font-sans: "Raleway", sans-serif;
 ```
@@ -23,6 +24,7 @@ Velyx uses two font families by default:
 Used for body text, headings, and most UI elements.
 
 ### Mono
+
 ```css
 --font-mono: "Geist Mono", monospace;
 ```
@@ -47,42 +49,43 @@ Velyx uses the `@tailwindcss/typography` plugin for styling Markdown content. Ap
 
 ### Text Utilities
 
-| Class | Size | Usage |
-|-------|------|-------|
-| `text-xs` | 0.75rem | Small labels, captions |
-| `text-sm` | 0.875rem | Secondary text, form labels |
-| `text-base` | 1rem | Body text, default |
-| `text-lg` | 1.125rem | Emphasized text |
-| `text-xl` | 1.25rem | Subheadings |
-| `text-2xl` | 1.5rem | Small section headings |
-| `text-3xl` | 1.875rem | Section headings |
-| `text-4xl` | 2.25rem | Page headings |
-| `text-5xl` | 3rem | Hero headings |
+| Class       | Size     | Usage                       |
+| ----------- | -------- | --------------------------- |
+| `text-xs`   | 0.75rem  | Small labels, captions      |
+| `text-sm`   | 0.875rem | Secondary text, form labels |
+| `text-base` | 1rem     | Body text, default          |
+| `text-lg`   | 1.125rem | Emphasized text             |
+| `text-xl`   | 1.25rem  | Subheadings                 |
+| `text-2xl`  | 1.5rem   | Small section headings      |
+| `text-3xl`  | 1.875rem | Section headings            |
+| `text-4xl`  | 2.25rem  | Page headings               |
+| `text-5xl`  | 3rem     | Hero headings               |
 
 ## Font Weights
 
-| Class | Weight | Usage |
-|-------|--------|-------|
-| `font-light` | 300 | Subtle text |
-| `font-normal` | 400 | Body text |
-| `font-medium` | 500 | Emphasized text |
-| `font-semibold` | 600 | Headings |
-| `font-bold` | 700 | Strong headings |
+| Class           | Weight | Usage           |
+| --------------- | ------ | --------------- |
+| `font-light`    | 300    | Subtle text     |
+| `font-normal`   | 400    | Body text       |
+| `font-medium`   | 500    | Emphasized text |
+| `font-semibold` | 600    | Headings        |
+| `font-bold`     | 700    | Strong headings |
 
 ## Line Heights
 
-| Class | Height | Usage |
-|-------|--------|-------|
-| `leading-none` | 1 | Tight spacing |
-| `leading-tight` | 1.25 | Headings |
-| `leading-snug` | 1.375 | Compact text |
-| `leading-normal` | 1.5 | Body text |
-| `leading-relaxed` | 1.625 | Readable paragraphs |
-| `leading-loose` | 2 | Spaced out text |
+| Class             | Height | Usage               |
+| ----------------- | ------ | ------------------- |
+| `leading-none`    | 1      | Tight spacing       |
+| `leading-tight`   | 1.25   | Headings            |
+| `leading-snug`    | 1.375  | Compact text        |
+| `leading-normal`  | 1.5    | Body text           |
+| `leading-relaxed` | 1.625  | Readable paragraphs |
+| `leading-loose`   | 2      | Spaced out text     |
 
 ## Examples
 
 ### Body Text
+
 ```php
 <p class="text-base leading-normal text-foreground">
     This is the default body text styling with comfortable line height for readability.
@@ -90,6 +93,7 @@ Velyx uses the `@tailwindcss/typography` plugin for styling Markdown content. Ap
 ```
 
 ### Heading
+
 ```php
 <h1 class="text-4xl font-bold tracking-tight text-foreground">
     Page Title
@@ -97,6 +101,7 @@ Velyx uses the `@tailwindcss/typography` plugin for styling Markdown content. Ap
 ```
 
 ### Small Text
+
 ```php
 <p class="text-sm text-muted-foreground">
     Secondary information or helper text
@@ -104,6 +109,7 @@ Velyx uses the `@tailwindcss/typography` plugin for styling Markdown content. Ap
 ```
 
 ### Code
+
 ```php
 <code class="font-mono text-sm bg-muted px-1.5 py-0.5 rounded">
     npm install velyx@latest
@@ -125,10 +131,10 @@ Use responsive prefixes to adjust text at different breakpoints:
 To use custom fonts, update your theme CSS:
 
 ```css
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
 
 @theme inline {
-    --font-sans: "Inter", sans-serif;
+  --font-sans: "Inter", sans-serif;
 }
 ```
 

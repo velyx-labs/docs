@@ -19,7 +19,7 @@ function initDarkMode() {
       const isDark = document.documentElement.classList.contains("dark");
       const newTheme = isDark ? "light" : "dark";
       const prefersReducedMotion = window.matchMedia(
-        "(prefers-reduced-motion: reduce)"
+        "(prefers-reduced-motion: reduce)",
       ).matches;
 
       const applyThemeChange = () => {
@@ -115,7 +115,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
   codeBlocks.forEach((block) => {
     // Skip if already has a button or has no-copy-button class
-    if (block.querySelector(".copy-button") || block.closest(".no-copy-button")) return;
+    if (block.querySelector(".copy-button") || block.closest(".no-copy-button"))
+      return;
 
     const button = document.createElement("button");
     button.className =

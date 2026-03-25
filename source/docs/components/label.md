@@ -57,11 +57,11 @@ Add the label component to your project:
 
 ## Props
 
-| Prop | Type | Default | Description |
-|------|------|---------|-------------|
-| `for` | `string` | `null` | The ID of the form input this label is associated with |
-| `required` | `boolean` | `false` | Whether to display a required indicator (*) |
-| `description` | `string` | `null` | Additional helper text to display below the label |
+| Prop          | Type      | Default | Description                                            |
+| ------------- | --------- | ------- | ------------------------------------------------------ |
+| `for`         | `string`  | `null`  | The ID of the form input this label is associated with |
+| `required`    | `boolean` | `false` | Whether to display a required indicator (\*)           |
+| `description` | `string`  | `null`  | Additional helper text to display below the label      |
 
 ## Examples
 
@@ -204,7 +204,7 @@ The Label component includes proper accessibility features:
 
 ## Notes
 
-- The label automatically adds the required (*) indicator when `required="true"`
+- The label automatically adds the required (\*) indicator when `required="true"`
 - Descriptions appear below the label in muted text
 - The component uses peer-placeholder CSS for styling (use with `peer` class on parent)
 - When used with checkboxes/radios, add `cursor-pointer` class to make the entire label clickable

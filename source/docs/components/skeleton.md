@@ -49,12 +49,12 @@ Add the skeleton component to your project:
 
 ## Props
 
-| Prop | Type | Default | Description |
-|------|------|---------|-------------|
+| Prop      | Type     | Default     | Description                                                                  |
+| --------- | -------- | ----------- | ---------------------------------------------------------------------------- |
 | `variant` | `string` | `'default'` | Preset shape such as `text`, `title`, `avatar`, `button`, `card`, or `image` |
-| `rounded` | `string` | `'md'` | Border radius preset from `none` to `full` |
-| `count` | `int` | `1` | Number of skeleton items to render |
-| `gap` | `string` | `'2'` | Gap size between repeated skeleton items |
+| `rounded` | `string` | `'md'`      | Border radius preset from `none` to `full`                                   |
+| `count`   | `int`    | `1`         | Number of skeleton items to render                                           |
+| `gap`     | `string` | `'2'`       | Gap size between repeated skeleton items                                     |
 
 ## Example Structure
 

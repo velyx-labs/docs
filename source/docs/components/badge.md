@@ -120,14 +120,14 @@ Add the badge component to your project:
 
 ## Props
 
-| Prop | Type | Default | Description |
-|------|------|---------|-------------|
-| `variant` | `string` | `'default'` | Visual style: `default`, `primary`, `secondary`, `destructive`, `outline` |
-| `size` | `string` | `'default'` | Size: `sm`, `default`, `lg` |
-| `pill` | `boolean` | `false` | Use pill/rounded shape instead of default squared corners |
-| `icon` | `string` | `null` | Icon name to display before the text |
-| `removable` | `boolean` | `false` | Show remove button (×) to dismiss the badge |
-| `label` | `string` | `'Badge'` | Text content to display |
+| Prop        | Type      | Default     | Description                                                               |
+| ----------- | --------- | ----------- | ------------------------------------------------------------------------- |
+| `variant`   | `string`  | `'default'` | Visual style: `default`, `primary`, `secondary`, `destructive`, `outline` |
+| `size`      | `string`  | `'default'` | Size: `sm`, `default`, `lg`                                               |
+| `pill`      | `boolean` | `false`     | Use pill/rounded shape instead of default squared corners                 |
+| `icon`      | `string`  | `null`      | Icon name to display before the text                                      |
+| `removable` | `boolean` | `false`     | Show remove button (×) to dismiss the badge                               |
+| `label`     | `string`  | `'Badge'`   | Text content to display                                                   |
 
 ## Examples
 
@@ -232,13 +232,13 @@ The badge component uses Tailwind CSS classes. You can customize the appearance 
 
 ### Variant Styles
 
-| Variant | Use Case |
-|---------|----------|
-| `default` | General purpose labels |
-| `primary` | Important highlights |
-| `secondary` | Subtle information |
+| Variant       | Use Case                      |
+| ------------- | ----------------------------- |
+| `default`     | General purpose labels        |
+| `primary`     | Important highlights          |
+| `secondary`   | Subtle information            |
 | `destructive` | Errors or destructive actions |
-| `outline` | Bordered badges |
+| `outline`     | Bordered badges               |
 
 ### Icon Integration
 
@@ -254,3 +254,4 @@ The badge component integrates with your icon system. Any icon name available in
 - Explore [Alert component](/docs/components/alert)
 - Learn about [Button component](/docs/components/button)
 - View [Breadcrumbs component](/docs/components/breadcrumbs)
+```

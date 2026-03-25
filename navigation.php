@@ -38,7 +38,6 @@ return [
             'Rating' => 'docs/components/rating',
             'Skeleton' => 'docs/components/skeleton',
             'Sortable List' => 'docs/components/sortable-list',
-            'Stat Card' => 'docs/components/stat-card',
             'Stepper' => 'docs/components/stepper',
             'Table' => 'docs/components/table',
             'Tabs' => 'docs/components/tabs',

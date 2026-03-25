@@ -53,6 +53,7 @@ Add the table component to your project:
             </x-ui.table.row>
         </x-ui.table.body>
     </x-ui.table>
+
 </x-component-preview>
 
 ### With Caption
@@ -85,6 +86,7 @@ Add the table component to your project:
             </x-ui.table.row>
         </x-ui.table.body>
     </x-ui.table>
+
 </x-component-preview>
 
 ### With Footer
@@ -123,6 +125,7 @@ Add the table component to your project:
             </x-ui.table.row>
         </x-ui.table.footer>
     </x-ui.table>
+
 </x-component-preview>
 
 ### Full Table with All Sections
@@ -179,22 +182,23 @@ Add the table component to your project:
             </x-ui.table.row>
         </x-ui.table.footer>
     </x-ui.table>
+
 </x-component-preview>
 
 ## Components
 
 The Table component consists of several sub-components:
 
-| Component | Purpose |
-|-----------|---------|
-| `<x-ui.table>` | Main table container with responsive scrolling |
-| `<x-ui.table.header>` | Table header section (`<thead>`) |
-| `<x-ui.table.body>` | Table body section (`<tbody>`) |
-| `<x-ui.table.footer>` | Table footer section (`<tfoot>`) |
-| `<x-ui.table.row>` | Table row (`<tr>`) |
-| `<x-ui.table.head>` | Table header cell (`<th>`) |
-| `<x-ui.table.cell>` | Table data cell (`<td>`) |
-| `<x-ui.table.caption>` | Table caption (`<caption>`) |
+| Component              | Purpose                                        |
+| ---------------------- | ---------------------------------------------- |
+| `<x-ui.table>`         | Main table container with responsive scrolling |
+| `<x-ui.table.header>`  | Table header section (`<thead>`)               |
+| `<x-ui.table.body>`    | Table body section (`<tbody>`)                 |
+| `<x-ui.table.footer>`  | Table footer section (`<tfoot>`)               |
+| `<x-ui.table.row>`     | Table row (`<tr>`)                             |
+| `<x-ui.table.head>`    | Table header cell (`<th>`)                     |
+| `<x-ui.table.cell>`    | Table data cell (`<td>`)                       |
+| `<x-ui.table.caption>` | Table caption (`<caption>`)                    |
 
 ## Examples
 

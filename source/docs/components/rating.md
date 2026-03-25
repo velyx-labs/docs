@@ -38,18 +38,19 @@ Add the rating component to your project:
             <x-ui.rating :readonly="true" :show-value="true" variant="primary" x-data="{}" />
         </div>
     </div>
+
 </x-component-preview>
 
 ## Props
 
-| Prop | Type | Default | Description |
-|------|------|---------|-------------|
-| `rating` | `number` | `0` | Initial rating value (0-5) |
-| `maxRating` | `number` | `5` | Maximum possible rating |
-| `readonly` | `boolean` | `false` | Whether the rating is editable |
-| `showValue` | `boolean` | `false` | Whether to display the numeric value |
-| `variant` | `string` | `'default'` | Color style: `default`, `primary`, `warning`, `success` |
-| `size` | `string` | `'md'` | Size of the stars: `sm`, `md`, or `lg` |
+| Prop        | Type      | Default     | Description                                             |
+| ----------- | --------- | ----------- | ------------------------------------------------------- |
+| `rating`    | `number`  | `0`         | Initial rating value (0-5)                              |
+| `maxRating` | `number`  | `5`         | Maximum possible rating                                 |
+| `readonly`  | `boolean` | `false`     | Whether the rating is editable                          |
+| `showValue` | `boolean` | `false`     | Whether to display the numeric value                    |
+| `variant`   | `string`  | `'default'` | Color style: `default`, `primary`, `warning`, `success` |
+| `size`      | `string`  | `'md'`      | Size of the stars: `sm`, `md`, or `lg`                  |
 
 ## Examples
 
@@ -265,6 +266,7 @@ Add the rating component to your project:
 ## Common Use Cases
 
 ### Product Rating
+
 ```php
 <x-ui.rating
     :rating="$product->rating"
@@ -275,6 +277,7 @@ Add the rating component to your project:
 ```
 
 ### Service Feedback
+
 ```php
 <x-ui.label>Rate our service</x-ui.label>
 <x-ui.rating
@@ -286,6 +289,7 @@ Add the rating component to your project:
 ```
 
 ### Content Quality
+
 ```php
 <x-ui.rating
     :rating="4"
@@ -297,6 +301,7 @@ Add the rating component to your project:
 ```
 
 ### Skill Assessment
+
 ```php
 <div class="space-y-3">
     <div>
@@ -325,10 +330,10 @@ The Rating component uses Tailwind CSS utility classes:
 
 ### Size Variants
 
-| Size | Star Size | Spacing |
-|------|-----------|---------|
+| Size | Star Size | Spacing   |
+| ---- | --------- | --------- |
 | `sm` | `h-4 w-4` | `gap-0.5` |
-| `md` | `h-5 w-5` | `gap-1` |
+| `md` | `h-5 w-5` | `gap-1`   |
 | `lg` | `h-6 w-6` | `gap-1.5` |
 
 ### Variant Colors

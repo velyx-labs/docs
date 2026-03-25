@@ -35,25 +35,26 @@ Add the toast component to your project:
         <x-ui.button variant="outline" @click="$dispatch('toast', { type: 'warning', title: 'Careful', message: 'Storage is almost full.' })">Warning</x-ui.button>
         <x-ui.button variant="destructive" @click="$dispatch('toast', { type: 'error', title: 'Failed', message: 'Unable to complete this action.' })">Error</x-ui.button>
     </div>
+
 </x-component-preview>
 
 ## Props
 
-| Prop | Type | Default | Description |
-|------|------|---------|-------------|
-| `position` | `string` | `'bottom-right'` | Position on screen: `top-left`, `top-right`, `bottom-left`, `bottom-right`, `top-center`, `bottom-center` |
-| `duration` | `number` | `3000` | Auto-dismiss duration in milliseconds |
-| `maxToasts` | `number` | `3` | Maximum number of toasts to display at once |
+| Prop        | Type     | Default          | Description                                                                                               |
+| ----------- | -------- | ---------------- | --------------------------------------------------------------------------------------------------------- |
+| `position`  | `string` | `'bottom-right'` | Position on screen: `top-left`, `top-right`, `bottom-left`, `bottom-right`, `top-center`, `bottom-center` |
+| `duration`  | `number` | `3000`           | Auto-dismiss duration in milliseconds                                                                     |
+| `maxToasts` | `number` | `3`              | Maximum number of toasts to display at once                                                               |
 
 ## Toast Event
 
 Dispatch a `toast` event with the following properties:
 
-| Property | Type | Default | Description |
-|----------|------|---------|-------------|
-| `type` | `string` | `'info'` | Toast type: `success`, `info`, `warning`, `error` |
-| `title` | `string` | `null` | Heading text for the toast |
-| `message` | `string` | `null` | Body text for the toast |
+| Property  | Type     | Default  | Description                                       |
+| --------- | -------- | -------- | ------------------------------------------------- |
+| `type`    | `string` | `'info'` | Toast type: `success`, `info`, `warning`, `error` |
+| `title`   | `string` | `null`   | Heading text for the toast                        |
+| `message` | `string` | `null`   | Body text for the toast                           |
 
 ## Examples
 
@@ -342,6 +343,7 @@ public function update()
 ## Common Use Cases
 
 ### Success Messages
+
 ```php
 $this->dispatch('toast', [
     'type' => 'success',
@@ -351,6 +353,7 @@ $this->dispatch('toast', [
 ```
 
 ### Error Alerts
+
 ```php
 $this->dispatch('toast', [
     'type' => 'error',
@@ -360,6 +363,7 @@ $this->dispatch('toast', [
 ```
 
 ### Informational
+
 ```php
 $this->dispatch('toast', [
     'type' => 'info',
@@ -369,6 +373,7 @@ $this->dispatch('toast', [
 ```
 
 ### Warning Messages
+
 ```php
 $this->dispatch('toast', [
     'type' => 'warning',
@@ -397,6 +402,7 @@ The Toast component uses Tailwind CSS utility classes:
 ### Positioning
 
 Positions determine where toasts appear on screen:
+
 - Top positions: Appear below top edge
 - Bottom positions: Appear above bottom edge
 - Left/Right: Aligned to respective edges

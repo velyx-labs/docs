@@ -73,9 +73,9 @@ For system-based dark mode, use the `class` strategy in your Tailwind config:
 ```js
 // tailwind.config.js
 export default {
-  darkMode: 'class',
+  darkMode: "class",
   // ...
-}
+};
 ```
 
 ## Customizing Components
@@ -136,6 +136,7 @@ Apply your custom theme to specific components:
 For more advanced theming and visual customization, use [TweakCN](https://tweakcn.com/) — a visual tool for creating and customizing UI component designs.
 
 TweakCN allows you to:
+
 - Visually design and tweak component styles
 - Export ready-to-use Tailwind CSS classes
 - Create consistent design systems
@@ -145,7 +146,7 @@ TweakCN allows you to:
 Use <a href="https://tweakcn.com/?utm_source=velyx.dev&utm_medium=docs&utm_campaign=theming" class="underline hover:text-foreground/80" target="_blank" rel="noopener noreferrer">TweakCN</a> to visually customize your components, then copy the generated classes to your Velyx components.
 </x-callout>
 
-  ## Next Steps
+## Next Steps
 
 - Learn about [colors](/docs/design/colors)
 - Explore [typography](/docs/design/typography)

@@ -1,9 +1,9 @@
 ---
 name: Bug report
 about: Report a reproducible docs issue affecting layout, content, navigation, search, or examples
-title: '[BUG] '
+title: "[BUG] "
 labels: bug, needs-triage
-assignees: ''
+assignees: ""
 ---
 
 ## Summary

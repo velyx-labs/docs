@@ -44,6 +44,7 @@ Add the markdown viewer component to your project:
 
         > Keep it minimal and readable.
     </x-ui.markdown-viewer>
+
 </x-component-preview>
 
 ### Headings
@@ -59,6 +60,7 @@ Add the markdown viewer component to your project:
 
         Headings help structure your content.
     </x-ui.markdown-viewer>
+
 </x-component-preview>
 
 ### Text Formatting
@@ -79,6 +81,7 @@ Add the markdown viewer component to your project:
         - *Italic* for subtle emphasis
         - ***Bold and italic*** for extra emphasis
     </x-ui.markdown-viewer>
+
 </x-component-preview>
 
 ### Lists
@@ -107,6 +110,7 @@ Add the markdown viewer component to your project:
         - [ ] Incomplete task
         - [ ] Another task
     </x-ui.markdown-viewer>
+
 </x-component-preview>
 
 ### Code Blocks
@@ -143,6 +147,7 @@ Add the markdown viewer component to your project:
         console.log(greet('World'));
         ```
     </x-ui.markdown-viewer>
+
 </x-component-preview>
 
 ### Blockquotes
@@ -166,6 +171,7 @@ Add the markdown viewer component to your project:
 
         Remember: Blockquotes are great for highlighting important information.
     </x-ui.markdown-viewer>
+
 </x-component-preview>
 
 ### Links
@@ -192,14 +198,15 @@ Add the markdown viewer component to your project:
 
         <user@example.com>
     </x-ui.markdown-viewer>
+
 </x-component-preview>
 
 ## Props
 
-| Prop | Type | Default | Description |
-|------|------|---------|-------------|
-| `content` | `string` | `''` | The markdown content to render. Can be passed as a prop or as slot content. |
-| `maxHeight` | `string` | `'420px'` | Maximum height of the content area with overflow scroll. |
+| Prop        | Type     | Default   | Description                                                                 |
+| ----------- | -------- | --------- | --------------------------------------------------------------------------- |
+| `content`   | `string` | `''`      | The markdown content to render. Can be passed as a prop or as slot content. |
+| `maxHeight` | `string` | `'420px'` | Maximum height of the content area with overflow scroll.                    |
 
 ## Examples
 
@@ -211,7 +218,7 @@ Add the markdown viewer component to your project:
 
 ### Using Slot Content
 
-```php
+````php
 <x-ui.markdown-viewer>
     # Your Title
 
@@ -243,3 +250,4 @@ Add the markdown viewer component to your project:
 - Unsafe links are automatically filtered
 - The component uses Tailwind Typography (`prose`) classes for styling
 - Dark mode is automatically supported via `dark:prose-invert`
+````

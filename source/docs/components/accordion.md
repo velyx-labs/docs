@@ -49,6 +49,7 @@ Add the accordion component to your project:
             </x-ui.accordion.content>
         </x-ui.accordion.item>
     </x-ui.accordion>
+
 </x-component-preview>
 
 ### Multiple Open
@@ -76,24 +77,23 @@ Add the accordion component to your project:
             </x-ui.accordion.content>
         </x-ui.accordion.item>
     </x-ui.accordion>
+
 </x-component-preview>
-
-
 
 ## Props
 
 ### Accordion Root
 
-| Prop | Type | Default | Description |
-|------|------|---------|-------------|
-| `type` | `string` | `'single'` | Type of accordion: `'single'` or `'multiple'` |
-| `collapsible` | `boolean` | `true` | Whether items can be collapsed |
-| `defaultValue` | `string` | `null` | The value of the item that should be open by default |
+| Prop           | Type      | Default    | Description                                          |
+| -------------- | --------- | ---------- | ---------------------------------------------------- |
+| `type`         | `string`  | `'single'` | Type of accordion: `'single'` or `'multiple'`        |
+| `collapsible`  | `boolean` | `true`     | Whether items can be collapsed                       |
+| `defaultValue` | `string`  | `null`     | The value of the item that should be open by default |
 
 ### Accordion Item
 
-| Prop | Type | Default | Description |
-|------|------|---------|-------------|
+| Prop    | Type     | Default  | Description                    |
+| ------- | -------- | -------- | ------------------------------ |
 | `value` | `string` | required | Unique identifier for the item |
 
 ### Usage

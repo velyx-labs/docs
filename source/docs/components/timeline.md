@@ -49,17 +49,17 @@ Add the timeline component to your project:
 
 ## Props
 
-| Prop | Type | Default | Description |
-|------|------|---------|-------------|
-| `items` | `array` | `[]` | Ordered timeline entries |
-| `variant` | `string` | `'vertical'` | Layout mode: `vertical` or `horizontal` |
-| `size` | `string` | `'md'` | Size preset |
-| `lineStyle` | `string` | `'solid'` | Connector style: `solid`, `dashed`, or `dotted` |
-| `animated` | `bool` | `true` | Enables staged reveal transitions |
-| `alternating` | `bool` | `false` | Alternates sides in vertical mode |
+| Prop          | Type     | Default      | Description                                     |
+| ------------- | -------- | ------------ | ----------------------------------------------- |
+| `items`       | `array`  | `[]`         | Ordered timeline entries                        |
+| `variant`     | `string` | `'vertical'` | Layout mode: `vertical` or `horizontal`         |
+| `size`        | `string` | `'md'`       | Size preset                                     |
+| `lineStyle`   | `string` | `'solid'`    | Connector style: `solid`, `dashed`, or `dotted` |
+| `animated`    | `bool`   | `true`       | Enables staged reveal transitions               |
+| `alternating` | `bool`   | `false`      | Alternates sides in vertical mode               |
 
 ## Next Steps
 
-- Explore [Stat Card component](/docs/components/stat-card)
+- Explore [Tabs component](/docs/components/tabs)
 - Learn about [Progress Steps component](/docs/components/progress-steps)
 - View [Stepper component](/docs/components/stepper)

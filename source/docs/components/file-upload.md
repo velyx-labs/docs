@@ -31,11 +31,11 @@ Add the file upload component to your project:
 
 ## Props
 
-| Prop | Type | Default | Description |
-|------|------|---------|-------------|
-| `accept` | `string` | `'*'` | File types to accept (e.g., `'image/*'`, `'.pdf,.doc'`) |
-| `multiple` | `boolean` | `false` | Allow multiple file selection |
-| `maxSize` | `number` | `null` | Maximum file size in bytes |
+| Prop       | Type      | Default | Description                                             |
+| ---------- | --------- | ------- | ------------------------------------------------------- |
+| `accept`   | `string`  | `'*'`   | File types to accept (e.g., `'image/*'`, `'.pdf,.doc'`) |
+| `multiple` | `boolean` | `false` | Allow multiple file selection                           |
+| `maxSize`  | `number`  | `null`  | Maximum file size in bytes                              |
 
 ## Examples
 

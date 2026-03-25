@@ -43,6 +43,7 @@ Add the dropdown menu component to your project:
             <x-ui.dropdown-menu.item>Logout</x-ui.dropdown-menu.item>
         </x-ui.dropdown-menu.content>
     </x-ui.dropdown-menu>
+
 </x-component-preview>
 
 ### With Keyboard Shortcuts
@@ -69,6 +70,7 @@ Add the dropdown menu component to your project:
             </x-ui.dropdown-menu.item>
         </x-ui.dropdown-menu.content>
     </x-ui.dropdown-menu>
+
 </x-component-preview>
 
 ### With Groups and Labels
@@ -96,6 +98,7 @@ Add the dropdown menu component to your project:
             </x-ui.dropdown-menu.group>
         </x-ui.dropdown-menu.content>
     </x-ui.dropdown-menu>
+
 </x-component-preview>
 
 ### With Nested Submenus
@@ -124,6 +127,7 @@ Add the dropdown menu component to your project:
             </x-ui.dropdown-menu.sub>
         </x-ui.dropdown-menu.content>
     </x-ui.dropdown-menu>
+
 </x-component-preview>
 
 ### With Disabled Items
@@ -142,6 +146,7 @@ Add the dropdown menu component to your project:
             <x-ui.dropdown-menu.item :disabled="true">Export</x-ui.dropdown-menu.item>
         </x-ui.dropdown-menu.content>
     </x-ui.dropdown-menu>
+
 </x-component-preview>
 
 ### Right Aligned
@@ -159,60 +164,61 @@ Add the dropdown menu component to your project:
             <x-ui.dropdown-menu.item>Delete</x-ui.dropdown-menu.item>
         </x-ui.dropdown-menu.content>
     </x-ui.dropdown-menu>
+
 </x-component-preview>
 
 ## Components
 
 The Dropdown Menu component consists of several sub-components:
 
-| Component | Purpose |
-|-----------|---------|
-| `<x-ui.dropdown-menu>` | Root container with Alpine.js state |
-| `<x-ui.dropdown-menu.trigger>` | Button that opens the menu |
-| `<x-ui.dropdown-menu.content>` | Floating menu panel |
-| `<x-ui.dropdown-menu.item>` | Clickable menu item |
-| `<x-ui.dropdown-menu.group>` | Groups related items |
-| `<x-ui.dropdown-menu.label>` | Non-interactive label for groups |
-| `<x-ui.dropdown-menu.separator>` | Visual divider between sections |
-| `<x-ui.dropdown-menu.shortcut>` | Keyboard shortcut display |
-| `<x-ui.dropdown-menu.sub>` | Nested submenu |
-| `<x-ui.dropdown-menu.sub-trigger>` | Trigger for submenu |
-| `<x-ui.dropdown-menu.sub-content>` | Content of submenu |
-| `<x-ui.dropdown-menu.portal>` | Teleport wrapper for submenu |
+| Component                          | Purpose                             |
+| ---------------------------------- | ----------------------------------- |
+| `<x-ui.dropdown-menu>`             | Root container with Alpine.js state |
+| `<x-ui.dropdown-menu.trigger>`     | Button that opens the menu          |
+| `<x-ui.dropdown-menu.content>`     | Floating menu panel                 |
+| `<x-ui.dropdown-menu.item>`        | Clickable menu item                 |
+| `<x-ui.dropdown-menu.group>`       | Groups related items                |
+| `<x-ui.dropdown-menu.label>`       | Non-interactive label for groups    |
+| `<x-ui.dropdown-menu.separator>`   | Visual divider between sections     |
+| `<x-ui.dropdown-menu.shortcut>`    | Keyboard shortcut display           |
+| `<x-ui.dropdown-menu.sub>`         | Nested submenu                      |
+| `<x-ui.dropdown-menu.sub-trigger>` | Trigger for submenu                 |
+| `<x-ui.dropdown-menu.sub-content>` | Content of submenu                  |
+| `<x-ui.dropdown-menu.portal>`      | Teleport wrapper for submenu        |
 
 ## Props
 
 ### Dropdown Menu Root
 
-| Prop | Type | Default | Description |
-|------|------|---------|-------------|
+| Prop   | Type      | Default | Description                        |
+| ------ | --------- | ------- | ---------------------------------- |
 | `open` | `boolean` | `false` | Whether the menu is initially open |
 
 ### Dropdown Menu Trigger
 
-| Prop | Type | Default | Description |
-|------|------|---------|-------------|
+| Prop      | Type      | Default | Description                               |
+| --------- | --------- | ------- | ----------------------------------------- |
 | `asChild` | `boolean` | `false` | Render as child element instead of button |
 
 ### Dropdown Menu Content
 
-| Prop | Type | Default | Description |
-|------|------|---------|-------------|
-| `align` | `string` | `'start'` | Alignment: `start`, `center`, or `end` |
-| `side` | `string` | `'bottom'` | Side to display: `top`, `right`, `bottom`, or `left` |
+| Prop    | Type     | Default    | Description                                          |
+| ------- | -------- | ---------- | ---------------------------------------------------- |
+| `align` | `string` | `'start'`  | Alignment: `start`, `center`, or `end`               |
+| `side`  | `string` | `'bottom'` | Side to display: `top`, `right`, `bottom`, or `left` |
 
 ### Dropdown Menu Item
 
-| Prop | Type | Default | Description |
-|------|------|---------|-------------|
-| `disabled` | `boolean` | `false` | Whether the item is disabled |
-| `inset` | `boolean` | `false` | Add inset padding for nested items |
+| Prop       | Type      | Default | Description                        |
+| ---------- | --------- | ------- | ---------------------------------- |
+| `disabled` | `boolean` | `false` | Whether the item is disabled       |
+| `inset`    | `boolean` | `false` | Add inset padding for nested items |
 
 ### Dropdown Menu Checkbox
 
-| Prop | Type | Default | Description |
-|------|------|---------|-------------|
-| `checked` | `boolean` | `false` | Whether the checkbox is checked |
+| Prop       | Type      | Default | Description                      |
+| ---------- | --------- | ------- | -------------------------------- |
+| `checked`  | `boolean` | `false` | Whether the checkbox is checked  |
 | `disabled` | `boolean` | `false` | Whether the checkbox is disabled |
 
 ## Examples

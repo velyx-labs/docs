@@ -122,12 +122,12 @@ Add the avatar group component to your project:
 
 ## Props
 
-| Prop | Type | Default | Description |
-|------|------|---------|-------------|
-| `avatars` | `array` | `[]` | Array of avatar data with `src`, `name`, and optional `status` |
-| `max` | `int` | `4` | Maximum number of avatars to show before displaying overflow |
-| `size` | `string` | `'lg'` | Size of avatars: `xs`, `sm`, `md`, `lg`, `xl` |
-| `shape` | `string` | `'circle'` | Shape of avatars: `circle` or `square` |
+| Prop      | Type     | Default    | Description                                                    |
+| --------- | -------- | ---------- | -------------------------------------------------------------- |
+| `avatars` | `array`  | `[]`       | Array of avatar data with `src`, `name`, and optional `status` |
+| `max`     | `int`    | `4`        | Maximum number of avatars to show before displaying overflow   |
+| `size`    | `string` | `'lg'`     | Size of avatars: `xs`, `sm`, `md`, `lg`, `xl`                  |
+| `shape`   | `string` | `'circle'` | Shape of avatars: `circle` or `square`                         |
 
 ### Avatar Data Structure
 
