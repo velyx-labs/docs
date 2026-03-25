@@ -6,6 +6,7 @@
     "build": "vite build",
     "prod": "vite build --mode production",
     "start": "serve ./build_production",
+    "format": "prettier . --write",
     "pm2:start": "pm2 start 'serve ./build_production' --name velar-docs",
     "pm2:refresh": "pnpm run prod && pm2 reload velar-docs",
     "pm2:stop": "pm2 stop velar-docs",
