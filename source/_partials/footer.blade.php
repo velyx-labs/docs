@@ -56,6 +56,8 @@
                                 class="text-muted-foreground transition-colors hover:text-foreground">GitHub</a>
                             <a href="https://x.com/velyxdev" target="_blank" rel="noopener noreferrer"
                                 class="text-muted-foreground transition-colors hover:text-foreground">X</a>
+                            <a href="https://gvcjmaad.mychariow.shop/velyx-dev" target="_blank" rel="noopener noreferrer"
+                                class="text-muted-foreground transition-colors hover:text-foreground">Support</a>
                         </div>
                     </div>
                 </div>

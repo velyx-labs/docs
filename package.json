@@ -13,17 +13,17 @@
     "pm2:delete": "pm2 delete velar-docs"
   },
   "devDependencies": {
-    "@tailwindcss/vite": "^4.1.8",
-    "@tighten/jigsaw-vite-plugin": "^1.0.0",
+    "@tailwindcss/vite": "^4.3.0",
+    "@tighten/jigsaw-vite-plugin": "^1.0.2",
     "prettier": "3.8.1",
-    "tailwindcss": "^4.1.11",
-    "vite": "^6.4.1"
+    "tailwindcss": "^4.3.0",
+    "vite": "^6.4.2"
   },
   "dependencies": {
-    "@docsearch/core": "^4.6.0",
-    "@docsearch/css": "^4.6.0",
-    "@docsearch/js": "^4.6.0",
-    "@docsearch/modal": "^4.6.0",
+    "@docsearch/core": "^4.6.3",
+    "@docsearch/css": "^4.6.3",
+    "@docsearch/js": "^4.6.3",
+    "@docsearch/modal": "^4.6.3",
     "@fontsource/geist": "^5.2.8",
     "@fontsource/geist-mono": "^5.2.7",
     "@fontsource/instrument-sans": "^5.2.8",
@@ -31,7 +31,7 @@
     "@fontsource/jetbrains-mono": "^5.2.8",
     "@fontsource/raleway": "^5.2.8",
     "@tailwindcss/typography": "^0.5.19",
-    "alpinejs": "^3.15.8",
+    "alpinejs": "^3.15.12",
     "prismjs": "^1.30.0",
     "serve": "^14.2.6",
     "shadcn": "^3.8.5",

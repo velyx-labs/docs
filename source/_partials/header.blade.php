@@ -58,6 +58,16 @@
                         <x-icons.github class="h-4 w-4 text-foreground" />
                         GitHub
                     </a>
+
+                    <a
+                        href="https://gvcjmaad.mychariow.shop/velyx-dev"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="inline-flex items-center gap-1.5 rounded-md px-3 py-1.5 text-muted-foreground transition-colors hover:bg-muted/60 hover:text-foreground"
+                        aria-label="Support (opens in new tab)"
+                    >
+                        Support
+                    </a>
                 </nav>
             </div>
 
