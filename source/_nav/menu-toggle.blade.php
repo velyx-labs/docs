@@ -40,6 +40,12 @@
         </div>
         <div class="px-4 py-4">
             @include('_nav.menu', ['items' => $page->navigation])
+            <div class="mt-4 border-t border-border pt-4">
+                <a href="https://gvcjmaad.mychariow.shop/velyx-dev" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 rounded-md px-3 py-2 text-red-600 hover:bg-red-50 transition-colors">
+                    <x-icons.heart class="h-4 w-4 text-red-600" />
+                    Support
+                </a>
+            </div>
         </div>
     </aside>
 </div>

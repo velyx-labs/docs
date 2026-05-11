@@ -57,7 +57,7 @@
                             <a href="https://x.com/velyxdev" target="_blank" rel="noopener noreferrer"
                                 class="text-muted-foreground transition-colors hover:text-foreground">X</a>
                             <a href="https://gvcjmaad.mychariow.shop/velyx-dev" target="_blank" rel="noopener noreferrer"
-                                class="text-muted-foreground transition-colors hover:text-foreground">Support</a>
+                                class="text-muted-foreground transition-colors hover:text-foreground"><x-icons.heart class="h-4 w-4 text-red-600 inline-block mr-2" />Support</a>
                         </div>
                     </div>
                 </div>

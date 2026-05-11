@@ -66,6 +66,7 @@
                         class="inline-flex items-center gap-1.5 rounded-md px-3 py-1.5 text-muted-foreground transition-colors hover:bg-muted/60 hover:text-foreground"
                         aria-label="Support (opens in new tab)"
                     >
+                        <x-icons.heart class="h-4 w-4 text-red-600" />
                         Support
                     </a>
                 </nav>

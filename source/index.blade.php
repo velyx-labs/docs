@@ -27,7 +27,7 @@
                 Blade Components For Shipping Products
             </div>
 
-            <h1 class="mt-7 animate-fade-in font-serif text-5xl font-normal leading-[1.06] tracking-[-0.03em] text-foreground sm:text-6xl lg:text-[5.25rem]"
+            <h1 class="mt-7 animate-fade-in text-5xl font-normal leading-[1.06] tracking-[-0.03em] text-foreground sm:text-6xl lg:text-[5.25rem]"
                 style="animation-delay: 0.08s">
                 Copy the UI.<br>
                 <em class="italic text-muted-foreground">Keep the leverage.</em>
@@ -192,7 +192,7 @@
                     Start Building
                 </span>
 
-                <h2 class="mx-auto mt-6 max-w-2xl font-serif text-4xl font-normal leading-[1.1] tracking-[-0.03em] text-foreground sm:text-5xl">
+                <h2 class="mx-auto mt-6 max-w-2xl text-4xl font-normal leading-[1.1] tracking-[-0.03em] text-foreground sm:text-5xl">
                     Build the first serious screen faster,
                     <em class="italic text-muted-foreground">then make it unmistakably yours.</em>
                 </h2>
